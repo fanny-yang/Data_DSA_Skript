@@ -2,7 +2,7 @@
 %Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
 \Akademie{Braunschweig}{2015}{1}
 
-\usepackage[ngerman, english]{babel}
+\usepackage[english, ngerman]{babel}
 \usepackage{misc}
 \usepackage{multicol}
 
@@ -10,7 +10,6 @@
 \usepackage{amsfonts}
 
 \usepackage{blindtext}
-
 \usepackage{url}
 \def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
 \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
@@ -29,6 +28,7 @@
 %\setlength{\abovedisplayskip}{5pt}
 %\setlength{\belowdisplayskip}{5pt}
 
+\newcommand{\media}{media/}
 
 %%%%%Mathe-Definitionen
 \newtheorem{Def}{Definition}
@@ -43,31 +43,27 @@
 %%%%Ende Mathe-Definitionen
 
 \begin{document}
-
- %   \input{titel}
- \setcounter{page}{3}
+%\input{titel}
+\setcounter{page}{3}
 
 \setcounter{tocdepth}{1}
- \tableofcontents
+\tableofcontents
 
-   \setcounter{secnumdepth}{1}
-
+\setcounter{secnumdepth}{1}
 
 \setcounter{page}{7}
 \setcounter{chapter}{0}
 
 %Angabe, bis zu welcher Stufe die sections im Text nummeriert werden sollen.
-      \settocdepth{2}
+\settocdepth{2}
 
-
-
-\course{1.2}{Lineare Algebra}%%% 
+\course{1.2}{Learning from Data}%%% 
 \begin{coursetitle}
-  \centerline{Learning from Data aka i++} 
+  \centerline{Learning from Data} 
   \bigskip
-  \Large \centerline{Mathematische Methoden des digitalen Zeitalters}
+  \Large \centerline{Mathematische Theorien und Methoden für das digitale Zeitalter}
   \bigskip
- %\includegraphics[width=.9\columnwidth]{volleyball.jpg}
+ \includegraphics[width=.9\columnwidth]{media/Titelbild-fehlt.png}
  \label{fig:meinbild}
   \bigskip
 \end{coursetitle}
@@ -78,9 +74,13 @@
 %label{fig:meinbild}
 %\end{center}
 %\end{dsafigure}
+%\input{Theorieteil/Ana/Doku}
+%\input{Theorieteil/LinA/LinAVektoren}
+%\input{Theorieteil/Optimierung/Inhalt-OptimierungLennart}
+%\input{Theorieteil/Optimierung/Inhalt-OptimierungLukasL}
+%\input{Theorieteil/Optimierung/Inhalt-OptimierungPatrice}
 
-
-
+\input{Theorieteil/ML/ML}
 
 %\input{Kapitel_LineareAlgebra}
 
