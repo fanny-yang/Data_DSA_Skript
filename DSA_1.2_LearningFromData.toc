@@ -1,13 +1,17 @@
 \select@language {ngerman}
 \setcounter {tocdepth}{2}
-\contentsline {chapter}{\numberline {1.2}Learning from Data}{8}
-\contentsline {section}{\numberline {1}Machine Learning}{8}
-\contentsline {subsection}{\numberline {1.1}Support Vector Machines}{8}
-\contentsline {subsubsection}{\numberline {1.1.1}Soft Margin SVMs}{9}
-\contentsline {section}{\numberline {2}Neuronale Netze}{9}
-\contentsline {subsection}{\numberline {2.1}Einf\IeC {\"u}hrung}{9}
-\contentsline {subsection}{\numberline {2.2}SVMs als Neuronale Netze}{9}
-\contentsline {subsection}{\numberline {2.3}Lineare Regression}{9}
-\contentsline {subsection}{\numberline {2.4}Deep Learning}{9}
-\contentsline {subsection}{\numberline {2.5}Convolutional Neuronal Networks}{9}
+\contentsline {chapter}{\numberline {2}Learning from Data}{7}
+\contentsline {section}{\numberline {1}Aus der Kursbeschreibung}{7}
+\contentsline {section}{\numberline {2}Vektoren}{7}
+\contentsline {subsection}{\numberline {2.1}Vektor- \& Unterraum}{7}
+\contentsline {subsection}{\numberline {2.2}Span}{7}
+\contentsline {subsection}{\numberline {2.3}Basis \& Dimension}{7}
+\contentsline {subsection}{\numberline {2.4}Lineare Unabh\"angigkeit}{8}
+\contentsline {subsection}{\numberline {2.5}Norm und Skalarprodukt}{8}
+\contentsline {section}{\numberline {3}Lineare Abbildungen}{9}
+\contentsline {subsection}{\numberline {3.1}Matrix}{9}
+\contentsline {subsection}{\numberline {3.2}Matrix-Vektor-Multiplikation}{9}
+\contentsline {subsection}{\numberline {3.3}Matrix-Matrix-Multiplikation}{9}
+\contentsline {section}{\numberline {4}Analysis}{10}
+\contentsline {section}{\numberline {5}Wahrscheinlichkeitstheorie}{12}
 \contentsfinish 
