@@ -1,0 +1,75 @@
+%\documentclass{article}
+
+%\usepackage[ngerman]{babel}
+%\usepackage[utf8]{inputenc}
+%\usepackage{color}
+%\usepackage[a4paper,lmargin={2cm},rmargin={2cm},
+%tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\usepackage{multicol}
+%\usepackage{amsthm}
+
+%\setlength{\columnsep}{1cm}
+%\newtheorem{defi}{Definition}
+%\newtheorem*{defi*}{Definition}
+
+%\begin{document}
+%\begin{multicols*}{2}
+
+\section{Vektoren}
+In der linearen Algebra nehmen Vektoren eine zentrale Rolle ein. Ein Vektor wird in der Schule als eine Menge an Pfeilen gelehrt, die parallel, gleichgerichtet und gleich lang sind. Betrachten wir jedoch nicht nur den dreidimensionalen Raum, sondern $\mathbb{R}\textsuperscript{n}$, so ist die Vorstellung eines Pfeils nicht immer m\"oglich . Dies bedingt die Notwendigkeit einer anderen Definition.
+\newline
+\indent Ein Vektor ist eine Aufz\"ahlung von Objekten und beschreibt eine Verschiebung. Eine solche Aufz\"ahlung entspricht der Definition eines Tupels. Entscheidend bei Tupeln ist die Reihenfolge der Objekte, die auch mehrfach vorkommen k\"onnen.
+\begin{equation*}
+\text{n-Tupel } (a_1,a_2,\dots,a_n)
+\end{equation*}
+\subsection{Vektor- \& Unterraum}
+Vektoren bilden die Elemente eines Vektorraumes V. Addieren wir zwei Vektoren eines Vektorraumes oder multiplizieren wir sie mit einem Skalar, so ist die Summe bzw. das Produkt ebenfalls ein Element des Vektorraumes.
+\begin{align*}
+(1)\text{ }u, v \in V,\text{ } u+v \in V  \\
+(2)\text{ }u \in V, \lambda \in \mathbb{R} ,\text{ }\lambda u \in V
+\end{align*}
+Ein Unterraum ist eine Teilmenge eines Vektorraumes. Es gelten f\"ur sie die oben genannten Eigenschaften eines Vektorraumes.
+\begin{align*}
+U\subseteq V, \text{wenn gilt:}	\\
+(1)\text{ }u, v \in U,\text{ } u+v \in U  \\
+(2)\text{ }u \in U, \lambda \in \mathbb{R} ,\text{ }\lambda u \in U
+\end{align*}
+\subsection{Span}
+Alle m\"oglichen Vektoren eines Vektorraumes werden durch den sogenannten Span dargestellt. Der Span ist die Menge aller m\"oglichen Linearkombinationen der Basisvektoren.
+\begin{align*}
+\text{Span }(V_1,\dots,V_k) = \{U \in V : U = \lambda_1v_1+\dots+\lambda_kv_k\} \\
+\text{ mit } \lambda_1,\dots,\lambda_k \in \mathbb{R}
+\end{align*}
+\subsection{Basis \& Dimension}
+Die Menge der Basisvektoren wird Basis eines Vektorraumes genannt. Jeder Vektorraum besitzt eine Dimension p, die durch die Anzahl der Basisvektoren bestimmt wird.
+\subsubsection*{\"Ubung}
+Beweise, dass ein Span immer ein Vektorraum ist.
+\begin{proof}
+Wir nehmen an: 
+\begin{align*}
+U \in Span(V_1,\dots,V_k)\\
+V \in Span(V_1,\dots,V_k)\\
+\\
+U = \lambda_1V_1+\dots+\lambda_kV_k\\
+V = \alpha_1V_1+\dots+\alpha_kV_k\\
+\end{align*}
+Additionsregelung bei Vektorr\"aumen (s.(1))
+\begin{align*}
+	&W_1 = U+V\\
+	&=\lambda_1V_1+\dots+\lambda_kV_k+\alpha_1V_1+\dots+\alpha_kV_k\\
+	&= (\lambda_1\alpha_1)V_1+\dots+(\lambda_k\alpha_k)V_k
+\end{align*}
+Multiplikationsregelung bei Vektorr\"aumen (s.(2))
+\begin{align*}
+	&W_2 = \lambda_1V_1+\dots+\lambda_kV_k\\
+	&\lambda W_2= (\lambda \lambda_1)V_1+\dots+(\lambda\lambda_k)V_k
+\end{align*}
+\end{proof}
+\subsection{Lineare Unabh\"angigkeit}
+$v_1,\dots,v_k$ mit $v_i \in V$ sind linear unabh\"angig, falls $\lambda_iv_i+\dots+\lambda_kv_k = 0$ nur f\"ur $\lambda_i=\dots=\lambda_k= 0$ gilt. 
+
+%\end{multicols*}
+%\end{document}
