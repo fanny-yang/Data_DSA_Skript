@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\usepackage{ dsfont }
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+%\usepackage{mathtools}
+
+\begin{document}
+
+\section{Analysis}
+
+
+Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für Optimierung und somit auch von großer Bedeutung beim Maschinellen Lernen. \\
+Im Kurs war f\"ur uns besonders die Stetigkeit und Differenzierbarkeit von ein- und mehrdimensionalen Funktionen wichtig. \\
+Um uns Klarheit \"uber diesen Bereich der Mathematik zu verschaffen, l\"osten wir - unter anderem - die folgenden Aufgaben.
+
+\vspace{15pt}
+
+\textbf{Aufgabe 1:} \\
+Aufgabenstellung:
+Beweise, dass eine Funktion $f:\mathds{R} \rightarrow \mathds{R}$, welche differenzierbar ist an der Stelle $x \in R$ ist auch stetig an bei $x \in R$ ist.\\ %Satz ist noch nicht optimal formuliert
+
+Lösung:
+
+Zuerst überlegen wir, welche Bedingungen bereits in der Aufgabenstellung gegeben sind. \\
+Eine Funktion ist an der Stelle x differenzierbar, wenn gilt:\\ \\
+
+$f(x+h)=f(x)+l_x(h)+ r(h)$ mit $\lim\limits_{h \rightarrow 0} \frac{r(h)}{h}= 0$ \\ \\
+
+Diese Funktion wäre außerdem stetig, wenn $\lim\limits_{w \rightarrow x} f(w)=f(x)$.\\
+Da die Funktion $f(x+h)$ äquivalent zur Funktion $f(w)$ sein soll, ersetzen wir in der Bedingung für die Stetigkeit $f(w)$ mit der gesamten Funktion von $f(x+h)$.  
+Somit gilt: \\ \\
+$\lim\limits_{h \rightarrow 0} f(x)+l_x(h)+r(h)=f(x)$. \\ \\
+
+Damit die Bedingung der Stetigkeit erfüllt ist, muss der Grenzwert dieser Funktion gleich dem Funktionswert sein. Um diese Bedingung zu erfüllen, müssen wir beweisen, dass die Teile der Funktion $l_x(h)$ und $r(h)$ gegen Null gehen. Wir beginnen mit dem Teil $r(h)$.  Würde $r(h)$ nicht gegen Null gehen, so würde $\frac{r(h)}{h}$ nicht gegen Null gehen. Die Funktion $r(h)$ muss gegen Null gehen, da die Bedingung der Differenzierbarkeit gilt. Jetzt müssen wir zeigen, dass $l_x(h)$ auch gegen Null geht. Dieser Teil der Funktion kann auch als $f'(x) \cdot h$ dargestellt werden. Da wir annehmen, dass h gegen Null geht und somit ein Faktor von $l_x(h)$ Null ist, wird die Funktion Null. Damit ist bewiesen, dass $\lim\limits_{h \rightarrow 0} f(x)=f(x)$. \\
+
+\vspace{15pt}
+
+\textbf{Aufgabe 3:}\\
+Bei der nachfolgenden Aufgabe soll bewiesen werden, dass es immer möglich ist für eine differenzierbare Funktion f einen Skalar $\lambda$ zu finden, damit folgende Aussage gilt: \\ \\
+$(1) f(x + \lambda \nabla f(x)) \leq f(x)$ \\ \\
+Manche von Ihnen werden sich jetzt fragen, was das Zeichen $\nabla$ bedeutet. Es steht für den Gradienten, welcher im Grunde die Ableitung einer Funktion darstellt.
+Dadurch lässt sich die Ungleichung (1) in folgende Form umwandeln: \\ \\
+$f(x) + Df(x)h + r(h) \leq f(x)$  \\ \\
+Hierbei ist h = $\lambda \nabla$ f(x) und r(h) das Restglied %Muss eventuell erklärt werden 
+. \\
+Das Ganze kann man noch weiter umschreiben, indem man das Skalarprodukt bildet: \\ \\
+$f(x) + \lambda <\nabla f(x), \nabla f(x)> + r(h) \leq f(x)$ \\ \\
+Anschließend kann man von der Regel Gebrauch machen, dass sich ein Skalarprodukt, das in der Form $<u,u>$ vorliegt, in die Auspr\'agung der Euklidischen Norm von $||u||^2$ umgewandelt werden kann. \\
+Daraus folgt: \\ \\
+$f(x) + \lambda \cdot || \nabla f(x)||^2 + r(h) \leq f(x)$ \\ \\
+Um nun die obige Ungleichung (1) zu beweisen, muss man zeigen, dass \\ $\lambda ||\nabla f(x)||^2 + r(h) \leq 0$ ist.\\
+Dafür wird $\lambda$ ausgeklammert. Anschließend erhält man:\\
+Da $||\nabla f(x)||$ quadriert wird, wird dieser Term automatisch positiv. Da man den gesamten Term aber negativ haben will, wählt man $\lambda < 0.$ Schließlich kennt jeder die Regel, dass ein Produkt negativ wird, falls eine ungerade Zahl von Faktoren negativ ist. Da wir $\lambda$ negativ gewählt haben, muss \\ $||\nabla f(x)||^2$$(2) \lambda (||\nabla f(x)||^2 + \frac{r(h)}{\lambda}$ positiv sein.\\
+Bei $||\nabla f(x)||^2||$ stellt dies aus den eben genannten Gr\"unden kein Problem dar. Deswegen muss nur noch gezeigt werden, dass es mindestens einen Wert von $r(h)$ gibt, der gr\"oßer oder gleich 0 ist. Ansonsten würde der Wert in der Klammer negativ werden k\"onnen und damit die unspr\"ungliche Aussage (1) widerlegen.\\
+Damit wir zeigen k\"onnen, dass $r(h) >= 0$ ist, formten wir zuerst den Term (2) um:\\
+
+$\lambda (||\nabla f(x)||^2 + \frac{r(h)}{\lambda})$ \\
+
+$\Leftrightarrow \lambda(||\nabla f(x)||^2 + \frac{r(\lambda \nabla f(x))}{\lambda})$ \\
+
+Bei dieser Umformung wurde h wieder mit $\lambda\nabla f(x)$ ersetzt.
+
+$\leftrightarrow \lambda ||\nabla f(x)|| \cdot (||\nabla f(x)|| + \frac{r(\lambda \nabla f(x))}{\lambda || f(x)||})$
+
+
+Durch diese Umformungen schlussfolgerten wir, dass f\"ur die Funktion $h(x)$ folgendes gelten muss:\\
+(3) $h(\lambda)=||\nabla f(x)|| + \frac{r(\lambda\nabla f(x))}{\lambda||\nabla f(x)||} >=0$ \\
+
+Da in $||\nabla f(x)$ kein $\lambda$ steht ist dieser Term konstant. Gleichzeitig wird durch das Bilden der euklidischen Norm festgelegt, dass ein Wert größe/gleich null vorliegt. \\ %der Satz ist noch nicht wiklich schön formuliert
+Deswegen muss nur noch gezeigt werden, dass dder zweite Summand ebenfalls positiv werden kann. Dazu bildeten wir den Grenzwert. \\ %Die Zeitformen stimmen sehr oft nicht
+$\lim\limits_{h \rightarrow 0}{\frac{r(\lambda \nabla f(x))}{\lambda ||\nabla f(x)||}} = \frac{r(\lambda \nabla f(x))}{||\lambda  \nabla f(x)||}$ \\ %hier kommt noch kein h vor. Umschreiben?
+
+Man kann $\lambda \nabla f(x)$ wieder durch h ersetzen, woraus folgt: \\
+$\lim\limits_{h \rightarrow 0} \frac{r(h)}{h}$ \\
+
+Der Grenzwert des Restbetrages strebt gegen null. Daraus lässt sich schließen, dass es einen Punkt gibt, ab welchem die Ungleichung der Funktion $h(\lambda)$ (3) erfüllt ist und damit auch die anfängliche Aussage (1). \\ %ist hier h(\lambda) und (3) beies nötig?
+\vspace{15pt}
+
+\textbf{Aufgabe 6:} \\
+
+In der n\"achsten Aufgabe soll gezeigt werden, dass zwei differenzierbare Funktionen, die vom $\mathds{R}^m$ in den $\mathds{R}$ abgebildet werden, mit $h(x) = f(x) \cdot g(x)$ die Produktregel bedienen. Diese lautet: $Dh(x) = f(x) \cdot Dg(x) + Df(x) \cdot g(x)$.
+
+
+\end{document}
+
+
