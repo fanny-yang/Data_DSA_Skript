@@ -1,0 +1,5 @@
+*.tex.*preview*
+*.aux
+*.toc
+*.synctex.*
+*.log

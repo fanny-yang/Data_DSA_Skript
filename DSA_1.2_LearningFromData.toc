@@ -1,0 +1,4 @@
+\select@language {english}
+\setcounter {tocdepth}{2}
+\contentsfinish 
+\contentsline {chapter}{\numberline {1.2}Lineare Algebra}{8}
