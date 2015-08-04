@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.22)  4 AUG 2015 18:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.22)  4 AUG 2015 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,12 +749,15 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \colbreak@box=\box60
 \multicol@sort@counter=\count132
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup8
 \symAMSb=\mathgroup9
 LaTeX Info: Redefining \frak on input line 111.
-)
+))
 (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
@@ -1090,25 +1093,25 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 (./DSA_1.2_LearningFromData.aux)
 \openout1 = `DSA_1.2_LearningFromData.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 50.
  (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 48.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 50.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1170,7 +1173,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 48.
+LaTeX Info: Redefining \microtypecontext on input line 50.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1218,41 +1221,41 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 48.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 48.
+(Font)              `operators' in the math version `normal' on input line 50.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 48.
+(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 50.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 48.
+(Font)              `operators' in the math version `bold' on input line 50.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 48.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 50.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 48.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 48.
+(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 48.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 48.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 48.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 48.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 48.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 48.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 48.
+(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 48.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 48.
+(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 48.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 48.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 48.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 48.
+(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 50.
 ABD: EveryShipout initializing macros
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -1266,7 +1269,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 53.
+(scrreprt)              by `\normalfont \bfseries ' on input line 55.
 
 (./DSA_1.2_LearningFromData.toc
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
@@ -1346,13 +1349,13 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 64.
+(scrreprt)              by `\normalfont \bfseries ' on input line 66.
 
 <media/Titelbild-fehlt.png, id=12, 370.0224pt x 255.8358pt>
 File: media/Titelbild-fehlt.png Graphic file (type png)
 
 <use media/Titelbild-fehlt.png>
-Package pdftex.def Info: media/Titelbild-fehlt.png used on input line 69.
+Package pdftex.def Info: media/Titelbild-fehlt.png used on input line 71.
 (pdftex.def)             Requested size: 195.2557pt x 135.00285pt.
  (./Theorieteil/Einleitung/Kursbeschreibung.tex
 
@@ -1788,25 +1791,6 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 27.
 
-! Display math should end with $$.
-<to be read again> 
-                    
-l.36 ...\sum_{i=1}^n \mathds{P} (\mathds{E}_{i})$ 
-                                                  f\"ur alle $\mathds{E}_{1}...
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.37 	\end{equation*}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 LaTeX Warning: Command \O invalid in math mode on input line 41.
 
@@ -1861,36 +1845,15 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 81.
 
-! Display math should end with $$.
-<to be read again> 
-                   \protect 
-l.89 ...al{X}} X* \mathds{P} (X=x) wobei $\mathcal
-                                                  {X} $
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
 
-
-! LaTeX Error: \mathcal allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 ...al{X}} X* \mathds{P} (X=x) wobei $\mathcal
-                                                  {X} $
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.90 \end{equation*}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Overfull \hbox (1.9433pt too wide) detected at line 90
+\U/dsrom/m/n/10 E\U/euf/m/n/10 [\OML/lmm/m/it/10 X\U/euf/m/n/10 ] = [] \OML/lmm
+/m/it/10 X\U/euf/m/n/10 (\OML/lmm/m/it/10 i\U/euf/m/n/10 ) \OMS/lmsy/m/n/10 ^^C
+ \U/dsrom/m/n/10 P\U/euf/m/n/10 (\OML/lmm/m/it/10 i\U/euf/m/n/10 ) = [] \OML/lm
+m/m/it/10 X \OMS/lmsy/m/n/10 ^^C \U/dsrom/m/n/10 P\U/euf/m/n/10 (\OML/lmm/m/it/
+10 X \U/euf/m/n/10 = \OML/lmm/m/it/10 x\U/euf/m/n/10 )\OML/lmm/m/it/10 wobei\OM
+S/lmsy/m/n/10 X
+ []
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -1968,26 +1931,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
  []
 
-! Undefined control sequence.
-l.171 ...1}=i} \cap {X_{2}=l-i}) = \sum_{i=-\intfy
-                                                  }^{\intfy} \mathds{P} ({X_...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.171 ...p {X_{2}=l-i}) = \sum_{i=-\intfy}^{\intfy
-                                                  } \mathds{P} ({X_{1} = i})...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (95.35437pt too wide) detected at line 172
+Overfull \hbox (103.21552pt too wide) detected at line 172
 \U/dsrom/m/n/10 P\U/euf/m/n/10 ([]) = [] \U/dsrom/m/n/10 P\U/euf/m/n/10 ([] \OM
 S/lmsy/m/n/10 \ []\U/euf/m/n/10 ) = [] \U/dsrom/m/n/10 P\U/euf/m/n/10 ([]) \OMS
 /lmsy/m/n/10 ^^C \U/dsrom/m/n/10 P\U/euf/m/n/10 ([])
@@ -2007,49 +1952,377 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 177.
 
+) (./Theorieteil/ML/ML.tex
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 2.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 9.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 13.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 16.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 20.
+
+
+LaTeX Warning: Reference `SVM2' on page 13 undefined on input line 30.
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 30--31
+[]\T1/lmr/m/n/10 (+20) Durch die Fea-tu-res ist es dann mög-lich
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 30--31
+\T1/lmr/m/n/10 (+20) dimensionalen Ko-or-di-na-ten-sys-tem zu-zu-ord-nen.
+ []
+
+[13] <media/Figure_SimpleSVM.pdf, id=56, 223.53111pt x 219.1357pt>
+File: media/Figure_SimpleSVM.pdf Graphic file (type pdf)
+
+<use media/Figure_SimpleSVM.pdf>
+Package pdftex.def Info: media/Figure_SimpleSVM.pdf used on input line 35.
+(pdftex.def)             Requested size: 227.62206pt x 223.161pt.
+
+Overfull \hbox (10.66978pt too wide) in paragraph at lines 35--36
+ [] 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 36.
+
+
+LaTeX Warning: Reference `SVM2' on page 14 undefined on input line 42.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 82.
+
+<media/Figure_SVM.pdf, id=57, 223.53111pt x 219.1357pt>
+File: media/Figure_SVM.pdf Graphic file (type pdf)
+
+<use media/Figure_SVM.pdf>
+Package pdftex.def Info: media/Figure_SVM.pdf used on input line 96.
+(pdftex.def)             Requested size: 227.62206pt x 223.161pt.
+
+Overfull \hbox (10.66978pt too wide) in paragraph at lines 96--97
+ [] 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 97.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 97.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 97.
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 103.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 106.
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 107--110
+\T1/lmr/m/n/10 (+20) Inspiriert von un-se-rem Ver-ständ-nis, wie das
+ []
+
+[14 <./media/Figure_SimpleSVM.pdf>]
+<media/Figure_NN.pdf, id=72, 192.03746pt x 320.0748pt>
+File: media/Figure_NN.pdf Graphic file (type pdf)
+
+<use media/Figure_NN.pdf>
+Package pdftex.def Info: media/Figure_NN.pdf used on input line 113.
+(pdftex.def)             Requested size: 227.62206pt x 379.39435pt.
+
+Overfull \hbox (10.66978pt too wide) in paragraph at lines 113--114
+ [] 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 114.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 120.
+
+
+Overfull \hbox (14.8849pt too wide) in paragraph at lines 131--131
+[] 
+ []
+
+[15 <./media/Figure_SVM.pdf> <./media/Figure_NN.pdf>]
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 134.
+
+<media/Figure_ConvNN.pdf, id=131, 192.03746pt x 263.1692pt>
+File: media/Figure_ConvNN.pdf Graphic file (type pdf)
+
+<use media/Figure_ConvNN.pdf>
+Package pdftex.def Info: media/Figure_ConvNN.pdf used on input line 137.
+(pdftex.def)             Requested size: 227.62206pt x 311.94243pt.
+
+Overfull \hbox (10.66978pt too wide) in paragraph at lines 137--138
+ [] 
+ []
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 138.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 148.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 171.
+
+
+Overfull \hbox (4.3482pt too wide) in paragraph at lines 178--178
+[] 
+ []
+
 )
 No file DSA_1.2_LearningFromData.bbl.
-[13
-
-] (./DSA_1.2_LearningFromData.aux)
+[16 <./media/Figure_ConvNN.pdf>] (./DSA_1.2_LearningFromData.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 17221 strings out of 493304
- 300814 string characters out of 6139871
- 444042 words of memory out of 5000000
- 20112 multiletter control sequences out of 15000+600000
- 65382 words of font info for 110 fonts, out of 8000000 for 9000
+ 17533 strings out of 493304
+ 304539 string characters out of 6139871
+ 444163 words of memory out of 5000000
+ 20395 multiletter control sequences out of 15000+600000
+ 73202 words of font info for 134 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  65i,15n,71p,839b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/font
-s/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/euler/euex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eu
-ler/eusm7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-csc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on DSA_1.2_LearningFromData.pdf (8 pages, 290612 bytes).
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/euler/euex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/euler/eufm5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/euler/eusm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/euler/eusm7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
+i5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/font
+s/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb>
+Output written on DSA_1.2_LearningFromData.pdf (11 pages, 419037 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 246 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16914 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 17446 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -14,4 +14,16 @@
 \contentsline {subsection}{\numberline {3.3}Matrix-Matrix-Multiplikation}{9}
 \contentsline {section}{\numberline {4}Analysis}{10}
 \contentsline {section}{\numberline {5}Wahrscheinlichkeitstheorie}{12}
+\contentsline {section}{\numberline {6}Machine Learning}{13}
+\contentsline {subsection}{\numberline {6.1}Klassifikation und Regression}{13}
+\contentsline {subsubsection}{\numberline {6.1.1}Klassifikation}{13}
+\contentsline {subsubsection}{\numberline {6.1.2}Regression}{13}
+\contentsline {subsection}{\numberline {6.2}Support Vector Machines}{13}
+\contentsline {subsubsection}{\numberline {6.2.1}Soft Margin SVMs}{14}
+\contentsline {section}{\numberline {7}Neuronale Netze}{14}
+\contentsline {subsection}{\numberline {7.1}Einf\IeC {\"u}hrung}{14}
+\contentsline {subsection}{\numberline {7.2}Deep Learning}{15}
+\contentsline {subsection}{\numberline {7.3}Convolutional Neural Networks}{16}
+\contentsline {subsection}{\numberline {7.4}SVMs als Neuronale Netze}{16}
+\contentsline {subsection}{\numberline {7.5}Lineare Regression}{16}
 \contentsfinish 

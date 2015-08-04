@@ -1,6 +1,3 @@
-%\newcommand{\media}{../../media/}
-
-
 \section{Machine Learning}
 \author{Farhadiba Mohammed, Dennis Kempf, David Steinmann}
 Machine Learning ist ein Konzept, bei dem der Computer durch Algorythmen in der Lage ist Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmässigkeiten, durch die er dann in der Lage ist, neue, ihm unbekannte Datensätze bezüglich eines bestimmten Problems zu lösen.
@@ -35,7 +32,7 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 
 \begin{dsafigure}
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{\media svm.jpg}
+	\includegraphics[width=0.5\textwidth]{\media Figure_SimpleSVM}
 	\caption{Da der Abstand zwischen den unterschiedlich klassifizierten Datensätzen maximiert werden soll, gilt die rote und nicht die blaue Linie als Trennelement.}
 	\label{SVM1}
 	\end{center}
@@ -153,14 +150,14 @@ Wir haben bereits SVMs kennengelernt. Im folgenden wird verdeutlicht, wie man di
 
 \begin{align*}
 \min\limits_{b,w,z} \norm{w} + C  \sum_{i=1}^{n} z
-\end {align*}
+\end{align*}
 
 sodass:
 
 \begin{align*}
-&y_i (<w,x> - b) \geq 1 - z_i ; z_i \geq 0 \\
-\implies &z_i \geq 1- y_i (\langle w,x \rangle - b) \text{ und } z_i \geq 0
-\end {align*}
+&y_i (\langle w,x \rangle - b) \geq 1 - z_i ; z_i \geq 0 \\
+\Rightarrow &z_i \geq 1- y_i (\langle w,x \rangle - b) \text{ und } z_i \geq 0
+\end{align*}
 
 
 \begin{align*}

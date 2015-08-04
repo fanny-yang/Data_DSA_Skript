@@ -7,6 +7,7 @@
 \usepackage{multicol}
 
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+\usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{tikz}
 \usepackage{dsfont}
@@ -32,6 +33,7 @@
 %\setlength{\belowdisplayskip}{5pt}
 
 \newcommand{\media}{media/}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 %%%%%Mathe-Definitionen
 \newtheorem{Def}{Definition}
@@ -88,17 +90,8 @@
 \input{Theorieteil/Ana/Analysis}
 \input{Theorieteil/Wkeit/Wahrscheinlichkeitstheorie}
 
-%\input{Theorieteil/Optimierung/Inhalt-OptimierungLennart}
-%\input{Theorieteil/Optimierung/Inhalt-OptimierungLukasL}
-%\input{Theorieteil/Optimierung/Inhalt-OptimierungPatrice}
 
-%\input{Theorieteil/ML/ML}
-
-%\input{Kapitel_LineareAlgebra}
-
-%\input{Kapitel-2-Kapitelüberschrift}
-%\input{Kapitel-3-Kapitelüberschrift}
-%usw.
+\input{Theorieteil/ML/ML}
 
 %\nocite{*} % alle referenzen anzeigen, sogar wenn sie nicht im text zitiert sind
 \bibliography{lit}{}
