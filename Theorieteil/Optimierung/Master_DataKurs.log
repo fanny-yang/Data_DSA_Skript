@@ -1,59 +1,47 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  4 AUG 2015 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.7.26)  4 AUG 2015 17:47
 entering extended mode
-**C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Maste
-r_DataKurs.tex
-
-(C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Master
-_DataKurs.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\newlay
-out.cls
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Master_DataKurs.tex
+(./Master_DataKurs.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./newlayout.cls
 Document Class: newlayout 2007/09/19 LaTeX2e BuB New Layout
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrreprt.cls
-Document Class: scrreprt 2015/07/02 v3.18 KOMA-Script document class (report)
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrkbase.sty
-Package: scrkbase 2015/07/02 v3.18 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbase.sty
-Package: scrbase 2015/07/02 v3.18 KOMA-Script package (KOMA-Script-independent 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2015/05/06 v3.17a KOMA-Script document class (report)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2015/05/06 v3.17a KOMA-Script package (KOMA-Script-dependent 
 basics and keyval usage)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2015/05/06 v3.17a KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrlfile.sty
-Package: scrlfile 2015/07/02 v3.18 KOMA-Script package (loading files)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2015/05/06 v3.17a KOMA-Script package (loading files)
 
-Package scrlfile, 2015/07/02 v3.18 KOMA-Script package (loading files)
+Package scrlfile, 2015/05/06 v3.17a KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-)))
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\tocbasic.sty
-Package: tocbasic 2015/07/02 v3.18 KOMA-Script package (handling toc-files)
+))) (/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2015/05/06 v3.17a KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 125.
+(tocbasic)             for `toc' on input line 124.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 126.
+(tocbasic)             for `lof' on input line 125.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 127.
-Package tocbasic Info: defining new hook before heading of `' on input line 158
+(tocbasic)             for `lot' on input line 126.
+Package tocbasic Info: defining new hook before heading of `' on input line 155
 2.
 Package scrreprt Info: You've used standard option `10pt'.
 (scrreprt)             This is correct!
@@ -72,17 +60,15 @@ Class scrreprt Warning: You've used obsolete option `smallheadings'.
 
 Class scrreprt Info: Switching compatibility level to `first'.
 Class scrreprt Info: File `scrsize10pt.clo' used to setup font sizes on input l
-ine 2242.
-
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrsize10pt.cl
-o
-File: scrsize10pt.clo 2015/07/02 v3.18 KOMA-Script font size class option (10pt
+ine 2149.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+File: scrsize10pt.clo 2015/05/06 v3.17a KOMA-Script font size class option (10p
+t)
 )
-)
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\typearea.sty
-Package: typearea 2015/07/02 v3.18 KOMA-Script package (type area)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2015/05/06 v3.17a KOMA-Script package (type area)
 
-Package typearea, 2015/07/02 v3.18 KOMA-Script package (type area)
+Package typearea, 2015/05/06 v3.17a KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -115,7 +101,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 42.0pt
 (typearea)              \baselineskip   = 12.0pt
-(typearea)              on input line 1506.
+(typearea)              on input line 1485.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -124,26 +110,27 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
+LaTeX Info: Redefining \textsubscript on input line 4417.
 \abovecaptionskip=\skip46
 \belowcaptionskip=\skip47
 \c@pti@nb@sid@b@x=\box26
 \c@figure=\count87
 \c@table=\count88
 \bibindent=\dimen102
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -292,8 +279,8 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -323,8 +310,8 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -347,34 +334,34 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
@@ -382,10 +369,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -399,7 +386,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks17
 \MT@count=\count90
@@ -408,8 +395,7 @@ LaTeX Info: Redefining \textls on input line 766.
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
 \MT@listname@count=\count91
 
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype-pdftex
-.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
@@ -418,21 +404,21 @@ LaTeX Info: Redefining \lslig on input line 915.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count92
@@ -447,8 +433,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen112
 \Gm@layoutvoffset=\dimen113
 \Gm@dimlist=\toks18
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+)
 
 Class scrreprt Warning: Usage of package `fancyhdr' together
 (scrreprt)              with a KOMA-Script class is not recommended.
@@ -457,7 +442,7 @@ Class scrreprt Warning: Usage of package `fancyhdr' together
 (scrreprt)              Nevertheless, using requested
 (scrreprt)              package `fancyhdr' on input line 68.
 
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip49
 \f@ncyO@elh=\skip50
 \f@ncyO@erh=\skip51
@@ -468,7 +453,7 @@ Class scrreprt Warning: Usage of package `fancyhdr' together
 \f@ncyO@olf=\skip56
 \f@ncyO@orf=\skip57
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\euler\euler.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/euler/euler.sty
 Package: euler 1995/03/05 v2.5
 
 Package: `euler' v2.5 <1995/03/05> (FJ and FMi)
@@ -572,24 +557,24 @@ LaTeX Font Info:    Redeclaring math accent \breve on input line 250.
 LaTeX Font Info:    Redeclaring math accent \bar on input line 251.
 LaTeX Font Info:    Redeclaring math accent \dot on input line 252.
 LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks19
 \ex@=\dimen114
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen115
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count95
@@ -630,7 +615,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen123
 \lightrulewidth=\dimen124
@@ -650,12 +635,10 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count110
 \@thisrulewidth=\dimen135
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\dsafig
-ure.sty
+) (./dsafigure.sty
 \df@insert=\insert233
 \df@topthis=\box29
 \df@topnext=\box30
@@ -665,21 +648,21 @@ ure.sty
 \df@wbotthis=\box34
 \df@index=\count111
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titletoc.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2011/12/15 v1.6 TOC entries
 \ttl@leftsep=\dimen136
 )
 \c@bibcounter=\count112
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\theorem.sty"
-Package: theorem 1995/11/23 v2.2c Theorem extension package (FMi)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/theorem.sty
+Package: theorem 2014/10/28 v2.2c Theorem extension package (FMi)
 \theorem@style=\toks24
 \theorem@bodyfont=\toks25
 \theorempreskipamount=\skip61
 \theorempostskipamount=\skip62
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\thp.sty"
-File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/thp.sty
+File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
 ))
 \c@hauptsatz=\count113
 \c@satz=\count114
@@ -692,47 +675,66 @@ File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
 \c@beispiel=\count121
 \c@definition=\count122
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\ngermanb.ldf"
-Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
+(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count123
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count123
+\c@ALG@rem=\count124
+\c@ALG@nested=\count125
+\ALG@tlm=\skip63
+\ALG@thistlm=\skip64
+\c@ALG@Lnr=\count126
+\c@ALG@blocknr=\count127
+\c@ALG@storecount=\count128
+\c@ALG@tmpcounter=\count129
+\ALG@tmplength=\skip65
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+\babel@savecnt=\count130
 \U@D=\dimen137
 )
 \l@naustrian = a dialect from \language\l@ngerman 
-Package babel Info: Making " an active character on input line 92.
-))
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\misc.s
-ty
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
+))) (./misc.sty
 Package: misc 2004/09/01 Verschiedenes ...
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count124
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count131
 \mult@box=\box35
 \multicol@leftmargin=\dimen138
-\c@unbalance=\count125
-\c@collectmore=\count126
-\doublecol@number=\count127
-\multicoltolerance=\count128
-\multicolpretolerance=\count129
+\c@unbalance=\count132
+\c@collectmore=\count133
+\doublecol@number=\count134
+\multicoltolerance=\count135
+\multicolpretolerance=\count136
 \full@width=\dimen139
 \page@free=\dimen140
 \premulticols=\dimen141
 \postmulticols=\dimen142
-\multicolsep=\skip63
-\multicolbaselineskip=\skip64
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
 \partial@page=\box36
 \last@line=\box37
+\maxbalancingoverflow=\dimen143
 \mult@rightbox=\box38
 \mult@grightbox=\box39
 \mult@gfirstbox=\box40
@@ -754,47 +756,47 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box56
 \@tempa=\box57
 \@tempa=\box58
-\c@columnbadness=\count130
-\c@finalcolumnbadness=\count131
-\last@try=\dimen143
-\multicolovershoot=\dimen144
-\multicolundershoot=\dimen145
+\c@columnbadness=\count137
+\c@finalcolumnbadness=\count138
+\last@try=\dimen144
+\multicolovershoot=\dimen145
+\multicolundershoot=\dimen146
 \mult@nat@firstbox=\box59
 \colbreak@box=\box60
-\multicol@sort@counter=\count132
+\mc@col@check@num=\count139
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup8
 \symAMSb=\mathgroup9
 LaTeX Info: Redefining \frak on input line 111.
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\blindtext\blindtext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
-Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count133
-\c@Blindtext=\count134
-\c@blind@countparstart=\count135
-\blind@countxx=\count136
-\blindtext@numBlindtext=\count137
-\blind@countyy=\count138
-\c@blindlist=\count139
-\c@blindlistlevel=\count140
-\c@blindlist@level=\count141
-\blind@listitem=\count142
-\c@blind@listcount=\count143
-\c@blind@levelcount=\count144
-\blind@mathformula=\count145
-\blind@Mathformula=\count146
-\c@blind@randomcount=\count147
-\c@blind@randommax=\count148
-\c@blind@pangramcount=\count149
-\c@blind@pangrammax=\count150
+\c@blindtext=\count140
+\c@Blindtext=\count141
+\c@blind@countparstart=\count142
+\blind@countxx=\count143
+\blindtext@numBlindtext=\count144
+\blind@countyy=\count145
+\c@blindlist=\count146
+\c@blindlistlevel=\count147
+\c@blindlist@level=\count148
+\blind@listitem=\count149
+\c@blind@listcount=\count150
+\c@blind@levelcount=\count151
+\blind@mathformula=\count152
+\blind@Mathformula=\count153
+\c@blind@randomcount=\count154
+\c@blind@randommax=\count155
+\c@blind@pangramcount=\count156
+\c@blind@pangrammax=\count157
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -833,16 +835,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\mdwtools\footnote.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box61
-\fn@width=\dimen146
+\fn@width=\dimen147
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks26
-\footnotemargin=\dimen147
-\c@pp@next@reset=\count151
+\footnotemargin=\dimen148
+\c@pp@next@reset=\count158
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -852,44 +854,89 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-\c@Def=\count152
-\c@Sat=\count153
-\c@Bew=\count154
-\c@Thm=\count155
+\c@Def=\count159
+\c@Sat=\count160
+\c@Bew=\count161
+\c@Thm=\count162
 
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Master
-_DataKurs.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 46.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+(./Master_DataKurs.aux)
+\openout1 = `Master_DataKurs.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 50.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
-\scratchdimen=\dimen148
+\scratchcounter=\count163
+\scratchdimen=\dimen149
 \scratchbox=\box62
-\nofMPsegments=\count157
-\nofMParguments=\count158
+\nofMPsegments=\count164
+\nofMParguments=\count165
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count159
-\MPscratchDim=\dimen149
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen150
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
 \everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-LaTeX Info: Redefining \microtypecontext on input line 46.
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \microtypecontext on input line 50.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -899,7 +946,8 @@ Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-cmr.cfg
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -942,41 +990,41 @@ Package microtype Warning: Unknown slot number of character
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 46.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 46.
+(Font)              `operators' in the math version `normal' on input line 50.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 46.
+(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 50.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 46.
+(Font)              `operators' in the math version `bold' on input line 50.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 46.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 50.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 46.
+(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 46.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 46.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 46.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 46.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 46.
+(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 46.
+(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 46.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 46.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 46.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 46.
+(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 50.
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\quotedblbase '
@@ -995,7 +1043,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 52.
+(scrreprt)              by `\normalfont \bfseries ' on input line 56.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1003,92 +1051,15 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                in font encoding `T1' in protrusion list 
 (microtype)                `cmr-T1'.
 
-
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Master
-_DataKurs.toc
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list 
-(microtype)                `cmr-T1'.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list 
-(microtype)                `cmr-T1'.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list 
-(microtype)                `cmr-T1'.
-
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 4.
-LaTeX Font Info:    Try loading font information for U+euf on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-euf.cfg
-File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
-
-)
-LaTeX Font Info:    Try loading font information for U+eus on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-eus.cfg
-File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
-)
-LaTeX Font Info:    Try loading font information for U+euex on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuex.fd"
-File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+(./Master_DataKurs.toc)
 \tf@toc=\write3
+\openout3 = `Master_DataKurs.toc'.
 
-[3
+ [3
 
 
 
-{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\quotedblbase '
@@ -1107,7 +1078,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 66.
+(scrreprt)              by `\normalfont \bfseries ' on input line 70.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1121,12 +1092,12 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                in font encoding `T1' in protrusion list 
 (microtype)                `cmr-T1'.
 
-<Grafik-TempKursfoto.jpg, id=8, 803.0pt x 812.03375pt>
+<Grafik-TempKursfoto.jpg, id=8, 192.72pt x 194.8881pt>
 File: Grafik-TempKursfoto.jpg Graphic file (type jpg)
 
 <use Grafik-TempKursfoto.jpg>
-Package pdftex.def Info: Grafik-TempKursfoto.jpg used on input line 71.
-(pdftex.def)             Requested size: 195.2557pt x 197.44455pt.
+Package pdftex.def Info: Grafik-TempKursfoto.jpg used on input line 75.
+(pdftex.def)             Requested size: 195.2557pt x 197.45099pt.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1146,7 +1117,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 86.
+(scrreprt)              by `\normalfont \bfseries ' on input line 90.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1155,10 +1126,12 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                `cmr-T1'.
 
 
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
--OptimierungLennart.tex)
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
--OptimierungLukasL.tex
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+(./Inhalt-OptimierungLennart.tex) (./Inhalt-OptimierungLukasL.tex
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -1186,6 +1159,10 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 5.
+
+
+LaTeX Warning: Reference `figure:Grafik-OptimierungLukasL_KonvexeMengen' on pag
+e 7 undefined on input line 5.
 
 <Grafik-OptimierungLukasL_KonvexeMengen.pdf, id=9, 623.11537pt x 449.55356pt>
 File: Grafik-OptimierungLukasL_KonvexeMengen.pdf Graphic file (type pdf)
@@ -1249,6 +1226,78 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                `lmr-it-T1'.
 
 
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 18.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 18.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 18.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 18.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 18.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 18.
+LaTeX Font Info:    Try loading font information for U+euf on input line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
+LaTeX Font Info:    Try loading font information for U+eus on input line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-eus.cfg
+File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
+)
+LaTeX Font Info:    Try loading font information for U+euex on input line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuex.fd
+File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
 (scrreprt)              been defined for compatiblitiy to Script 2.0 only.
@@ -1263,7 +1312,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              by `\normalfont \bfseries ' on input line 28.
 
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 30.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
@@ -1287,9 +1336,7 @@ Package microtype Warning: Unknown slot number of character
 
 
 
- <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Grafi
-k-TempKursfoto.jpg> <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorietei
-l/Optimierung/Grafik-OptimierungLukasL_KonvexeMengen.pdf>]
+ <./Grafik-TempKursfoto.jpg> <./Grafik-OptimierungLukasL_KonvexeMengen.pdf>]
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -1321,7 +1368,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 
 Underfull \hbox (badness 2460) in paragraph at lines 66--68
 []\T1/lmr/m/sc/10 (+20) Definition[]2 \T1/lmr/m/it/10 (+20) (Kon-ve-xes Pro-gra
-mm) \T1/lmr/m/n/10 (+20) Sei $\OML/lmm/m/it/10 f \U/euf/m/n/10 :$
+mm) \T1/lmr/m/n/10 (+20) Sei $\OML/lmm/m/it/10 f \U/euf/m/n/10 :
  []
 
 
@@ -1338,72 +1385,94 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 74.
 
-)
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
--OptimierungPatrice.tex
+) (./Inhalt-OptimierungPatrice.tex
 
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 2.
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
 
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list
-(microtype)                `T1-default'.
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
 
-) [8]
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Master
-_DataKurs.aux) ) 
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/9'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 6.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+) [8] (./Master_DataKurs.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8142 strings out of 493921
- 125766 string characters out of 3144876
- 303379 words of memory out of 3000000
- 11181 multiletter control sequences out of 15000+200000
- 64959 words of font info for 77 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 48i,14n,68p,597b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
-}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/euler/euex10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/euler/eufm7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmri9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_DataKurs.pdf (3 pages, 693026 bytes).
+ 9154 strings out of 493089
+ 140126 string characters out of 6134842
+ 331839 words of memory out of 5000000
+ 12333 multiletter control sequences out of 15000+600000
+ 86841 words of font info for 102 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 48i,14n,52p,525b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
+15/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/euler/euex10.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+lm/lmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
+r12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on Master_DataKurs.pdf (3 pages, 728114 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 19979 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 25611 words of extra memory for PDF output out of 29859 (max. 10000000)
 
