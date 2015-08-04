@@ -1,0 +1,5 @@
+Die Hauptdatei ist Master_DataKurs.tex.
+Bitte, wenn möglich, die temporären Zwischendateien entfernen.
+Also es sollen nur noch die Grafiken und die tex-, sty- und bib-Dateien vorhanden bleiben!
+Eure eigenen Teile fügt Ihr dann mit \input{datei} ein.
+Ende.

@@ -1,7 +1,5 @@
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\newcommand{\media}{../../media/}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Ich weiß nicht, wie man dafür sorgen kann, dass die Formeln nicht so komisch aussehen.
 
 \section{Machine Learning}
 \author{Farhadiba Mohammed, Dennis Kempf, David Steinmann}
@@ -28,7 +26,7 @@ Dabei werden für alle Datensätze zürst gewisse Features festgelegt. Diese Fea
 
 Diese Features werden normalerweise in einem Vektor für den entsprechenden Datensatz gespeichert.
 Dieser Vektor wird $x_{i}$ genannt wobei $i = 1, ..., n$ den Datensatz beschreibt mit  $x \in  \mathbb{R}^m$.
-Zusätzlich hat jeder Datensatz noch einen weiteren Wert, welcher das "'Ergebnis"' des Datensatzes beschreibt, der $y_{i} \in \mathbb{R}$ oder auch "`Label"' genannt wird.
+Zusätzlich hat jeder Datensatz noch einen weiteren Wert, welcher das >>Ergebnis<< des Datensatzes beschreibt, der $y_{i} \in \mathbb{R}$ oder auch >>Label<< genannt wird.
 
 Die Features und das Label zusammen beschreiben einen Punkt im n-dimensionalen Koordinatensystem, wobei $n = m + 1$, da zu den m Dimensionen von x noch die eine Dimension von y dazukommt.
 
@@ -37,7 +35,7 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 
 \begin{dsafigure}
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{svm.jpg}
+	\includegraphics[width=0.5\textwidth]{\media svm.jpg}
 	\caption{Da der Abstand zwischen den unterschiedlich klassifizierten Datensätzen maximiert werden soll, gilt die rote und nicht die blaue Linie als Trennelement.}
 	\label{SVM1}
 	\end{center}
@@ -75,12 +73,13 @@ Klassifikation:
 %????
 
 Nachdem das Problem optimiert wurde, ist der Computer in der Lage, weitere Daten einzuordnen, vorrausgesetzt, es ist richtig optimiert.
-Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.
+Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.\\
 
-\begin{enumerate}
-	\item Wenn die Datensätze nicht linear separierbar sind, das heisst, es ist nicht möglich die beiden Datensätze mit einem linearen Element zu trennen
-	\item Wenn die Daten nicht alle korrekt klassifiziert sind oder es Daten gibt, die in dem "`Bereich"' der anderen Seite liegen.
-\end{enumerate}
+\begin{itemize}
+	\item Wenn die Datensätze nicht linear separierbar sind, d.h., es ist nicht möglich die beiden Datensätze mit einem linearen Element zu trennen\\
+	
+	\item Wenn die Daten nicht alle korrekt klassifiziert sind oder es Daten gibt, die in dem >>Bereich<< der anderen Seite liegen.
+\end{itemize}
 
 \subsubsection{Soft Margin SVMs}
 Die Soft Margin SVMs können mit dem zweiten Problem umgehen.
@@ -96,10 +95,10 @@ Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse 
 Dabei steht $z_{i}$ für die Grösse des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren grösse bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
 
 \begin{dsafigure}
-\begin{center}
-	\includegraphics[width=0.5\textwidth]{Figure_SVM}
-	\caption{Nun wurden zu der Trenngerade zwischen den Datensätzen noch zwei parallele Geraden hinzugefügt, die als Stützvektoren (Support vectors) einen der klassifizierten Datenpunkte nutzen. Das mathematische Problem zielt dann darauf ab, den Abstand zwischen den beiden Datengruppen maximal zu machen.}
-	\label{SVM2}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{\media Figure_SVM.pdf}
+		\caption{Links und rechts zur Trenngeraden befinden sich die parallelen Grenzen (gestrichelte Geraden). Ziel der Optimierung ist es, den Abstand zwischen den Grenzen zu maximieren, um den Normalenvektor $w$ zu bestimmen.}
+		\label{FigSVM}
 	\end{center}
 \end{dsafigure}
 
@@ -113,18 +112,20 @@ Dazu zählen Spracherkennung, Objekterkennung in Bildern und die Fähigkeit indi
 Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist dabei, die Datenschicht, auf die ein oder mehrere hidden layer folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher die Wahrscheinlichkeitsverteilung darstellt. Mit anderen Worten, wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
 
 \begin{dsafigure}
-\begin{center}
-	\includegraphics[width=0.5\textwidth]{Figure_NN}
-	\caption{Beispiel eines Neuronalen Netzwerkes}
-	\label{NN1}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{\media Figure_NN.pdf}
+		\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ >>Neuronen<<.}
+		\label{FigNN}
 	\end{center}
 \end{dsafigure}
 
 \subsection{Deep Learning}
 
-Mit Deep Learning beschreibt man die Neuronalen Netze, die über mehr als einen hidden layer verfügen. Dabei wird jeweils eine nicht lineare Funktion auf die linearen Ergebnisse der einzelnen layer angewendet, um die Anzahl der Parameter zu vergrößern. 
+Mit Deep Learning beschreibt man die Neuronalen Netze, die über mehr als einen >>versteckte Schicht<< verfügen. Damit ist gemeint, dass sich zwischen Ein- und Ausgabeschicht weitere Schichten befinden. 
 
-Wie wir in der Abbildung 2.3 sehen können ist ein typisches Fully connected Neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $x_1 ... x_i$. Diese Werte werden nun mit einem jeweiligen Faktor w multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht lineare Funktion angewendet und das Ganze wird erneut mit einem Faktor w multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $p_1 .. p_1$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert wird. Anhand eines konkreten Beispiels würde es folgendes bedeuten:
+Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft. Dadurch kann eine höhere Genauigkeit erzielt werden. Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk >>overfitted<<, d.h., zu sehr an den Trainingsdatensatz angepasst, wird. Dann kann das Netzwerk neue, fremde Daten nicht mehr korrekt klassifizieren. 
+
+Wie wir in der Abbildung 2.3 sehen können ist ein typisches Fully connected Neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $x_1 ... x_i$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht lineare Funktion angewendet und das Ganze wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $p_1 .. p_1$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert wird. Anhand eines konkreten Beispiels würde es folgendes bedeuten:
 Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Tisch oder Stuhl das daurauf abgebildete Objekt gehört. Unsere inputs wären demnach die Pixel des Bildes. Diese durchlaufen nun das Neuronale Netz und wir erhalten eine Wahrscheinlichkeitsverteilung als Rückgabewert, welche uns mitteilt, dass es am wahrscheinlichsten ist, dass das abgebildete Objekt ein Objekt der Klasse Stuhl ist. Demnach ist die Klassifizierung vollzogen.
 
 
@@ -135,10 +136,10 @@ a_j^{(k)} = f^{(k)} (\langle w_{ji}^{(k)}, a_i^{(k-1)}\rangle) = f^{(k)} (\sum_{
 \subsection{Convolutional Neuronal Networks}
 
 \begin{dsafigure}
-\begin{center}
-	\includegraphics[width=0.5\textwidth]{Figure_ConvNN}
-	\caption{Beispiel eines Convolutional Neuronal Network}
-	\label{NN1}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{\media Figure_ConvNN}
+		\caption{Ein Convolutional Neural Network (CNN) (dt.: >>faltendes neurales Netzwerk<<) mit vier Eingängen ($x_1, ..., x_4$) und zwei Ausgängen ($p_1, p_2$). Dazwischen befindet sich eine Schicht aus drei >>Neuronen<<, die als Filter wirkt.}
+		\label{FigConvNN}
 	\end{center}
 \end{dsafigure}
 
@@ -157,20 +158,26 @@ Wir haben bereits SVMs kennengelernt. Im folgenden wird verdeutlicht, wie man di
 sodass:
 
 \begin{align*}
-y_i (<w,x> - b) \geq 1 - z ; z_i \geq 0 => z_i \geq 1- y_i (\langle w,x \rangle - b); z_i \geq 0
+&y_i (<w,x> - b) \geq 1 - z_i ; z_i \geq 0 \\
+\implies &z_i \geq 1- y_i (\langle w,x \rangle - b) \text{ und } z_i \geq 0
 \end {align*}
 
+
 \begin{align*}
-\min \norm{w} + C \cdot \sum_{i=1}^{n} \max (0, 1-y_i (\langle w,x_i\rangle-b) = \norm{w} + C \sum_{i=1}^{n} \ell ( 1-y_i (\langle w,x_i\rangle)-b) = \norm{w} + C \sum_{i=1}^{n} \ell (a_i)
+\min &\norm{w} + C \cdot \sum_{i=1}^{n} \max (0, 1-y_i (\langle w,x_i\rangle-b) \\
+ = &\norm{w} + C \sum_{i=1}^{n} \ell ( 1-y_i (\langle w,x_i\rangle)-b) \\
+=&\norm{w} + C \sum_{i=1}^{n} \ell (a_i)
 \end{align*}
 
 
 \subsection{Lineare Regression}
 
-Auch die lineare Regression kann auch in Form von Neuronalen Netzen ausgedrückt werden. 
+Die lineare Regression kann auch in Form von Neuronalen Netzen ausgedrückt werden. 
+
 
 \begin{align*}
 \min\limits_{w,b} 0,5 \sum_{i=1}^{n} ((\langle w,x_i\rangle- b) -y_i)^2
 a_i = \langle w,x_i\rangle -b-y_i
 \end{align*}
+
 
