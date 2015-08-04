@@ -1,0 +1,218 @@
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage{multicol}
+\usepackage{inputenc}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{tipa}
+\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
+
+
+%\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+\usepackage{amsfonts}
+
+\usepackage{amsmath, amssymb, amsthm}
+\begin{document}
+
+
+
+\section *{Wahrscheinlichkeitstheorie}
+
+
+\vspace{15pt}
+
+
+1933 ver\"offentlichte der russische Mathematiker Andrey Kolmogorov sein Buch \textit{Foundations of the Theory of Probability}, in dem er die drei Axiome der Wahrscheinlichkeitstheorie aufstellte. Es existiert ein Wahrscheinlichkeitsraum, der sich aus den drei Elementen $\Omega, \mathcal{F}, \mathds{P}$ zusammensetzt.
+
+\vspace{5pt}
+
+\begin{enumerate}
+	\item $\Omega$ ist eine Menge mit endlicher Anzahl an Elementen. $|\Omega|= n $
+	\item $\mathcal{F}$ ist eine Menge der Ereignisse $\textsce $ und eine Teilmenge von $\Omega$. $\textsce \subseteq \Omega$
+	\item $\mathds{P}$ bezeichnet die Sicherheit der Wahrscheinlichkeit, das Wahrscheinlichkeitsmaß. Dieses weist jedem Ereignis in $\mathcal{F}$ eine reelle Zahl zu: 
+	\begin{equation*} 
+	\mathds{P}: \mathcal{F} \longrightarrow \mathds{R}
+	\end{equation*}
+	
+\end{enumerate}
+
+\vspace{10pt}
+
+
+
+\subsection *{Kolmogorovs Axiome lauten:}
+
+\vspace{5pt}
+
+\begin{enumerate}
+	\item Die Wahrscheinlichkeit eines Ereignisses ist eine positive, reelle Zahl. $\mathds{P} (\mathds{E}) \geq 0$ f\"ur alle $\mathds{E} \in \mathcal{F}$.
+	\item Die Menge aller Ergebnisse bezeichnet man als sicheres Ereignis, das die Wahrscheinlichkeit $1$ hat. $\mathds{P} (\Omega) = 1$
+	\item Die Wahrscheinlichkeit der Vereinigung von disjunkten Ereignisssen ist gleich der Summe der Wahrscheinlichkeiten der disjunkten Ereignisse. 
+	\vspace{3pt}
+	\begin{equation*}
+	\mathds{P} (\cup_{i=1}^m \mathds{E}_{i}) = \sum_{i=1}^n \mathds{P} (\mathds{E}_{i})$ f\"ur alle $\mathds{E}_{1},...,\mathds{E}_{m} \in \mathcal{F}
+	\end{equation*}
+\end{enumerate}
+\vspace{5pt}
+
+$\mathds{E}_{1},...,\mathds{E}_{m}$ ist disjunkt, falls $\mathds{E}_{i} \cap \mathds{E}_{j} = \o$ f\"ur alle $i,j= 1,2,...,m$. 
+Hierbei bezeichnet $\o$ ein unm\"ogliches Ereignis. $\o \in \mathcal{F}$. Im Gegensatz dazu gibt es das sichere Ereignis mit ${\Omega} \in \mathcal{F}$.
+
+\vspace{5pt}
+
+Die Wahrscheinlichkeit wird errechnet durch $ \mathds{P} = \frac {|\mathds{E}|}{|\Omega|}$.
+Alternativ definiert man: 
+
+\vspace{5pt}
+
+\begin{equation*}
+p_{i} \geq 0 $ f\"ur $i \in \Omega$, sodass $\sum_{i\in \Omega} p_{i} =1$, $p_{i} = \mathds{P} ({i})
+\end{equation*}
+
+
+\vspace{10pt}
+
+\subsection *{Konsequenzen der Axiome:}
+
+\vspace{5pt}
+
+\begin{enumerate}
+	\item $\mathds{P} (\o) = 0$
+	\item Monotonie: $A\subseteq B$ daraus folgt: $\mathds{P} (A) \leq \mathds{P} (B)$
+	\item $0 \leq \mathds{P} (E) \leq 1$
+	\item $ \mathds{P} (A \cup B) = \mathds{P} (A) + \mathds{P} (B) - \mathds{P} (A \cap B)$
+\end{enumerate}
+
+
+\vspace{10pt}
+
+\subsection *{Zufallsvariablen}
+
+\vspace{5pt}
+
+In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathds{P})$ beschreibt die Funktion $X:\Omega \longrightarrow \mathds{R}^k$ einen k-dimensionalen Zufallsvektoren. Im Fall von $k=1$ redet man von einer Zufallsvariablen.
+
+\vspace{10pt}
+
+\subsection *{Erwartungswert}
+
+\vspace{5pt}
+
+ Der Erwartungswert einer Zufallsvariablen beschreibt die Zahl, die die Zufallsvariable im Mittel annimmt.
+
+\vspace{3pt}
+
+\begin{equation*}
+\mathds{E} [X] = \sum_{x \in \Omega} X (i) * \mathds{P} ({i}) = \sum_{x\in\mathcal{X}} X* \mathds{P} (X=x)$ wobei $\mathcal{X}
+\end{equation*}
+ ein Wertebereich von x ist 
+
+
+\vspace{10pt}
+
+\subsection *{Varianz}
+
+\vspace{5pt}
+
+Die Varianz kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. Die Varianz einer Zufallsvariable X.
+
+\vspace{3pt}
+
+\begin{equation*}
+X= \mathds{E} [X^2] - \mathds{E} [X]^2 = \mathds{E} [ (X - \mathds{E} [X] )^2 ] 
+\end{equation*}
+
+\vspace{10pt}
+
+\subsection *{Unabh\"angigkeit von Ereignissen}
+
+\vspace{5pt}
+
+\begin{enumerate}
+	\item Wenn f\"ur Ereignisse $E, F \in \mathcal{F} $ gilt
+	\vspace{3pt}
+	$\mathds{P} (E\cap F)= \mathds{P} (E) * \mathds{P} (F)$
+	\vspace{3pt}
+dann sind E und F unabh\"angig. 
+
+\item Wenn f\"ur die Zufallsvariablen 
+\begin{equation*}
+X_{1}: \Omega_{1} \longrightarrow \mathds{R}, \mathcal{F}_{1} , X_{2}: \Omega_{2} \longrightarrow \mathds{R}, \mathcal{F}_{2}
+\end{equation*}
+ gilt
+\vspace{3pt}
+\begin{equation*}
+\mathds{P} ({X_{1} \in A} \cap {X_{2} \in B} ) = \mathds{P} ({X_{1} \in A} * \mathds{P} {X_{2} \in B} )
+\end{equation*}
+\vspace{3pt}
+f\"ur alle $A, B \subseteq \mathds{R}$
+\end{enumerate}
+
+\vspace{10pt}
+
+\subsection *{Marginal bestimmte Wahrscheinlichkeiten}
+
+\vspace{5pt}
+
+\begin{equation*}
+\mathds{P} ({X_{1} \in A } ) = \sum_{b \in \Omega_{2} } \mathds{P} {X_{1} \in A} \cap {X_{2} \in b})
+\end{equation*}
+
+\vspace{10pt}
+
+\subsection *{Bedingte Wahrscheinlichkeit}
+
+\vspace{5pt}
+
+\begin{equation*}
+\mathds{P} ({X_{1} \in A } | { X_{2} \in B } ) = \frac {\mathds{P} ( {X_{1} \in A } \cap {X_{2} \in B })} {\mathds{P} ({X_{2} \in B})}
+\end{equation*}
+
+\vspace{10pt}
+
+\subsection *{Summe von Zufallsvariablen}
+
+\vspace{5pt}
+\begin{equation*}
+X_{1}:\Omega \longrightarrow \mathds{R}, X_{2}:\Omega \longrightarrow \mathds{R}
+\end{equation*}
+\begin{equation*}
+Y=X_{1}+X_{2}
+\end{equation*}
+\vspace{3pt}
+Annahme: $X_{1}$ und $X_{2}$ sind unabh\"angig.\\
+\begin{equation*}
+{Y=l}=\cup_{i=-\infty}^{\infty} {X_{1}=1} \cap {X_{2}=l-i}
+\end{equation*}
+\vspace{3pt}
+\begin{equation*}
+\mathds{P} ({Y=l}) = \sum_{i=-\infty}^{\infty} \mathds{P} ({X_{1}=i} \cap {X_{2}=l-i}) = \sum_{i=-\intfy}^{\intfy} \mathds{P} ({X_{1} = i}) * \mathds{P} ({X_{2}=l-i})
+\end{equation*}
+
+\vspace{10pt}
+
+\subsection *{Theorem: Liniarit\"at des Erwartungswerts}
+
+\vspace{5pt}
+
+Angenommen, wir h\"atten eine Funktion
+\vspace{3pt}
+
+$f: \mathds{R} \longrightarrow \mathds{R}$ , f\"ur die gilt: 
+\begin{equation*}
+\int_{\mathds{R}} f(x) dx = 1
+\end{equation*}
+
+\vspace{3pt}
+
+dann k\"onnten wir eine Wahrscheinlichkeitsverteilung folgenderma"sen definieren:
+\begin{equation*}
+\mathds{P} ({X\in A}) = \int_{X \in A} f(x) dx
+\end{equation*}
+
+
+
+
+\end{document}
+%Das ist ein Kommentar 
