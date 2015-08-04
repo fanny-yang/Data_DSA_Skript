@@ -68,20 +68,20 @@ Für die dritte Bedingung ergibt sich $v_1 v_1 + \dots + v_n v_n = v_1^2 + \dots
 \node[] at (45:0.7) {$\theta$};
 \end{tikzpicture}
 
-Da grundsätzlich $\left\langle v,v\right\rangle  = ||v||^2$ gilt, kann über die Abbildung auch die Aussage getroffen werden, dass $||v-u||^2 = \left\langlev-u,v-u\right\rangle $. Mit der Bilinearität des Skalarproduktes und der eben getroffenen Aussage können wir die Gleichung zu 
+Da grundsätzlich $\left\langle v,v\right\rangle  = ||v||^2$ gilt, kann über die Abbildung auch die Aussage getroffen werden, dass $||v-u||^2 = \left\langle v-u,v-u\right\rangle $. Mit der Bilinearität des Skalarproduktes und der eben getroffenen Aussage können wir die Gleichung zu 
 \begin{equation*}
 ||v-u||^2 = ||v||^2 - 2\left\langle v,u\right\rangle  + ||u||^2 
 \end{equation*}
 umformen.
 Zusätzlich folgt aus dem Kosinussatz, dass $||v-u||^2 = ||u||^2 + ||v||^2 - 2 ||u|| ||v|| \cos\theta$. Setzt man beide Terme gleich, gelangt man über einige wenige Umformungen zu der Form $\left\langle u,v\right\rangle  = ||u|| ||v|| \cos\theta$, was ebenfalls eine Möglichkeit ist, das Skalarprodukt darzustellen.\\
-Aus dieser Gleichung ergibt sich direkt die Cauchy-Schwarz Ungleichung. Da der Betrag des Kosinus sich nur zwischen 0 und 1 bewegt, gilt $\left\langleu,v\right\rangle  \leq ||u|| ||v||$.\\
+Aus dieser Gleichung ergibt sich direkt die Cauchy-Schwarz Ungleichung. Da der Betrag des Kosinus sich nur zwischen 0 und 1 bewegt, gilt $\left\langle u,v\right\rangle  \leq ||u|| ||v||$.\\
 Eine häufig genutzte Norm ist die Euklidische Norm, welche mit $||v||_2 = \sqrt{v_1^2 + \dots + v_n^2}$ definiert ist. Mit den zuvor getroffenen Aussagen können wir beweisen, dass es sich bei der Euklidischen Norm wirklich um eine Norm handelt.\\
 Die erste und die dritte Bedingung aus der Definition für eine Norm zeigen sich aus der ausgeschriebenen Form der Euklidischen Norm. Da alle Komponenten dabei quadriert werden und die Wurzel gezogen wird muss die erste Bedingung stimmen. Ein Faktor $\lambda$, der ebenfalls quadriert in der Wurzel steht kann aus der Summe ausgeklammert werden und als Faktor vor die Wurzel gelangen. Der Betrag ergibt sich dabei daraus, dass $\lambda$ nach dem Vorgang nur positiv sein kann, auch wenn es zuvor negativ war.\\
 Um zu beweisen, dass $||u+v|| \leq ||u|| + ||v||$ formen wir diese Ungleichung zu der bekannten Cauchy-Schwarz Ungleichung um. Hierzu quadrieren wir zunächst beide Seiten, ersetzen die quadrierten Normen durch Skalarprodukte und erhalten 
 \begin{equation*}
 |\left\langle u+v,u+v\right\rangle | \leq \left\langle u,u\right\rangle  + 2 ||u|| ||v|| + \left\langle v,v\right\rangle 
 \end{equation*}
-Die linke Seite der Ungleichung kann aufgrund der Bilinearität als $|\left\langle u,u\right\rangle | + 2 |\left\langle u,v\right\rangle | + |\left\langle v,v\right\rangle |$ geschrieben werden. Dadurch können wir auf beiden Seiten $|\left\langleu,u\right\rangle |$ und $|\left\langle v,v\right\rangle |$ subtrahieren und kommen so auf $||u+v|| \leq ||u|| + ||v||$, womit bewiesen ist, dass die Euklidische Norm eine Norm ist.
+Die linke Seite der Ungleichung kann aufgrund der Bilinearität als $|\left\langle u,u\right\rangle | + 2 |\left\langle u,v\right\rangle | + |\left\langle v,v\right\rangle |$ geschrieben werden. Dadurch können wir auf beiden Seiten $|\left\langle u,u\right\rangle |$ und $|\left\langle v,v\right\rangle |$ subtrahieren und kommen so auf $||u+v|| \leq ||u|| + ||v||$, womit bewiesen ist, dass die Euklidische Norm eine Norm ist.
 
 %\end{multicols*}
 %\end{document}
