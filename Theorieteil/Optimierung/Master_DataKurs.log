@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  4 AUG 2015 15:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  4 AUG 2015 17:52
 entering extended mode
 **C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Maste
 r_DataKurs.tex
@@ -1156,9 +1156,7 @@ Package microtype Warning: Unknown slot number of character
 
 
 (C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
--OptimierungLennart.tex)
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
--OptimierungLukasL.tex
+-OptimierungLennart.tex
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -1174,6 +1172,17 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              by `\normalfont \bfseries ' on input line 2.
 
 
+Underfull \hbox (badness 1163) in paragraph at lines 2--3
+\T1/lmr/m/n/10 (+20) Bei der Op-ti-mie-rung be-trach-tet man vor al-
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 2--3
+\T1/lmr/m/n/10 (+20) lem Funk-tio-nen, wel-che Ele-men-te ei-nes $\OML/lmm/m/it
+/10 n$\T1/lmr/m/n/10 (+20) -
+ []
+
+
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
 (scrreprt)              been defined for compatiblitiy to Script 2.0 only.
@@ -1185,47 +1194,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 5.
-
-<Grafik-OptimierungLukasL_KonvexeMengen.pdf, id=9, 623.11537pt x 449.55356pt>
-File: Grafik-OptimierungLukasL_KonvexeMengen.pdf Graphic file (type pdf)
-
-<use Grafik-OptimierungLukasL_KonvexeMengen.pdf>
-Package pdftex.def Info: Grafik-OptimierungLukasL_KonvexeMengen.pdf used on inp
-ut line 10.
-(pdftex.def)             Requested size: 182.09486pt x 131.3687pt.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list 
-(microtype)                `cmr-T1'.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 12.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list 
-(microtype)                `cmr-it-T1'.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list
-(microtype)                `lmr-it-T1'.
+(scrreprt)              by `\normalfont \bfseries ' on input line 11.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1249,39 +1218,49 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                `lmr-it-T1'.
 
 
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
+<Grafik-OptimierungLennart_LineareRegression.pdf, id=9, 393.72093pt x 382.42876
+pt>
+File: Grafik-OptimierungLennart_LineareRegression.pdf Graphic file (type pdf)
+ <use Grafik-OptimierungLennart_LineareRegression.pdf>
+Package pdftex.def Info: Grafik-OptimierungLennart_LineareRegression.pdf used o
+n input line 21.
+(pdftex.def)             Requested size: 227.62206pt x 221.09106pt.
+
+Overfull \hbox (10.66978pt too wide) in paragraph at lines 21--22
+ [] 
+ []
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-T1'.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
 (scrreprt)              been defined for compatiblitiy to Script 2.0 only.
 (scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
 (scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
 (scrreprt)              See `fntguide.pdf' for more information about
 (scrreprt)              recommended font commands.
 (scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 28.
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 22.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 30.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\quotedblbase '
+(microtype)                in font encoding `T1' in protrusion list 
+(microtype)                `cmr-it-T1'.
 
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\quotedblbase '
 (microtype)                in font encoding `T1' in protrusion list
-(microtype)                `T1-default'.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list
-(microtype)                `T1-default'.
+(microtype)                `lmr-it-T1'.
 
 [7
 
@@ -1289,7 +1268,7 @@ Package microtype Warning: Unknown slot number of character
 
  <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Grafi
 k-TempKursfoto.jpg> <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorietei
-l/Optimierung/Grafik-OptimierungLukasL_KonvexeMengen.pdf>]
+l/Optimierung/Grafik-OptimierungLennart_LineareRegression.pdf>]
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -1302,108 +1281,25 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 61.
+(scrreprt)              by `\normalfont \bfseries ' on input line 54.
 
+! Undefined control sequence.
+l.56 \[f(\lambda x+(1-\lambda)y)\leq\lambdaf
+                                            (x)+(a-\lambda)f(y)\qquad\mid \f...
 
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 64.
+? 
+! Emergency stop.
+l.56 \[f(\lambda x+(1-\lambda)y)\leq\lambdaf
+                                            (x)+(a-\lambda)f(y)\qquad\mid \f...
+End of file on the terminal!
 
-
-Underfull \hbox (badness 2460) in paragraph at lines 66--68
-[]\T1/lmr/m/sc/10 (+20) Definition[]2 \T1/lmr/m/it/10 (+20) (Kon-ve-xes Pro-gra
-mm) \T1/lmr/m/n/10 (+20) Sei $\OML/lmm/m/it/10 f \U/euf/m/n/10 :$
- []
-
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 74.
-
-)
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
--OptimierungPatrice.tex
-
-Class scrreprt Warning: Usage of deprecated font command `\bf'!
-(scrreprt)              You should note, that in 1994 font command `\bf' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\bf' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 2.
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list
-(microtype)                `T1-default'.
-
-) [8]
-(C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Master
-_DataKurs.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 8142 strings out of 493921
- 125766 string characters out of 3144876
- 303379 words of memory out of 3000000
- 11181 multiletter control sequences out of 15000+200000
- 64959 words of font info for 77 fonts, out of 3000000 for 9000
+ 8029 strings out of 493921
+ 123321 string characters out of 3144876
+ 299394 words of memory out of 3000000
+ 11097 multiletter control sequences out of 15000+200000
+ 58651 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 48i,14n,68p,597b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
-}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/euler/euex10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/euler/eufm7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmri9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_DataKurs.pdf (3 pages, 693026 bytes).
-PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 19979 words of extra memory for PDF output out of 20736 (max. 10000000)
-
+ 48i,11n,68p,534b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
