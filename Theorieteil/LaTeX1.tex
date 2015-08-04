@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\begin{document}
+Aufgabenstellung:
+Beweise, dass eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar ist an der Stelle $x \in R$ ist auch stetig an bei $x \in R$ ist.\\
+Lösung:
+Zuerst überlegen wir, welche Bedingungen bereits in der Aufgabenstellung gegeben sind. \\
+Eine Funktion ist an der Stelle x differenzierbar, wenn\\
+$f(x+h)=f(x)+l_x(h)+ r(h)$ mit $lim_{h\rightarrow0} \frac{r(h)}{h}= 0$ 
+gilt.\\
+Diese Funktion wäre außerdem stetig, wenn $lim_{w\rightarrow x} f(w)=f(x)$.\\
+Da die Funktion f(x+h) äquivalent zur Funktion $f(w)$ sein soll, ersetze ich in der Bedingung für die Stetigkeit $f(w)$ mit der gesamten Funktion von $f(x+h)$.  
+Somit gilt \\$lim_{h\rightarrow0}f(x)+l_x(h)+r(h)=f(x)$.
+Damit die Bedingung der Stetigkeit erfüllt ist, muss der Grenzwert dieser Funktion gleich dem Funktionswert sein. Um diese Bedingung zu erfüllen, müssen wir beweisen, dass die Teile der Funktion $l_x(h)$ und $r(h)$ gegen null gehen. Wir beginnen mit dem Teil $r(h)$.  Würde $r(h)$ nicht gegen 0 gehen, so würde $\frac{r(h)}{h}$ nicht gegen 0 gehen. Die Funktion $r(h)$ muss gegen 0 gehen, da die Bedingung der Differenzierbarkeit gilt. Jetzt müssen wir zeigen, dass $l_x(h)$ auch gegen 0 geht. Dieser Teil der Funktion kann auch als $f'(x)*h$ dargestellt werden. Da wir annehmen, dass h gegen 0 geht und somit ein Faktor von $l_x(h)$ 0 ist, wird die Funktion 0. Damit ist bewiesen, dass $lim_{h\rightarrow0}f(x)=f(x)$.
+
+\end{document}
+
+
+
