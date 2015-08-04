@@ -1,0 +1,34 @@
+\newcommand{\possample}[1]{\draw[fill, green] (#1) circle (0.05);}
+\newcommand{\negsample}[1]{\draw[fill, red] (#1) circle (0.05);}
+\newcommand{\highlightsample}[1]{\draw[blue] (#1) circle (0.05);}
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\begin{tikzpicture}
+	% Koordinatenachsen
+	\draw[thick, ->] (-2, 0) -- (5, 0) node[anchor=north west] {$x_1$};
+	\draw[thick, ->] (0, -2) -- (0, 5) node[anchor=south east] {$x_2$};
+	
+	% Trennebene
+	\draw[color=blue] (-2,5) -- (5, -2);
+	\draw[color=blue, dashed] (-2,5) -- (5, -2);
+	
+	% Positive Beispiele
+	\possample{4, 1};
+	\possample{2, 3};
+	\possample{3, 1};
+	\possample{4, 2.5};
+	\possample{3, 2};
+	\possample{2, 2};
+	\highlightsample{2, 2};
+	\highlightsample{3, 1};
+	
+	% Negative Beispiele
+	\negsample{1,-1};
+	\negsample{-0.2611,1.2223};
+	\negsample{0.9838,-0.2221};
+	\negsample{0.5449,1.4298};
+	\negsample{2,-1};
+	\negsample{0.1749,0.7656};
+	\highlightsample{0.5449,1.4298};
+\end{tikzpicture}
