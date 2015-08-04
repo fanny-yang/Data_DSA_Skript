@@ -1,11 +1,10 @@
-\subsection{Gradientenmethode in Julia}
+\renewcommand\figurename{Algorithm}
+\small
+\label{Algorithm:insert_mCBF_aCBF}
+\begin{algorithmic}[1]
 
-Hier wird wird in Pseudocode gezeigt, wie mann die Gradientenmethode implementieren kann.
-F(x) bezeichnet die Funktion, auf die die Methode angewendet werden soll, F'(x) stellt die Ableitung dar 
-
-\begin{verbatim}
-
-\\F(x) = (x$^2$-2)$^2$
+\Procedure{$\mathbf{calculateMinimum}$}{}
+   \\F(x) = (x$^2$-2)$^2$
 \\F'(x) = 4x$^3$-8x
 
 \\
@@ -14,10 +13,11 @@ F(x) bezeichnet die Funktion, auf die die Methode angewendet werden soll, F'(x) 
 
  \For{i = 8}
  	\State $\lambda$ = $\lambda$+(i*0.001)
-	\For{j = 8}
-		\State x = x - $\lambda$ * F'(x)
-	 \EndFor
+\For{j = 8}
+\State x = x - $\lambda$ * F'(x)
+\EndFor
  \EndFor
  
- \\Print x
-\end{verbatim}
+ \\Print x\EndProcedure
+\Statex
+\end{algorithmic}
