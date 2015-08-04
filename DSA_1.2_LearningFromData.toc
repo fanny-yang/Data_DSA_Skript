@@ -1,0 +1,13 @@
+\select@language {ngerman}
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {1.2}Learning from Data}{8}
+\contentsline {section}{\numberline {1}Machine Learning}{8}
+\contentsline {subsection}{\numberline {1.1}Support Vector Machines}{8}
+\contentsline {subsubsection}{\numberline {1.1.1}Soft Margin SVMs}{9}
+\contentsline {section}{\numberline {2}Neuronale Netze}{9}
+\contentsline {subsection}{\numberline {2.1}Einf\IeC {\"u}hrung}{9}
+\contentsline {subsection}{\numberline {2.2}SVMs als Neuronale Netze}{9}
+\contentsline {subsection}{\numberline {2.3}Lineare Regression}{9}
+\contentsline {subsection}{\numberline {2.4}Deep Learning}{9}
+\contentsline {subsection}{\numberline {2.5}Convolutional Neuronal Networks}{9}
+\contentsfinish 

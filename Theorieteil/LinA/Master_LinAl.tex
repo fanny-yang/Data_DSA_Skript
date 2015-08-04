@@ -1,0 +1,91 @@
+\documentclass{newlayout}
+%Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
+\Akademie{Ort}{2014}{1}
+
+\usepackage[ngerman, english]{babel}
+\usepackage{misc}
+\usepackage{multicol}
+
+%\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage{lmodern}
+\usepackage{url}
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
+\urlstyle{same}
+
+% hinzugefügt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+\addtokomafont{paragraph}{\normalfont}
+\usepackage{footnote}
+\usepackage[flushmargin,hang,ragged]{footmisc}
+\deffootnote{1em}{1em}{%
+\textsuperscript{\thefootnotemark\ }
+}
+%\setlength{\abovedisplayskip}{5pt}
+%\setlength{\belowdisplayskip}{5pt}
+
+
+%%%%%Mathe-Definitionen
+\newtheorem{Def}{Definition}
+\newtheorem{Sat}{Satz}
+\newtheorem{Bew}{Beweis}
+\newtheorem{Thm}{Theorem}
+
+\setlength\abovedisplayshortskip{0pt}
+\setlength\belowdisplayshortskip{0pt}
+\setlength\abovedisplayskip{3pt}
+\setlength\belowdisplayskip{3pt}
+%%%%Ende Mathe-Definitionen
+
+\begin{document}
+
+ %   \input{titel}
+ \setcounter{page}{3}
+
+\setcounter{tocdepth}{1}
+ \tableofcontents
+
+   \setcounter{secnumdepth}{1}
+
+
+\setcounter{page}{7}
+\setcounter{chapter}{0}
+
+%Angabe, bis zu welcher Stufe die sections im Text nummeriert werden sollen.
+      \settocdepth{2}
+
+
+
+\course{1.2}{Lineare Algebra}%%% 
+\begin{coursetitle}
+  \centerline{Learning from Data aka i++} 
+  \bigskip
+  \Large \centerline{Mathematische Methoden des digitalen Zeitalters}
+  \bigskip
+\end{coursetitle}
+%\begin{dsafigure}
+%\begin{center}
+%\includegraphics[width=.9\columnwidth]{Titelbild-fehlt.png}
+%\caption{meine Bildunterschrift}
+%label{fig:meinbild}
+%\end{center}
+%\end{dsafigure}
+
+
+
+\input{LinAL_Vektoren1}
+\input{LinAl_Vektoren2}
+\input{LinAl_Matrizen}
+
+%\input{Kapitel-2-Kapitelüberschrift}
+%\input{Kapitel-3-Kapitelüberschrift}
+%usw.
+
+%\nocite{*} % alle referenzen anzeigen, sogar wenn sie nicht im text zitiert sind
+\bibliography{lit}{}
+\bibliographystyle{plain}
+\end{document}

@@ -1,31 +1,57 @@
 \documentclass{article}
-
+\usepackage{multicol}
 \usepackage{ dsfont }
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 %\usepackage{mathtools}
 
 \begin{document}
-
+\begin{multicols}{2}
 \section{Analysis}
-
+  
 
 Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für Optimierung und somit auch von großer Bedeutung beim Maschinellen Lernen. \\
-Im Kurs war f\"ur uns besonders die Stetigkeit und Differenzierbarkeit von ein- und mehrdimensionalen Funktionen wichtig. \\
-Um uns Klarheit \"uber diesen Bereich der Mathematik zu verschaffen, l\"osten wir - unter anderem - die folgenden Aufgaben.
+Im Kurs war für uns besonders die Stetigkeit und Differenzierbarkeit von ein- und mehrdimensionalen Funktionen wichtig. \\
+Dazu eignen wir uns vorerst die theoretischen Grundlagen der Analysis an. \\
 
+\subsection{Grenzwert}
+Grenzwert einer Funktion L ist Grenzwert der Funktion $f(x)$ für x gegen a, wenn für alle $\epsilon > 0$ ein $\delta > 0$ gibt, sodass für alle $|x-a| < \delta$ gilt \begin{equation*}|f(x)-L|<\epsilon\end{equation*}
+
+\subsection{Stetigkeit}
+Eine Funktion $f:\mathds{R}\rightarrow \mathds{R}$ ist stetig in x, wenn $lim_{w\rightarrow x}f(w)=f(x)$ auf ihrem gesamten Definitionsbereich gilt, wenn sie stetig in x für alle $x\in D$ ist.
+
+\subsection{Differenzierbarkeit}
+Eine Funktion f:$\mathds{R}\rightarrow\mathds{R}$ ist an einer Stelle x differenzierbar, wenn eine lineare Abbildung $ l_ x (h)$ und ein $r(h)$ existieren, sodass \begin{equation*}f(x+h)=f(x)+l_{x}(h)+r(h)\end{equation*} mit dem Grenzwert \begin{equation*}lim_{h\rightarrow 0} \frac{r(h)}{h}= 0\end{equation*}gilt.
+
+\subsection{Gradient}
+Der Gradient $\nabla$ ist die Ableitung eines Vektors, wobei jeder Eintrag die partielle Ableitung der entsprechenden Komponente ist:
+$f:\mathds{R}^m\rightarrow\mathds{R}$.
+\begin{equation} \begin{split} \nabla f(x) = \left( \begin{array}{c}
+& \partial_{x1} f(x) \\ & \partial_{x2} f(x) \\ & ... \\ & \partial_{xm} f(x)
+\end{array}
+\right)
+\end{split} \end{equation} 
+Der Gradient zeigt immer in Richtung des steilsten Abstiegs einer Funktion, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden.
+\subsection{Kettenregel}
+Gegeben seien die differenzierbaren Funktionen $f:\mathds{R}^k\rightarrow\mathds{R}^n$, $g:\mathds{R}^n\rightarrow{R}^k$ und $h(x)=f(g(x))$. Daraus folgt durch die Kettenregel, dass Dh(x)=Df(g(x))*Dg(x) ist.
+\subsection{Summenregel}
+Die Summenregel besagt, dass die Ableitung der Funktion $h(x)=f(x)+g(x)$ \begin{equation*} D(f + g)(x)=Df(x)+Dg(x)\end{equation*} ist.
+\subsection {Produktregel}
+Bei zwei differenzierbaren Funktionen $f:\mathds{R}^m\rightarrow\mathds{R}$ und $g:\mathds{R}^m\rightarrow\mathds{R}$ gilt für das Produkt der Funktionen ($h(x)=f(x)*g(x)$) die Ableitung \begin{equation*}Dh(x)=f(x)*Dg(x)+Df(x)*g(x)\end{equation*}
+\\
+Um uns Klarheit über diesen Bereich der Mathematik zu verschaffen, l\"osen wir die folgenden Aufgaben.
 \vspace{15pt}
 
-\textbf{Aufgabe 1:} \\
+\subsection{Aufgabe 1:} 
 Aufgabenstellung:
-Beweise, dass eine Funktion $f:\mathds{R} \rightarrow \mathds{R}$, welche differenzierbar ist an der Stelle $x \in R$ ist auch stetig an bei $x \in R$ ist.\\ %Satz ist noch nicht optimal formuliert
+Beweisen Sie, dass eine Funktion $f:\mathds{R} \rightarrow \mathds{R}$, welche differenzierbar an der Stelle $x \in R$ ist auch stetig an der Stelle $x \in R$ ist.\\ %Satz ist noch nicht optimal formuliert
 
 Lösung:
 
 Zuerst überlegen wir, welche Bedingungen bereits in der Aufgabenstellung gegeben sind. \\
-Eine Funktion ist an der Stelle x differenzierbar, wenn gilt:\\ \\
+Eine Funktion ist an der Stelle x differenzierbar, wenn gilt:
 
-$f(x+h)=f(x)+l_x(h)+ r(h)$ mit $\lim\limits_{h \rightarrow 0} \frac{r(h)}{h}= 0$ \\ \\
+\begin{equation}f(x+h)=f(x)+l_x(h)+ r(h) \text{ mit } \lim\limits_{h \rightarrow 0} \frac{r(h)}{h}= 0 \end{equation} 
 
 Diese Funktion wäre außerdem stetig, wenn $\lim\limits_{w \rightarrow x} f(w)=f(x)$.\\
 Da die Funktion $f(x+h)$ äquivalent zur Funktion $f(w)$ sein soll, ersetzen wir in der Bedingung für die Stetigkeit $f(w)$ mit der gesamten Funktion von $f(x+h)$.  
@@ -36,10 +62,9 @@ Damit die Bedingung der Stetigkeit erfüllt ist, muss der Grenzwert dieser Funkt
 
 \vspace{15pt}
 
-\textbf{Aufgabe 3:}\\
+\subsection{Aufgabe 2:}
 Bei der nachfolgenden Aufgabe soll bewiesen werden, dass es immer möglich ist für eine differenzierbare Funktion f einen Skalar $\lambda$ zu finden, damit folgende Aussage gilt: \\ \\
 $(1) f(x + \lambda \nabla f(x)) \leq f(x)$ \\ \\
-Manche von Ihnen werden sich jetzt fragen, was das Zeichen $\nabla$ bedeutet. Es steht für den Gradienten, welcher im Grunde die Ableitung einer Funktion darstellt.
 Dadurch lässt sich die Ungleichung (1) in folgende Form umwandeln: \\ \\
 $f(x) + Df(x)h + r(h) \leq f(x)$  \\ \\
 Hierbei ist h = $\lambda \nabla$ f(x) und r(h) das Restglied %Muss eventuell erklärt werden 
@@ -74,14 +99,46 @@ $\lim\limits_{h \rightarrow 0}{\frac{r(\lambda \nabla f(x))}{\lambda ||\nabla f(
 Man kann $\lambda \nabla f(x)$ wieder durch h ersetzen, woraus folgt: \\
 $\lim\limits_{h \rightarrow 0} \frac{r(h)}{h}$ \\
 
-Der Grenzwert des Restbetrages strebt gegen null. Daraus lässt sich schließen, dass es einen Punkt gibt, ab welchem die Ungleichung der Funktion $h(\lambda)$ (3) erfüllt ist und damit auch die anfängliche Aussage (1). \\ %ist hier h(\lambda) und (3) beies nötig?
+Der Grenzwert des Restbetrages strebt gegen Null. Daraus lässt sich schließen, dass es einen Punkt gibt, ab welchem die Ungleichung der Funktion $h(\lambda)$ (3) erfüllt ist und damit auch die anfängliche Aussage (1). \\ %ist hier h(\lambda) und (3) beies nötig?
 \vspace{15pt}
 
-\textbf{Aufgabe 6:} \\
+\subsection{Aufgabe 3:} 
 
-In der n\"achsten Aufgabe soll gezeigt werden, dass zwei differenzierbare Funktionen, die vom $\mathds{R}^m$ in den $\mathds{R}$ abgebildet werden, mit $h(x) = f(x) \cdot g(x)$ die Produktregel bedienen. Diese lautet: $Dh(x) = f(x) \cdot Dg(x) + Df(x) \cdot g(x)$.
+In der letzten Aufgabe soll die Produktregel bewiesen werden. \\
+Dafür waren zwei Funktionen gegeben: Einmal die Funktion f, die vom $\mathds{R}^m$ in den $\mathds{R}$ abbildet und die Funktion g, die ebenfalls vom $\mathds{R}^m$ in den $\mathds{R}$ abgebildet wird. \\
+Es sind also die Funktion f(x) mit der Ableitung $f(x+h) = f(x) \cdot Df(x) \cdot h \cdot r_{f}(h)$ und die Funktion g(x) mit der Ableitung $g(x+h) = f(x) \cdot Dg(x) \cdot h \cdot r_{g}(h)$ gegeben. \\
+Die Produktregel besagt, dass für die Funktion $h(x) = f(x) \cdot g(x)$ die Ableitung $Dh(x) = f(x) \cdot Dg(x) + Df(x) \cdot g(x)$ %Reihenfolge eventuell anpassen
+ ist. \\
+Damit dies bewiesen werden kann schreiben wir zuerst die Ableitung von $h(x+v)$ als Kombination aus den Ableitungen von $f(x)$ und $g(x)$ auf.
 
+\begin{align} \begin{split} h(x+v) & = (f(x) + Df(x) \cdot v \\ & + r_{g}(h)) \cdot (g(x) \\ & + Dg(x) \cdot v + r_{g}(v) \end{split} \end{align}
 
+Dieser Term wird ausmultipliziert und wir erhalten: 
+
+\begin{equation}
+\begin{split} h(x+v) & = f(x) \cdot g(x) \\ & + f(x)  \cdot D_{g}(x) \cdot v \\ & + f(x) \cdot r_{g}(v) \\ & + Df(x) \cdot v \cdot g(x) \\ & +  Df(x) \cdot v \cdot D_{g}(x) \cdot v  \\ & + Df(x) \cdot v \cdot r_{g}(v) \\ & +  r_{g}(v) \cdot g(x) \\ & + r_{g}(x) \cdot Dg(x) \cdot v \\ & + r_{g}(v) \cdot r_{g}(v) \end{split} \end{equation}   %Die Formel passt nicht in eine Zeile. Umbruch?
+
+Von den ganzen Summanden müsssen letztendlich alle eliminiert werden, bis auf 
+\begin{equation} f(x) \cdot g(x) + f(x) \cdot Dg(x) \cdot v + Df(x) \cdot v \cdot g(x) \end{equation} 
+Dafür müssen wir zeigen, dass die übrigen Summanden gegen Null gehen. Um das zu erreichen bilden wir den Grenzwert:
+%riesige Formel hier
+
+Damit die Summanden einzeln "aufgesplittet" werden können, wenden wir die Dreiecksungleichung %Wurde die weiter vorne schon erklärt?
+an:
+%andere große Formel
+
+Nun können wir von jedem Summanden einzeln den Limes bilden, um zu zeigen, dass der gesamte Grenzwert gegen Null geht. Dies ist aber nur der Fall, falls der Limes jedes Summanden gegen Null geht. Wir zeigen das exemplarisch für 
+
+\begin{equation} \lim\limits_{v \rightarrow 0} \frac{||Df(x) \cdot r_{g}(v)||}{||v||} \end{equation}
+
+Df(x) ist eine Matrix mit einer Zeile und m Spalten in der jeweils c steht. Daraus folgern wir:
+
+\begin{equation} \lim\limits_{v \rightarrow 0} \frac{m \cdot c \cdot ||v|| \cdot ||r_{g}(v)||}{||v||} \end{equation}
+\begin{equation}m \cdot c \cdot \lim\limits_{v \rightarrow 0} \frac{ ||v|| \cdot ||r_{g}(v)||}{||v|| = 0} \end{equation} 
+
+Damit haben wir gezeigt, dass der Summand gegen Null geht. Das Selbe lässt sich auch mit den anderen Summanden zeigen und auch diese gehen alle gegen Null. \\
+Die Produktregel ist damit bewiesen.
+
+\end{multicols}
 \end{document}
-
 
