@@ -24,13 +24,12 @@ Die Features und das Label zusammen beschreiben einen Punkt im n-dimensionalen K
 Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im n-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde. (\ref{SVM2}) %Muss noch verändert werden
 
 \begin{dsafigure}
-\begin{center}
-	\includegraphics[width=0.5\textwidth]{svm.jpg}
-	\caption{Da der Abstand zwischen den unterschiedlich klassifizierten Datensätzen maximiert werden soll, gilt die rote und nicht die blaü Linie als Trennelement.}
-	\label{SVM1}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{Figure_SimpleSVM}
+		\caption{Da der Abstand zwischen den unterschiedlich klassifizierten Datensätzen maximiert werden soll, gilt die durchgezogene und nicht die gestrichelte Linie als Trennelement.}
+		\label{FigSimpleSVM}
 	\end{center}
 \end{dsafigure}
-
 
 Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Da sich Ebenen auch in der Form $\langle x, w \rangle = b $ beschreiben lassen, folgt, dass wir die Datensätze auch etwas anders betrachten können (\ref{SVM2}). %Muss onoch überarbeitet werden.
 Das daraus folgende mathematische Programm sieht wie folgt aus: 
@@ -81,10 +80,10 @@ sodass
 Dabei steht $z_{i}$ für die Grösse des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren grösse bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
 
 \begin{dsafigure}
-\begin{center}
-	\includegraphics[width=0.5\textwidth]{Figure_SVM}
-	\caption{Nun wurden zu der Trenngerade zwischen den Datensätzen noch zwei parallele Geraden hinzugefügt, die als Stützvektoren (Support vectors) einen der klassifizierten Datenpunkte nutzen. Dann lässt sich das mathematische Programm optimieren.}
-	\label{SVM2}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{Figure_SVM}
+		\caption{Nun wurden zu der Trenngerade zwischen den Datensätzen noch zwei parallele Geraden hinzugefügt, die als Stützvektoren (Support vectors) einen der klassifizierten Datenpunkte nutzen. Dann lässt sich das mathematische Programm optimieren.}
+		\label{FigSVM}
 	\end{center}
 \end{dsafigure}
 
@@ -99,10 +98,10 @@ Dazu zählen Spracherkennung, Objekterkennung in Bildern und die Fähigkeit indi
 Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist dabei, die Datenschicht, auf die ein oder mehrere hidden layer folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher die Wahrscheinlichkeitsverteilung darstellt. Mit anderen Worten, wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
 
 \begin{dsafigure}
-\begin{center}
-	\includegraphics[width=0.5\textwidth]{Figure_NN}
-	\caption{ASHGDXJAGSHDJAGSDJAGS}
-	\label{NN1}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{Figure_NN}
+		\caption{Lorem ipsum dolor sit amet, consetetur sadipscing elitr} % TODO: Caption muss angepasst werden
+		\label{FigNN}
 	\end{center}
 \end{dsafigure}
 
@@ -138,3 +137,11 @@ a_i = <w,x_i> -b-y_i
 Mit Deep Learing beschreibt man die Neuronalen Netze, die über mehr als einen hidden layer verfügen. Dabei wird jeweils eine nicht lineare Funktion auf die linearen Ergebnisse der einzelnen layer angewendet, um die Anzahl der Parameter zu vergrößern.
 
 \subsection{Convolutional Neuronal Networks}
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{Figure_ConvNN}
+		\caption{Lorem ipsum dolor sit amet, consetetur sadipscing elitr} % TODO: Caption muss angepasst werden
+		\label{FigConvNN}
+	\end{center}
+\end{dsafigure}
