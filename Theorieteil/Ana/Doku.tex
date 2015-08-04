@@ -8,15 +8,41 @@
 \begin{document}
 \begin{multicols}{2}
 \section{Analysis}
+  
 
-
-Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist die Grundlage für Optimierung und somit auch von großer Bedeutung beim Maschinellen Lernen. \\
+Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für Optimierung und somit auch von großer Bedeutung beim Maschinellen Lernen. \\
 Im Kurs war für uns besonders die Stetigkeit und Differenzierbarkeit von ein- und mehrdimensionalen Funktionen wichtig. \\
-Um uns Klarheit üuber diesen Bereich der Mathematik zu verschaffen, lösen wir - unter anderem - die folgenden Aufgaben.
+Dazu eignen wir uns vorerst die theoretischen Grundlagen der Analysis an. \\
 
+\subsection{Grenzwert}
+Grenzwert einer Funktion L ist Grenzwert der Funktion $f(x)$ für x gegen a, wenn für alle $\epsilon > 0$ ein $\delta > 0$ gibt, sodass für alle $|x-a| < \delta$ gilt \begin{equation*}|f(x)-L|<\epsilon\end{equation*}
+
+\subsection{Stetigkeit}
+Eine Funktion $f:\mathds{R}\rightarrow \mathds{R}$ ist stetig in x, wenn $lim_{w\rightarrow x}f(w)=f(x)$ auf ihrem gesamten Definitionsbereich gilt, wenn sie stetig in x für alle $x\in D$ ist.
+
+\subsection{Differenzierbarkeit}
+Eine Funktion f:$\mathds{R}\rightarrow\mathds{R}$ ist an einer Stelle x differenzierbar, wenn eine lineare Abbildung $ l_ x (h)$ und ein $r(h)$ existieren, sodass \begin{equation*}f(x+h)=f(x)+l_{x}(h)+r(h)\end{equation*} mit dem Grenzwert \begin{equation*}lim_{h\rightarrow 0} \frac{r(h)}{h}= 0\end{equation*}gilt.
+
+\subsection{Gradient}
+Der Gradient $\nabla$ ist die Ableitung eines Vektors, wobei jeder Eintrag die partielle Ableitung der entsprechenden Komponente ist:
+$f:\mathds{R}^m\rightarrow\mathds{R}$.
+\begin{equation} \begin{split} \nabla f(x) = \left( \begin{array}{c}
+& \partial_{x1} f(x) \\ & \partial_{x2} f(x) \\ & ... \\ & \partial_{xm} f(x)
+\end{array}
+\right)
+\end{split} \end{equation} 
+Der Gradient zeigt immer in Richtung des steilsten Abstiegs einer Funktion, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden.
+\subsection{Kettenregel}
+Gegeben seien die differenzierbaren Funktionen $f:\mathds{R}^k\rightarrow\mathds{R}^n$, $g:\mathds{R}^n\rightarrow{R}^k$ und $h(x)=f(g(x))$. Daraus folgt durch die Kettenregel, dass Dh(x)=Df(g(x))*Dg(x) ist.
+\subsection{Summenregel}
+Die Summenregel besagt, dass die Ableitung der Funktion $h(x)=f(x)+g(x)$ \begin{equation*} D(f + g)(x)=Df(x)+Dg(x)\end{equation*} ist.
+\subsection {Produktregel}
+Bei zwei differenzierbaren Funktionen $f:\mathds{R}^m\rightarrow\mathds{R}$ und $g:\mathds{R}^m\rightarrow\mathds{R}$ gilt für das Produkt der Funktionen ($h(x)=f(x)*g(x)$) die Ableitung \begin{equation*}Dh(x)=f(x)*Dg(x)+Df(x)*g(x)\end{equation*}
+\\
+Um uns Klarheit über diesen Bereich der Mathematik zu verschaffen, l\"osen wir die folgenden Aufgaben.
 \vspace{15pt}
 
-\textbf{Aufgabe 1:} \\
+\subsection{Aufgabe 1:} 
 Aufgabenstellung:
 Beweisen Sie, dass eine Funktion $f:\mathds{R} \rightarrow \mathds{R}$, welche differenzierbar an der Stelle $x \in R$ ist auch stetig an der Stelle $x \in R$ ist.\\ %Satz ist noch nicht optimal formuliert
 
@@ -36,10 +62,9 @@ Damit die Bedingung der Stetigkeit erfüllt ist, muss der Grenzwert dieser Funkt
 
 \vspace{15pt}
 
-\textbf{Aufgabe 3:}\\
+\subsection{Aufgabe 2:}
 Bei der nachfolgenden Aufgabe soll bewiesen werden, dass es immer möglich ist für eine differenzierbare Funktion f einen Skalar $\lambda$ zu finden, damit folgende Aussage gilt: \\ \\
 $(1) f(x + \lambda \nabla f(x)) \leq f(x)$ \\ \\
-Manche von Ihnen werden sich jetzt fragen, was das Zeichen $\nabla$ bedeutet. Es steht für den Gradienten, welcher im Grunde die Ableitung einer Funktion darstellt.
 Dadurch lässt sich die Ungleichung (1) in folgende Form umwandeln: \\ \\
 $f(x) + Df(x)h + r(h) \leq f(x)$  \\ \\
 Hierbei ist h = $\lambda \nabla$ f(x) und r(h) das Restglied %Muss eventuell erklärt werden 
@@ -74,10 +99,10 @@ $\lim\limits_{h \rightarrow 0}{\frac{r(\lambda \nabla f(x))}{\lambda ||\nabla f(
 Man kann $\lambda \nabla f(x)$ wieder durch h ersetzen, woraus folgt: \\
 $\lim\limits_{h \rightarrow 0} \frac{r(h)}{h}$ \\
 
-Der Grenzwert des Restbetrages strebt gegen null. Daraus lässt sich schließen, dass es einen Punkt gibt, ab welchem die Ungleichung der Funktion $h(\lambda)$ (3) erfüllt ist und damit auch die anfängliche Aussage (1). \\ %ist hier h(\lambda) und (3) beies nötig?
+Der Grenzwert des Restbetrages strebt gegen Null. Daraus lässt sich schließen, dass es einen Punkt gibt, ab welchem die Ungleichung der Funktion $h(\lambda)$ (3) erfüllt ist und damit auch die anfängliche Aussage (1). \\ %ist hier h(\lambda) und (3) beies nötig?
 \vspace{15pt}
 
-\textbf{Aufgabe 6:} \\
+\subsection{Aufgabe 3:} 
 
 In der letzten Aufgabe soll die Produktregel bewiesen werden. \\
 Dafür waren zwei Funktionen gegeben: Einmal die Funktion f, die vom $\mathds{R}^m$ in den $\mathds{R}$ abbildet und die Funktion g, die ebenfalls vom $\mathds{R}^m$ in den $\mathds{R}$ abgebildet wird. \\
@@ -113,10 +138,6 @@ Df(x) ist eine Matrix mit einer Zeile und m Spalten in der jeweils c steht. Dara
 
 Damit haben wir gezeigt, dass der Summand gegen Null geht. Das Selbe lässt sich auch mit den anderen Summanden zeigen und auch diese gehen alle gegen Null. \\
 Die Produktregel ist damit bewiesen.
-
-
-
-
 
 \end{multicols}
 \end{document}
