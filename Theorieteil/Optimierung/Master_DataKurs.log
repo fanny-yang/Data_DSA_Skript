@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  4 AUG 2015 18:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  4 AUG 2015 20:37
 entering extended mode
 **C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Maste
 r_DataKurs.tex
@@ -692,7 +692,30 @@ File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
 \c@beispiel=\count121
 \c@definition=\count122
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algpseudocode
+.sty
+Package: algpseudocode 
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithmicx\algorithmicx.
+sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count123
+\c@ALG@rem=\count124
+\c@ALG@nested=\count125
+\ALG@tlm=\skip63
+\ALG@thistlm=\skip64
+\c@ALG@Lnr=\count126
+\c@ALG@blocknr=\count127
+\c@ALG@storecount=\count128
+\c@ALG@tmpcounter=\count129
+\ALG@tmplength=\skip65
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
@@ -706,7 +729,7 @@ Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count123
+\babel@savecnt=\count130
 \U@D=\dimen137
 )
 \l@naustrian = a dialect from \language\l@ngerman 
@@ -717,20 +740,20 @@ ty
 Package: misc 2004/09/01 Verschiedenes ...
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count124
+\c@tracingmulticols=\count131
 \mult@box=\box35
 \multicol@leftmargin=\dimen138
-\c@unbalance=\count125
-\c@collectmore=\count126
-\doublecol@number=\count127
-\multicoltolerance=\count128
-\multicolpretolerance=\count129
+\c@unbalance=\count132
+\c@collectmore=\count133
+\doublecol@number=\count134
+\multicoltolerance=\count135
+\multicolpretolerance=\count136
 \full@width=\dimen139
 \page@free=\dimen140
 \premulticols=\dimen141
 \postmulticols=\dimen142
-\multicolsep=\skip63
-\multicolbaselineskip=\skip64
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
 \partial@page=\box36
 \last@line=\box37
 \mult@rightbox=\box38
@@ -754,14 +777,14 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \@tempa=\box56
 \@tempa=\box57
 \@tempa=\box58
-\c@columnbadness=\count130
-\c@finalcolumnbadness=\count131
+\c@columnbadness=\count137
+\c@finalcolumnbadness=\count138
 \last@try=\dimen143
 \multicolovershoot=\dimen144
 \multicolundershoot=\dimen145
 \mult@nat@firstbox=\box59
 \colbreak@box=\box60
-\multicol@sort@counter=\count132
+\multicol@sort@counter=\count139
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -775,24 +798,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count133
-\c@Blindtext=\count134
-\c@blind@countparstart=\count135
-\blind@countxx=\count136
-\blindtext@numBlindtext=\count137
-\blind@countyy=\count138
-\c@blindlist=\count139
-\c@blindlistlevel=\count140
-\c@blindlist@level=\count141
-\blind@listitem=\count142
-\c@blind@listcount=\count143
-\c@blind@levelcount=\count144
-\blind@mathformula=\count145
-\blind@Mathformula=\count146
-\c@blind@randomcount=\count147
-\c@blind@randommax=\count148
-\c@blind@pangramcount=\count149
-\c@blind@pangrammax=\count150
+\c@blindtext=\count140
+\c@Blindtext=\count141
+\c@blind@countparstart=\count142
+\blind@countxx=\count143
+\blindtext@numBlindtext=\count144
+\blind@countyy=\count145
+\c@blindlist=\count146
+\c@blindlistlevel=\count147
+\c@blindlist@level=\count148
+\blind@listitem=\count149
+\c@blind@listcount=\count150
+\c@blind@levelcount=\count151
+\blind@mathformula=\count152
+\blind@Mathformula=\count153
+\c@blind@randomcount=\count154
+\c@blind@randommax=\count155
+\c@blind@pangramcount=\count156
+\c@blind@pangrammax=\count157
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -842,7 +865,7 @@ Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks26
 \footnotemargin=\dimen147
-\c@pp@next@reset=\count151
+\c@pp@next@reset=\count158
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -852,44 +875,44 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-\c@Def=\count152
-\c@Sat=\count153
-\c@Bew=\count154
-\c@Thm=\count155
+\c@Def=\count159
+\c@Sat=\count160
+\c@Bew=\count161
+\c@Thm=\count162
 
 (C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Master
 _DataKurs.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 52.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
+\scratchcounter=\count163
 \scratchdimen=\dimen148
 \scratchbox=\box62
-\nofMPsegments=\count157
-\nofMParguments=\count158
+\nofMPsegments=\count164
+\nofMParguments=\count165
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count159
+\MPscratchCnt=\count166
 \MPscratchDim=\dimen149
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
 \everyMPtoPDFconversion=\toks28
 )
-LaTeX Info: Redefining \microtypecontext on input line 46.
+LaTeX Info: Redefining \microtypecontext on input line 52.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -942,41 +965,41 @@ Package microtype Warning: Unknown slot number of character
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 46.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 52.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 46.
+(Font)              `operators' in the math version `normal' on input line 52.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 46.
+(Font)                  OT1/lmr/m/n --> T1/lmr/m/n on input line 52.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 46.
+(Font)              `operators' in the math version `bold' on input line 52.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 46.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/m/n on input line 52.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 46.
+(Font)                  T1/lmr/m/n --> T1/lmr/bx/n on input line 52.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 46.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 46.
+(Font)                  OT1/lmr/bx/n --> T1/lmr/bx/n on input line 52.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 46.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 46.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 52.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 46.
+(Font)                  OT1/lmr/m/it --> T1/lmr/m/it on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 46.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 46.
+(Font)                  OT1/lmr/bx/it --> T1/lmr/m/it on input line 52.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 46.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 46.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 46.
+(Font)                  T1/lmss/m/n --> T1/lmss/bx/n on input line 52.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 46.
+(Font)                  T1/lmr/m/it --> T1/lmr/bx/it on input line 52.
 
 Package microtype Warning: Unknown slot number of character
 (microtype)                `\quotedblbase '
@@ -995,7 +1018,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 52.
+(scrreprt)              by `\normalfont \bfseries ' on input line 58.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1107,7 +1130,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 66.
+(scrreprt)              by `\normalfont \bfseries ' on input line 72.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1121,11 +1144,12 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                in font encoding `T1' in protrusion list 
 (microtype)                `cmr-T1'.
 
-<Grafik-TempKursfoto.jpg, id=8, 803.0pt x 812.03375pt>
-File: Grafik-TempKursfoto.jpg Graphic file (type jpg)
+<../../media/Grafik-TempKursfoto.jpg, id=8, 803.0pt x 812.03375pt>
+File: ../../media/Grafik-TempKursfoto.jpg Graphic file (type jpg)
 
-<use Grafik-TempKursfoto.jpg>
-Package pdftex.def Info: Grafik-TempKursfoto.jpg used on input line 71.
+<use ../../media/Grafik-TempKursfoto.jpg>
+Package pdftex.def Info: ../../media/Grafik-TempKursfoto.jpg used on input line
+ 77.
 (pdftex.def)             Requested size: 195.2557pt x 197.44455pt.
 
 
@@ -1146,7 +1170,7 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 86.
+(scrreprt)              by `\normalfont \bfseries ' on input line 92.
 
 
 Package microtype Warning: Unknown slot number of character
@@ -1218,12 +1242,13 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                `lmr-it-T1'.
 
 
-<Grafik-OptimierungLennart_LineareRegression.pdf, id=9, 393.72093pt x 382.42876
-pt>
-File: Grafik-OptimierungLennart_LineareRegression.pdf Graphic file (type pdf)
- <use Grafik-OptimierungLennart_LineareRegression.pdf>
-Package pdftex.def Info: Grafik-OptimierungLennart_LineareRegression.pdf used o
-n input line 22.
+<../../media/Grafik-Optimierung_LineareRegression.pdf, id=9, 393.72093pt x 382.
+42876pt>
+File: ../../media/Grafik-Optimierung_LineareRegression.pdf Graphic file (type p
+df)
+ <use ../../media/Grafik-Optimierung_LineareRegression.pdf>
+Package pdftex.def Info: ../../media/Grafik-Optimierung_LineareRegression.pdf u
+sed on input line 22.
 (pdftex.def)             Requested size: 227.62206pt x 221.09106pt.
 
 Overfull \hbox (10.66978pt too wide) in paragraph at lines 22--23
@@ -1266,9 +1291,9 @@ Package microtype Warning: Unknown slot number of character
 
 
 
- <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Grafi
-k-TempKursfoto.jpg> <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorietei
-l/Optimierung/Grafik-OptimierungLennart_LineareRegression.pdf>])
+ <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/media/Grafik-TempKursfoto.jpg
+> <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/media/Grafik-Optimierung_Lin
+eareRegression.pdf>]
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              You should note, that in 1994 font command `\bf' has
@@ -1281,9 +1306,52 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 87.
+(scrreprt)              by `\normalfont \bfseries ' on input line 55.
 
 
+<../../media/Grafik-Optimierung_KonvexeFunktion.jpg, id=27, 554.07pt x 525.965p
+t>
+File: ../../media/Grafik-Optimierung_KonvexeFunktion.jpg Graphic file (type jpg
+)
+ <use ../../media/Grafik-Optimierung_KonvexeFunktion.jpg>
+Package pdftex.def Info: ../../media/Grafik-Optimierung_KonvexeFunktion.jpg use
+d on input line 62.
+(pdftex.def)             Requested size: 204.85846pt x 194.46756pt.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 63.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 70.
+
+
+Overfull \hbox (161.43573pt too wide) in paragraph at lines 76--76
+[] 
+ []
+
+)
 (C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Inhalt
 -OptimierungLukasL.tex
 
@@ -1315,12 +1383,12 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              by `\normalfont \bfseries ' on input line 5.
 
 
-<Grafik-OptimierungLukasL_KonvexeMengen.pdf, id=27, 623.11537pt x 449.55356pt>
-File: Grafik-OptimierungLukasL_KonvexeMengen.pdf Graphic file (type pdf)
-
-<use Grafik-OptimierungLukasL_KonvexeMengen.pdf>
-Package pdftex.def Info: Grafik-OptimierungLukasL_KonvexeMengen.pdf used on inp
-ut line 10.
+<../../media/Grafik-Optimierung_KonvexeMengen.pdf, id=28, 623.11537pt x 449.553
+56pt>
+File: ../../media/Grafik-Optimierung_KonvexeMengen.pdf Graphic file (type pdf)
+ <use ../../media/Grafik-Optimierung_KonvexeMengen.pdf>
+Package pdftex.def Info: ../../media/Grafik-Optimierung_KonvexeMengen.pdf used 
+on input line 10.
 (pdftex.def)             Requested size: 182.09486pt x 131.3687pt.
 
 
@@ -1349,28 +1417,49 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\bf' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrreprt)              by `\normalfont \bfseries ' on input line 28.
-
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 30.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+(scrreprt)              by `\normalfont \bfseries ' on input line 30.
 
 
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list
-(microtype)                `T1-default'.
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 38.
 
 
-Package microtype Warning: Unknown slot number of character
-(microtype)                `\quotedblbase '
-(microtype)                in font encoding `T1' in protrusion list
-(microtype)                `T1-default'.
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 46.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 54.
 
 
 Class scrreprt Warning: Usage of deprecated font command `\bf'!
@@ -1400,9 +1489,11 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 64.
 
-
+[8 <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/media/Grafik-Optimierung_Ko
+nvexeFunktion.jpg> <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/media/Grafi
+k-Optimierung_KonvexeMengen.pdf>]
 Underfull \hbox (badness 2460) in paragraph at lines 66--68
-[]\T1/lmr/m/sc/10 (+20) Definition[]3 \T1/lmr/m/it/10 (+20) (Kon-ve-xes Pro-gra
+[]\T1/lmr/m/sc/10 (+20) Definition[]4 \T1/lmr/m/it/10 (+20) (Kon-ve-xes Pro-gra
 mm) \T1/lmr/m/n/10 (+20) Sei $\OML/lmm/m/it/10 f \U/euf/m/n/10 :$
  []
 
@@ -1420,23 +1511,36 @@ Class scrreprt Warning: Usage of deprecated font command `\bf'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
 (scrreprt)              by `\normalfont \bfseries ' on input line 74.
 
-[8 <C:/Users/Lukas/Documents/GitHub/Data_DSA_Skript/Theorieteil/Optimierung/Gra
-fik-OptimierungLukasL_KonvexeMengen.pdf>]) [9
+
+Class scrreprt Warning: Usage of deprecated font command `\bf'!
+(scrreprt)              You should note, that in 1994 font command `\bf' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\bf' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrreprt)              by `\normalfont \bfseries ' on input line 91.
+
+) [9
 
 ]
 (C:\Users\Lukas\Documents\GitHub\Data_DSA_Skript\Theorieteil\Optimierung\Master
 _DataKurs.aux) ) 
 Here is how much of TeX's memory you used:
- 8105 strings out of 493921
- 125108 string characters out of 3144876
- 305394 words of memory out of 3000000
- 11143 multiletter control sequences out of 15000+200000
- 64972 words of font info for 80 fonts, out of 3000000 for 9000
+ 8578 strings out of 493921
+ 132081 string characters out of 3144876
+ 310517 words of memory out of 3000000
+ 11616 multiletter control sequences out of 15000+200000
+ 59149 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  48i,14n,68p,597b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex
-.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x8
+.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/public/amsfonts/euler/euex10.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program Files (x86)/MiKTeX
@@ -1450,13 +1554,12 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmri9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Master_DataKurs.pdf (4 pages, 775716 bytes).
+ic/lm/lmri9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Master_DataKurs.pdf (4 pages, 789647 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 19472 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 16917 words of extra memory for PDF output out of 17280 (max. 10000000)
 

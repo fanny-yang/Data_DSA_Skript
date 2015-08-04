@@ -2,13 +2,13 @@
 
 \paragraph{Einführung}
 
-Im Rahmen der Optimierung von konvexen Funktionen ist es erforderlich, den Begriff der konvexen Menge einzuführen. Um diese Thematik anschaulich darzustellen, verwenden wir zunächst verschiedene geometrische Figuren in Abbildung \ref{figure:Grafik-OptimierungLukasL_KonvexeMengen}, von denen einige konvex sowie andere wiederum nicht konvex sind.
+Im Rahmen der Optimierung von konvexen Funktionen ist es erforderlich, den Begriff der konvexen Menge einzuführen. Um diese Thematik anschaulich darzustellen, verwenden wir zunächst verschiedene geometrische Figuren in Abbildung \ref{figure:Grafik-Optimierung_KonvexeMengen}, von denen einige konvex sowie andere wiederum nicht konvex sind.
 Ist es möglich für je zwei beliebige Punkte der Menge eine Verbindungsstrecke zu finden, die selbst ebenfalls in der Menge liegt, so ist die Menge konvex.
 
 \begin{dsafigure}
 \begin{center}
-\includegraphics[width=0.4\textwidth]{Grafik-OptimierungLukasL_KonvexeMengen.pdf}
-\label{figure:Grafik-OptimierungLukasL_KonvexeMengen}
+\includegraphics[width=0.4\textwidth]{\media Grafik-Optimierung_KonvexeMengen.pdf}
+\label{figure:Grafik-Optimierung_KonvexeMengen}
 \caption{Beispiele für konvexe Mengen}
 \end{center}
 \end{dsafigure}
@@ -25,7 +25,7 @@ Eine Menge $X$ heißt konvex, falls für alle $x, y \in X$ und $\lambda \in \mat
 
 \paragraph{Beispiele konvexer Mengen}
 
-\subparagraph{Kugel}
+\paragraph{Kugel}
 
 Ein Beispiel für eine konvexe Menge ist die Menge $S$ der Vektoren, die eine Kugel mit dem Radius $r = 1$, deren Mittelpunkt im Ursprung liegt, beschreibt:
 
@@ -33,7 +33,7 @@ Ein Beispiel für eine konvexe Menge ist die Menge $S$ der Vektoren, die eine Ku
 S = \{ \in \mathbb{R}^{n} | \|v\| \le 1\}
 \end{equation*}
 
-\subparagraph{Quadrant}
+\paragraph{Quadrant}
 
 Auch die Quadranten des kartesischen Koordinatensystems lassen sich durch eine konvexe Menge erfassen. So gilt z.~B. für den ersten Quadranten:
 
@@ -41,7 +41,7 @@ Auch die Quadranten des kartesischen Koordinatensystems lassen sich durch eine k
 L = \{ x \in \mathbb{R}^{n} | x_1 \ge 0, x_2 \ge 0, ..., x_n \ge 0\}
 \end{equation*}
 
-\subparagraph{Eistüte}
+\paragraph{Eistüte}
 
 Bei einer Eistüte bzw. einem quadratischen Kegel handelt es sich um ein weiteres Beispiel für eine konvexe Menge, sonfern für $x \in \mathbb{R}^{n-1}$, $t \in \mathbb{R}$ gilt:
 
@@ -49,7 +49,7 @@ Bei einer Eistüte bzw. einem quadratischen Kegel handelt es sich um ein weitere
 Q = \{(x, t) \in \mathbb{R}^{n} | \|x\|^{2} \le t\}
 \end{equation*}
 
-\subparagraph{Box}
+\paragraph{Box}
 
 Die Menge von Vektoren im $\mathbb{R}$ bilden eine konvexe Menge in Form einer Box mit der Seitenlänge 2, deren Mittelpunkt im Ursprung liegt, wenn gilt:
 
@@ -86,7 +86,7 @@ Es folgt für die Nebenbedigungen:
 
 Hieraus folgt: $x_{1} \le 1$, $x_{2} \le 1$.
 
-\subparagraph{Quadratische Programme}
+\paragraph{Quadratische Programme}
 
 Im Hinblick auf quadratische Programme verwenden wir dieselbe Herangehensweise. \\
 Auch hier sei eine Funktion $f$ gegeben, z.~B. $f(x) = x^{T}Qx$ mit $Q = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, die es zu unter der Bedingung $x \in X$ für $X: Ax \le b$ zu minmieren gilt.\\
