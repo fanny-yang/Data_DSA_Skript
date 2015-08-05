@@ -33,7 +33,7 @@
 	\item Die Wahrscheinlichkeit der Vereinigung von disjunkten Ereignisssen ist gleich der Summe der Wahrscheinlichkeiten der disjunkten Ereignisse. 
 	\vspace{3pt}
 	\begin{equation*}
-	\mathds{P} (\cup_{i=1}^m \mathds{E}_{i}) = \sum_{i=1}^n \mathds{P} (\mathds{E}_{i})$ f\"ur alle $\mathds{E}_{1},...,\mathds{E}_{m} \in \mathcal{F}
+	\mathds{P} (\bigcup_{i=1}^m \mathds{E}_{i}) = \sum_{i=1}^n \mathds{P} (\mathds{E}_{i})$ f\"ur alle $\mathds{E}_{1},...,\mathds{E}_{m} \in \mathcal{F}
 	\end{equation*}
 \end{enumerate}
 \vspace{5pt}
@@ -73,7 +73,7 @@ $p_{i} \geq 0$  f\"ur $i \in \Omega$, sodass $\sum_{i\in \Omega} p_{i} =1$, $p_{
 
 \vspace{5pt}
 
-In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathds{P})$ beschreibt die Funktion $X:\Omega \longrightarrow \mathds{R}^k$ einen k-dimensionalen Zufallsvektoren. Im Fall von $k=1$ redet man von einer Zufallsvariablen.
+In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathds{P})$ beschreibt die Funktion \\ $X:\Omega \longrightarrow \mathds{R}^k$ einen k-dimensionalen Zufallsvektoren. Im Fall von $k=1$ redet man von einer Zufallsvariablen.
 
 \vspace{10pt}
 
@@ -86,9 +86,9 @@ In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathds{P})$ beschreibt 
 \vspace{3pt}
 
 \begin{equation*}
-\mathds{E} [X] = \sum_{x \in \Omega} X (i) * \mathds{P} ({i}) = \sum_{x\in\mathcal{X}} X* \mathds{P} (X=x) wobei $\mathcal{X} $
+\mathds{E} [X] = \sum_{x \in \Omega} X (i)  \mathds{P} ({i}) = \sum_{x\in\mathcal{X}} X \mathds{P} (X=x) 
 \end{equation*}
-  ein Wertebereich von x ist  
+ wobei $\mathcal{X} $ ein Wertebereich von x ist. 
 
 \vspace{10pt}
 
@@ -96,7 +96,7 @@ In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathds{P})$ beschreibt 
 
 \vspace{5pt}
 
-Die Varianz kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. Die Varianz einer Zufallsvariable X.
+Die Varianz kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. Die Varianz einer Zufallsvariable X lautet
 
 \vspace{3pt}
 
@@ -113,18 +113,16 @@ X= \mathds{E} [X^2] - \mathds{E} [X]^2 = \mathds{E} [ (X - \mathds{E} [X] )^2 ]
 \begin{enumerate}
 	\item Wenn f\"ur Ereignisse $E, F \in \mathcal{F} $ gilt
 	\vspace{3pt}
-	$\mathds{P} (E\cap F)= \mathds{P} (E) * \mathds{P} (F)$
-	\vspace{3pt}
-dann sind E und F unabh\"angig. 
+	$\mathds{P} (E\cap F)= \mathds{P} (E)  \mathds{P} (F)$
+	\vspace{3pt}, dann sind E und F unabh\"angig. 
 
 \item Wenn f\"ur die Zufallsvariablen 
 \begin{equation*}
-X_{1}: \Omega_{1} \longrightarrow \mathds{R}, \mathcal{F}_{1} , X_{2}: \Omega_{2} \longrightarrow \mathds{R}, \mathcal{F}_{2}
+X_{1}: \Omega_{1} \longrightarrow \mathds{R} \: \text{ und } \: X_{2}: \Omega_{2} \longrightarrow \mathds{R}
 \end{equation*}
- gilt
-\vspace{3pt}
+
 \begin{equation*}
-\mathds{P} ({X_{1} \in A} \cap {X_{2} \in B} ) = \mathds{P} ({X_{1} \in A} * \mathds{P} {X_{2} \in B} )
+\text{ gilt } \: \mathds{P} (\{X_{1} \in A\} \cap \{X_{2} \in B\} ) = \mathds{P} (\{X_{1} \in A\}) \mathds{P}(\{X_{2} \in B\} )
 \end{equation*}
 \vspace{3pt}
 f\"ur alle $A, B \subseteq \mathds{R}$
@@ -137,7 +135,7 @@ f\"ur alle $A, B \subseteq \mathds{R}$
 \vspace{5pt}
 
 \begin{equation*}
-\mathds{P} ({X_{1} \in A } ) = \sum_{b \in \Omega_{2} } \mathds{P} {X_{1} \in A} \cap {X_{2} \in b})
+\mathds{P} (\{X_{1} \in A \} ) = \sum_{b \in \Omega_{2} } \mathds{P} (\{X_{1} \in A\} \cap \{X_{2} \in b\})
 \end{equation*}
 
 \vspace{10pt}
@@ -147,7 +145,7 @@ f\"ur alle $A, B \subseteq \mathds{R}$
 \vspace{5pt}
 
 \begin{equation*}
-\mathds{P} ({X_{1} \in A } | { X_{2} \in B } ) = \frac {\mathds{P} ( {X_{1} \in A } \cap {X_{2} \in B })} {\mathds{P} ({X_{2} \in B})}
+\mathds{P} (\{X_{1} \in A \} | \{ X_{2} \in B \} ) = \frac {\mathds{P} ( \{X_{1} \in A \} \cap \{X_{2} \in B \})} {\mathds{P} (\{X_{2} \in B\})}
 \end{equation*}
 
 \vspace{10pt}
@@ -156,7 +154,7 @@ f\"ur alle $A, B \subseteq \mathds{R}$
 
 \vspace{5pt}
 \begin{equation*}
-X_{1}:\Omega \longrightarrow \mathds{R}, X_{2}:\Omega \longrightarrow \mathds{R}
+X_{1}:\Omega \longrightarrow \mathds{R} \: \text{ und } \: X_{2}:\Omega \longrightarrow \mathds{R}
 \end{equation*}
 \begin{equation*}
 Y=X_{1}+X_{2}
@@ -164,11 +162,11 @@ Y=X_{1}+X_{2}
 \vspace{3pt}
 Annahme: $X_{1}$ und $X_{2}$ sind unabh\"angig.\\
 \begin{equation*}
-{Y=l}=\cup_{i=-\infty}^{\infty} {X_{1}=1} \cap {X_{2}=l-i}
+\{Y=l\}=\bigcup_{i=-\infty}^{\infty} \{X_{1}=1\} \cap \{X_{2}=l-i\}
 \end{equation*}
 \vspace{3pt}
 \begin{equation*}
-\mathds{P} ({Y=l}) = \sum_{i=-\infty}^{\infty} \mathds{P} ({X_{1}=i} \cap {X_{2}=l-i}) = \sum_{i=-\intfy}^{\intfy} \mathds{P} ({X_{1} = i}) * \mathds{P} ({X_{2}=l-i})
+\mathds{P} (\{Y=l\}) = \sum_{i=-\infty}^{\infty} \mathds{P} (\{X_{1}=i\} \cap \{X_{2}=l-i\}) = \sum_{i=-\intfy}^{\intfy} \mathds{P} (\{X_{1} = i\}) * \mathds{P} (\{X_{2}=l-i\})
 \end{equation*}
 
 \vspace{10pt}
@@ -189,7 +187,7 @@ $f: \mathds{R} \longrightarrow \mathds{R}$ , f\"ur die gilt:
 
 dann k\"onnten wir eine Wahrscheinlichkeitsverteilung folgenderma"sen definieren:
 \begin{equation*}
-\mathds{P} ({X\in A}) = \int_{X \in A} f(x) dx
+\mathds{P} (\{X\in A\}) = \int_{X \in A} f(x) dx
 \end{equation*}
 
 
