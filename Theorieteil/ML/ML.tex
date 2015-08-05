@@ -14,7 +14,6 @@ Bei der Klassifikation sorgt der Algorythmus am Ende dafür, dass der Datensatz 
 
 \subsubsection{Regression}
 Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern ein konkretes Ergebnis beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (z. B. Größe, Lage ...) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in "`teuer"', "`mittelteuer"', "`billig"'. 
-%Noch die Mathematische Regression (methode der kleinsten Quadrate)
 
 \subsection{Support Vector Machines}
 \author{David Steinmann}
@@ -32,9 +31,9 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 
 \begin{dsafigure}
 \begin{center}
+	\label{SVM1}
 	\includegraphics[width=0.5\textwidth]{\media Figure_SimpleSVM}
 	\caption{Da der Abstand zwischen den unterschiedlich klassifizierten Datensätzen maximiert werden soll, gilt die durchgezogene und nicht die gestrichelte Linie als Trennelement.}
-	\label{SVM1}
 	\end{center}
 \end{dsafigure}
 
@@ -43,7 +42,7 @@ Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. D
 Das daraus folgende mathematische Programm sieht wie folgt aus: 
 
 \begin{align*}
-	\operatorname{maximiere}_{w,b} \quad & \frac{2}{\norm{(w)}} \\
+	\operatorname{max}_{w,b} \quad & \frac{2}{\norm{(w)}} \\
 	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,...,n ; \\
 	&x \in \mathbb{R}^n; \quad	y \in \{1;-1\}
 	 %\label{SVMProblemMax}
@@ -53,12 +52,11 @@ Unter der Vorraussetzung, dass alle vorhandenen Datensätze richtig klassifizier
 man aber genauso schreiben als:
 
 \begin{align*}
-		\operatorname{minimiere}_{w,b} \quad & \norm{(w)} \\
+		\operatorname{min}_{w,b} \quad & \norm{(w)} \\
 		\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall i = 1,...,n ; \\
 		&x \in \mathbb{R}^n; \quad y \in \{1; -1\}
 		%\label{SVMProblemMin}
 \end{align*}
-%Genauso gemacht wie obendrüber, funktioniert aber nicht geaunso ??
 
 Klassifikation:
 
@@ -67,13 +65,12 @@ Klassifikation:
 		& \{ -1 \operatorname{falls} \langle w,x_{i} \rangle \leq 1\}
 	%\label{KlassifikationSVM}
 \end{align*}
-%????
 
 Nachdem das Problem optimiert wurde, ist der Computer in der Lage, weitere Daten einzuordnen, vorrausgesetzt, es ist richtig optimiert.
 Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.\\
 
 \begin{itemize}
-	\item Wenn die Datensätze nicht linear separierbar sind, d.h., es ist nicht möglich die beiden Datensätze mit einem linearen Element zu trennen\\
+	\item Wenn die Datensätze nicht linear separierbar sind, d.h., es ist nicht möglich die beiden Datensätze mit einem linearen Element zu trennen.
 	
 	\item Wenn die Daten nicht alle korrekt klassifiziert sind oder es Daten gibt, die in dem >>Bereich<< der anderen Seite liegen.
 \end{itemize}
