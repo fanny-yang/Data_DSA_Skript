@@ -26,7 +26,7 @@ Zusätzlich hat jeder Datensatz noch einen weiteren Wert, welcher das >>Ergebnis
 
 Die Features und das Label zusammen beschreiben einen Punkt im n-dimensionalen Koordinatensystem, wobei $n = m + 1$, da zu den $m$ Dimensionen von $x$ noch die eine Dimension von $y$ dazukommt.
 
-Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im n-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde. (\ref{SVM1}) 
+Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im n-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde (Siehe Abb. \ref{SVM1}). 
 
 
 \begin{dsafigure}
@@ -38,14 +38,16 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 \end{dsafigure}
 
 
-Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Ebenen kann man auch in der Form $\langle x, w \rangle = b $ beschreiben. Daraus folgt, dass das optimierungsproblem wie folgt geschreiben werden kann.(\ref{SVM2}).
+Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Ebenen kann man auch in der Form $\langle x, w \rangle = b $ beschreiben. Daraus folgt, dass das Optimierungsproblem wie folgt geschreiben werden kann.
 
 \begin{align*}
-	\operatorname{max}_{w,b} \quad & \frac{2}{\norm{(w)}} \\
+	\operatorname{max}_{w,b} \quad & \frac{2}{\norm{w}} \\
 	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,...,n ; \\
 	&x \in \mathbb{R}^n; \quad	y \in \{1;-1\}
 	 %\label{SVMProblemMax}
 \end{align*}
+
+Dabei wird der Abstand zwischen den innersten Ebenen durch die beiden Datensätze ($\frac{2}{\norm{w}}$) (Siehe Abb. \ref{SVM2}).
 
 Unter der Vorraussetzung, dass alle vorhandenen Datensätze richtig klassifiziert sind. Dieses Problem kann 
 man aber genauso schreiben als:
@@ -93,7 +95,8 @@ Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse 
 	%\label{eq: SoftMarginSVMs}
 \end{align*}
 
-Dabei steht $z_{i}$ für die Größe des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren Größe bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
+Dabei steht $z_{i}$ für die Größe des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren Größe bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Die gesamte Gleichung aber soll minimiert werden, deshalb sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
+Um die optimale Größe von C für das entsprechende Problem zu finden wird ein System namens Crossvalidation genutzt. Bei diesem System wird der Algorithmus mehrmals auf den gleichen Testdatensatz angewendet, C dabei aber variiert. Damit kann man herausfinden, bei welchem Wert von C der Algorithmus optimal funktioniert.
 
 \section{Neuronale Netze}
 \author {Farhadiba Mohammed}
