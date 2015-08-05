@@ -7,14 +7,14 @@
 \vspace{15pt}
 
 
-1933 ver\"offentlichte der russische Mathematiker Andrey Kolmogorov sein Buch \textit{Foundations of the Theory of Probability}, in dem er die drei Axiome der Wahrscheinlichkeitstheorie aufstellte. Es existiert ein Wahrscheinlichkeitsraum, der sich aus den drei Elementen $\Omega, \mathcal{F}, \mathds{P}$ zusammensetzt.
+1933 ver\"offentlichte der russische Mathematiker Andrey Kolmogorov sein Buch \textit{Foundations of the Theory of Probability}, in dem er die drei Axiome der Wahrscheinlichkeitstheorie aufstellte. Es existiert ein Wahrscheinlichkeitsraum, der sich aus den drei Elementen $\Omega$, $\mathcal{F}$, $\mathbb{P}$ zusammensetzt.
 
 \vspace{5pt}
 
 \begin{enumerate}
-	\item $\Omega$ ist eine Menge mit endlicher Anzahl an Elementen. $|\Omega|= n $
-	\item $\mathcal{F}$ ist eine Menge der Ereignisse $\textsce $ und eine Teilmenge von $\Omega$. $\mathcal{F} \subseteq \Omega$
-	\item $\mathds{P}$ bezeichnet die Sicherheit der Wahrscheinlichkeit, das Wahrscheinlichkeitsmaß. Dieses weist jedem Ereignis in $\mathcal{F}$ eine reelle Zahl zu.  $\mathds{P}: \mathcal{F} \longrightarrow \mathds{R}$
+	\item $\Omega$ ist eine Menge mit einer endlichen Anzahl an Elementen. $|\Omega|= n $
+	\item $\mathcal{F}$ ist die Menge aller Ereignisse E, also Teilmengen von $\Omega$. Das hei"st f\"ur alle $E \in \mathcal{F}$  $E \subseteq \Omega$
+	\item $\mathbb{P}$ bezeichnet die Wahrscheinlichkeitsverteilung. Diese weist jedem Ereignis in $\mathcal{F}$ eine reelle Zahl zu.  $\mathbb{P}: \mathcal{F} \longrightarrow \mathbb{R}$
 	
 	
 \end{enumerate}
@@ -23,173 +23,166 @@
 
 
 
-\subsection *{Kolmogorovs Axiome lauten:}
+\begin{Def}[Kolmogorovs Axiome]
 
 \vspace{5pt}
 
 \begin{enumerate}
-	\item Die Wahrscheinlichkeit eines Ereignisses ist eine positive, reelle Zahl. \\ $\mathds{P} (\mathds{E}) \geq 0$ f\"ur alle $\mathds{E} \in \mathcal{F}$.
-	\item Die Menge aller Ergebnisse bezeichnet man als sicheres Ereignis, das die Wahrscheinlichkeit $1$ hat. $\mathds{P} (\Omega) = 1$
+	\item Die Wahrscheinlichkeit eines Ereignisses ist eine positive, reelle Zahl, f\"ur die gilt \\ $\mathbb{P} (E) \geq 0$ f\"ur alle $E \in \mathcal{F}$.
+	\item Die Menge aller Ergebnisse bezeichnet man als sicheres Ereignis, das die Wahrscheinlichkeit $\mathbb{P} (\Omega) = 1$ hat.
 	\item Die Wahrscheinlichkeit der Vereinigung von disjunkten Ereignisssen ist gleich der Summe der Wahrscheinlichkeiten der disjunkten Ereignisse. 
 	\vspace{3pt}
 	\begin{equation*}
-	\mathds{P} (\cup_{i=1}^m \mathds{E}_{i}) = \sum_{i=1}^n \mathds{P} (\mathds{E}_{i})$$ für alle $$\mathds{E}_{1},...,\mathds{E}_{m} \in \mathcal{F}
+	\mathbb{P} (\cup_{i=1}^m E_{i}) = \sum_{i=1}^n \mathbb{P} (E_{i}) \quad \text{f\"ur alle} \: E_{1},...,E_{m} \in \mathcal{F}
 	\end{equation*}
 \end{enumerate}
 \vspace{5pt}
 
-$\mathds{E}_{1},...,\mathds{E}_{m}$ ist disjunkt, falls $\mathds{E}_{i} \cap \mathds{E}_{j} = \O$ f\"ur alle $i,j= 1,2,...,m$. 
-Hierbei bezeichnet $\O$ ein unm\"ogliches Ereignis $\O \in \mathcal{F}$. \\ Im Gegensatz dazu gibt es das sichere Ereignis mit ${\Omega} \in \mathcal{F}$.
+$\mathbb{E}_{1},...,\mathbb{E}_{m}$ sind disjunkt, falls $\mathbb{E}_{i} \cap \mathbb{E}_{j} = \emptyset$ f\"ur alle $i,j= 1,2,...,m$. 
+Hierbei bezeichnet $\emptyset$ ein unm\"ogliches Ereignis $\emptyset \in \mathcal{F}$.
+\end{Def}
 
 \vspace{5pt}
 
-Die Wahrscheinlichkeit wird errechnet durch $ \mathds{P} = \frac {|\mathds{E}|}{|\Omega|}$.
-Alternativ definiert man: 
+Die Wahrscheinlichkeit wird errechnet durch $ \mathbb{P}(E) = \frac {|E|}{|\Omega|}$.
+Alternativ definieren wir $p_{i} = \mathbb{P} ({i})$\\ 
+mit
 
-\vspace{5pt}
-
-
-$p_{i} \geq 0$  f\"ur $i \in \Omega$, sodass $\sum_{i\in \Omega} p_{i} =1$, $p_{i} = \mathds{P} ({i})$
+$p_{i} \geq 0$  f\"ur $i \in \Omega$, f\"ur die gilt $\sum_{i\in \Omega} p_{i} =1$. 
 
 
 
 \vspace{10pt}
 
-\subsection *{Konsequenzen der Axiome:}
+\paragraph{Konsequenzen der Axiome:}
 
 \vspace{5pt}
 
 \begin{enumerate}
-	\item $\mathds{P} (\O) = 0$
-	\item Monotonie: $A\subseteq B$ daraus folgt: $\mathds{P} (A) \leq \mathds{P} (B)$
-	\item $0 \leq \mathds{P} (E) \leq 1$
-	\item $ \mathds{P} (A \cup B) = \mathds{P} (A) + \mathds{P} (B) - \mathds{P} (A \cap B)$
+	\item $\mathbb{P} (\emptyset) = 0$
+	\item Monotonie: Wenn immer $A\subseteq B$ dann: $\mathbb{P} (A) \leq \mathbb{P} (B)$
+	\item $0 \leq \mathbb{P} (E) \leq 1$ \: f\"ur alle $E \in \mathcal{F}$
+	\item $ \mathbb{P} (A \cup B) = \mathbb{P} (A) + \mathbb{P} (B) - \mathbb{P} (A \cap B)$ f\"ur alle $A,B \in \mathcal(F)$
 \end{enumerate}
 
 
 \vspace{10pt}
 
-\subsection *{Zufallsvariablen}
+\paragraph {Zufallsvariablen}
 
 \vspace{5pt}
 
-In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathds{P})$ beschreibt die Funktion $X:\Omega \longrightarrow \mathds{R}^k$ einen k-dimensionalen Zufallsvektoren. Im Fall von $k=1$ redet man von einer Zufallsvariablen.
+In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathbb{P})$ k\"onnen wir eine Funktion $X:\Omega \longrightarrow \mathbb{R}^k$\: definieren, die dann einen k-dimensionalen Zufallsvektoren beschreibt. Im Fall von $k=1$ sprechen wir von einer Zufallsvariablen.
 
 \vspace{10pt}
 
-\subsection *{Erwartungswert}
+\paragraph {Erwartungswert}
 
 \vspace{5pt}
 
  Der Erwartungswert einer Zufallsvariablen beschreibt die Zahl, die die Zufallsvariable im Mittel annimmt.
-
-\vspace{3pt}
+Sie wird definiert durch
 
 \begin{equation*}
-\mathds{E} [X] = \sum_{x \in \Omega} X (i) * \mathds{P} ({i}) = \sum_{x\in\mathcal{X}} X* \mathds{P} (X=x) wobei \mathcal{X}
+\mathbb{E} [X] = \sum_{x \in \Omega} X (i) * \mathbb{P} ({i}) = \sum_{x\in\mathcal{X}} X* \mathbb{P} (X=x) \text{,}
 \end{equation*}
-  ein Wertebereich von x ist  
+wobei $\mathcal{X}$ ein Wertebereich von x ist.
 
 \vspace{10pt}
 
-\subsection *{Varianz}
+\paragraph {Varianz}
 
 \vspace{5pt}
 
-Die Varianz kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. Die Varianz einer Zufallsvariable X.
+Die Varianz kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. Die Varianz einer Zufallsvariable X ist definiert durch
 
-\vspace{3pt}
 
 \begin{equation*}
-X= \mathds{E} [X^2] - \mathds{E} [X]^2 = \mathds{E} [ (X - \mathds{E} [X] )^2 ] 
+X= \mathbb{E} [X^2] - \mathbb{E} [X]^2 = \mathbb{E} [ (X - \mathbb{E} [X] )^2 ] 
 \end{equation*}
 
 \vspace{10pt}
 
-\subsection *{Unabh\"angigkeit von Ereignissen}
+\begin{Def}[Unabh\"angigkeit von Ereignissen]
 
 \vspace{5pt}
 
 \begin{enumerate}
 	\item Wenn f\"ur Ereignisse $E, F \in \mathcal{F} $ gilt
-	\vspace{3pt}
-	$\mathds{P} (E\cap F)= \mathds{P} (E) * \mathds{P} (F)$
-	\vspace{3pt}
+	\begin{equation} \mathbb{P} (E\cap F)= \mathbb{P} (E)  \mathbb{P} (F) \end{equation},
+
 dann sind E und F unabh\"angig. 
 
-\item Wenn f\"ur die Zufallsvariablen 
+\item Zwei Zufallsvariablen 
 \begin{equation*}
-X_{1}: \Omega_{1} \longrightarrow \mathds{R}, \mathcal{F}_{1} , X_{2}: \Omega_{2} \longrightarrow \mathds{R}, \mathcal{F}_{2}
+X_{1}: \Omega_{1} \longrightarrow \mathbb{R}, X_{2}: \Omega_{2} \longrightarrow \mathbb{R}
 \end{equation*}
- gilt
-\vspace{3pt}
+sind unabh\"angig, falls gilt, dass f\"ur alle $A, B \subseteq \mathbb{R}$
 \begin{equation*}
-\mathds{P} ({X_{1} \in A} \cap {X_{2} \in B} ) = \mathds{P} ({X_{1} \in A} * \mathds{P} {X_{2} \in B} )
+\mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} \in B\} ) = \mathbb{P} (\{X_{1} \in A\} * \mathbb{P} \{X_{2} \in B\} )
 \end{equation*}
-\vspace{3pt}
-f\"ur alle $A, B \subseteq \mathds{R}$
 \end{enumerate}
-
+\end{Def}
 \vspace{10pt}
 
-\subsection *{Marginal bestimmte Wahrscheinlichkeiten}
+\paragraph {Marginale Wahrscheinlichkeiten}
 
-\vspace{5pt}
+Es seien $X_{1}, X_{2}$ Zufallsvariablen auf dem Wahrscheinlichkeitsraum $\Omega_{1}\times \Omega_{2}$, dann ist die marginale Wahrscheinlichkeit von $X_{1}$ definiert durch 
 
 \begin{equation*}
-\mathds{P} ({X_{1} \in A } ) = \sum_{b \in \Omega_{2} } \mathds{P} {X_{1} \in A} \cap {X_{2} \in b})
+\mathbb{P} (\{X_{1} \in A \} ) = \sum_{b \in \Omega_{2} } \mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} \in b\})
 \end{equation*}
 
 \vspace{10pt}
 
-\subsection *{Bedingte Wahrscheinlichkeit}
-
-\vspace{5pt}
+\paragraph {Bedingte Wahrscheinlichkeit}
+Die bedingte Wahrscheinlichkeit ist bestimmt durch 
 
 \begin{equation*}
-\mathds{P} ({X_{1} \in A } | { X_{2} \in B } ) = \frac {\mathds{P} ( {X_{1} \in A } \cap {X_{2} \in B })} {\mathds{P} ({X_{2} \in B})}
+\mathbb{P} ({X_{1} \in A } | { X_{2} \in B } ) = \frac {\mathbb{P} ( {X_{1} \in A } \cap {X_{2} \in B })} {\mathbb{P} ({X_{2} \in B})}
 \end{equation*}
 
-\vspace{10pt}
 
-\subsection *{Summe von Zufallsvariablen}
 
-\vspace{5pt}
+\paragraph {Summe von Zufallsvariablen}
+
+Gegeben seien zwei unabhängige Zufallsvariablen
 \begin{equation*}
-X_{1}:\Omega \longrightarrow \mathds{R}, X_{2}:\Omega \longrightarrow \mathds{R}
+X_{1}:\Omega \longrightarrow \mathbb{R}, X_{2}:\Omega \longrightarrow \mathbb{R}
 \end{equation*}
+Wir betrachten nun die Summe
 \begin{equation*}
 Y=X_{1}+X_{2}
-\end{equation*}
-\vspace{3pt}
-Annahme: $X_{1}$ und $X_{2}$ sind unabh\"angig.\\
+.\end{equation*}
+
+F\"ur die Berechnung der Verteilung der Summe 
 \begin{equation*}
-{Y=l}=\cup_{i=-\infty}^{\infty} {X_{1}=1} \cap {X_{2}=l-i}
+\{Y=l\}=\cup_{i=-\infty}^{\infty} \{X_{1}=1\} \cap \{X_{2}=l-i\}
 \end{equation*}
-\vspace{3pt}
-\begin{equation*}
-\mathds{P} ({Y=l}) = \sum_{i=-\infty}^{\infty} \mathds{P} ({X_{1}=i} \cap {X_{2}=l-i}) = \sum_{i=-\infty}^{\infty} \mathds{P} ({X_{1} = i}) * \mathds{P} ({X_{2}=l-i})
-\end{equation*}
+beobachten wir zun\"achst, dass 
+\begin{align*}
+\mathbb{P} (/{Y=l/}) = \sum_{i=-\infty}^{\infty} \mathbb{P} (/{X_{1}=i/} \cap /{X_{2}=l-i/}) = \sum_{i=-\infty}^{\infty} \mathbb{P} (/{X_{1} = i/}) * \mathbb{P} (/{X_{2}=l-i/})
+\end{align*}
 
 \vspace{10pt}
 
-\subsection *{Theorem: Liniarit\"at des Erwartungswerts}
+\paragraph {Theorem: Linearit\"at des Erwartungswerts}
 
 \vspace{5pt}
 
 Angenommen, wir h\"atten eine Funktion
 \vspace{3pt}
 
-$f: \mathds{R} \longrightarrow \mathds{R}$ , f\"ur die gilt: 
+$f: \mathbb{R} \longrightarrow \mathbb{R}$ , f\"ur die gilt: 
 \begin{equation*}
-\int_{\mathds{R}} f(x) dx = 1
+\int_{\mathbb{R}} f(x) dx = 1
 \end{equation*}
 
 \vspace{3pt}
 
 dann k\"onnten wir eine Wahrscheinlichkeitsverteilung folgenderma"sen definieren:
 \begin{equation*}
-\mathds{P} ({X\in A}) = \int_{X \in A} f(x) dx
+\mathbb{P} ({X\in A}) = \int_{X \in A} f(x) dx
 \end{equation*}
 
 

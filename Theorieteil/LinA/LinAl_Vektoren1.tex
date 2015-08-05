@@ -19,56 +19,60 @@
 %\begin{multicols*}{2}
 
 \section{Vektoren}
-In der linearen Algebra nehmen Vektoren eine zentrale Rolle ein. Ein Vektor wird in der Schule als eine Menge an Pfeilen gelehrt, die parallel, gleichgerichtet und gleich lang sind. Betrachten wir jedoch nicht nur den dreidimensionalen Raum, sondern $\mathbb{R}\textsuperscript{n}$, so ist die Vorstellung eines Pfeils nicht immer m\"oglich . Dies bedingt die Notwendigkeit einer anderen Definition.
+In der linearen Algebra nehmen Vektoren eine zentrale Rolle ein. Ein Vektor wird in der Schule als eine Menge an Pfeilen gelehrt, die parallel, gleichgerichtet und gleich lang sind. Betrachten wir jedoch nicht nur den dreidimensionalen Raum, sondern $\mathbb{R}\textsuperscript{n}$, so ist die Vorstellung eines Pfeils nicht immer m\"oglich. Dies bedingt die Notwendigkeit einer anderen Definition.
 \newline
-\indent Ein \textit{Vektor} ist eine Aufz\"ahlung von Objekten und beschreibt eine Verschiebung. Eine solche Aufz\"ahlung entspricht der Definition eines \textit{Tupels}. Entscheidend bei Tupeln ist die Reihenfolge der Objekte, die auch mehrfach vorkommen k\"onnen.
-\begin{equation*}
-\text{n-Tupel } (a_1,a_2,\dots,a_n)
-\end{equation*}
+\indent Ein \textit{Vektor} ist eine geordnete Aufz\"ahlung von Objekten und wird auch \textit{Tupel} $(a_1, a_2,\dots,a_n)$ genannt. Entscheidend bei Tupeln ist die Reihenfolge der Objekte, die auch mehrfach vorkommen k\"onnen.
+
 \subsection{Vektor- \& Unterraum}
 Vektoren bilden die Elemente eines \textit{Vektorraumes V}. Addieren wir zwei Vektoren eines Vektorraumes oder multiplizieren wir sie mit einem Skalar, so ist die Summe bzw. das Produkt ebenfalls ein Element des Vektorraumes.
-\begin{align*}
-(1)\text{ }u, v \in V,\text{ } u+v \in V  \\
-(2)\text{ }u \in V, \lambda \in \mathbb{R} ,\text{ }\lambda u \in V
-\end{align*}
-Ein \textit{Unterraum} ist eine Teilmenge eines Vektorraumes. Es gelten f\"ur sie die oben genannten Eigenschaften eines Vektorraumes.
-\begin{align*}
-U\subseteq V, \text{wenn gilt:}	\\
-(1)\text{ }u, v \in U,\text{ } u+v \in U  \\
-(2)\text{ }u \in U, \lambda \in \mathbb{R} ,\text{ }\lambda u \in U
-\end{align*}
+\vspace{10pt}
+\begin{enumerate}
+\item $u, v \in V \text{ }\Rightarrow u+v \in V$
+\item $u\in V, \lambda \in \mathbb{R} \text{ }\Rightarrow \lambda u \in V$
+\end{enumerate}
+\vspace{10pt}
+Ein \textit{Unterraum} $U$ ist eine Teilmenge eines Vektorraumes $V$. Es gelten f\"ur sie die oben genannten Eigenschaften eines Vektorraumes.
+\vspace{10pt}
+\begin{enumerate}
+\item $\text{ }u, v \in U,\text{ } u+v \in U$
+\item $\text{ }u \in U, \lambda \in \mathbb{R} ,\text{ }\lambda u \in U$
+\end{enumerate}
+
 \subsection{Span}
-Alle m\"oglichen Vektoren eines Vektorraumes werden durch den sogenannten \textit{Span} dargestellt. Der Span ist die Menge aller m\"oglichen Linearkombinationen der Basisvektoren.
+Der span$(v_1, v_2,\dots,v_k)$ ist die Menge aller Vektoren, die mit den Linearkombinationen der Basisvektoren darstellbar sind.
 \begin{align*}
-\text{Span }(V_1,\dots,V_k) = \{U \in V : U = \lambda_1v_1+\dots+\lambda_kv_k\} \\
+\text{span}(v_1,\dots,v_k) = \{u \in V : u = \lambda_1v_1+\dots+\lambda_kv_k\} \\
 \text{ mit } \lambda_1,\dots,\lambda_k \in \mathbb{R}
 \end{align*}
+
 \subsection{Basis \& Dimension}
 Die Menge der Basisvektoren wird \textit{Basis} eines Vektorraumes genannt. Jeder Vektorraum besitzt eine \textit{Dimension p}, die durch die Anzahl der Basisvektoren bestimmt wird.
+
 \subsubsection*{\"Ubung}
 Beweise, dass ein Span immer ein Vektorraum ist.
 \begin{proof}
 Wir nehmen an: 
 \begin{align*}
-U &\in Span(V_1,\dots,V_k)\\
-V &\in Span(V_1,\dots,V_k)\\
-U &= \lambda_1V_1+\dots+\lambda_k V_k\\
-V &= \alpha_1V_1+\dots+\alpha_k V_k
+u &\in \text{span}(v_1,\dots,v_k)\\
+v &\in \text{span}(v_1,\dots,v_k)\\
+u &= \lambda_1v_1+\dots+\lambda_k v_k\\
+v &= \alpha_1v_1+\dots+\alpha_k v_k
 \end{align*}
-Additionsregelung bei Vektorr\"aumen (s.(1))
+Additionsregelung bei Vektorr\"aumen
 \begin{align*}
-	W_1 &= U+V\\
-	&=\lambda_1 V_1+\dots+\lambda_k V_k+\alpha_1 V_1+\dots+\alpha_k V_k \\
-	&= (\lambda_1 \alpha_1) V_1+\dots+(\lambda_k \alpha_k) V_k
+	w_1 &= u+v\\
+	&=\lambda_1 v_1+\dots+\lambda_k v_k+\alpha_1 v_1+\dots+\alpha_k v_k \\
+	&=(\lambda_1+\alpha_1) v_1+\dots+(\lambda_k+\alpha_k) v_k
 \end{align*}
-Multiplikationsregelung bei Vektorr\"aumen (s.(2))
+Multiplikationsregelung bei Vektorr\"aumen 
 \begin{align*}
-	W_2 &= \lambda_1 V_1+\dots+\lambda_k V_k\\
-	\lambda W_2 &= (\lambda \lambda_1) V_1+\dots+(\lambda\lambda_k)V_k
+	w_2 &= \lambda_1 v_1+\dots+\lambda_k v_k\\
+	\lambda w_2 &= (\lambda \cdot \lambda_1) v_1+\dots+(\lambda \cdot \lambda_k)v_k
 \end{align*}
 \end{proof}
+
 \subsection{Lineare Unabh\"angigkeit}
-$v_1,\dots,v_k$ mit $v_i \in V$ sind \textit{linear unabh\"angig}, falls $\lambda_iv_i+\dots+\lambda_kv_k = 0$ nur f\"ur $\lambda_i=\dots=\lambda_k= 0$ gilt. 
+Die Vektoren $v_1,\dots,v_k$ mit $v_i \in V$ sind \textit{linear unabh\"angig}, falls $\lambda_iv_i+\dots+\lambda_kv_k = 0$ nur f\"ur $\lambda_i=\dots=\lambda_k= 0$ gilt. 
 
 %\end{multicols*}
 %\end{document}
