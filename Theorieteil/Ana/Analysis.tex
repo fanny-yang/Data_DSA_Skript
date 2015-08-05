@@ -120,25 +120,34 @@ Von den ganzen Summanden müsssen letztendlich alle eliminiert werden, bis auf
 \begin{equation*} f(x) \cdot g(x) + f(x) \cdot Dg(x) \cdot v + Df(x) \cdot v \cdot g(x) \end{equation*} 
 Dafür müssen wir zeigen, dass die übrigen Summanden gegen Null gehen. Um das zu erreichen bilden wir den Grenzwert:
 %Die Formel funktioniert nicht. Wir wissen nicht warum
+%Jetzt funktioniert sie, Bruch-Splitting nicht möglich, Aufteilung in einzelne Brüche #Lukas K
 
 \begin{align}
-\begin{split} \lim\limits_{v \rightarrow 0} \frac{||f(x) \cdot r_{g}v &
-+Df(x) \cdot v \cdot Dg(x) \cdot v \\ &
-+Df(x) \cdot v \cdot r_{g}(v) \\ &
-r_{f}(v) \cdot g(x) + r_{g}(v) \cdot Dg(x) \cdot v \\&
-+r_{g}(v) \cdot r_{f}(v)||{||v||} \end{split} \end{align}
+\begin{split}
+\lim \limits_{v \rightarrow 0} &\frac{||f(x) \cdot r_{g}v + Df(x) \cdot v \cdot Dg(x) \cdot v +}{||v||}\\
+&\frac{+ Df(x) \cdot v \cdot r_{g}(v) r_{f}(v) \cdot g(x) +}{}\\
+&\frac{+ r_{g}(v) \cdot Dg(x) \cdot v + r_{g}(v) \cdot r_{f}(v)||}{}
+\end{split}
+\end{align}
 
 Damit die Summanden einzeln "aufgesplittet" werden können, wenden wir die Dreiecksungleichung %Wurde die weiter vorne schon erklärt?
 an.
 
 Nun können wir von jedem Summanden einzeln den Limes bilden, um zu zeigen, dass der gesamte Grenzwert gegen Null geht. Dies ist aber nur der Fall, falls der Limes jedes Summanden gegen Null geht. Wir zeigen das exemplarisch für 
 
-\begin{equation*} \lim\limits_{v \rightarrow 0} \frac{||Df(x) \cdot r_{g}(v)||}{||v||} \end{equation*}
+\begin{equation*}
+\lim\limits_{v \rightarrow 0} \frac{||Df(x) \cdot r_{g}(v)||}{||v||}
+\end{equation*}
 
 Df(x) ist eine Matrix mit einer Zeile und m Spalten in der jeweils c steht. Daraus folgern wir:
 
-\begin{equation*} \lim\limits_{v \rightarrow 0} \frac{m \cdot c \cdot ||v|| \cdot ||r_{g}(v)||}{||v||} \end{equation*}
-\begin{equation*}m \cdot c \cdot \lim\limits_{v \rightarrow 0} \frac{ ||v|| \cdot ||r_{g}(v)||}{||v|| = 0} \end{equation*} 
+\begin{equation*}
+\lim\limits_{v \rightarrow 0} \frac{m \cdot c \cdot ||v|| \cdot ||r_{g}(v)||}{||v||}
+\end{equation*}
+
+\begin{equation*}
+m \cdot c \cdot \lim\limits_{v \rightarrow 0} \frac{ ||v|| \cdot ||r_{g}(v)||}{||v|| = 0}
+\end{equation*} 
 
 Damit haben wir gezeigt, dass der Summand gegen Null geht. Das Selbe lässt sich auch mit den anderen Summanden zeigen und auch diese gehen alle gegen Null. \\
 Die Produktregel ist damit bewiesen. 
