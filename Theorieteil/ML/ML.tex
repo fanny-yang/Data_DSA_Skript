@@ -1,4 +1,4 @@
-\section{Machine Learning}
+km\section{Machine Learning}
 \author{Farhadiba Mohammed, Dennis Kempf, David Steinmann}
 Machine Learning ist ein Konzept, bei dem der Computer durch Algorithmen in der Lage ist Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmässigkeiten, durch die er dann in der Lage ist, neue, ihm unbekannte Datensätze bezüglich eines bestimmten Problems zu lösen.
 
@@ -41,7 +41,7 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Ebenen kann man auch in der Form $\langle x, w \rangle = b $ beschreiben. Daraus folgt, dass das Optimierungsproblem wie folgt geschreiben werden kann.
 
 \begin{align*}
-	\operatorname{max}_{w,b} \quad & \frac{2}{\norm{w}} \\
+	\underset{w,b}{\operatorname{max}} \quad & \frac{2}{\norm{w}} \\
 	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,...,n ; \\
 	&x \in \mathbb{R}^n; \quad	y \in \{1;-1\}
 	 %\label{SVMProblemMax}
@@ -53,7 +53,7 @@ Unter der Vorraussetzung, dass alle vorhandenen Datensätze richtig klassifizier
 man aber genauso schreiben als:
 
 \begin{align*}
-		\operatorname{min}_{w,b} \quad & \norm{w} \\
+		\underset{w,b}{\operatorname{minimiere}} \quad & \norm{w} \\
 		\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall i = 1,...,n ; \\
 		&x \in \mathbb{R}^n; \quad y \in \{1; -1\}
 		%\label{SVMProblemMin}
@@ -89,7 +89,7 @@ Die Soft Margin SVMs können mit beiden Problemen umgehen.
 Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse Fehlertoleranz besitzen. Diese kommt durch eine Veränderung an der Formel zustande:
 
 \begin{align*}
-	\operatorname{minimiere}_{w,b} \quad & \norm{w} + C\sum_{i}{z_{i}} \quad \forall i = 1,...,n \\
+	\underset{w,b}{\operatorname{minimiere}} \quad & \norm{w} + C\sum_{i}{z_{i}} \quad \forall i = 1,...,n \\
 	\operatorname{sodass} \quad & y_{i}(\langle w,x_{i} \rangle - b) \geq 1 - z_{i} \quad \forall i = 1,...,n; \\ 
 	&x \in \mathbb{R}^n; \quad y \in \{1; -1\} \quad z_{i} \geq 0 \\
 	%\label{eq: SoftMarginSVMs}
