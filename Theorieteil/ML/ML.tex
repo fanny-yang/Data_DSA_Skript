@@ -1,6 +1,6 @@
 \section{Machine Learning}
 \author{Farhadiba Mohammed, Dennis Kempf, David Steinmann}
-Machine Learning ist ein Konzept, bei dem der Computer durch Algorythmen in der Lage ist Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmässigkeiten, durch die er dann in der Lage ist, neue, ihm unbekannte Datensätze bezüglich eines bestimmten Problems zu lösen.
+Machine Learning ist ein Konzept, bei dem der Computer durch Algorithmen in der Lage ist Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmässigkeiten, durch die er dann in der Lage ist, neue, ihm unbekannte Datensätze bezüglich eines bestimmten Problems zu lösen.
 
 Dass der Computer die Gesetzmässigkeiten erkennen kann, werden verschiedene Systeme genutzt, doch zunächst einmal sollten wir uns mit den Begriffen Klassifikation und Regression vertraut machen.
 
@@ -10,10 +10,10 @@ Dass der Computer die Gesetzmässigkeiten erkennen kann, werden verschiedene Sys
 Bei Klassifikation und Regression handelt es sich um zwei verscheidene Arten von Problemen, beziehungsweise Möglichkeiten zur Problemlösung im Bereich Machine Learning.
 
 \subsubsection{Klassifikation}
-Bei der Klassifikation sorgt der Algorythmus am Ende dafür, dass der Datensatz klassifiziert wird. Das heißt, der Datensatz wird vom Computer in verschiedene Klassen eingeteilt. Die Klassen müssen vorher vom Mensch entschieden werden. Der Computer klassifiziert die Datensätze dann anhand der Attribute des entsprechenden Datensatzes. Die klassifizierten Datensätze enthalten dann meistens eine weitere Dimension, in der die Klassifizierung anhand einer Zahl gespeichert ist.
+Bei der Klassifikation sorgt der Algorithmus am Ende dafür, dass der Datensatz klassifiziert wird. Das heißt, der Datensatz wird vom Computer in verschiedene Klassen eingeteilt. Die Klassen müssen vorher vom Mensch entschieden werden. Der Computer klassifiziert die Datensätze dann anhand der Attribute des entsprechenden Datensatzes. Die klassifizierten Datensätze enthalten dann meistens eine weitere Dimension, in der die Klassifizierung anhand einer Zahl gespeichert ist.
 
 \subsubsection{Regression}
-Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern ein konkretes Ergebnis beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (z. B. Größe, Lage ...) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in "`teuer"', "`mittelteuer"', "`billig"'. 
+Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern ein konkretes Ergebnis beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (z. B. Größe, Lage ...) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in ``teuer'', ``mittelteuer'', ``billig''. 
 %Noch die Mathematische Regression (methode der kleinsten Quadrate)
 
 \subsection{Support Vector Machines}
@@ -110,8 +110,8 @@ Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist d
 
 \begin{dsafigure}
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{\media Figure_NN.pdf}
-		\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ >>Neuronen<<.}
+		\includegraphics[width=0.35\textwidth]{\media Figure_NN.pdf}
+		\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ ´´Neuronen''.}
 		\label{FigNN}
 	\end{center}
 \end{dsafigure}
@@ -122,9 +122,8 @@ Mit Deep Learning beschreibt man die Neuronalen Netze, die über mehr als einen 
 
 Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft. Dadurch kann eine höhere Genauigkeit erzielt werden. Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk >>overfitted<<, d.h., zu sehr an den Trainingsdatensatz angepasst, wird. Dann kann das Netzwerk neue, fremde Daten nicht mehr korrekt klassifizieren. 
 
-Wie wir in der Abbildung 2.3 sehen können ist ein typisches Fully connected Neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $x_1 ... x_i$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht lineare Funktion angewendet und das Ganze wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $p_1 .. p_1$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert wird. Anhand eines konkreten Beispiels würde es folgendes bedeuten:
+Wie wir in der Abbildung \ref{FigNN} sehen können ist ein typisches Fully connected Neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $x_1 ... x_i$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht lineare Funktion angewendet und das Ganze wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $p_1 .. p_k$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert werden kann. Anhand eines konkreten Beispiels würde es folgendes bedeuten:
 Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Tisch oder Stuhl das daurauf abgebildete Objekt gehört. Unsere inputs wären demnach die Pixel des Bildes. Diese durchlaufen nun das Neuronale Netz und wir erhalten eine Wahrscheinlichkeitsverteilung als Rückgabewert, welche uns mitteilt, dass es am wahrscheinlichsten ist, dass das abgebildete Objekt ein Objekt der Klasse Stuhl ist. Demnach ist die Klassifizierung vollzogen.
-
 
 \begin{align*}
 a_j^{(k)} = f^{(k)} (\langle w_{ji}^{(k)}, a_i^{(k-1)}\rangle) = f^{(k)} (\sum_{i=1}^{m^{(k-1)}} w_{ji}^{(k)},a_i^{(k-1)} )
@@ -134,29 +133,28 @@ a_j^{(k)} = f^{(k)} (\langle w_{ji}^{(k)}, a_i^{(k-1)}\rangle) = f^{(k)} (\sum_{
 
 \begin{dsafigure}
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{\media Figure_ConvNN}
+		\includegraphics[width=0.35\textwidth]{\media Figure_ConvNN}
 		\caption{Ein Convolutional Neural Network (CNN) (dt.: >>faltendes neurales Netzwerk<<) mit vier Eingängen ($x_1, ..., x_4$) und zwei Ausgängen ($p_1, p_2$). Dazwischen befindet sich eine Schicht aus drei >>Neuronen<<, die als Filter wirkt.}
 		\label{FigConvNN}
 	\end{center}
 \end{dsafigure}
 
 
-Bei den Convolutional Networks handelt es sich um ein Neuronales Netz mit einer vereinfachten Struktur. Diese kommt dadurch zu Stande, dass nun kein Fully Connected Neuronales Netzwerk mehr vorliegt. Das bedeutet nicht jeder der Knoten ist mit jedem verbunden, sondern nur jeweils die lokalen drei.
-
+Bei den Convolutional Networks handelt es sich um ein Neuronales Netz mit einer vereinfachten Struktur. Diese kommt dadurch zu Stande, dass nun kein Fully Connected Neuronales Netzwerk mehr vorliegt. 
 
 \subsection{SVMs als Neuronale Netze}
 
 Wir haben bereits SVMs kennengelernt. Im folgenden wird verdeutlicht, wie man diese auch als Neuronales Netz ausdrücken kann. Charakteristisch für dieses Neuronale Netz ist, dass es nur einen Layer besitzt:
 
 \begin{align*}
-\min\limits_{b,w,z} \norm{w} + C  \sum_{i=1}^{n} z
+\min\limits_{b,w,z} \norm{w} + C  \sum_{i=1}^{n} z_i
 \end{align*}
 
 sodass:
 
 \begin{align*}
-&y_i (\langle w,x \rangle - b) \geq 1 - z_i ; z_i \geq 0 \\
-\Rightarrow &z_i \geq 1- y_i (\langle w,x \rangle - b) \text{ und } z_i \geq 0
+&y_i (\langle w,x \rangle - b) \geq 1 - z_i \text { mit } z_i \geq 0 \\
+\Rightarrow &z_i \geq 1- y_i (\langle w,x \rangle - b) \text{ mit } z_i \geq 0
 \end{align*}
 
 
