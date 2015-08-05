@@ -1,0 +1,10 @@
+diff a/Theorieteil/ML/Master_DataKurs.pdf b/Theorieteil/ML/Master_DataKurs.pdf	(rejected hunks)
+@@ -7,7 +7,7 @@
+        2.2   SVMs als Neuronale Netze . . . .         .   .   . . . .    .   .   .   . . . .   .   .   . . . .    .   .   .   . . . .   .   8
+        2.3   Lineare Regression . . . . . . . . .     .   .   . . . .    .   .   .   . . . .   .   .   . . . .    .   .   .   . . . .   .   9
+        2.4   Deep Learning . . . . . . . . . . .      .   .   . . . .    .   .   .   . . . .   .   .   . . . .    .   .   .   . . . .   .   9
+-       2.5   Convolutional Neuronal Networks          .   .   . . . .    .   .   .   . . . .   .   .   . . . .    .   .   .   . . . .   .   9
++       2.5   Convolutional Neural Networks . .        .   .   . . . .    .   .   .   . . . .   .   .   . . . .    .   .   .   . . . .   .   9
+ 
+ 
+ 
