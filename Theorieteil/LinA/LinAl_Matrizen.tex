@@ -5,17 +5,11 @@ In diesem Abschnitt werden wir die elementarste Form einer Funktion kennenlernen
 \begin{Def}
 	\label{Def:Def_1}
 Eine Funktion $f:U \stackrel{}{\rightarrow} V$ ist linear, wenn folgende Bedingungen gelten: \\ 
-1.
-\begin{equation*}
- f(u+v) = f(u)+f(v) \forall \ u,v \in U
-\end{equation*}\\
-2.
-\begin{equation*}
- f(\lambda v) = \lambda f(v) \ \forall \ v \in U \ und \ \lambda \in \mathbb{R}
-\end{equation*}
+1. $f(u+v) = f(u)+f(v) \forall \ u,v \in U$\\
+2. $f(\lambda v) = \lambda f(v) \ \forall \ v \in U \ \text{und} \ \lambda \in \mathbb{R}$
 \end{Def}
 
-Das besondere an solchen Abbildungen ist, dass sie von \textit{Matrizen} der Form $A \in \mathbb{R}^{n \times m}$ definiert werden, wobei $n$ die Dimension von $U$ und $m$ die Dimension von $V$ ist.
+Das besondere an solchen Abbildungen ist, dass sie von \textit{Matrizen} eindeutig definiert werden, wobei $n$ die Dimension von $U$ und $m$ die Dimension von $V$ ist. Wie Matrizen definiert sind und wie wir sie verwenden können, lernen wir in nächsten Kapitel.
 
 \subsection{Matrix}
 Eine Matrix ist eine spezielle Anordnung von $n\cdot m$ Zahlen in $n$ Zeilen und $m$ Spalten. Man kann eine Matrix aber auch als eine Zusammenfassung von $m$ Vektoren mit $n$ Komponenten ansehen, dabei bildet ein Vekotor eine Spalte. Die Komponente in der $i$-ten Zeile und $j$-ten Spalte wird als $a_{ij}$ geschrieben und die ganze Spalte mit $a_j$ notiert.\\
@@ -48,7 +42,7 @@ Bei einer Matrix-Vektor-Multiplikation wird eine Matrix $A \in  \mathbb{R}^{n \t
 		a_{n1} & a_{n2} & ... & a_{nm}
 	 \end{array}
 	\right) 
-	\times 
+	\cdot 
 	\left(
 	 \begin{array}{c}
 	  v_1\\
@@ -59,14 +53,13 @@ Bei einer Matrix-Vektor-Multiplikation wird eine Matrix $A \in  \mathbb{R}^{n \t
 	\right)\\
 	&= \left(
 	 \begin{array}{c}
-	 a_{11}\times v_1 + a_{12} \times v_2 + ... + a_{1m} \times v_m\\
-	 a_{21}\times v_1 + a_{22} \times v_2 + ... + a_{2m} \times v_m\\
+	 a_{11} \cdot v_1 + a_{12} \cdot v_2 + ... + a_{1m} \cdot v_m\\
+	 a_{21} \cdot v_1 + a_{22} \cdot v_2 + ... + a_{2m} \cdot v_m\\
 		...\\
-	 a_{n1}\times v_1 + a_{n2} \times v_2 + ... + a_{nm} \times v_m\\
+	 a_{n1} \cdot v_1 + a_{n2} \cdot v_2 + ... + a_{nm} \cdot v_m\\
 	 \end{array}
 	\right)
 \end{align*}
-\caption{Matrix mit Vektor multiplizieren}
 
 Allgemein lässt sich für die Matrix-Vektor-Multiplikation sagen
 \begin{equation*}
@@ -85,19 +78,19 @@ Beweise, dass eine Komposition $h(x) = f \circ g (x)$ aus den linearen Abbildung
 \begin{proof}
 Da $f$ und $g$ linear sind gelten die Bedingungen aus Definition \ref{Def:Def_1}:
 \begin{align*}
-	h(u+v) &= f \circ g(u+v)\\
+	h(u+v) &= (f \circ g)(u+v)\\
 	&= f(g(u+v))\\
 	&= f(g(u)+g(v))\\
 	&= f(g(u)) + f(g(v))\\
-	&= f\circ g (u) + f\circ g (v) = h(u) + h(v)
+	&= (f\circ g)(u) + (f\circ g)(v) = h(u) + h(v)
 \end{align*}
 Des Weiteren gilt:
 \begin{align*}
-	h(\lambda v) &= f \circ g (\lambda v)\\
+	h(\lambda v) &= (f \circ g)(\lambda v)\\
 	&=f(g(\lambda v))\\
 	&= f(\lambda g(v))\\
 	&=\lambda f(g(v))\\
-	&=\lambda f \circ g (v) = \lambda h(v)
+	&=\lambda (f \circ g)(v) = \lambda h(v)
 \end{align*}
 Da beide Bedingungen aus Definition \ref{Def:Def_1} für $h$ erfüllt sind, ist auch eine Komposition aus zwei linearen Abbildungen linear.
 \end{proof}
