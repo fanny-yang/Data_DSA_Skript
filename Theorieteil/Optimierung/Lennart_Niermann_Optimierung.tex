@@ -71,7 +71,7 @@ z.~B.$\qquad h'(a)=0\qquad \wedge\qquad h''(a)>0$
 \item Gradientenabstiegsmethode \\
 $a^{t+1}  =a^{t} - \lambda \cdot \partial f(a^{t})$ \\
 Man findet also ein $\lambda > 0$, sodass\\
-$f(a^{t+1}) < f(a^{t})  \qquad \mid \delta f(a^{(t)}) \neq 0$ \\
+$f(a^{t+1}) < f(a^{t})  \qquad \mid \partial f(a^{(t)}) \neq 0$ \\
 $g^{+}(\lambda)=f(a^+-\lambda\nabla f(a^t))$ \\
 $\lambda^+=argmin(g^+(\lambda))$
 \end{enumerate}
@@ -83,7 +83,7 @@ Für $f: D\rightarrow \mathbb{R}$ ist $x\in D$ ein lokales Minimum, wenn mindeste
 $x\in D$ ist dann ein globales Minimum, falls $N=D$.
 \end{Def}
 
-\subsection{Konvexität}
+\subsection{Konvexität einer Funktion}
 
 \begin{Def}[Konvexe Funktion]
 Eine Funktion $f: \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls $\forall_{x,y\in D}$ gilt:\\ 
