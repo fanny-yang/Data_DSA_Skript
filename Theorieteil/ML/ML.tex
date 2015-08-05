@@ -1,4 +1,4 @@
-km\section{Machine Learning}
+\section{Machine Learning}
 \author{Farhadiba Mohammed, Dennis Kempf, David Steinmann}
 Machine Learning ist ein Konzept, bei dem der Computer durch Algorithmen in der Lage ist Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmässigkeiten, durch die er dann in der Lage ist, neue, ihm unbekannte Datensätze bezüglich eines bestimmten Problems zu lösen.
 
@@ -95,20 +95,9 @@ Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse 
 	%\label{eq: SoftMarginSVMs}
 \end{align*}
 
-<<<<<<< HEAD
 Dabei steht $z_{i}$ für die Grösse des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren grösse bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
-
-\begin{dsafigure}
-	\begin{center}
-		\includegraphics[width=0.36\textwidth]{\media Figure_SVM.pdf}
-		\caption{Links und rechts zur Trenngeraden befinden sich die parallelen Grenzen (gestrichelte Geraden). Ziel der Optimierung ist es, den Abstand zwischen den Grenzen zu maximieren, um den Normalenvektor $w$ zu bestimmen.}
-		\label{FigSVM}
-	\end{center}
-\end{dsafigure}
-=======
-Dabei steht $z_{i}$ für die Größe des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren Größe bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Die gesamte Gleichung aber soll minimiert werden, deshalb sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
 Um die optimale Größe von C für das entsprechende Problem zu finden wird ein System namens Crossvalidation genutzt. Bei diesem System wird der Algorithmus mehrmals auf den gleichen Testdatensatz angewendet, C dabei aber variiert. Damit kann man herausfinden, bei welchem Wert von C der Algorithmus optimal funktioniert.
->>>>>>> ecb66b6f81ff912f607908c828c74742b4e87308
+
 
 \section{Neuronale Netze}
 \author {Farhadiba Mohammed}
@@ -121,13 +110,9 @@ Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist d
 
 \begin{dsafigure}
 	\begin{center}
-<<<<<<< HEAD
-		\includegraphics[width=0.34\textwidth]{\media Figure_NN.pdf}
-	\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ Neuronen.}
-=======
 		\includegraphics[width=0.35\textwidth]{\media Figure_NN.pdf}
 		\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ \glqq Neuronen\grqq .}
->>>>>>> ecb66b6f81ff912f607908c828c74742b4e87308
+
 		\label{FigNN}
 	\end{center}
 \end{dsafigure}
