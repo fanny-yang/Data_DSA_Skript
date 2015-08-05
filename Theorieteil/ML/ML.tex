@@ -13,20 +13,20 @@ Bei Klassifikation und Regression handelt es sich um zwei verscheidene Arten von
 Bei der Klassifikation sorgt der Algorithmus am Ende dafür, dass der Datensatz klassifiziert wird. Das heißt, der Datensatz wird vom Computer in verschiedene Klassen eingeteilt. Die Klassen müssen vorher vom Mensch entschieden werden. Der Computer klassifiziert die Datensätze dann anhand der Attribute des entsprechenden Datensatzes. Die klassifizierten Datensätze enthalten dann meistens eine weitere Dimension, in der die Klassifizierung anhand einer Zahl gespeichert ist.
 
 \subsubsection{Regression}
-Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern ein konkretes Ergebnis beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (z. B. Größe, Lage ...) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in ``teuer'', ``mittelteuer'', ``billig''. 
+Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern ein konkretes Ergebnis beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (z. B. Größe, Lage ...) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in \glqq teuer\grqq , \glqq mittelteuer\grqq , \glqq billig\grqq . 
 
 \subsection{Support Vector Machines}
 \author{David Steinmann}
 Support Vector Machines oder kurz SVMs sind ein Konzept zum Lösen von Machine Learning Problemen.
-Dabei werden für alle Datensätze zürst gewisse Features festgelegt. Diese Features entsprechen den Attributen des Datensatzes. Je nach Problem kann es unterschiedlich viele Features geben, doch allgemein kann man sagen, dass, je mehr Features es sind die Genauigkeit des Programms genaür wird.
+Dabei werden für alle Datensätze zuerst gewisse Features festgelegt. Diese Features entsprechen den Attributen des Datensatzes. Je nach Problem kann es unterschiedlich viele Features geben, doch allgemein kann man sagen, dass, je mehr Features es sind die Genauigkeit des Programms genauer wird.
 
 Diese Features werden normalerweise in einem Vektor für den entsprechenden Datensatz gespeichert.
 Dieser Vektor wird $x_{i}$ genannt wobei $i = 1, ..., n$ den Datensatz beschreibt mit  $x \in  \mathbb{R}^m$.
 Zusätzlich hat jeder Datensatz noch einen weiteren Wert, welcher das >>Ergebnis<< des Datensatzes beschreibt, der $y_{i} \in \mathbb{R}$ oder auch >>Label<< genannt wird.
 
-Die Features und das Label zusammen beschreiben einen Punkt im n-dimensionalen Koordinatensystem, wobei $n = m + 1$, da zu den m Dimensionen von x noch die eine Dimension von y dazukommt.
+Die Features und das Label zusammen beschreiben einen Punkt im n-dimensionalen Koordinatensystem, wobei $n = m + 1$, da zu den $m$ Dimensionen von $x$ noch die eine Dimension von $y$ dazukommt.
 
-Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im n-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde. (\ref{SVM2}) 
+Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im n-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde. (\ref{SVM1}) 
 
 
 \begin{dsafigure}
@@ -38,8 +38,7 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 \end{dsafigure}
 
 
-Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Da sich Ebenen auch in der Form $\langle x, w \rangle = b $ beschreiben lassen, folgt, dass wir die Datensätze auch etwas anders betrachten können (\ref{SVM2}).
-Das daraus folgende mathematische Programm sieht wie folgt aus: 
+Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Ebenen kann man auch in der Form $\langle x, w \rangle = b $ beschreiben. Daraus folgt, dass das optimierungsproblem wie folgt geschreiben werden kann.(\ref{SVM2}).
 
 \begin{align*}
 	\operatorname{max}_{w,b} \quad & \frac{2}{\norm{(w)}} \\
@@ -52,7 +51,7 @@ Unter der Vorraussetzung, dass alle vorhandenen Datensätze richtig klassifizier
 man aber genauso schreiben als:
 
 \begin{align*}
-		\operatorname{min}_{w,b} \quad & \norm{(w)} \\
+		\operatorname{min}_{w,b} \quad & \norm{w} \\
 		\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall i = 1,...,n ; \\
 		&x \in \mathbb{R}^n; \quad y \in \{1; -1\}
 		%\label{SVMProblemMin}
@@ -61,13 +60,21 @@ man aber genauso schreiben als:
 Klassifikation:
 
 \begin{align*}
-	y_{i} =& \{ 1 \operatorname{falls} \langle w,x_{i} \rangle - b \geq 1\} \\
-		& \{ -1 \operatorname{falls} \langle w,x_{i} \rangle \leq 1\}
+	y_{i} =& \{ 1 \quad \operatorname{falls} \langle w,x_{i} \rangle - b \geq 0\} \\
+		& \{ -1 \operatorname{falls} \langle w,x_{i} \rangle - b \leq 0\}
 	%\label{KlassifikationSVM}
 \end{align*}
 
 Nachdem das Problem optimiert wurde, ist der Computer in der Lage, weitere Daten einzuordnen, vorrausgesetzt, es ist richtig optimiert.
 Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.\\
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{\media Figure_SVM.pdf}
+		\caption{Links und rechts zur Trenngeraden befinden sich die parallelen Grenzen (gestrichelte Geraden). Ziel der Optimierung ist es, den Abstand zwischen den Grenzen zu maximieren, um den Normalenvektor $w$ zu bestimmen.}
+		\label{SVM2}
+	\end{center}
+\end{dsafigure}
 
 \begin{itemize}
 	\item Wenn die Datensätze nicht linear separierbar sind, d.h., es ist nicht möglich die beiden Datensätze mit einem linearen Element zu trennen.
@@ -76,25 +83,17 @@ Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.\\
 \end{itemize}
 
 \subsubsection{Soft Margin SVMs}
-Die Soft Margin SVMs können mit dem zweiten Problem umgehen.
+Die Soft Margin SVMs können mit beiden Problemen umgehen.
 Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse Fehlertoleranz besitzen. Diese kommt durch eine Veränderung an der Formel zustande:
 
 \begin{align*}
 	\operatorname{minimiere}_{w,b} \quad & \norm{w} + C\sum_{i}{z_{i}} \quad \forall i = 1,...,n \\
-	\operatorname{sodass} \quad & y_{i}(\langle w,x_{i} \rangle - b) \geq 1 \quad \forall i = 1,...,n; \\ 
-	&x \in \mathbb{R}^n; y \in \{1; -1\} \quad z_{i} \geq 0 \\
+	\operatorname{sodass} \quad & y_{i}(\langle w,x_{i} \rangle - b) \geq 1 - z_{i} \quad \forall i = 1,...,n; \\ 
+	&x \in \mathbb{R}^n; \quad y \in \{1; -1\} \quad z_{i} \geq 0 \\
 	%\label{eq: SoftMarginSVMs}
 \end{align*}
 
-Dabei steht $z_{i}$ für die Grösse des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren grösse bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
-
-\begin{dsafigure}
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{\media Figure_SVM.pdf}
-		\caption{Links und rechts zur Trenngeraden befinden sich die parallelen Grenzen (gestrichelte Geraden). Ziel der Optimierung ist es, den Abstand zwischen den Grenzen zu maximieren, um den Normalenvektor $w$ zu bestimmen.}
-		\label{FigSVM}
-	\end{center}
-\end{dsafigure}
+Dabei steht $z_{i}$ für die Größe des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren Größe bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
 
 \section{Neuronale Netze}
 \author {Farhadiba Mohammed}
@@ -108,7 +107,7 @@ Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist d
 \begin{dsafigure}
 	\begin{center}
 		\includegraphics[width=0.35\textwidth]{\media Figure_NN.pdf}
-		\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ ´´Neuronen''.}
+		\caption{Ein vollständig verbundenes neuronales Netzwerk mit $i$ Eingängen und $k$ Ausgängen, bestehend aus $n$ Schichten mit jeweils $m$ \glqq Neuronen\grqq .}
 		\label{FigNN}
 	\end{center}
 \end{dsafigure}
