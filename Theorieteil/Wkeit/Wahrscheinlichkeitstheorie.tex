@@ -115,13 +115,14 @@ Berechnet man den Erwartungswert eines einfachen W\"urfelwurfes, so erh\"alt man
 	\mathbb{P} (E\cap F)= \mathbb{P} (E)  \mathbb{P} (F),
 	\end{equation}
 
-dann sind E und F unabh\"angig. 
+dann sind E und F unabhängig. 
 
 \item Zwei Zufallsvariablen 
 \begin{equation*}
-X_{1}: \Omega_{1} \rightarrow \mathbb{R} \: \text{ und } \: X_{2}: \Omega_{2} \rightarrow \mathbb{R}
+%X_{1}: \Omega_{1} \rightarrow \mathbb{R} \: \text{ und } \: X_{2}: \Omega_{2} \rightarrow \mathbb{R}
+X_{1}: \Omega_{1} \rightarrow \mathbb{R} : \text{ und } : X_{2}: \Omega_{2} \rightarrow \mathbb{R}
 \end{equation*}
-sind unabh\"angig, falls gilt, dass f\"ur alle $A, B \subseteq \mathbb{R}$
+sind unabhängig, falls gilt, dass für alle $A, B \subseteq \mathbb{R}$
 \begin{equation*}
 \mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} \in B\} ) = \mathbb{P} (\{X_{1} \in A\}  \mathbb{P} \{X_{2} \in B\} )
 \end{equation*}
@@ -153,7 +154,7 @@ Diese ist bestimmt durch:
 
 Gegeben seien zwei unabhängige Zufallsvariablen
 \begin{equation*}
-X_{1}:\Omega \rightarrow \mathbb{R} \: \text{ und } \: X_{2}:\Omega \rightarrow \mathbb{R}
+X_{1}:\Omega \rightarrow \mathbb{R} : \text{ und } : X_{2}:\Omega \rightarrow \mathbb{R}
 \end{equation*}
 Wir betrachten nun die Summe
 \begin{equation*}
@@ -166,7 +167,8 @@ F\"ur die Berechnung der Verteilung der Summe
 \end{equation*}
 beobachten wir zun\"achst, dass 
 \begin{align*}
-\mathbb{P} (\{Y=l\}) = \sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1}=i\} \cap \{X_{2}=l-i\}) = \sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1} = i\})  \mathbb{P} (\{X_{2}=l-i\})
+\mathbb{P} (\{Y=l\}) &= \sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1}=i\} \cap \{X_{2}=l-i\})\\
+&= \sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1} = i\})  \mathbb{P} (\{X_{2}=l-i\})
 \end{align*}
 
 \vspace{10pt}
@@ -175,7 +177,7 @@ beobachten wir zun\"achst, dass
 
 \vspace{5pt}
 
-F\"ur Zufallsvariablen $ {X_{1},..., {X_{2} $ gilt
+Für Zufallsvariablen ${X_{1},..., X_{2}}$ gilt
 
 \begin{equation*}
 \mathbb{E} [\sum_{i=1}^{n} a_{i} X_{i}] = \sum_{i=1}^{n} a_{i} (\mathbb{E} [X_{i}] )
@@ -206,10 +208,10 @@ Die Methode kann auf parametrisierte Verteilungen angewandt werden. Eine dieser 
 Die Wahrscheinlichkeit, dass wir unter der Verteilung $\theta$ den Datenpunkt x ziehen, ist $p(x,\theta)$
 
 \begin{equation*}
-\theta_{ML} = \operatorname{argmax}_{\theta} \: \text {p} (x_{1},...,x_{r};\theta)
+\theta_{ML} = \operatorname{argmax}_{\theta} : \text{p} (x_{1},...,x_{r};\theta)
 \end{equation*}
 
-hei"st ML-Sch\"atzer (von $\theta$) f\"ur $x_{1},...,x_{n}$ gezogen aus p(x_{1},...,x_{r};\theta)
+hei"st ML-Sch\"atzer (von $\theta$) für $x_{1},...,x_{n}$ gezogen aus $p(x_{1},...,x_{r};\theta$)
 
 In Folge dessen kann man auf diese Formel den Logarithmus (log) anwenden, der eine Summenschreibweise der Formel erm\"oglicht. Dadurch l\"asst sich die Form sehr gut optimieren bzw. maximieren. 
 
@@ -218,7 +220,7 @@ In Folge dessen kann man auf diese Formel den Logarithmus (log) anwenden, der ei
 
 Wenn man das Modell
 \begin{equation*} 
-y_{i} = ax_{i}+\epsilon_{i} \: \text{ mit} \: y_{i}, x_{i} \in \mathbb{R}
+y_{i} = ax_{i}+\epsilon_{i} : \text{ mit} : y_{i}, x_{i} \in \mathbb{R}
 \end{equation*}
 hat und das Rauschen $\mathcal{N}$ normal verteilt ist, dann ist die \textit{Lineare Regression} gleich dem Maximum-Likelihood. Optimiert man $y_{1},...,y_{n}$ mit $a$ gegeben
 \begin{equation*} 
