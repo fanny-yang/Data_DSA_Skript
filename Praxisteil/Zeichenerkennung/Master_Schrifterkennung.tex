@@ -2,18 +2,13 @@
 %Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
 \Akademie{Braunschweig}{2015}{1}
 
-\usepackage{algpseudocode}
-\usepackage[ngerman]{babel}
+\usepackage[english, ngerman]{babel}
 \usepackage{misc}
 \usepackage{multicol}
-\usepackage[utf8]{inputenc}
 
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
 \usepackage{amsfonts}
-
 \usepackage{blindtext}
-
-\newcommand{\media}{../../media/}
 
 \usepackage{url}
 \def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
@@ -21,10 +16,7 @@
 \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
 \urlstyle{same}
 
-\alglanguage{pseudocode}
-
-
-% hinzugefügt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
+% hinzugef�gt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
 \usepackage{lmodern}
 \setkomafont{descriptionlabel}{\normalfont\bfseries}
 \addtokomafont{paragraph}{\normalfont}
@@ -32,10 +24,11 @@
 \usepackage[flushmargin,hang,ragged]{footmisc}
 \deffootnote{1em}{1em}{%
 \textsuperscript{\thefootnotemark\ }
+
 }
 %\setlength{\abovedisplayskip}{5pt}
 %\setlength{\belowdisplayskip}{5pt}
-
+\newcommand{\media}{../../media/}
 
 %%%%%Mathe-Definitionen
 \newtheorem{Def}{Definition}
@@ -68,13 +61,12 @@
 
 
 
-\course{1}{Learning from Data}%%% 
+\course{1}{Projekte}%%% 
 \begin{coursetitle}
-  \centerline{Learning from Data} 
+  \centerline{Schrifterkennung}
   \bigskip
-  \Large \centerline{Mathematische Methoden des digitalen Zeitalters}
+  \Large \centerline{mit SVMs und Neuronalen Netzen}
   \bigskip
- \includegraphics[width=.9\columnwidth]{\media Grafik-TempKursfoto.jpg}
  \label{fig:meinbild}
   \bigskip
 \end{coursetitle}
@@ -87,16 +79,17 @@
 %\end{dsafigure}
 
 
-%SECTION KOMMT NACHHER NOCH IN UNTERDATEI
-\section{Zeichenerkennung mit Hilfe neuronaler Netzwerke}
 
-\input{Inhalt-PraxisZeichenerkennungNN}
 
-%\input{Kapitel-2-Kapitelüberschrift}
-%\input{Kapitel-3-Kapitelüberschrift}
+\input{Kapitel_SchrifterkennungSVM}
+
+\input{Inhalt-PraxisZeichenerkennungNN.tex}
+
+%\input{Kapitel-2-Kapitel�berschrift}
+%\input{Kapitel-3-Kapitel�berschrift}
 %usw.
 
 %\nocite{*} % alle referenzen anzeigen, sogar wenn sie nicht im text zitiert sind
-%\bibliography{lit}{}
-%\bibliographystyle{plain}
+\bibliography{lit}{}
+\bibliographystyle{plain}
 \end{document}
