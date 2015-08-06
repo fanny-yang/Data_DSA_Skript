@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Deep Learning for Binary Options")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("finances-optimize")]
+[assembly: AssemblyDescription("Optimiert ein neuronales Netzwerk")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Deep Learning for Binary Options")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyProduct("finances-optimize")]
+[assembly: AssemblyCopyright("Copyright © 2015 Dennis Kempf")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2d4ee4ef-fb87-4c02-8ea4-92d65695af6d")]
+[assembly: Guid("182e981e-ebd0-4a42-bfda-acad058b0b26")]
 
 // Version information for an assembly consists of the following four values:
 //
