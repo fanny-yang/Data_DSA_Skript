@@ -1,29 +1,27 @@
 \section{Analysis}
   
 
-Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für Optimierung und somit auch von großer Bedeutung beim Maschinellen Lernen. \\
-Im Kurs war für uns besonders die Stetigkeit und Differenzierbarkeit von ein- und mehrdimensionalen Funktionen wichtig. \\
+Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für Optimierung und somit auch von großer Bedeutung für das Maschinelle Lernen. Im Kurs war für uns besonders die Stetigkeit und Differenzierbarkeit von ein- und mehrdimensionalen Funktionen wichtig. \\
 Dazu eignen wir uns vorerst die theoretischen Grundlagen der Analysis an. \\
 
-\paragraph{Grenzwert}
-$L$ ist Grenzwert der Funktion $f(x)$ für x gegen a, wenn es für alle $\epsilon > 0$ ein $\delta > 0$ gibt, sodass für alle $|x-a| < \delta$ gilt \begin{equation*}|f(x)-L|<\epsilon\end{equation*}.
 
-\paragraph{Stetigkeit}
-Eine Funktion $f:\mathds{R}\rightarrow \mathds{R}$ ist stetig in x, wenn $lim_{w\rightarrow x}f(w)=f(x)$ auf ihrem gesamten Definitionsbereich gilt.Dafür muss sie stetig in x für alle $x\in D$ sein.
+Der \emph{Grenzwert} $L$ der Funktion $f(x)$ für $x$ gegen $a$, wenn es für alle $\epsilon > 0$ ein $\delta > 0$ gibt, sodass für alle $|x-a| < \delta$ gilt \begin{equation*}|f(x)-L|<\epsilon\end{equation*}.
 
-\paragraph{Differenzierbarkeit}
-Eine Funktion f:$\mathds{R}\rightarrow\mathds{R}$ ist an einer Stelle x differenzierbar, wenn eine lineare Abbildung $ l_ x (h)$ und ein Restglied $r(h)$ existieren, sodass \begin{equation*}f(x+h)=f(x)+l_{x}(h)+r(h)\end{equation*} mit dem Grenzwert \begin{equation*}lim_{h\rightarrow 0} \frac{r(h)}{h}= 0\end{equation*}gilt.
 
-Es lässt sich leicht beweisen, dass eine Funktion $f:\mathds{R} \rightarrow \mathds{R}$, welche differenzierbar an der Stelle $x \in R$ ist auch stetig an der Stelle $x \in R$ ist.\\ %Satz ist noch nicht optimal formuliert
+Eine Funktion $f: D \subseteq \mathbb{R}\rightarrow \mathbb{R}$ ist \emph{stetig}, wenn $\lim\limits_{w\rightarrow x}f(w)=f(x)$ auf ihrem gesamten Definitionsbereich gilt, d.h. muss sie ist stetig in x für alle $x\in D$. \\
 
-Dazu überlegen wir zuerst, welche Bedingungen gegeben sind. \\
-Eine Funktion ist an der Stelle x differenzierbar, wenn gilt:
+
+Eine Funktion $f:\mathbb{R}\rightarrow \mathbb{R}$ ist an einer Stelle $x$ \emph{differenzierbar}, wenn eine lineare Abbildung $ l_ x (h)$ und ein Restglied $r(h)$ existieren, sodass \begin{equation*}f(x+h)=f(x)+l_{x}(h)+r(h)\end{equation*} mit dem Grenzwert \begin{equation*}lim_{h\rightarrow 0} \frac{r(h)}{h}= 0\end{equation*}gilt.
+
+Es lässt sich leicht beweisen, dass eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar an der Stelle $x \in \mathbb{R}$ ist auch stetig an der Stelle $x \in \mathbb{R}$ ist.\\ %Satz ist noch nicht optimal formuliert
+
+Dazu überlegen wir zuerst, welche Bedingungen gegeben sind. Eine Funktion ist an der Stelle $x$ differenzierbar, wenn gilt:
 
 \begin{equation*}f(x+h)=f(x)+l_x(h)+ r(h)  \end{equation*}  
 mit 
 \begin{equation*} \lim\limits_{h \rightarrow 0} \frac{r(h)}{h}= 0  \end{equation*}
 
-Diese Funktion wäre außerdem stetig, wenn $\lim\limits_{w \rightarrow x} f(w)=f(x)$.\\
+Diese Funktion wäre außerdem stetig an der Stelle $x$, wenn $\lim\limits_{w \rightarrow x} f(w)=f(x)$.\\
 Da die Funktion $f(x+h)$ äquivalent zur Funktion $f(w)$ sein soll, ersetzen wir in der Bedingung für die Stetigkeit $f(w)$ mit der gesamten Funktion von $f(x+h)$.  
 Somit gilt: \\ \\
 $\lim\limits_{h \rightarrow 0} f(x)+l_x(h)+r(h)=f(x)$. \\ \\
@@ -78,9 +76,9 @@ Der Grenzwert des Restbetrages strebt gegen Null. Daraus lässt sich schließen,
 
 \vspace{15pt}
 
-\paragraph{Gradient}
-Der Gradient $\nabla$ ist die Ableitung eines Vektors, wobei jeder Eintrag die partielle Ableitung der entsprechenden Komponente ist:
-$f:\mathds{R}^m\rightarrow\mathds{R}$.
+
+Der \emph{Gradient} einer Funktion  $\nabla f(x)$ ist ein Vektor, wobei jeder Eintrag die partielle Ableitung der entsprechenden Komponente ist:
+$f:\mathbb{R}^m\rightarrow\mathbb{R}$.
 \begin{equation*} \begin{split} \nabla f(x) = \left( \begin{array}{c}
 \partial_{x1} f(x) \\
 \partial_{x2} f(x) \\
@@ -89,21 +87,21 @@ $f:\mathds{R}^m\rightarrow\mathds{R}$.
 \end{array}
 \right)
 \end{split} \end{equation*} 
-Der Gradient zeigt immer in Richtung des steilsten Abstiegs einer Funktion, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden.
+Der Gradient zeigt immer in Richtung des steilsten Anstiegs einer Funktion. Der negative Gradient in die Richtung des steilsten Abstiegs, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden.
 
 
-\paragraph{Kettenregel}
-Gegeben seien die differenzierbaren Funktionen $f:\mathds{R}^k\rightarrow\mathds{R}^n$, $g:\mathds{R}^n\rightarrow{R}^k$ und $h(x)=f(g(x))$. Daraus folgt durch die Kettenregel, dass Dh(x)=Df(g(x))*Dg(x) ist.
+Falls mehrere Funktonen miteinander verknüpft sind gelten drei Regeln: \\
+Gegeben seien die differenzierbaren Funktionen $f:\mathbb{R}^k\rightarrow\mathbb{R}^n$, $g:\mathbb{R}^n\rightarrow{R}^k$ und $h(x)=f(g(x))$. Daraus folgt durch die \emph{Kettenregel}, dass $Dh(x) = Df(g(x)) \cdot D \cdot g(x)$ ist.
 
-\paragraph{Summenregel}
-Die Summenregel besagt, dass die Ableitung der Funktion $h(x)=f(x)+g(x)$ \begin{equation*} D(f + g)(x)=Df(x)+Dg(x)\end{equation*} ist.
 
-\paragraph{Produktregel}
-Bei zwei differenzierbaren Funktionen $f:\mathds{R}^m\rightarrow\mathds{R}$ und $g:\mathds{R}^m\rightarrow\mathds{R}$ gilt für das Produkt der Funktionen ($h(x)=f(x)*g(x)$) die Ableitung \begin{equation*}Dh(x)=f(x)*Dg(x)+Df(x)*g(x)\end{equation*}
+Die \emph{Summenregel} besagt, dass der Gradient der Funktion $h(x)=f(x)+g(x)$ die Summe der Gradienten ist. Das heißt für $h(x) = f(x) + g(x)$ gilt:
+\begin{equation*} D(f + g)(x)=Df(x)+Dg(x)\end{equation*} ist.
+
+Bei zwei differenzierbaren Funktionen $f:\mathbb{R}^m\rightarrow\mathbb{R}$ und $g:\mathbb{R}^m\rightarrow\mathbb{R}$ gilt für das Produkt der Funktionen $h(x)=f(x) \cdot g(x)$ die Ableitung \begin{equation*}Dh(x)=f(x) \cdot Dg(x)+Df(x) \cdot g(x)\end{equation*}
 \\
-Die Produktregel muss häufig benutzt werden, wenn man zwei Funktionen miteinander verküpfen will. Daher ist es sinnvoll diese Regel einmal bewiesen zu haben.
+Die \emph{Produktregel} muss häufig benutzt werden, wenn man zwei Funktionen miteinander verküpfen will. Daher ist es sinnvoll, diese Regel einmal bewiesen zu haben.
  \\
-Dafür nehmen wir zwei Funktionen als gegeben an: Einmal die Funktion f, die vom $\mathds{R}^m$ in den $\mathds{R}$ abbildet und die Funktion g, die ebenfalls vom $\mathds{R}^m$ in den $\mathds{R}$ abgebildet wird. \\
+Dafür nehmen wir zwei Funktionen als gegeben an: Einmal die Funktion f, die vom $\mathbb{R}^m$ in den $\mathbb{R}$ abbildet und die Funktion g, die ebenfalls vom $\mathbb{R}^m$ in den $\mathbb{R}$ abgebildet wird. \\
 Es sind also die Funktion f(x) mit der Ableitung $f(x+h) = f(x) \cdot Df(x) \cdot h \cdot r_{f}(h)$ und die Funktion g(x) mit der Ableitung $g(x+h) = f(x) \cdot Dg(x) \cdot h \cdot r_{g}(h)$ gegeben. \\
 Die Produktregel besagt, dass für die Funktion $h(x) = f(x) \cdot g(x)$ die Ableitung $Dh(x) = f(x) \cdot Dg(x) + Df(x) \cdot g(x)$ %Reihenfolge eventuell anpassen
  ist. \\
