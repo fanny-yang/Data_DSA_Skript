@@ -1,5 +1,5 @@
 %% 
-%% LaTeX2e-Dokumentenklasse fÃ¼r neues BuB-Doku-Layout
+%% LaTeX2e-Dokumentenklasse für neues BuB-Doku-Layout
 %% Stand 17.04.2009
 %%
 
@@ -17,9 +17,9 @@
 \RequirePackage{xcolor}
 \RequirePackage{microtype}
 
-%% Wir brauchen ein paar Zusatzangaben Ã¼ber die Akademie
+%% Wir brauchen ein paar Zusatzangaben über die Akademie
 
-\def\Akademie#1#2#3%  SteinmÃ¼hle,2006,4
+\def\Akademie#1#2#3%  Steinmühle,2006,4
   {\def\thecourseprefix{#3.}%
    \def\theacademy{Akademie #1 #2-#3}}
 
@@ -39,7 +39,7 @@
   {\gdef\thecourseno{#1}%
    \gdef\thecoursetitle{#2}%
    \gdef\thecourse{#3}%
-   \stepcounter{chapter}% Das setzt die ganzen abhÃ¤ngigen ZÃ¤hler zurÃ¼ck
+   \stepcounter{chapter}% Das setzt die ganzen abhängigen Zähler zurück
    \setcounter{chapter}{\thecourseno}}
 
 \def\coursetitle%
@@ -75,7 +75,7 @@
 \fancyfoot{}
 \fancyfoot[LE,RO]{\thepage}
 
-\fancypagestyle{plain}% fÃ¼r Titelseiten
+\fancypagestyle{plain}% für Titelseiten
   {\fancyhead{}\fancyfoot{}
    \fancyfoot[LE,RO]{\thepage}
    \renewcommand{\headrulewidth}{0pt}}
@@ -86,7 +86,7 @@
 
 %% Mathefont: Euler
 
-\RequirePackage{euler}
+%\RequirePackage{euler}
 
 %% amsmath, damit wir align nutzen koennen
 
@@ -102,7 +102,7 @@
 \RequirePackage{dsafigure}
 \setcaptionprefix{\thecourseno.}
 
-%% Ãœberschriften oder was dafÃ¼r durchgeht
+%% Überschriften oder was dafür durchgeht
 
 \def\doifemptyelse#1%
   {\def\reserved@a{#1}\ifx\reserved@a\empty
@@ -205,7 +205,7 @@
      \twocolumn
    \endgroup}
 
-% Das Standardlayout ist _fast_ schon richtig, nur mÃ¼ssen unbedingt
+% Das Standardlayout ist _fast_ schon richtig, nur müssen unbedingt
 % alle Seitenzahlen mit Punkten eingeleitet werden ...
 
 \usepackage{titletoc}
@@ -227,23 +227,23 @@
 \def\labelitemi{--}
 \def\labelitemii{--}
 
-%% Formatierung der FuÃŸnoten
+%% Formatierung der Fußnoten
 
 \deffootnote{1.5em}{1.5em}
   {\textsuperscript{\normalfont\thefootnotemark\ }}
 
-%% Extra-Kerning fÃ¼r Guillemets, d.h. Umschalten der AnfÃ¼hrungszeichen von " auf ...
+%% Extra-Kerning für Guillemets, d.h. Umschalten der Anführungszeichen von " auf ...
 
 \DeclareTextCommand{\quotedblbase}{T1}{\guillemotright\kern.1ex}
 \DeclareTextCommand{\grqq}{T1}{\kern.1ex\guillemotleft}
 
-%% AbsatzeinrÃ¼ckung
+%% Absatzeinrückung
 
 \parindent5mm
 
 %% Bibliographie
 
-% kein neues Kapitel, keine Ãœberschrift
+% kein neues Kapitel, keine Überschrift
 % Durchnummerieren innerhalb eines Kapitels
 
 \newcounter{bibcounter}[chapter]
@@ -272,7 +272,7 @@
 %     \subsection{...}
 %
 % Da beim zweiten Subsection der Abstand nicht richtig gesetzt
-% wird. Daher patchen wir \label so, daÃŸ es \lastskip sichert.
+% wird. Daher patchen wir \label so, daß es \lastskip sichert.
 
 \let\label@orig\label
 \def\label#1%
