@@ -1,0 +1,99 @@
+\documentclass{newlayout}
+%Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
+\Akademie{Braunschweig}{2015}{1}
+
+\usepackage[ngerman]{babel}
+\usepackage{misc}
+\usepackage{multicol}
+\usepackage{inputenc}
+% \usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx}
+	\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+%\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+\usepackage{amsfonts}
+
+\usepackage{url}
+\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
+\urlstyle{same}
+
+% hinzugefügt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
+\usepackage{lmodern}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+\addtokomafont{paragraph}{\normalfont}
+\usepackage{footnote}
+\usepackage[flushmargin,hang,ragged]{footmisc}
+\deffootnote{1em}{1em}{%
+\textsuperscript{\thefootnotemark\ }
+}
+%\setlength{\abovedisplayskip}{5pt}
+%\setlength{\belowdisplayskip}{5pt}
+
+
+%%%%%Mathe-Definitionen
+\newtheorem{Def}{Definition}
+\newtheorem{Sat}{Satz}
+\newtheorem{Bew}{Beweis}
+
+\setlength\abovedisplayshortskip{0pt}
+\setlength\belowdisplayshortskip{0pt}
+\setlength\abovedisplayskip{3pt}
+\setlength\belowdisplayskip{3pt}
+%%%%Ende Mathe-Definitionen
+\begin{document}
+
+\section{Aufgaben Wahrscheinlichkeitstheorie}
+\subsection{Übung 1}
+Gezeigt werden soll, dass die Varainz:\\
+ $\mathbb{E} [X^2] - (\mathbb{E} [X])^2$ auch als $\mathbb{E} [(X- \mathbb{E} [X] )^2 ]$ geschrieben werden kann.	
+
+\begin{align*}
+&\mathbb{E} [(X- \mathbb{E} [X] )^2 ] \\
+&\quad= \mathbb{E} [X^2 - 2X \mathbb{E} [X] + \mathbb{E} [X]^2 \\
+&\quad= \mathbb{E} [X^2] - \mathbb{E} [2X]  \cdot \mathbb{E} [X] + \mathbb{E} [\mathbb{E} [X] \cdot \mathbb{E} [X]]\\
+&\quad= \mathbb{E} [X^2] - 2\mathbb{E} [X] \cdot \mathbb{E} [X] +  \mathbb{E} [\mathbb{E} [X] \cdot \mathbb{E} [X] \cdot 1]\\
+&\quad= \mathbb{E} [X^2] - 2(\mathbb{E} [X])^2 + (\mathbb{E} [X])^2 \cdot \mathbb{E} [1]\\
+&\quad= \mathbb{E} [X^2] - (\mathbb{E} [X])^2
+\end{align*}
+
+
+\subsection{Aufgabe Nr. 2}
+Aufgabenteil 1:\\
+Zu zeigen ist, dass eine Dichtefunktion $\mathbb{P}(\{X\in A\}):=\int_{x\in A}f(x)dx$ eine Wahrscheinlichkeitsverteilung ist und infolge dessen alle nötigen Axiome erfüllt.\\
+
+\begin{enumerate}
+\item Aus der Definition einer Dichtefunktion ergibt sich, dass $f(x)\geq 0$ woraus folgt, dass \begin{equation*}\int_{x\in A}f(x)dx\geq 0\end{equation*}
+\item Aus der Definition einer Dichtefunktion ergibt sich, dass \begin{equation*}\int_{-\infty}^{+\infty}f(x)dx= 1\end{equation*}, woraus folgt, dass $\mathb{P}(A)=1$\\
+\item Für alle für $i,j\in 1,...,n$ disjunkte $E_i,E_j$gilt:
+\begin{align*}
+\mathbb{P}(\bigcup_{i=1}^{n} E_i)&=\int_{x\in \bigcup_{i=1}^{n}E_i}{f(x)dx}\\
+&=\sum_{i=1}^{n}{\int_{x\in E_i}{f(x)dx}}\\
+&=\sum_{i=1}^{n}{\mathbb{P}(E_i)}
+\end{align*}
+\end{enumerate}
+Aufgabenteil 2:\\
+Wir sollen zeigen, dass, wenn eine Dichtefunktion faktorisiert wird die daraus entstehenden Zufallsvektoren unabhängig sind.\\
+Gegeben ist:
+\begin{enumerate}
+\item \begin{align*}&\mathbb{P}(\{(X_{1}, ... , X_{p}) \in (A_{1} \times ... \times A_{p})\} )\\ &= \quad \int_{X \in A}{f(x)dx}\end{align*}
+\item \begin{equation*}f(x) = \prod_{i=1}^{p}{f(x_{i})}\end{equation*}
+\end{enumerate}
+Daraus folgt:
+\begin{align*}
+&\mathbb{P}(\{(X_{1}, ... , X_{p}) \in (A_{1} \times ... \times A_{p})\} ) = \int_{X \in A}{f(x)dx}\\
+&= \int_{X \in A}{\prod_{i=1}^{p}{f(x_{i})}} = \prod_{i=1}^{p}{\int_{X_{i} \in A_{i}}{f(x_{i})}}\\
+&= \prod_{i=1}^{p}{\mathbb{P} (\{X_{i} \in A_{i}\})}
+\end{align*}
+
+\subsection{Aufgabe Nr. 3}
+Wie lässt sich die Wahrscheinlichkeit darstellen dass bei einer Abfolge von $n$ unabhängigen Ja- oder nein Experimenten $k$-mal Ja herauskommt?\\
+$\mathbb{P}(\{X=K\})$ bezeichnet die Wahrscheinlichkeit, dass nach $n$-Ja, Nein Entscheidungen genau $k$-mal "`Ja"' und $n-k$-mal "`Nein"' geantwortet wurde.\\
+Die Wahrscheinlichkeit für einen Durchlauf bestehend aus $n$-Entscheidungen, welche das oben genannte kriterium erfüllen und eine fest definierte Reinfolge haben lässt sich wiefolgt beschreiben:\\
+$p^k\cdot (1-p)^{n-k}$, falls $p$ die Wahrscheinlichkeit für das eintreten eines "`Ja"'- Ereignisses beschreibt. Da alle möglichen Kombinationen, von gegebenen "`Ja"', "`Nein"' Ereignissen durch $\dbinom{n}{k}$ gegeben ist gilt für $\mathbb{P}(\{X=K\})=\dbinom{n}{k}p^k\cdot (1-p)^{n-k}$
+
+\end{document}
