@@ -5,7 +5,6 @@
 \usepackage[english, ngerman]{babel}
 \usepackage{misc}
 \usepackage{multicol}
-\usepackage[utf8]{inputenc}
 
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
 \usepackage{amssymb}
@@ -15,9 +14,6 @@
 \usepackage{blindtext}
 \usepackage{tipa}
 \usepackage{algpseudocode}
-\usetikzlibrary{arrows}
-\usepackage{pgf,tikz}
-\usepackage{mathrsfs}
 \usepackage{url}
 \def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
 \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
@@ -44,7 +40,6 @@
 \newtheorem{Sat}{Satz}
 \newtheorem{Bew}{Beweis}
 \newtheorem{Thm}{Theorem}
-\newtheorem{exercise}{Aufgabe}
 
 \setlength\abovedisplayshortskip{0pt}
 \setlength\belowdisplayshortskip{0pt}
@@ -96,14 +91,15 @@
 \input{Theorieteil/Wkeit/Wahrscheinlichkeitstheorie}
 
 \section{Optimierung}
-\authors{Lennart ?, Lukas Lück, Patrice Becker}
 
-\input{Theorieteil/Optimierung/Lennart_Niermann_Optimierung.tex}
-% \input{Theorieteil/Optimierung/Inhalt-OptimierungLennart.tex}
+\input{Theorieteil/Optimierung/Inhalt-OptimierungLennart}
 \input{Theorieteil/Optimierung/Inhalt-OptimierungLukasL}
 \input{Theorieteil/Optimierung/Inhalt-OptimierungPatrice}
 
 \input{Theorieteil/ML/ML}
+
+\input{Praxisteil/Finanzen/Finanzen}
+\input{Praxisteil/KI/KI}
 
 %\nocite{*} % alle referenzen anzeigen, sogar wenn sie nicht im text zitiert sind
 %\bibliography{lit}{}
