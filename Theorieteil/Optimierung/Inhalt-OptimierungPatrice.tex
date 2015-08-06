@@ -1,22 +1,46 @@
-\subsection{Hier fehlt eine Überschrift!}
+\subsection{Gradientenmethode}
+
+Folgend beschrieben wird Gradientenmethode, die einen wichtigen Teil des Gebietes der Optimierung darstellt.
+Das Ziel der Gradientenmethode ist es, das Optimum einer Funktion zu finden. Ein 
+anfänglicher Schätzwert wird dafür in Richtung des negativen Gradienten 
+optimiert, man nähert sich dem Minimum der Funktion möglichst genau durch jenes 
+Abstiegsverfahren an.
+
+\begin{dsafigure}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{\media grafik_optimierung_patrice_gradient_descent.pdf}
+\label{figure:grafik_optimierung_patrice_gradient_descent}
+\caption{Beispiel der Gradientenmethode}
+\end{center}
+\end{dsafigure}
+
+Eine mögliche Softwareimplementierung in Pseudocode wird hier gezeigt:
 
 \begin{algorithmic}[1]
 
 \Procedure{$\mathbf{calculateMinimum}$}{}
-   \\F(x) = (x$^2$-2)$^2$
-\\F'(x) = 4x$^3$-8x
+   \\$F(x) = (x^2-2)^2$
+\\$F'(x) = 4x^3-8x$
 
 \\
-\\x = 10.0
-\\$\lambda$ = 0.001
+\\$x = 10.0$
+\\$\lambda = 0.001$
 
- \For{i = 8}
- 	\State $\lambda$ = $\lambda$+(i*0.001)
-\For{j = 8}
-\State x = x - $\lambda$ * F'(x)
+\For{$i = 1, \dots, m$}
+ \State $\lambda = \lambda+0.001\cdot i$
+  \For{$j = 1, \dots, n$}
+    \State $x = x - \lambda \cdot F'(x)$
+  \EndFor
 \EndFor
- \EndFor
  
- \\Print x\EndProcedure
+ 
+\\Print x\EndProcedure
 \Statex
 \end{algorithmic}
+
+\paragraph{Erklärung}
+$F(x)$ beschreibt die Funktion, deren globales Minimum wir finden wollen. $F'(x)$ ist die Ableitung der Funktion $F(x)$. Mit $x$ deklarieren wir den Schätzwert, ab dem optimiert wird. $\lambda$ bekommt einen niedrigen Wert deklariert, damit man sich in kleinen Schritten dem Minimum annähern kann. Dies wiederum geschieht in zwei For-Schleifen, deren Inhalt in diesem Fall n bzw. m mal durchlaufen wird. In der äußeren Schleife sorgen wir dafür, dass unser Lambda größere Werte annimmt. In der inneren For-Schleife wird die Schätz-Variable $x$ mit Hilfe der Ableitung und $\lambda$ angepasst. Daraus folgt:
+\begin{equation*}
+ f(x+\lambda \nabla f(x)) \leq f(x)
+ \end{equation*}
+
