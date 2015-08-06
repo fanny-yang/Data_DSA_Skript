@@ -16,29 +16,8 @@ feature, hog_image = feats.hog(sub_pic,
  cells_per_block = (1,1),visualise = true)
 \end{verbatim}
 
-%<<<<<<< HEAD
-%Im ersten Schritt generieren wir die Features sämtlicher Bilder. Dabei gibt es mehrere Einstellungsmöglichkeiten. Beispielsweise zur %Variation der Pixelzahl in einer Zelle (pixels\_per\_cell) und der Genauigkeit zur Erkennung von Konturen. Dabei gilt: Je kleiner die %Zellen sind und je höher die Genauigkeit (orientations) ist, desto länger braucht der Algorithmus zum berechnen, aber desto präziser ist %das Endergebnis. Hierbei müssen wir beachten, dass die Zellengröße nicht zu klein wird (min 2x2 Pixel)!
-%
-%\begin{verbatim}
-%clf[:fit]=(feature_trainset', 
-% label_train_data[:])
-%  ...
-%prob=clf[:predict_proba](feature_testset')
-%\end{verbatim}
-%
-%Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit.Um nun die Genauigkeit der SVM zu testen, erzeugen wir ein %Testset, dessen Features ebenfalls über den bestehenden Algorithmus generiert werden. Getetstet wird die SVM, indem wir das Testset an die %SVM übergeben und sie uns aufgrund der vorhandenen Werte eine Schätzung abgibt, was am wahrscheinlichsten auf dem Bild abgebildet ist. Die %Ergebnisse werden dann überprüft und die Genauigkeit wird errechnet.
-%
-%\begin{dsafigure}
-%\begin{center}
-	%\label{SESVM}
-	%\includegraphics[width=0.35\textwidth]{\media Zahlen_fuer_Schrifterkennung.png}
-	%\caption{Zahlen für die Schrifterkennung.}
-	%\end{center}
-%\end{dsafigure}
-%
-%Daraufhin erzeugen wir ein Bild mit 100 Zahlen, die weitgehend zufällig auf dem Bild verteilt sind. Dieses Bild wird in eine Matrix %umgewandelt. Ein Algorithmus iterriert dann über das gesamte Bild und die SVM ermittelt welche 100 Zahlen abgebildet sind.
-%=======
-Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind Muster in einem Bild, z.B. Kanten oder Farben. Dabei gibt es mehrere Einstellungsmöglichkeiten, beispielsweise zur Variation der Pixelanzahl in einer Zelle (pixels\_per\_cell) und der Genauigkeit zur Erkennung von Konturen (orientations). Dabei gilt: Je kleiner die Zellen sind und je höher die Genauigkeit ist, desto länger braucht der Algorithmus zum berechnen, aber desto präziser ist das Endergebnis. Allerdings muss man auch beachten, dass die Zellengröße nicht zu klein wird, da in sehr kleinen Zellen die Muster eventuell nicht für das Programm erkennbar sind. 
+Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind z.B. Muster in einem Bild, wie Kanten und Farben oder allgemein gesagt, die Eigenschaften eines Objektes. Wie wir an dem Beispielbild mit dem Kameramann (Abb. \ref{Kameramann}) sehen können, wurden durch den Algorithmus die Kanten hervorgehoben und alles andere wurde ignoriert (Abb. \ref{Kameramann_hogfeat}). Dieses Featurebild kann als Vektor dargestellt werden und die SVM benutz solche Vektoren, um die Unterschiede der Trainingsdaten zu ermitteln. Danach kann die SVM neue Objekte, hier sind es Bilder, den richtigen Gruppen zuzuordnen.\\ 
+Bei dem Erstellen der Features gibt es mehrere Einstellungsmöglichkeiten, beispielsweise zur Variation der Pixelanzahl in einer Zelle (\textit{pixels\_per\_cell}) und der Genauigkeit zur Erkennung von Konturen (\textit{orientations}). Dabei gilt: Je kleiner die Zellen sind und je höher die Genauigkeit ist, desto länger braucht der Algorithmus zum berechnen, aber desto präziser ist das Endergebnis. Allerdings muss man auch beachten, dass die Zellengröße nicht zu klein wird, da in sehr kleinen Zellen die Muster eventuell nicht für das Programm erkennbar sind. 
 
 \begin{dsafigure}
 \begin{center}
@@ -51,7 +30,7 @@ Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind 
 \begin{dsafigure}
 \begin{center}
 	\includegraphics[width=0.35\textwidth]{\media Kameramann_hogfeat.png}
-	\caption{Feature-Bild des voherigen Bildes.}
+	\caption{Feature-Bild von Abb.\ref{Kameramann}.}
 	\label{Kameramann_hogfeat}
 \end{center}
 \end{dsafigure}
