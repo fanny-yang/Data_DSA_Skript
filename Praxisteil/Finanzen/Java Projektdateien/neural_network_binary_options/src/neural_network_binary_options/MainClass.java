@@ -12,9 +12,28 @@ import org.encog.neural.networks.training.propagation.resilient.ResilientPropaga
  
 
 public class MainClass {
-	public static double XOR_INPUT[][] = { { 0.0, 0.0 }, { 1.0, 0.0 },
-		{ 0.0, 1.0 }, { 1.0, 1.0 } };
+	// Data input here!
+	public static double XOR_INPUT[][] = { { 0.0, 0.0, 0.0 }, { 0.0, 1.0, 0.0 },
+		{1.0, 0.0, 1.0 }, {1.0, 1.0, 1.0 } };
+	
+	public static double FINANCE_DATA_INPUT[][] = {
+		{0.83265121,0.78193578,0.80190290,0.73834197,0.47910270,0.43535283,0.42266352,0.40995336},
+		{0.78193578,0.80190290,0.73834197,0.73050398,0.43535283,0.42266352,0.40995336,0.36925646},
+		{0.80190290,0.73834197,0.73050398,0.35028902,0.42266352,0.40995336,0.36925646,0.24759241},
+		{0.73834197,0.73050398,0.35028902,0.48974359,0.40995336,0.36925646,0.24759241,0.20516204},
+		{0.73050398,0.35028902,0.48974359,0.41564562,0.36925646,0.24759241,0.20516204,0.14949119},
+		{0.35028902,0.48974359,0.41564562,0.52339813,0.24759241,0.20516204,0.14949119,0.16061510},
+		{0.48974359,0.41564562,0.52339813,0.69918699,0.20516204,0.14949119,0.16061510,0.11697322},
+		{0.41564562,0.52339813,0.69918699,0.80458515,0.14949119,0.16061510,0.11697322,0.14718309},
+		{0.52339813,0.69918699,0.80458515,0.81818182,0.16061510,0.11697322,0.14718309,0.21243180},
+		{0.69918699,0.80458515,0.81818182,0.64439877,0.11697322,0.14718309,0.21243180,0.13918478},
+		{0.80458515,0.81818182,0.64439877,0.56848971,0.14718309,0.21243180,0.13918478,0.04473981},
+		{0.81818182,0.64439877,0.56848971,0.57142857,0.21243180,0.13918478,0.04473981,0.00568447},
+		{0.64439877,0.56848971,0.57142857,0.58135017,0.13918478,0.04473981,0.00568447,0.00807640}
+		};
 
+		public static double FINANCE_DATA_EXPECTED[][] = {
+			{0.0},{1.0},{1.0},{1.0},{1.0},{1.0},{1.0},{1.0},{0.0},{1.0},{0.0},{0.0},{1.0}};
 	/**
 	 * The ideal data necessary for XOR.
 	 */
@@ -35,7 +54,7 @@ public class MainClass {
 		network.reset();
 	
 		// create training data
-		MLDataSet trainingSet = new BasicMLDataSet(XOR_INPUT, XOR_IDEAL);
+		MLDataSet trainingSet = new BasicMLDataSet(FINANCE_DATA_INPUT, FINANCE_DATA_EXPECTED);
 	
 		// train the neural network
 		final ResilientPropagation train = new ResilientPropagation(network, trainingSet);
@@ -46,7 +65,7 @@ public class MainClass {
 			train.iteration();
 			System.out.println("Epoch #" + epoch + " Error:" + train.getError());
 			epoch++;
-		} while(train.getError() > 0.01);
+		} while(train.getError() > 0.30);
 		train.finishTraining();
 	
 		// test the neural network
