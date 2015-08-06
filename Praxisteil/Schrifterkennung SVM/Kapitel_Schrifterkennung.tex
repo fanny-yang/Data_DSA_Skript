@@ -1,0 +1,27 @@
+\section{Einleitung}
+
+Täglich werden in Deutschland rund 64 Millionen Briefe verschickt. Doch habt ihr euch schon einmal gefragt, wie die ganzen Briefe so schnell verarbeitet werden können? Die Vorstellung von mehreren tausend Mitarbeitern, die sich nur mit der Sortierung der Post beschäftigen, erscheint schon aufgrund des Aufwandes unwahrscheinich. Eine bessere Variante stellt die Benutzung von Schrifterkennungsalgorithmen dar, deren sich die Post seit längerer Zeit bedient. Dabei scannt ein Computer die auf den Umschlägen geschriebenen Adressen ein, wertet diese aus und sortiert sie entsprechend. \\
+Zu diesem Thema gab es zwei Projektgruppen, die sich dem Problem auf verschiedene Weise näherten. Eine Gruppe nutzte SVMs, die andere ein neuronales Netzwerk.
+
+
+\section{Schrifterkennung mit SVMs}
+
+\paragraph{Aufbau des Programms}
+
+Da es beim maschinellen Lernen essenziell ist über ein entsprechend großes Datenset zu verfügen, haben wir unseren Algorithmus zunächst einmal mit 60.000 Bildern ausgestattet. 
+
+\begin{verbatim}
+	feature, hog_image = feats.hog(sub_pic,
+	 orientations = 8,pixels_per_cell = (4,4),
+	 cells_per_block = (1,1),visualise = true)
+\end{verbatim}
+Im ersten Schritt generieren wir die Features sämtlicher Bilder. Dabei gibt es mehrere Einstellungsmöglichkeiten. Beispielsweise zur Variation der Pixelzahl in einer Zelle (pixels_per_cell) und der Genauigkeit zur Erkennung von Konturen. Dabei gilt: Je kleiner die Zellen sind und je höher die Genauigkeit (orientations) ist, desto länger braucht der Algorithmus zum berechnen, aber desto präziser ist das Endergebnis. Hierbei müssen wir beachten, dass die Zellengröße nicht zu klein wird (min 2x2 Pixel)!
+
+\begin{verbatim}
+
+\end{verbatim}
+
+Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit.Um nun die Genauigkeit der SVM zu testen, erzeugen wir ein Testset, dessen Features ebenfalls über den bestehenden Algorithmus generiert werden. Getetstet wird die SVM, indem wir das Testset an die SVM übergeben und sie uns aufgrund der vorhandenen Werte eine Schätzung abgibt, was am wahrscheinlichsten auf dem Bild abgebildet ist. Die Ergebnisse werden dann überprüft und die Genauigkeit wird errechnet.
+Daraufhin erzeugen wir ein Bild mit 100 Zahlen, die weitgehend zufällig auf dem Bild verteilt sind. Dieses Bild wird in eine Matrix umgewandelt. Ein Algorithmus iterriert dann über das gesamte Bild und die SVM ermittelt welche 100 Zahlen abgebildet sind.
+
+

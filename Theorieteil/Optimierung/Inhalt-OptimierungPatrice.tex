@@ -1,5 +1,6 @@
-\subsection{Hier fehlt eine Überschrift!}
+\subsection{Gradientenmethode}
 
+Folgender Algorithmus implementiert die Gradientenmethode, die einen wichtigen Teil des Gebietes der Optimierung darstellt. Funktionieren tut sie wie folgt:
 \begin{algorithmic}[1]
 
 \Procedure{$\mathbf{calculateMinimum}$}{}
@@ -10,13 +11,21 @@
 \\x = 10.0
 \\$\lambda$ = 0.001
 
- \For{i = 8}
- 	\State $\lambda$ = $\lambda$+(i*0.001)
-\For{j = 8}
-\State x = x - $\lambda$ * F'(x)
+\For{i = 8}
+ \State $\lambda$ = $\lambda$+(i*0.001)
+  \For{j = 8}
+    \State x = x - $\lambda$ * F'(x)
+  \EndFor
 \EndFor
- \EndFor
  
- \\Print x\EndProcedure
+ 
+\\Print x\EndProcedure
 \Statex
 \end{algorithmic}
+
+\paragraph{Erklärung}
+$F(x)$ beschreibt die Funktion, deren globales Minimum wir finden wollen. $F'(x)$ ist dementsprechend die Ableitung der Funktion $F(x)$. Mit $x=10.0$ setzen wir den Schätzwert, ab dem optimiert wird. $\lambda$ bekommt einen niedrigen Wert deklariert, damit man sich in kleinen Schritten dem Minimum annähern kann. Dies wiederum geschieht in zwei For-Schleifen, deren Inhalt in diesem Fall je 8 mal durchlaufen wird. In der äußeren Schleife sorgen wir dafür, dass unser Lambda größere Werte annimmt. In der inneren For-Schleife wird die Schätz-Variable $x$ mit Hilfe der Ableitung und $\lambda$ angepasst. Daraus folgt:
+\begin{equation*}
+ f(x+\lambda \nabla f(x)) \leq f(x)
+ \end{equation*}
+

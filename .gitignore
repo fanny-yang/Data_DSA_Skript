@@ -4,3 +4,4 @@
 *.synctex.*
 *.log
 DSA_1.2_LearningFromData.pdf
+.DS_Store
