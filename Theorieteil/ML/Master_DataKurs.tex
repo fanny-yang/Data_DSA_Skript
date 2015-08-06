@@ -1,10 +1,11 @@
 \documentclass{newlayout}
 %Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
-\Akademie{Ort}{2014}{1}
+\Akademie{Braunschweig}{2015}{1}
 
 \usepackage[english]{babel}
 \usepackage{misc}
 \usepackage{multicol}
+\usepackage[utf8]{inputenc}
 
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
 \usepackage{amsfonts}
@@ -17,7 +18,6 @@
 \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
 \urlstyle{same}
 
-% hinzugefügt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
 \usepackage{lmodern}
 \setkomafont{descriptionlabel}{\normalfont\bfseries}
 \addtokomafont{paragraph}{\normalfont}
@@ -29,6 +29,8 @@
 %\setlength{\abovedisplayskip}{5pt}
 %\setlength{\belowdisplayskip}{5pt}
 
+\newcommand{\media}{../../media/}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 %%%%%Mathe-Definitionen
 \newtheorem{Def}{Definition}
@@ -44,7 +46,6 @@
 
 \begin{document}
 
- %   \input{titel}
  \setcounter{page}{3}
 
 \setcounter{tocdepth}{1}
@@ -61,32 +62,17 @@
 
 
 
-\course{1}{Machine Learning}%%% 
+\course{2}{Machine Learning} 
 \begin{coursetitle}
   \centerline{Machine Learning} 
   \bigskip
   \Large \centerline{SVMs und Neuronale Netzwerke}
   \bigskip
-%\includegraphics[width=.9\columnwidth]{volleyball.jpg}
- \label{fig:meinbild}
   \bigskip
 \end{coursetitle}
-%\begin{dsafigure}
-%\begin{center}
-%\includegraphics[width=.9\columnwidth]{Titelbild-fehlt.png}
-%\caption{meine Bildunterschrift}
-%label{fig:meinbild}
-%\end{center}
-%\end{dsafigure}
-
-
 
 
 \input{ML}
-
-%\input{Kapitel-2-Kapitelüberschrift}
-%\input{Kapitel-3-Kapitelüberschrift}
-%usw.
 
 %\nocite{*} % alle referenzen anzeigen, sogar wenn sie nicht im text zitiert sind
 %\bibliography{lit}{}

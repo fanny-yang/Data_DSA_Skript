@@ -86,7 +86,7 @@
 
 %% Mathefont: Euler
 
-\RequirePackage{euler}
+%\RequirePackage{euler}
 
 %% amsmath, damit wir align nutzen koennen
 

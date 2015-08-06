@@ -2,14 +2,14 @@
 
 \paragraph{Einführung}
 
-Im Rahmen der Optimierung von konvexen Funktionen ist es erforderlich, den Begriff der konvexen Menge einzuführen. Um diese Thematik anschaulich darzustellen, verwenden wir zunächst verschiedene geometrische Figuren in Abbildung \ref{figure:Grafik-OptimierungLukasL_KonvexeMengen}, von denen einige konvex sowie andere wiederum nicht konvex sind.
-Ist es möglich für je zwei beliebige Punkte der Menge eine Verbindungsstrecke zu finden, die selbst ebenfalls in der Menge liegt, so ist die Menge konvex.
+Im Rahmen der Optimierung von konvexen Funktionen ist es erforderlich, den Begriff der konvexen Menge einzuführen. Um diese Thematik anschaulich darzustellen, verwenden wir zunächst verschiedene geometrische Figuren in Abbildung \ref{figure:Grafik-Optimierung_KonvexeMengen}, von denen einige konvex sowie andere wiederum nicht konvex sind. \\
+Ist es eine direkte Verbindungsstrecke zwischen zwei beliebigen zu finden, die selbst ebenfalls in der Menge liegt, so ist die Menge konvex.
 
 \begin{dsafigure}
 \begin{center}
-\includegraphics[width=0.4\textwidth]{Grafik-OptimierungLukasL_KonvexeMengen.pdf}
-\label{figure:Grafik-OptimierungLukasL_KonvexeMengen}
-\caption{Beispiele für konvexe Mengen}
+\includegraphics[width=0.4\textwidth]{\media Grafik-Optimierung_KonvexeMengen.pdf}
+\label{figure:Grafik-Optimierung_KonvexeMengen}
+\caption{Beispiele konvexer Mengen}
 \end{center}
 \end{dsafigure}
 
@@ -17,23 +17,23 @@ Ist es möglich für je zwei beliebige Punkte der Menge eine Verbindungsstrecke 
 
 Eine Menge $X$ heißt konvex, falls für alle $x, y \in X$ und $\lambda \in \mathbb{R}$ und $\lambda \in [0,1]$ gilt:
 
-\begin{equation}
+\begin{equation*}
 \lambda x + (1 - \lambda) \in X
-\end{equation}
+\end{equation*}
 
 \end{Def}
 
-\paragraph{Beispiele konvexer Mengen}
+\subsection{Beispiele konvexer Mengen}
 
-\subparagraph{Kugel}
+\paragraph{Kugel}
 
 Ein Beispiel für eine konvexe Menge ist die Menge $S$ der Vektoren, die eine Kugel mit dem Radius $r = 1$, deren Mittelpunkt im Ursprung liegt, beschreibt:
 
 \begin{equation*}
-S = \{ \in \mathbb{R}^{n} | \|v\| \le 1\}
+S = \{x \in \mathbb{R}^{n} | \lVert x \rVert \le 1\}
 \end{equation*}
 
-\subparagraph{Quadrant}
+\paragraph{Quadrant}
 
 Auch die Quadranten des kartesischen Koordinatensystems lassen sich durch eine konvexe Menge erfassen. So gilt z.~B. für den ersten Quadranten:
 
@@ -41,56 +41,53 @@ Auch die Quadranten des kartesischen Koordinatensystems lassen sich durch eine k
 L = \{ x \in \mathbb{R}^{n} | x_1 \ge 0, x_2 \ge 0, ..., x_n \ge 0\}
 \end{equation*}
 
-\subparagraph{Eistüte}
+\paragraph{Eistüte}
 
-Bei einer Eistüte bzw. einem quadratischen Kegel handelt es sich um ein weiteres Beispiel für eine konvexe Menge, sonfern für $x \in \mathbb{R}^{n-1}$, $t \in \mathbb{R}$ gilt:
+Bei einer Eistüte bzw. einem quadratischen Kegel handelt es sich um ein weiteres Beispiel für eine konvexe Menge, da sie folgendermaßen für $x \in \mathbb{R}^{n-1}$ und $t \in \mathbb{R}$ beschrieben werden kann:
 
 \begin{equation*}
-Q = \{(x, t) \in \mathbb{R}^{n} | \|x\|^{2} \le t\}
+Q = \{(x, t) \in \mathbb{R}^{n} | \lVert x\rVert ^{2} \le t\}
 \end{equation*}
 
-\subparagraph{Box}
+\paragraph{Box}
 
-Die Menge von Vektoren im $\mathbb{R}$ bilden eine konvexe Menge in Form einer Box mit der Seitenlänge 2, deren Mittelpunkt im Ursprung liegt, wenn gilt:
+Die Menge von Vektoren in $B \subseteq \mathbb{R}$ bilden eine konvexe Menge in Form einer Box mit der Seitenlänge 2, deren Mittelpunkt im Ursprung liegt:
 
 \begin{equation*}
-B = \{x \ in \mathbb{R}^{n} | |x_{i}| \le 1, i = 1, ..., n\}
+B = \{x \in \mathbb{R}^{n} | |x_{i}| \le 1, i = 1, ..., n\}
 \end{equation*}
 
 \subsection{Konvexe Programme}
 
 \paragraph{Einführung}
 
-Bei einem konvexen Programm handelt es sich um eine Funktion $f$ in Abhängigkeit vom Paramenter $x$. Im Rahmen der mathematischen Optimierung versuchen wir diese Funktion unter Berücksichtigung von Nebenbedingungen zu minimieren. Hierbei sind sowohl die Zielfunktion als auch die Menge der Punkte konvex.
+Bei einem konvexen Programm handelt es sich um die Optimierung einer Funktion $f$, die vom Parameter $x$ abhängig ist. Wir versuchen diese Funktion unter Berücksichtigung von Nebenbedingungen zu minimieren. Hierbei sind sowohl die Zielfunktion als auch die Menge der Punkte, die die Nebenbedingungen erfüllt, konvex.
 
 \begin{Def}[Konvexes Programm]
-Sei $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ eine konvexe Funktion und $X \subseteq \mathbb{R}^{n}$, so minimieren wir die Funktion $f(x)$ unter der Nebenbedigung, dass $x \in X$.
+Sei $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ eine konvexe Funktion und $X \subseteq \mathbb{R}^{n}$, so ist das konvexe Optimierungsproblem bzw. Programm die Minimierung der Funktion $f(x)$ unter der Nebenbedingung, sodass $x \in X$.
 \end{Def}
-
-% Bsp. 1
 
 \paragraph{Lineare Programme}
 
-Lineare Programme lassen sich durch lineare Funktionen beschreiben, z.~B. $f(x) = \langle c, x \rangle$. Darüber hinaus sind eine lineare Abbildungsmatrix $A$, z.~B. $A = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, sowie ein Vektor $b$ und ein weiterer Vektor $c$, z.~B. $c = \begin{pmatrix}1 \\ 0 \end{pmatrix}$, gegeben. $x$ ist dann zulässig, wenn $x \in X$ mit $X: Ax \le b$ bzw. $X = \{x \in \mathbb{R}^{n} | Ax \le b\}$ erfüllt ist. \\
-So ergibt beispielsweise die Funktion $f(x)$:
+Lineare Programme lassen sich durch lineare Funktionen beschreiben, z.~B. $f(x) = \langle c, x \rangle$. Darüber hinaus sind eine lineare Abbildungsmatrix $A$, z.~B. $A = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, sowie ein Vektor $b$ und ein weiterer Vektor $c$, z.~B. $c = \begin{pmatrix}1 \\ 0 \end{pmatrix}$, gegeben. $x$ ist dann zulässig, wenn $x \in X$ mit $X: Ax \le b$ d.~h. $X = \{x \in \mathbb{R}^{n} | Ax \le b\}$ erfüllt ist. \\
+Ein Beispiel für ein lineares Programm wäre:
 
 \begin{equation*}
 f(x) = \langle \begin{pmatrix}1 \\ 0 \end{pmatrix}, \begin{pmatrix}x_{1} \\ x_{2} \end{pmatrix} \rangle = x_{1}
 \end{equation*}
 
-Es folgt für die Nebenbedigungen:
+Für die Nebenbedingungen gilt:
 
 \begin{equation*}
 \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}
 \end{equation*}
 
-Hieraus folgt: $x_{1} \le 1$, $x_{2} \le 1$.
+Für den Wertebereich des linearen Programms folgt: $x_{1} \le 1$, $x_{2} \le 1$.
 
-\subparagraph{Quadratische Programme}
+\paragraph{Quadratische Programme}
 
-Im Hinblick auf quadratische Programme verwenden wir dieselbe Herangehensweise. \\
-Auch hier sei eine Funktion $f$ gegeben, z.~B. $f(x) = x^{T}Qx$ mit $Q = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, die es zu unter der Bedingung $x \in X$ für $X: Ax \le b$ zu minmieren gilt.\\
-Hieraus folgt:
+Im Vergleich zu einem linearen Programm weist z.~B. eine Kostenfunktion im quadratischen Programm eine quadratische Form auf. \\
+Beispielsweise sei ein quadratisches Programm $f(x) = x^{T}Qx$ mit $Q = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$. $f$ gilt es nun unter der Bedingung $x \in X$ für $X: Ax \le b$ zu minmieren:
 
 \begin{align*}
 f(x) &= x^{T}Qx \\

@@ -12,15 +12,16 @@ Beispielhafte Anwendungszwecke wären die Minimierung oder Maximierung der Koste
 \begin{Thm}[Methode der kleinsten Quadrate]
 Beispiel für die Lösung eines solchen Minimierungsproblems wäre die Methode der kleinsten Quadrate. Gegeben ist hierbei eine lineare Funktion $f$ und Punkte $P_i=(x_i,y_i)$, welche näherungsweise auf der Geraden liegen:
 
-\begin{equation*}
-f(x)=ax \qquad\wedge\qquad y_i=f(x_i)+\epsilon_i
-\end{equation*}
+\begin{align*}
+f(x) &= ax \\
+y_i &= f(x_i) + \epsilon_{i}
+\end{align*}
 
 \begin{dsafigure}
 \begin{center}
-\includegraphics[width=0.5\textwidth]{Grafik-OptimierungLennart_LineareRegression.pdf}
+\includegraphics[width=0.5\textwidth]{\media Grafik-Optimierung_LineareRegression.pdf}
 \caption{Konvexe Funktion}
-\label{figure:Grafik-OptimierungLennart_LineareRegression.pdf}
+\label{figure:Grafik-Optimierung_LineareRegression.pdf}
 \end{center}
 \end{dsafigure}
 
@@ -51,17 +52,25 @@ $x\in D$ ist dann ein globales Minimum, falls $N=D$.
 \end{Def}
 
 \subsection{Konvexität}
+
 \begin{Def}[Konvexe Funktion]
 Eine Funktion $f: \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls $\forall_{x,y\in D}$ gilt: 
-\[f(\lambda x+(1-\lambda)y)\leq\lambdaf(x)+(a-\lambda)f(y)\qquad\mid \forall_{y\in[0,1]}\]
-%$\begin{figure}[htbp] 
-%  \centering
-%     \includegraphics[width=0.7\textwidth]{konvexe_funktion.jpg}
-%  \caption{konvexe Funktion}
-%  \label{fig:Konvexe Funktion}
-%\end{figure}
-%	\subsubsection{Beispiel zur Konvexität}
-%	\[f(u)=\mid\mid u\mid\mid_2^2\qquad\mid u\in\mathbb{R}\]
-%	\[f(\lambda u+(1-\lambda)v)=\mid\mid\lambda u+(1-\lambda)v\mid\mid_2\]
-%	\[\leq\mid\mid\lambda u\mid\mid_2+\mid\mid(1-\lambda)v\mid\mid_2\]
-%	\[\leq\lambda\mid\mid u\mid\mid_2+(1-\lambda)\mid\mid v\mid\mid_2\]
+$f(\lambda x+ (1 - \lambda)y) \leq \lambda f(x)+(a-\lambda)f(y) \qquad \mid \forall_{y\in[0,1]}$
+
+\begin{dsafigure}
+\begin{center}
+\includegraphics[width=0.45\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.jpg}
+\caption{konvexe Funktion}
+\end{center}
+\end{dsafigure}
+
+\end{Def}
+
+\subsubsection{Beispiel zur Konvexität}
+
+\begin{align*}
+f(u) &=\mid\mid u\mid\mid_2^2\qquad\mid u\in\mathbb{R}\\
+f(\lambda u+(1-\lambda)v) &=\mid\mid\lambda u+(1-\lambda)v\mid\mid_2
+\leq\mid\mid\lambda u\mid\mid_2+\mid\mid(1-\lambda)v\mid\mid_2
+\leq\lambda\mid\mid u\mid\mid_2+(1-\lambda)\mid\mid v\mid\mid_2
+\end{align*}
