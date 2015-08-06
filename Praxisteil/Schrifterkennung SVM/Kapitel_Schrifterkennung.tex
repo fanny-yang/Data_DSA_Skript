@@ -20,17 +20,17 @@ Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind 
 
 \begin{dsafigure}
 \begin{center}
-	\label{Kameramann}
 	\includegraphics[width=0.35\textwidth]{\media Kameramann.png}
 	\caption{Schwarz-Weiß Bild eines Kameramannes.}
+	\label{Kameramann}
 \end{center}
 \end{dsafigure}
 
 \begin{dsafigure}
 \begin{center}
-	\label{Kameramann_hogfeat}
 	\includegraphics[width=0.35\textwidth]{\media Kameramann_hogfeat.png}
 	\caption{Feature-Bild des voherigen Bildes.}
+	\label{Kameramann_hogfeat}
 \end{center}
 \end{dsafigure}
 
@@ -46,20 +46,20 @@ Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit
 
 \begin{dsafigure}
 \begin{center}
-	\label{Zahlen_input}
 	\includegraphics[width=0.35\textwidth]{\media Zahlen_input.png}
-	\caption{Ausschnitt des generierten Bild, das die SVM analysieren soll.}
+	\caption{Ausschnitt des generierten Bildes, das die SVM analysieren soll.}
+	\label{Zahlen_input}
 \end{center}
 \end{dsafigure}
 
 \begin{dsafigure}
 \begin{center}
-	\label{Zahlen_hogfeat}
 	\includegraphics[width=0.35\textwidth]{\media Zahlen_hogfeat.png}
-	\caption{Feature-Bild des generierten Bild.}
+	\caption{Feature-Bild des generierten Bildes.}
+	\label{Zahlen_hogfeat}
 \end{center}
 \end{dsafigure}
 
-Daraufhin erzeugen wir ein Bild mit 100 Zahlen Abb.\ref{Zahlen_input}, die jeweils in einer 38 $\times$ 38 Pixelzelle zufällig verteilt werden. Dieses Bild wird in eine Matrix umgewandelt und ein Algorithmus iteriert über die Matrix, sodass die SVM bestimmen kann, welche 100 Zahlen abgebildet sind.
+Daraufhin erzeugen wir ein Bild mit 100 Zahlen Abb. \ref{Zahlen_input}, die jeweils in einer $38 \times 38$ Pixelzelle zufällig verteilt werden. Dieses Bild wird in eine Matrix umgewandelt und ein Algorithmus iteriert über die Matrix, sodass die SVM bestimmen kann, welche 100 Zahlen abgebildet sind.
 
 
