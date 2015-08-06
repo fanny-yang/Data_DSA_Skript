@@ -21,46 +21,46 @@ Beispiel für die Lösung eines solchen Minimierungsproblems wäre die Methode der 
 f(x) &= ax\qquad \wedge\qquad y_i &= f(x_i) + \epsilon_{i}
 \end{align*}
 
-%\definecolor{ffqqqq}{rgb}{1.,0.,0.}
-%\definecolor{qqqqff}{rgb}{0.,0.,1.}
-%\begin{dsafigure}
-%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-%\draw[->,color=black] (-0.252729391848446,0.) -- (5.909881514665974,0.);
-%\foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5}
-%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-%\draw[->,color=black] (0.,-0.118522622381023) -- (0.,4.459842973966475);
-%\foreach \y in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.}
-%\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-%\clip(-0.252729391848446,-0.118522622381023) rectangle (5.909881514665974,4.459842973966475);
-%\draw[smooth,samples=100,domain=-0.252729391848446:5.909881514665974] plot(\x,{(\x)});
-%\draw [color=ffqqqq] (1.,1.)-- (1.,1.5);
-%\draw [color=ffqqqq] (2.,2.)-- (2.,1.7);
-%\draw [color=ffqqqq] (3.,3.)-- (3.,3.6);
-%\draw [color=ffqqqq] (4.,4.)-- (4.,3.2);
-%\begin{scriptsize}
-%\draw [fill=qqqqff] (1.,1.5) circle (1.5pt);
-%\draw[color=qqqqff] (0.9863140708369929,1.7517884297439121) node {$P_1$};
-%\draw [fill=qqqqff] (2.,1.7) circle (1.5pt);
-%\draw[color=qqqqff] (1.9808094816766213,1.4790347346423591) node {$P_2$};
-%\draw [fill=qqqqff] (3.,3.6) circle (1.5pt);
-%\draw[color=qqqqff] (2.9753048925162497,3.8656295667809477) node {$P_3$};
-%\draw [fill=qqqqff] (4.,3.2) circle (1.5pt);
-%\draw[color=qqqqff] (3.95893150105162,2.9499564475114486) node {$P_4$};
-%\draw[color=ffqqqq] (1.0297892800540258,1.2647282599197103) node {$\varepsilon_1$};
-%\draw[color=ffqqqq] (2.230791934674561,1.9466124976735928) node {$\varepsilon_2$};
-%\draw[color=ffqqqq] (3.029648904037541,3.29089856638839) node {$\varepsilon_3$};
-%\draw[color=ffqqqq] (4.236085959810206,3.6902879056442353) node {$\varepsilon_4$};
-%\end{scriptsize}
-%\end{tikzpicture}
-%\caption{Beispiel einer Linearen Reggression}
-%\label{fig:LinReg}
-%\end{dsafigure}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{dsafigure}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-0.252729391848446,0.) -- (5.909881514665974,0.);
+\foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+\draw[->,color=black] (0.,-0.118522622381023) -- (0.,4.459842973966475);
+\foreach \y in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+\clip(-0.252729391848446,-0.118522622381023) rectangle (5.909881514665974,4.459842973966475);
+\draw[smooth,samples=100,domain=-0.252729391848446:5.909881514665974] plot(\x,{(\x)});
+\draw [color=ffqqqq] (1.,1.)-- (1.,1.5);
+\draw [color=ffqqqq] (2.,2.)-- (2.,1.7);
+\draw [color=ffqqqq] (3.,3.)-- (3.,3.6);
+\draw [color=ffqqqq] (4.,4.)-- (4.,3.2);
+\begin{scriptsize}
+\draw [fill=qqqqff] (1.,1.5) circle (1.5pt);
+\draw[color=qqqqff] (0.9863140708369929,1.7517884297439121) node {$P_1$};
+\draw [fill=qqqqff] (2.,1.7) circle (1.5pt);
+\draw[color=qqqqff] (1.9808094816766213,1.4790347346423591) node {$P_2$};
+\draw [fill=qqqqff] (3.,3.6) circle (1.5pt);
+\draw[color=qqqqff] (2.9753048925162497,3.8656295667809477) node {$P_3$};
+\draw [fill=qqqqff] (4.,3.2) circle (1.5pt);
+\draw[color=qqqqff] (3.95893150105162,2.9499564475114486) node {$P_4$};
+\draw[color=ffqqqq] (1.0297892800540258,1.2647282599197103) node {$\varepsilon_1$};
+\draw[color=ffqqqq] (2.230791934674561,1.9466124976735928) node {$\varepsilon_2$};
+\draw[color=ffqqqq] (3.029648904037541,3.29089856638839) node {$\varepsilon_3$};
+\draw[color=ffqqqq] (4.236085959810206,3.6902879056442353) node {$\varepsilon_4$};
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Beispiel einer Linearen Reggression}
+\label{fig:LinReg}
+\end{dsafigure}
 
 
 Wenn nun der Abstand $\epsilon_i$ minimiert werden soll, dann gilt:
 
 \begin{equation*}
-\min h(x)={\sum_{i=1}^n(y_i-ax_i)^2)}
+\min h(x)={\sum_{i=1}^n(\epsilon_i)}{\sum_{i=1}^n(y_i-ax_i)^2)}
 \end{equation*}
 
  Zur Berechnung dieses Minimums gibt es nun verschiedene Möglichkeiten:
@@ -79,7 +79,7 @@ $\lambda^+=argmin(g^+(\lambda))$
 \end{Thm}
 
 \begin{Def}[Lokales und globales Minimum]
-Für $f: D\rightarrow \mathbb{R}$ ist $x\in D$ ein lokales Minimum, wenn mindestens eine Umgebung $N$ existiert, sodass \\$\forall_{y\in N}$ gilt: $f(y)>=f(x)$ \\
+Für $f: D\rightarrow \mathbb{R}$ ist $x\in D$ ein lokales Minimum, wenn mindestens eine Umgebung $N$ existiert, sodass \\$\forall_{y\in N}$ gilt: $f(y)\geq f(x)$ \\
 $x\in D$ ist dann ein globales Minimum, falls $N=D$.
 \end{Def}
 
@@ -89,40 +89,40 @@ $x\in D$ ist dann ein globales Minimum, falls $N=D$.
 Eine Funktion $f: \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls $\forall_{x,y\in D}$ gilt:\\ 
 $f(\lambda x+ (1 - \lambda)y) \leq \lambda f(x)+(a-\lambda)f(y) \qquad \mid \forall_{\lambda\in[0,1]}$ \ref{fig:konvex}
 
-%\definecolor{ffqqqq}{rgb}{1.,0.,0.}
-%\definecolor{qqqqff}{rgb}{0.,0.,1.}
-%\begin{dsafigure}
-%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-%\draw[->,color=black] (-0.252729391848446,0.) -- (5.9098815146659724,0.);
-%\foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5}
-%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-%\draw[->,color=black] (0.,-0.118522622381023) -- (0.,4.459842973966475);
-%\foreach \y in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.}
-%\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-%\clip(-0.252729391848446,-0.118522622381023) rectangle (5.9098815146659724,4.459842973966475);
-%\draw[smooth,samples=100,domain=-0.252729391848446:5.9098815146659724] plot(\x,{(\x)});
-%\draw [color=ffqqqq] (1.,1.)-- (1.,1.5);
-%\draw [color=ffqqqq] (2.,2.)-- (2.,1.7);
-%\draw [color=ffqqqq] (3.,3.)-- (3.,3.6);
-%\draw [color=ffqqqq] (4.,4.)-- (4.,3.2);
-%\begin{scriptsize}
-%\draw [fill=qqqqff] (1.,1.5) circle (1.5pt);
-%\draw[color=qqqqff] (1.0623956869668,1.7517884297439121) node {$(x_1,y_1)$};
-%\draw [fill=qqqqff] (2.,1.7) circle (1.5pt);
-%\draw[color=qqqqff] (2.0568910978064285,1.4790347346423591) node {$(x_2,y_2)$};
-%\draw [fill=qqqqff] (3.,3.6) circle (1.5pt);
-%\draw[color=qqqqff] (3.0513865086460568,3.8656295667809477) node {$(x_3,y_3)$};
-%\draw [fill=qqqqff] (4.,3.2) circle (1.5pt);
-%\draw[color=qqqqff] (4.0350131171814265,2.9499564475114486) node {$(x_4,y_4)$};
-%\draw[color=ffqqqq] (1.0297892800540254,1.2647282599197103) node {$\varepsilon_1$};
-%\draw[color=ffqqqq] (2.23079193467456,1.9466124976735928) node {$\varepsilon_2$};
-%\draw[color=ffqqqq] (3.02964890403754,3.29089856638839) node {$\varepsilon_3$};
-%\draw[color=ffqqqq] (4.236085959810204,3.6902879056442353) node {$\varepsilon_4$};
-%\end{scriptsize}
-%\end{tikzpicture}
-%\caption{Beispiel einer Konvexen Funktion}
-%\label{fig:konvex}
-%\end{dsafigure}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{dsafigure}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-0.252729391848446,0.) -- (5.9098815146659724,0.);
+\foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+\draw[->,color=black] (0.,-0.118522622381023) -- (0.,4.459842973966475);
+\foreach \y in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+\clip(-0.252729391848446,-0.118522622381023) rectangle (5.9098815146659724,4.459842973966475);
+\draw[smooth,samples=100,domain=-0.252729391848446:5.9098815146659724] plot(\x,{(\x)});
+\draw [color=ffqqqq] (1.,1.)-- (1.,1.5);
+\draw [color=ffqqqq] (2.,2.)-- (2.,1.7);
+\draw [color=ffqqqq] (3.,3.)-- (3.,3.6);
+\draw [color=ffqqqq] (4.,4.)-- (4.,3.2);
+\begin{scriptsize}
+\draw [fill=qqqqff] (1.,1.5) circle (1.5pt);
+\draw[color=qqqqff] (1.0623956869668,1.7517884297439121) node {$(x_1,y_1)$};
+\draw [fill=qqqqff] (2.,1.7) circle (1.5pt);
+\draw[color=qqqqff] (2.0568910978064285,1.4790347346423591) node {$(x_2,y_2)$};
+\draw [fill=qqqqff] (3.,3.6) circle (1.5pt);
+\draw[color=qqqqff] (3.0513865086460568,3.8656295667809477) node {$(x_3,y_3)$};
+\draw [fill=qqqqff] (4.,3.2) circle (1.5pt);
+\draw[color=qqqqff] (4.0350131171814265,2.9499564475114486) node {$(x_4,y_4)$};
+\draw[color=ffqqqq] (1.0297892800540254,1.2647282599197103) node {$\varepsilon_1$};
+\draw[color=ffqqqq] (2.23079193467456,1.9466124976735928) node {$\varepsilon_2$};
+\draw[color=ffqqqq] (3.02964890403754,3.29089856638839) node {$\varepsilon_3$};
+\draw[color=ffqqqq] (4.236085959810204,3.6902879056442353) node {$\varepsilon_4$};
+\end{scriptsize}
+\end{tikzpicture}
+\caption{Beispiel einer Konvexen Funktion}
+\label{fig:konvex}
+\end{dsafigure}
 
 
 
