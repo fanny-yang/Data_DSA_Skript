@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D4EE4EF-FB87-4C02-8EA4-92D65695AF6D}</ProjectGuid>
+    <ProjectGuid>{182E981E-EBD0-4A42-BFDA-ACAD058B0B26}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Deep_Learning_for_Binary_Options</RootNamespace>
-    <AssemblyName>Deep Learning for Binary Options</AssemblyName>
+    <RootNamespace>finances_optimize</RootNamespace>
+    <AssemblyName>finances-optimize</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -71,11 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDataParser.cs" />
-    <Compile Include="Learner.cs" />
+    <Compile Include="FsdParser.cs" />
+    <Compile Include="Optimizer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StochasticDataParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
