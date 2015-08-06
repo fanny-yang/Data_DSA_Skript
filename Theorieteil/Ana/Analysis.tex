@@ -18,8 +18,10 @@ Eine Funktion $f:\mathbb{R}\rightarrow \mathbb{R}$ ist an einer Stelle $x$ \emph
 \end{Def}
 Wir betrachten eine einfache Folgerung aus diesen Definitionen.
 
-\begin{exercise}Zeige, dass eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar an der Stelle $x \in \mathbb{R}$ ist dort auch stetig ist.
-\end{exercise}
+%\begin{exercise}
+Zeige, dass eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar an der Stelle $x \in \mathbb{R}$ ist dort auch stetig ist.
+%\end{exercise}
+
 Lösung: Wir überlegen zuerst, welche Bedingungen gegeben sind. Eine Funktion ist an der Stelle $x$ differenzierbar, wenn $f(x+h)=f(x)+l_x(h)+ r(h)$  
 mit $\lim_{h \rightarrow 0} r(h)/h= 0$. Um die Stetigkeit nachzuweisen müssen wir zeigen, dass $\lim_{w \rightarrow x} f(w)=f(x)$. Mit $w = x+h$ ist dies äquivalent zu $\lim_{h \rightarrow 0} f(x)+l_x(h)+r(h)=f(x)$. Es genügt also zu zeigen, dass  $l_x(h)$ und $r(h)$ gegen Null gehen.
 \begin{itemize}
@@ -40,10 +42,10 @@ Der \emph{Gradient} $\nabla f(x)$ einer Funktion $f:\mathbb{R}^n\rightarrow \mat
 \end{split} \end{equation*} 
 \end{Def}
 Der Gradient zeigt immer in Richtung des steilsten Anstiegs einer Funktion. Der negative Gradient in die Richtung des steilsten Abstiegs, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden. Wichtig für das Gradientenabstiegsverfahren ist die folgende Aufgabe.
-\begin{exercise}
+% \begin{exercise}
 Zeige, dass es immer möglich ist für eine differenzierbare Funktion $f$ einen Skalar $\lambda$ zu finden, sodass
 \begin{equation}\label{lambda-ungleichung}f(x + \lambda \nabla f(x)) \leq f(x)\end{equation} 
-\end{exercise}
+% \end{exercise}
 Lösung:
 Schreibe die Ungleichung \eqref{lambda-ungleichung} um in
 \begin{equation*}
