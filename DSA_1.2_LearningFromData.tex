@@ -8,8 +8,8 @@
 \usepackage[utf8]{inputenc}
 
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
-\usepackage{amssymb}
-\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amssymb,amsmath, amsfonts}
 \usepackage{tikz}
 \usepackage{dsfont}
 \usepackage{blindtext}
@@ -38,12 +38,15 @@
 
 \newcommand{\media}{media/}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\renewcommand{\|}{\Vert}
 
 %%%%%Mathe-Definitionen
 \newtheorem{Def}{Definition}
 \newtheorem{Sat}{Satz}
 \newtheorem{Bew}{Beweis}
+\newtheorem{Bsp}{Beispiel}
 \newtheorem{Thm}{Theorem}
+\newtheorem{Lem}{Lemma}
 \newtheorem{exercise}{Aufgabe}
 
 \setlength\abovedisplayshortskip{0pt}
@@ -95,8 +98,8 @@
 \input{Theorieteil/Ana/Analysis}
 \input{Theorieteil/Wkeit/Wahrscheinlichkeitstheorie}
 
-\section{Optimierung}
-\authors{Lennart ?, Lukas Lück, Patrice Becker}
+%% \section{Optimierung}
+%% \authors{Lennart ?, Lukas Lück, Patrice Becker}
 
 \input{Theorieteil/Optimierung/Lennart_Niermann_Optimierung.tex}
 % \input{Theorieteil/Optimierung/Inhalt-OptimierungLennart.tex}
