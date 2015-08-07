@@ -1,8 +1,7 @@
-\section{Aufgaben Wahrscheinlichkeitstheorie}
-\subsection{Übung 1}
-Gezeigt werden soll, dass die Varainz:\\
- $\mathbb{E} [X^2] - (\mathbb{E} [X])^2$ auch als $\mathbb{E} [(X- \mathbb{E} [X] )^2 ]$ geschrieben werden kann.	
-
+\section{Wahrscheinlichkeitstheorie}
+\subsection{Varianz}
+Wir zeigen, dass die Varianz
+ $\mathbb{E} [X^2] - \mathbb{E} [X]^2$ auch als $\mathbb{E} [(X- \mathbb{E} [X] )^2 ]$ geschrieben werden kann.	
 \begin{align*}
 &\mathbb{E} [(X- \mathbb{E} [X] )^2 ] \\
 &\quad= \mathbb{E} [X^2 - 2X \mathbb{E} [X] + \mathbb{E} [X]^2 \\
@@ -13,36 +12,36 @@ Gezeigt werden soll, dass die Varainz:\\
 \end{align*}
 
 
-\subsection{Aufgabe Nr. 2}
-Aufgabenteil 1:\\
-Zu zeigen ist, dass eine Dichtefunktion $\mathbb{P}(\{X\in A\}):=\int_{x\in A}f(x)dx$ eine Wahrscheinlichkeitsverteilung ist und infolge dessen alle nötigen Axiome erfüllt.\\
+\subsection{Dichtefunktionen}
+Wir zeigen, dass eine Dichtefunktion $f$ mittels
+\begin{equation*}
+\mathbb{P}(\{X\in A\}):=\int_{x\in A}f(x)dx
+\end{equation*}
+eine Wahrscheinlichkeitsverteilung definiert und infolgedessen alle nötigen Axiome erfüllt.
 
 \begin{enumerate}
-\item Aus der Definition einer Dichtefunktion ergibt sich, dass $f(x)\geq 0$ woraus folgt, dass \begin{equation*}\int_{x\in A}f(x)dx\geq 0 \end{equation*}
-\item Aus der Definition einer Dichtefunktion ergibt sich, dass \begin{equation*}\int_{-\infty}^{+\infty}f(x)dx= 1 \end{equation*} woraus folgt, dass $\mathbb{P}(A)=1$
-\item Für alle für $i,j\in 1,...,n$ disjunkte $E_i,E_j$ gilt:
+\item Aus der Definition einer Dichtefunktion ergibt sich, dass $f(x)\geq 0$ woraus folgt, dass \begin{equation*}\int_{x\in A}f(x)dx\geq 0. \end{equation*}
+\item Aus der Definition einer Dichtefunktion ergibt sich, dass \begin{equation*}\int_{-\infty}^{+\infty}f(x)dx= 1 \end{equation*} woraus folgt, dass $\mathbb{P}(A)=1$.
+\item Für alle disjunkten $E_i,E_j$ mit $i,j\in \{1,\dots ,n\}$ gilt
 \begin{align*}
-\mathbb{P}(\bigcup_{i=1}^{n} E_i)&=\int_{x\in \bigcup_{i=1}^{n}E_i}{f(x)dx}\\
+\mathbb{P}\left(\bigcup_{i=1}^{n} E_i\right)&=\int_{x\in \bigcup_{i=1}^{n}E_i}{f(x)dx}\\
 &=\sum_{i=1}^{n}{\int_{x\in E_i}{f(x)dx}}\\
 &=\sum_{i=1}^{n}{\mathbb{P}(E_i)}
 \end{align*}
 \end{enumerate}
-Aufgabenteil 2:\\
-Wir sollen zeigen, dass, wenn eine Dichtefunktion faktorisiert wird die daraus entstehenden Zufallsvektoren unabhängig sind.\\
-Gegeben ist:
-\begin{enumerate}
-\item \begin{align*}&\mathbb{P}(\{(X_{1}, ... , X_{p}) \in (A_{1} \times ... \times A_{p})\} )\\ &= \quad \int_{X \in A}{f(x)dx}\end{align*}
-\item \begin{equation*}f(x) = \prod_{i=1}^{p}{f(x_{i})}\end{equation*}
-\end{enumerate}
-Daraus folgt:
+Nun zeigen wir, dass im Falle $f(x) = \prod_{i=1}^p f_i(x_i)$ die daraus entstehenden Zufallsvektoren unabhängig sind. Dies folgt aus
 \begin{align*}
-&\mathbb{P}(\{(X_{1}, ... , X_{p}) \in (A_{1} \times ... \times A_{p})\} ) = \int_{X \in A}{f(x)dx}\\
+&\mathbb{P}(\{(X_{1}, ... , X_{p}) \in (A_{1} \times ... \times A_{p})\} )\\ &= \int_{X \in A}{f(x)dx}\\
 &= \int_{X \in A}{\prod_{i=1}^{p}{f(x_{i})}} = \prod_{i=1}^{p}{\int_{X_{i} \in A_{i}}{f(x_{i})}}\\
 &= \prod_{i=1}^{p}{\mathbb{P} (\{X_{i} \in A_{i}\})}
 \end{align*}
 
-\subsection{Aufgabe Nr. 3}
-Wie lässt sich die Wahrscheinlichkeit darstellen dass bei einer Abfolge von $n$ unabhängigen Ja- oder nein Experimenten $k$-mal Ja herauskommt?\\
-$\mathbb{P}(\{X=K\})$ bezeichnet die Wahrscheinlichkeit, dass nach $n$-Ja, Nein Entscheidungen genau $k$-mal "`Ja"' und $n-k$-mal "`Nein"' geantwortet wurde.\\
-Die Wahrscheinlichkeit für einen Durchlauf bestehend aus $n$-Entscheidungen, welche das oben genannte kriterium erfüllen und eine fest definierte Reinfolge haben lässt sich wiefolgt beschreiben:\\
-$p^k\cdot (1-p)^{n-k}$, falls $p$ die Wahrscheinlichkeit für das eintreten eines "`Ja"'- Ereignisses beschreibt. Da alle möglichen Kombinationen, von gegebenen "`Ja"', "`Nein"' Ereignissen durch $\dbinom{n}{k}$ gegeben ist gilt für $\mathbb{P}(\{X=K\})=\dbinom{n}{k}p^k\cdot (1-p)^{n-k}$
+\subsection{Binomialverteilung}
+Wie lässt sich die Wahrscheinlichkeit darstellen dass bei einer Abfolge von $n$ unabhängigen Experimenten, die je mit Wahrscheinlichkeit $p$ erfolgreich sind, $k$ Erfolge auftreten?
+
+Sei $\mathbb{P}(\{X=k\})$ die Wahrscheinlichkeit, dass nach $n$ Experimenten genau $k$ Erfolge auftreten.
+Die Wahrscheinlichkeit für einen Durchlauf bestehend aus $n$-Entscheidungen, von denen $k$ erfolgreich sind, die eine fest definierte Abfolge von \enquote{Erfolg} und \enquote{Misserfolg} haben lässt sich wie folgt beschreiben:
+$p^k\cdot (1-p)^{n-k}$, falls $p$ die Wahrscheinlichkeit für das eintreten eines Erfolges beschreibt. Da die Anzahl aller möglichen Abfolgen von Erfolgen und Misserfolgen durch $\dbinom{n}{k}$ gegeben ist gilt
+\begin{equation*}
+\mathbb{P}(\{X=k\})=\dbinom{n}{k}\cdot p^k\cdot (1-p)^{n-k}
+\end{equation*}
