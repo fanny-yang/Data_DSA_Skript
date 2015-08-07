@@ -18,11 +18,11 @@ Support Vector Machines oder kurz SVMs sind ein Modell im Machine Learning.
 Dabei werden für alle Datensätze zuerst gewisse Features festgelegt. Diese Features entsprechen den Attributen des Datensatzes. Je nach Problem kann es unterschiedlich viele Features geben, doch allgemein kann man sagen, dass mit der Anzahl der Features auch die Genauigkeit des Programms wächst.
 
 Diese Features werden normalerweise in einem Vektor $x_i\in \mathbb{R}^m$ für den entsprechenden Datensatz $i = 1, \dots, n$ gespeichert.
-Zusätzlich hat jeder Datensatz noch einen weiteren Wert $y_{i} \in \mathbb{R}$, welcher das \enquote{Ergebnis} oder \enquote{Label} des Datensatzes beschreibt.
+Zusätzlich hat jeder Datensatz noch einen weiteren Wert $y_{i} \in \mathbb{R}$, welcher das \enquote{Ergebnis} oder \enquote{Label} des Datensatzes beschreibt. Meist betrachtet man zwei Klassen $y_i \in \{-1, +1\}$.
 
-Die Features und das Label zusammen beschreiben einen Punkt im $(m+1)$-dimensionalen Koordinatensystem, da zu den $m$ Dimensionen von $x$ noch die eine Dimension von $y$ dazukommt.
+% Die Features und das Label zusammen beschreiben einen Punkt im $(m+1)$-dimensionalen Koordinatensystem, da zu den $m$ Dimensionen von $x$ noch die eine Dimension von $y$ dazukommt.
 
-Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im n-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde (Siehe Abb. \ref{SVM1}). 
+Durch die Features ist es dann möglich den Datensätzen einen bestimmten Vektor im $m$-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde (siehe Abb. \ref{SVM1}). 
 
 
 \begin{dsafigure}
@@ -34,37 +34,28 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Ort im
 \end{dsafigure}
 
 
-Um die Trennlinie zu optimieren, gibt es auch eine mathematische Beschreibung. Ebenen kann man auch in der Form $\langle x, w \rangle = b $ beschreiben. Daraus folgt, dass das Optimierungsproblem wie folgt geschreiben werden kann.
-
+Für die mathematische Formulierung des zugehörigen Optimierungsproblems stellen wir zunächst fest dass $2/\norm{w}$ der Abstand der Ebenen $\langle w, x_i\rangle - b = 1$ und $\langle w, x_i\rangle - b = -1$ ist (siehe Abb. \ref{SVM2}). Man nennt diesen Abstand auch den \emph{margin} der Klassifikationsebene $\langle w, x\rangle - b = 0$, $1/\norm{w}$ ist der maximal Abstand der Testdatenpunkte von der Ebene. Das folgende Programm berechnet somit eine Klassifikationsebene mit bester Trennung:
 \begin{align*}
-	\underset{w,b}{\operatorname{max}} \quad & \frac{2}{\norm{w}} \\
-	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,...,n ; \\
-	&x \in \mathbb{R}^n; \quad	y \in \{1;-1\}
+	\underset{w,b}{\operatorname{maximiere}} \quad & \frac{2}{\norm{w}} \\
+	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,\dots ,n
 	 %\label{SVMProblemMax}
 \end{align*}
-
-Dabei wird der Abstand zwischen den innersten Ebenen durch die beiden Datensätze ($\frac{2}{\norm{w}}$) (Siehe Abb. \ref{SVM2}).
-
-Unter der Vorraussetzung, dass alle vorhandenen Datensätze richtig klassifiziert sind. Dieses Problem kann 
-man aber genauso schreiben als:
-
+Dieses Problem is äquivalent zu
 \begin{align*}
 		\underset{w,b}{\operatorname{minimiere}} \quad & \norm{w} \\
-		\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall i = 1,...,n ; \\
-		&x \in \mathbb{R}^n; \quad y \in \{1; -1\}
-		%\label{SVMProblemMin}
+		\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall i = 1,\dots,n
 \end{align*}
-
-Klassifikation:
-
+Die Klassifikation neuer Datenpunkte erfolgt dann nach der Regel
 \begin{align*}
-	y_{i} =& \{ 1 \quad \operatorname{falls} \langle w,x_{i} \rangle - b \geq 0\} \\
-		& \{ -1 \operatorname{falls} \langle w,x_{i} \rangle - b \leq 0\}
+	y_{i} =& 
+        \begin{cases}
+1 &\text{falls} \quad \langle w,x_{i} \rangle - b \geq 0 \\
+-1 &\text{falls} \quad \langle w,x_{i} \rangle - b \leq 0
+\end{cases}
 	%\label{KlassifikationSVM}
 \end{align*}
-
-Nachdem das Problem optimiert wurde, ist der Computer in der Lage, weitere Daten einzuordnen, vorrausgesetzt, es ist richtig optimiert.
-Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.\\
+Nachdem das Problem optimiert wurde, ist der Computer in der Lage, weitere Daten einzuordnen.
+Dennoch kann es bei dieser Art von SVMs zu einem Problemen kommen: Wenn die Datensätze nicht linear separierbar sind, das heißt es ist nicht möglich, die beiden Datensätze mit einem linearen Element zu trennen. Dann ist obiges Optimierungsproblem nicht lösbar.
 
 \begin{dsafigure}
 	\begin{center}
@@ -74,25 +65,16 @@ Dennoch kann es bei dieser Art von SVMs zu einigen Problemen kommen.\\
 	\end{center}
 \end{dsafigure}
 
-\begin{itemize}
-	\item Wenn die Datensätze nicht linear separierbar sind, d.h., es ist nicht möglich die beiden Datensätze mit einem linearen Element zu trennen.
-	
-	\item Wenn die Daten nicht alle korrekt klassifiziert sind oder es Daten gibt, die in dem >>Bereich<< der anderen Seite liegen.
-\end{itemize}
-
-\paragraph{Soft Margin SVMs}
-Die Soft Margin SVMs können mit beiden Problemen umgehen.
-Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse Fehlertoleranz besitzen. Diese kommt durch eine Veränderung an der Formel zustande:
-
+\paragraph{Soft Margin SVM.}
+Die Soft Margin SVMs können mit diesem Problem umgehen.
+Sie sind im Prinzip wie herkömmliche SVMs aufgebaut, nur dass sie eine gewisse Fehlertoleranz besitzen. Diese kommt durch die folgende Modifikation des Optimierungsproblems zustande:
 \begin{align*}
-	\underset{w,b}{\operatorname{minimiere}} \quad & \norm{w} + C\sum_{i}{z_{i}} \quad \forall i = 1,...,n \\
-	\operatorname{sodass} \quad & y_{i}(\langle w,x_{i} \rangle - b) \geq 1 - z_{i} \quad \forall i = 1,...,n; \\ 
-	&x \in \mathbb{R}^n; \quad y \in \{1; -1\} \quad z_{i} \geq 0 \\
+	\underset{w,b}{\operatorname{minimiere}} \quad & \norm{w} + C\sum_{i}{z_{i}} \\
+	\operatorname{sodass} \quad & y_{i}(\langle w,x_{i} \rangle - b) \geq 1 - z_{i} \quad \forall i = 1,...,n
 	%\label{eq: SoftMarginSVMs}
 \end{align*}
-
-Dabei steht $z_{i}$ für die Grösse des Fehlers des Punktes $x_{i}$ und C ist eine Konstante, deren grösse bestimmt, wie stark die Fehler gewichtet werden, da die Konstante mit der Summe der Fehler multipliziert wird. Da die gesamte Gleichung aber minimiert werden soll sorgt ein hohes C dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch selbst gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
-Um die optimale Größe von C für das entsprechende Problem zu finden wird ein System namens Crossvalidation genutzt. Bei diesem System wird der Algorithmus mehrmals auf den gleichen Testdatensatz angewendet, C dabei aber variiert. Damit kann man herausfinden, bei welchem Wert von C der Algorithmus optimal funktioniert.
+Dabei steht $z_{i}$ für die Grö\ss e des Fehlers des Punktes $x_{i}$ und $C$ ist eine Konstante, deren Grö\ss e bestimmt, wie stark die Fehler gewichtet werden. Da die gesamte Gleichung minimiert werden soll sorgt ein hohes $C$ dafür, dass das Problem schwerer optimiert werden kann. Die Konstante muss vom Mensch gewählt werden, je nachdem, wie schwer Fehler gewichtet werden sollen.
+Um die optimale Größe von $C$ für das entsprechende Problem zu finden wird ein Verfahren namens \emph{crossvalidation} genutzt. Dabei wird der Algorithmus mehrmals auf den gleichen Testdatensatz angewendet, $C$ dabei aber variiert. Damit kann man herausfinden, bei welchem Wert von $C$ der Algorithmus optimal funktioniert.
 
 
 \section{Neuronale Netze}
@@ -100,9 +82,9 @@ Um die optimale Größe von C für das entsprechende Problem zu finden wird ein 
 
 \subsection{Einführung}
 
-Inspiriert von unserem Verständnis, wie das menschliche Gehirn lernt, benutzen Neuronale Netze Lernalgorithmen, welche besonders für praktische Anwendungen geeignet sind.
+Inspiriert von unserem Verständnis über das menschliche Gehirn benutzen neuronale Netze Lernalgorithmen, welche besonders für praktische Anwendungen geeignet sind.
 Dazu zählen Spracherkennung, Objekterkennung in Bildern und die Fähigkeit individuell passende Produkte vorzuschlagen, die dem Kunden gefallen könnten. 
-Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist dabei, die Datenschicht, auf die ein oder mehrere hidden layer folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher die Wahrscheinlichkeitsverteilung darstellt. Mit anderen Worten, wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
+Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist dabei, die Datenschicht, auf die ein oder mehrere sogenannte \emph{hidden layer} folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher eine Wahrscheinlichkeitsverteilung darstellt, die angibt wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
 
 \begin{dsafigure}
 	\begin{center}
@@ -115,40 +97,38 @@ Ein Neuronales Netz wird von mehreren Schichten aufgebaut. Ausgangsschicht ist d
 
 \subsection{Deep Learning}
 
-Mit Deep Learning beschreibt man die Neuronalen Netze, die über mehr als einen >>versteckte Schicht<< verfügen. Damit ist gemeint, dass sich zwischen Ein- und Ausgabeschicht weitere Schichten befinden. 
+Mit Deep Learning beschreibt man neuronale Netze, die über mehr als eine \enquote{versteckte Schicht} verfügen. Damit ist gemeint, dass sich zwischen Ein- und Ausgabeschicht weitere Schichten befinden. 
 
-Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft. Dadurch kann eine höhere Genauigkeit erzielt werden. Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk >>overfitted<<, d.h., zu sehr an den Trainingsdatensatz angepasst, wird. Dann kann das Netzwerk neue, fremde Daten nicht mehr korrekt klassifizieren. 
+Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft (die Verkettung von linearen Funktion wäre wieder linear und besäße deshalb nur begrenzte Representationskraft). Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk \enquote{overfitted}, das heißt zu sehr an den Trainingsdatensatz angepasst wird. Dann kann das Netzwerk neue Daten nicht mehr korrekt klassifizieren.
 
-Wie wir in der Abbildung \ref{FigNN} sehen können ist ein typisches Fully connected Neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $(x_1 \dots x_i)$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht lineare Funktion angewendet und das Ganze wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $(p_1 \dots p_k)$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert werden kann. Anhand eines konkreten Beispiels würde es folgendes bedeuten:
-Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Tisch oder Stuhl das daurauf abgebildete Objekt gehört. Unsere inputs wären demnach die Pixel des Bildes. Diese durchlaufen nun das Neuronale Netz und wir erhalten eine Wahrscheinlichkeitsverteilung als Rückgabewert, welche uns mitteilt, dass es am wahrscheinlichsten ist, dass das abgebildete Objekt ein Objekt der Klasse Stuhl ist. Demnach ist die Klassifizierung vollzogen.
-
+Wie wir in der Abbildung \ref{FigNN} sehen können ist ein typisches \emph{fully connected} neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $(x_1 \dots x_i)$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht-lineare Funktion angewendet. Für die $k$-te hidden layer bekommen wir
 \begin{align*}
-a_j^{(k)} = f^{(k)} (\langle w_{j}^{(k)}, a_i^{(k-1)}\rangle) = f^{(k)} (\sum_{i=1}^{m^{(k-1)}} w_{ji}^{(k)},a_i^{(k-1)} )
+a_j^{(k)} &= f^{(k)} (\langle w_{j}^{(k)}, a^{(k-1)}\rangle)\\ &= f^{(k)} \left(\sum_{i=1}^{m^{(k-1)}} w_{ji}^{(k)},a_i^{(k-1)}\right)
 \end{align*}
+Das Ergebnis wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $(p_1 \dots p_k)$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert werden kann.
+
+Anhand eines konkreten Beispiels würde es folgendes bedeuten:
+Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Tisch oder Stuhl das daurauf abgebildete Objekt gehört. Unsere inputs wären demnach die Pixel des Bildes. Diese durchlaufen nun das Neuronale Netz und wir erhalten eine Wahrscheinlichkeitsverteilung als Rückgabewert, welche uns mitteilt, dass es am wahrscheinlichsten ist, dass das abgebildete Objekt ein Objekt der Klasse Stuhl ist. Demnach ist die Klassifizierung vollzogen.
 
 \subsection{Convolutional Neural Networks}
 
 \begin{dsafigure}
-	\begin{center}
+  \centering
 		\includegraphics[width=0.5 \textwidth]{\media cnn.png}
-		\caption{Ein Convolutional Neural Network (CNN) (dt.: >>faltendes neurales Netzwerk<<) %mit vier Eingängen ($x_1, ..., x_4$) und zwei Ausgängen ($p_1, p_2$). Dazwischen befindet sich eine Schicht aus drei >>Neuronen<<, die als Filter wirkt.}
+		\caption{Ein Convolutional Neural Network (CNN) (deutsch \enquote{faltendes neurales Netzwerk}) %mit vier Eingängen ($x_1, ..., x_4$) und zwei Ausgängen ($p_1, p_2$). Dazwischen befindet sich eine Schicht aus drei >>Neuronen<<, die als Filter wirkt.}
 		}
 		\label{FigConvNN}
-	\end{center}
 \end{dsafigure}
-
-
-Bei den Convolutional Networks handelt es sich um ein Neuronales Netz mit einer vereinfachten Struktur. Diese kommt dadurch zu Stande, dass nun kein fully connected Neuronales Netzwerk mehr vorliegt. 
+\noindent Bei \emph{convolutional networks} handelt es sich um spezielle neuronale Netze, die besonders für die Bilderkennung geeignet sind.
 
 \begin{dsafigure}
-	\begin{center}
+  \centering
 		\includegraphics[width=0.4 \textwidth]{\media ConvolutionalNN.png}
-		\caption{Ein Convolutional NN mit einer Schicht aus neun >>Neuronen<< dazwischen, die als Filter wirkt. }
+		\caption{Ein Convolutional NN mit einer Schicht aus neun \enquote{Neuronen} dazwischen, die als Filter wirkt. }
 		\label{FigConvNN}
-	\end{center}
 \end{dsafigure}
 
-Der existierende Filter {w} wird auf die Eingabematrix angewendet. Dabei wird das Skalarprodukt berechnet und in der Endmatrix als Ergebnis festgehalten. Daraufhin wird der Filter immer um eine Stelle weiter nach rechts in der Eingabematrix verschoben und das neue Skalarprodukt berechnet bis das Ende der Eingabematrix erreicht wurde.
+Wie in Fig.~\ref{FigConvNN} gezeigt wird der existierende Filter $w$ über die Eingabematrix geschoben. Dabei wird das Skalarprodukt berechnet und in der Endmatrix als Ergebnis festgehalten. Daraufhin wird der Filter immer um eine Stelle weiter nach rechts in der Eingabematrix verschoben und das neue Skalarprodukt berechnet bis das Ende der Eingabematrix erreicht wurde.
 
 \subsection{SVMs als Neuronale Netze}
 
