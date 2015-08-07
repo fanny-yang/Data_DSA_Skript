@@ -64,15 +64,6 @@ Wir hingegen versuchen diese Aufgabe auf ein \emph{neuronales Netzwerk} zu über
 
 Wir haben uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Es handelt sich dabei um zwei der bekanntesten Indikatoren für die technische Analyse.
 
-\begin{dsafigure}
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]
-		{\media Finances_Datensatz}
-		\caption{Schematischer Aufbau unserer Featurevektoren (siehe \ref{sssec:Features})}
-		\label{fig:DatensatzSchema}
-	\end{center}
-\end{dsafigure}
-
 \paragraph{Stochastic Oscillator}
 
 Der Stochastic Oscillator ist ein von Dr. George Lane in den 1950er Jahren entwickelter Indikator. Dieser versucht, bevorstehende Trendwenden anhand von Unterstützungs- und Widerstandslinien zu erkennen. 
@@ -112,8 +103,19 @@ Der Relative Strength Index (dt.: \enquote{Relative Stärke Index}) ist ein von 
 \end{dsafigure}
 
 \subsubsection{Verwendete Datensätze}
+\author{Dennis Kempf}
+\label{sssec:Datensaetze}
 
 Für unsere Datensätze haben wir jeweils 65535 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus jeweils vier Werten des Stochastic Oscillators und des Relative Strength Indexes zusammen. Somit sind diese insgesamt 8 Elemente lang. Bei unseren Labels unterscheiden wir lediglich, ob der Kurs in der auf die Features folgenden Stunde gestiegen oder gefallen ist.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_Datensatz}
+		\caption{Schematischer Aufbau unserer Featurevektoren}
+		\label{fig:DatensatzSchema}
+	\end{center}
+\end{dsafigure}
 
 Insgesamt haben wir jeweils mehr als zehn Jahre an Features und Labels für den Währungspaare \emph{CHF/JPY} \emph{EUR/AUD}, \emph{EUR/CAD}, \emph{EUR/CHF}, \emph{EUR/USD} und \emph{GBP/JPY} zusammengestellt.
 
