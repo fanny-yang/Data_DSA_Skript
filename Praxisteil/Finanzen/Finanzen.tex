@@ -1,7 +1,7 @@
-\section{Finanzanalyse}
+\section{>>Earning from Data<< --- Finanzanalyse}
 \author{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
 
-Die Finanzanalyse versucht künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen.
+Die Finanzanalyse versucht künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
 
 \subsection{Formen der Finanzanalyse}
 \author{Dennis Kempf}
@@ -40,8 +40,8 @@ Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Cha
 \begin{dsafigure}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]
-		{\media EURUSDH1.png}
-		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren aus \ref{sssec:TechnischeAnalyse}}
+		{\media Finances_Chart.png}
+		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren (siehe  \ref{sssec:TechnischeAnalyse})}
 		\label{fig:Beispielchart}
 	\end{center}
 \end{dsafigure}
@@ -49,6 +49,56 @@ Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Cha
 \subsubsection{Sentimentanalyse}
 \author{Dennis Kempf}
 
-Die Sentimentanalyse befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische} Phase (steigender Trend) oder eine \emph{bärische} Phase (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
+Die Sentimentanalyse befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische Phase} (steigender Trend) oder eine \emph{bärische Phase} (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
 
 \subsection{Einsatz von Machine Learning}
+\author{Dennis Kempf}
+
+Unser Projekt befasst sich ausschließlich mit der Technischen Analyse (siehe \ref{sssec:TechnischeAnalyse}). Der klassische Ansatz würde die Aufgabe der Analyse einem Menschen oder einem selbstgeschriebenen Algorithmus überlassen. 
+
+Wir hingegen versuchen diese Aufgabe auf ein \emph{neuronales Netzwerk} zu übertragen. Hierbei spielt die Auswahl der Features und der verwendeten Parameter wie z.B. Schichtenanzahl des Netzwerks eine sehr wichtige Rolle.
+
+\subsubsection{Verwendete Features}
+\author{Dennis Kempf}
+\label{sssec:Features}
+
+Wir haben uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Jeder Featurevektor setzt sich aus jeweils vier Werten dieser Indikatoren zusammen. Somit sind diese insgesamt 8 Elemente lang. Zusammengefasst ergeben bei uns 65536 Featurevektoren inklusive Labels einen Datensatz.
+Unsere Datensätze beinhalten also Informationen aus mehr als zehn Jahren.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_Datensatz}
+		\caption{Schematischer Aufbau unserer Featurevektoren (siehe \ref{sssec:Features})}
+		\label{fig:DatensatzSchema}
+	\end{center}
+\end{dsafigure}
+
+\paragraph{Stochastic Oscillator}
+
+Lorem ipsum...
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_Stochastic}
+		\caption{Beispielchart des EUR/USD mit dem Stochastic Oscillator (Standardparameter) im unteren Fenster}
+		\label{fig:DatensatzSchema}
+	\end{center}
+\end{dsafigure}
+
+\paragraph{Relative Strength Index}
+
+Lorem ipsum...
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_RSI}
+		\caption{Beispielchart des EUR/USD mit dem Relative Strength Index (Standardparameter) im unteren Fenster}
+		\label{fig:DatensatzSchema}
+	\end{center}
+\end{dsafigure}
+
+\newpage
+Lorem ipsum...
