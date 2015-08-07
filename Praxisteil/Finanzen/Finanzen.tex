@@ -1,4 +1,4 @@
-\section{>>Earning from Data<< --- Finanzanalyse}
+\section{\enquote{Earning from Data} --- Finanzanalyse}
 \author{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
 
 Die Finanzanalyse versucht künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
@@ -42,7 +42,7 @@ Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Cha
 		\includegraphics[width=0.5\textwidth]
 		{\media Finances_Chart.png}
 		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren (siehe  \ref{sssec:TechnischeAnalyse})}
-		\label{fig:Beispielchart}
+		\label{fig:BeispielChart}
 	\end{center}
 \end{dsafigure}
 
@@ -62,8 +62,7 @@ Wir hingegen versuchen diese Aufgabe auf ein \emph{neuronales Netzwerk} zu über
 \author{Dennis Kempf}
 \label{sssec:Features}
 
-Wir haben uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Jeder Featurevektor setzt sich aus jeweils vier Werten dieser Indikatoren zusammen. Somit sind diese insgesamt 8 Elemente lang. Zusammengefasst ergeben bei uns 65536 Featurevektoren inklusive Labels einen Datensatz.
-Unsere Datensätze beinhalten also Informationen aus mehr als zehn Jahren.
+Wir haben uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Es handelt sich dabei um zwei der bekanntesten Indikatoren für die technische Analyse.
 
 \begin{dsafigure}
 	\begin{center}
@@ -94,23 +93,29 @@ Wir betrachten jedoch nur die \%K Kurve für unsere Features. Diese lässt sich 
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]
 		{\media Finances_Stochastic}
-		\caption{Beispielchart des EUR/USD mit dem Stochastic Oscillator (Standardparameter) im unteren Fenster. (Blau: \%K-Kurve, Rot: \%D-Kurve)}
-		\label{fig:DatensatzSchema}
+		\caption{Beispielchart des EUR/USD mit dem Stochastic Oscillator (Standardparameter) im unteren Fenster (Blau: \%K-Kurve, Rot: \%D-Kurve)}
+		\label{fig:BeispielChartStochastic}
 	\end{center}
 \end{dsafigure}
 
 \paragraph{Relative Strength Index}
 
-Der Relative Strength Index (dt.: >>Relative Stärke Index<<) ist ein von J. Welles Wilder Ende der 1970er Jahre entwickelter Indikator. Wie auch der Stochastic Oscillator versucht dieser, bevorstehende Trendwenden zu erkennen. 
+Der Relative Strength Index (dt.: \enquote{Relative Stärke Index}) ist ein von J. Welles Wilder Ende der 1970er Jahre entwickelter Indikator. Wie auch der Stochastic Oscillator versucht dieser, bevorstehende Trendwenden zu erkennen. Hierzu analysiert dieser Indikator Kursbewegungen entsprechend ihrer Richtung und Größe.
 
 \begin{dsafigure}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]
 		{\media Finances_RSI}
 		\caption{Beispielchart des EUR/USD mit dem Relative Strength Index (Standardparameter) im unteren Fenster}
-		\label{fig:DatensatzSchema}
+		\label{fig:BeispielChartRSI}
 	\end{center}
 \end{dsafigure}
+
+\subsubsection{Verwendete Datensätze}
+
+Für unsere Datensätze haben wir jeweils 65535 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus jeweils vier Werten des Stochastic Oscillators und des Relative Strength Indexes zusammen. Somit sind diese insgesamt 8 Elemente lang. Bei unseren Labels unterscheiden wir lediglich, ob der Kurs in der auf die Features folgenden Stunde gestiegen oder gefallen ist.
+
+Insgesamt haben wir jeweils mehr als zehn Jahre an Features und Labels für den Währungspaare \emph{CHF/JPY} \emph{EUR/AUD}, \emph{EUR/CAD}, \emph{EUR/CHF}, \emph{EUR/USD} und \emph{GBP/JPY} zusammengestellt.
 
 \newpage
 Lorem ipsum...
