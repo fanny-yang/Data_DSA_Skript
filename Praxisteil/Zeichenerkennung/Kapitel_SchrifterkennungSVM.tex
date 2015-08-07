@@ -1,14 +1,15 @@
-\section{Einleitung}
-
-Täglich werden in Deutschland rund 64 Millionen Briefe verschickt. Doch habt ihr euch schon einmal gefragt, wie die ganzen Briefe so schnell verarbeitet werden können? Die Vorstellung von mehreren tausend Mitarbeitern, die sich nur mit der Sortierung der Post beschäftigen, erscheint schon aufgrund des Aufwandes unwahrscheinich. Eine bessere Variante stellt die Benutzung von Schrifterkennungsalgorithmen dar, deren sich die Post seit längerer Zeit bedient. Dabei scannt ein Computer die auf den Umschlägen geschriebenen Adressen ein, wertet diese aus und sortiert sie entsprechend. \\
-Zu diesem Thema gab es zwei Projektgruppen, die sich dem Problem auf verschiedene Weise näherten. Eine Gruppe nutzte SVMs, die andere ein neuronales Netzwerk.
-
-
 \section{Schrifterkennung mit SVMs}
+\authors{Max Braun, Farhadiba Mohammed, Annika Scheug}
+
+\paragraph{Hintergrund}
+Wie in der Einleitung bereits erwähnt, werden in Deutschland rund 64 Millionen Briefe am Tag verschickt. Es ist nur verständlich, dass die Post anstelle vieler Angestellter, die die Briefe sortieren und dabei womöglich noch einige Fehler machen, lieber einem Programm das Sortieren überlässt. Da wir uns zunächst nicht wirklich vorstellen konnten, wie ein solches Programm funktionieren könnte, haben zwei Projektgruppen beschlossen, sich bei ihrer Arbeit mit Schrifterkennung zu beschäftigen und sich dem Problem auf zwei unterschiedliche Weisen anzunähern.\\
+Eine Gruppe nutzt Support Vector Machines \textit{(SVMs)}, die andere ein Convolutional Neural Network \textit{(CNN)}.
+
+%Täglich werden in Deutschland rund 64 Millionen Briefe verschickt. Doch habt ihr euch schon einmal gefragt, wie die ganzen Briefe so schnell verarbeitet werden können? Die Vorstellung von mehreren tausend Mitarbeitern, die sich nur mit der Sortierung der Post beschäftigen, erscheint schon aufgrund des Aufwandes unwahrscheinlich. Eine bessere Variante stellt die Benutzung von Schrifterkennungsalgorithmen dar, deren sich die Post seit längerer Zeit bedient. Dabei scannt ein Computer die auf den Umschlägen geschriebenen Adressen ein, wertet diese aus und sortiert sie entsprechend. \\
+%Zu diesem Thema gab es zwei Projektgruppen, die sich dem Problem auf verschiedene Weise näherten. Eine Gruppe nutzte SVMs, die andere ein neuronales Netzwerk.
 
 \paragraph{Aufbau des Programms}
-
-Da es beim maschinellen Lernen essenziell ist über ein entsprechend großes Datenset zu verfügen, haben wir unseren Algorithmus zunächst einmal mit 60.000 Bildern ausgestattet. 
+Da es beim maschinellen Lernen essenziell ist, über ein entsprechend großes Datenset zu verfügen, haben wir unseren Algorithmus zunächst einmal mit 60.000 Bildern ausgestattet. 
 
 \begin{verbatim}
 feature, hog_image = feats.hog(sub_pic,
@@ -16,7 +17,7 @@ feature, hog_image = feats.hog(sub_pic,
  cells_per_block = (1,1),visualise = true)
 \end{verbatim}
 
-Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind z.B. Muster in einem Bild, wie Kanten und Farben oder allgemein gesagt, die Eigenschaften eines Objektes. Wie wir an dem Beispielbild mit dem Kameramann (Abb. \ref{Kameramann}) sehen können, wurden durch den Algorithmus die Kanten hervorgehoben und alles andere wurde ignoriert (Abb. \ref{Kameramann_hogfeat}). Dieses Featurebild kann als Vektor dargestellt werden und die SVM benutz solche Vektoren, um die Unterschiede der Trainingsdaten zu ermitteln. Danach kann die SVM neue Objekte, hier sind es Bilder, den richtigen Gruppen zuzuordnen.\\ 
+Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind z.B. Muster in einem Bild, wie Kanten und Farben oder allgemein gesagt, die Eigenschaften eines Objektes. Wie wir an dem Beispielbild mit dem Kameramann (Abb. \ref{Kameramann}) sehen können, wurden durch den Algorithmus die Kanten hervorgehoben und alles andere wurde ignoriert (Abb. \ref{Kameramann_hogfeat}). Dieses Featurebild kann als Vektor dargestellt werden und die SVM benutzt solche Vektoren, um die Unterschiede der Trainingsdaten zu ermitteln. Danach kann die SVM neue Objekte, hier sind es Bilder, richtig klassifizieren.\\ 
 Bei dem Erstellen der Features gibt es mehrere Einstellungsmöglichkeiten, beispielsweise zur Variation der Pixelanzahl in einer Zelle (\textit{pixels\_per\_cell}) und der Genauigkeit zur Erkennung von Konturen (\textit{orientations}). Dabei gilt: Je kleiner die Zellen sind und je höher die Genauigkeit ist, desto länger braucht der Algorithmus zum berechnen, aber desto präziser ist das Endergebnis. Allerdings muss man auch beachten, dass die Zellengröße nicht zu klein wird, da in sehr kleinen Zellen die Muster eventuell nicht für das Programm erkennbar sind. 
 
 \begin{dsafigure}
@@ -43,7 +44,7 @@ prob = clf[:predict_proba]
  (features_testset')
 \end{verbatim}
 
-Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit.Um nun die Genauigkeit der SVM zu testen, erzeugen wir ein Testset, dessen Features ebenfalls über den bestehenden Algorithmus generiert werden. Getestet wird die SVM, indem wir das Testset an die SVM übergeben und sie uns aufgrund der vorhandenen Werte eine Schätzung abgibt, was am wahrscheinlichsten auf dem Bild abgebildet ist. Die Ergebnisse werden dann überprüft und die Genauigkeit wird errechnet.
+Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit. Um nun die Genauigkeit der SVM zu testen, erzeugen wir ein Testset, dessen Features ebenfalls über den bestehenden Algorithmus generiert werden. Getestet wird die SVM, indem wir das Testset an die SVM übergeben und sie uns aufgrund der vorhandenen Werte eine Schätzung abgibt, was am wahrscheinlichsten auf dem Bild abgebildet ist. Die Ergebnisse werden dann überprüft und die Genauigkeit wird errechnet.
 
 \begin{dsafigure}
 \begin{center}
@@ -61,7 +62,4 @@ Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit
 \end{center}
 \end{dsafigure}
 
-Daraufhin erzeugen wir ein Bild mit 100 Zahlen Abb. \ref{Zahlen_input}, die jeweils in einer $38 \times 38$ Pixelzelle zufällig verteilt werden. Dieses Bild wird in eine Matrix umgewandelt und ein Algorithmus iteriert über die Matrix, sodass die SVM bestimmen kann, welche 100 Zahlen abgebildet sind.
-
-
-
+Daraufhin erzeugen wir ein Bild mit $10 \times 10$ Zahlen (Ausschnitt s. Abb. \ref{Zahlen_input}), die jeweils in einer $38 \times 38$ Pixelzelle zufällig verteilt werden. Dieses Bild wird in eine Matrix umgewandelt und ein Algorithmus iteriert über die Matrix, sodass die SVM bestimmen kann, welche 100 Zahlen abgebildet sind.

@@ -39,8 +39,15 @@ Eine mögliche Softwareimplementierung in Pseudocode wird hier gezeigt:
 \end{algorithmic}
 
 \paragraph{Erklärung}
+<<<<<<< HEAD
+$F(x)$ beschreibt die Funktion, deren globales Minimum wir finden wollen. $F'(x)$ ist dementsprechend die Ableitung der Funktion $F(x)$. Mit $x=10.0$ setzen wir den Schätzwert, ab dem optimiert wird. $\lambda$ bekommt einen niedrigen Wert deklariert, damit man sich in kleinen Schritten dem Minimum annähern kann. Dies wiederum geschieht in zwei For-Schleifen, deren Inhalt in diesem Fall je 8 mal durchlaufen wird. In der äußeren Schleife sorgen wir dafür, dass unser Lambda größere Werte annimmt. In der inneren For-Schleife wird die Schätz-Variable $x$ mit Hilfe der Ableitung und $\lambda$ angepasst. Daraus folgt
+%\begin{equation*}
+ $f(x-\lambda \nabla f(x)) \leq f(x)$.
+% \end{equation*}
+=======
 $F(x)$ beschreibt die Funktion, deren globales Minimum wir finden wollen. $F'(x)$ ist die Ableitung der Funktion $F(x)$. Mit $x$ deklarieren wir den Schätzwert, ab dem optimiert wird. $\lambda$ bekommt einen niedrigen Wert deklariert, damit man sich in kleinen Schritten dem Minimum annähern kann. Dies wiederum geschieht in zwei For-Schleifen, deren Inhalt in diesem Fall n bzw. m mal durchlaufen wird. In der äußeren Schleife sorgen wir dafür, dass unser Lambda größere Werte annimmt. In der inneren For-Schleife wird die Schätz-Variable $x$ mit Hilfe der Ableitung und $\lambda$ angepasst. Daraus folgt:
 \begin{equation*}
  f(x+\lambda \nabla f(x)) \leq f(x)
  \end{equation*}
+>>>>>>> 70aebc3b96f943eec61bf519bf64e708ab927277
 

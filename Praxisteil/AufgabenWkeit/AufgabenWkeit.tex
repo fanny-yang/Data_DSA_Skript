@@ -1,52 +1,3 @@
-\documentclass{newlayout}
-%Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
-\Akademie{Braunschweig}{2015}{1}
-
-\usepackage[ngerman]{babel}
-\usepackage{misc}
-\usepackage{multicol}
-\usepackage{inputenc}
-% \usepackage[ansinew]{inputenc}
-\usepackage[utf8]{inputenc} 
-\usepackage{graphicx}
-	\usepackage{pgf,tikz}
-\usepackage{mathrsfs}
-\usetikzlibrary{arrows}
-
-%\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
-\usepackage{amsfonts}
-
-\usepackage{url}
-\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
-\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
-\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
-\urlstyle{same}
-
-% hinzugefügt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
-\usepackage{lmodern}
-\setkomafont{descriptionlabel}{\normalfont\bfseries}
-\addtokomafont{paragraph}{\normalfont}
-\usepackage{footnote}
-\usepackage[flushmargin,hang,ragged]{footmisc}
-\deffootnote{1em}{1em}{%
-\textsuperscript{\thefootnotemark\ }
-}
-%\setlength{\abovedisplayskip}{5pt}
-%\setlength{\belowdisplayskip}{5pt}
-
-
-%%%%%Mathe-Definitionen
-\newtheorem{Def}{Definition}
-\newtheorem{Sat}{Satz}
-\newtheorem{Bew}{Beweis}
-
-\setlength\abovedisplayshortskip{0pt}
-\setlength\belowdisplayshortskip{0pt}
-\setlength\abovedisplayskip{3pt}
-\setlength\belowdisplayskip{3pt}
-%%%%Ende Mathe-Definitionen
-\begin{document}
-
 \section{Aufgaben Wahrscheinlichkeitstheorie}
 \subsection{Übung 1}
 Gezeigt werden soll, dass die Varainz:\\
@@ -67,9 +18,9 @@ Aufgabenteil 1:\\
 Zu zeigen ist, dass eine Dichtefunktion $\mathbb{P}(\{X\in A\}):=\int_{x\in A}f(x)dx$ eine Wahrscheinlichkeitsverteilung ist und infolge dessen alle nötigen Axiome erfüllt.\\
 
 \begin{enumerate}
-\item Aus der Definition einer Dichtefunktion ergibt sich, dass $f(x)\geq 0$ woraus folgt, dass \begin{equation*}\int_{x\in A}f(x)dx\geq 0\end{equation*}
-\item Aus der Definition einer Dichtefunktion ergibt sich, dass \begin{equation*}\int_{-\infty}^{+\infty}f(x)dx= 1\end{equation*}, woraus folgt, dass $\mathb{P}(A)=1$\\
-\item Für alle für $i,j\in 1,...,n$ disjunkte $E_i,E_j$gilt:
+\item Aus der Definition einer Dichtefunktion ergibt sich, dass $f(x)\geq 0$ woraus folgt, dass \begin{equation*}\int_{x\in A}f(x)dx\geq 0 \end{equation*}
+\item Aus der Definition einer Dichtefunktion ergibt sich, dass \begin{equation*}\int_{-\infty}^{+\infty}f(x)dx= 1 \end{equation*} woraus folgt, dass $\mathbb{P}(A)=1$
+\item Für alle für $i,j\in 1,...,n$ disjunkte $E_i,E_j$ gilt:
 \begin{align*}
 \mathbb{P}(\bigcup_{i=1}^{n} E_i)&=\int_{x\in \bigcup_{i=1}^{n}E_i}{f(x)dx}\\
 &=\sum_{i=1}^{n}{\int_{x\in E_i}{f(x)dx}}\\
@@ -95,5 +46,3 @@ Wie lässt sich die Wahrscheinlichkeit darstellen dass bei einer Abfolge von $n$
 $\mathbb{P}(\{X=K\})$ bezeichnet die Wahrscheinlichkeit, dass nach $n$-Ja, Nein Entscheidungen genau $k$-mal "`Ja"' und $n-k$-mal "`Nein"' geantwortet wurde.\\
 Die Wahrscheinlichkeit für einen Durchlauf bestehend aus $n$-Entscheidungen, welche das oben genannte kriterium erfüllen und eine fest definierte Reinfolge haben lässt sich wiefolgt beschreiben:\\
 $p^k\cdot (1-p)^{n-k}$, falls $p$ die Wahrscheinlichkeit für das eintreten eines "`Ja"'- Ereignisses beschreibt. Da alle möglichen Kombinationen, von gegebenen "`Ja"', "`Nein"' Ereignissen durch $\dbinom{n}{k}$ gegeben ist gilt für $\mathbb{P}(\{X=K\})=\dbinom{n}{k}p^k\cdot (1-p)^{n-k}$
-
-\end{document}
