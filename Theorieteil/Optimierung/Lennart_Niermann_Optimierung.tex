@@ -65,7 +65,6 @@ a^{t+1}  =a^{t} - \lambda \cdot \nabla  f(a^{t}).
 \end{equation*}
 Nach Lemma~\ref{lem:gradientabstieg} ist es moeglich, dass man ein $\lambda > 0$ findet, sodass $f(a^{t+1}) < f(a^{t})$ falls $ \nabla f(a^{(t)}) \neq 0$. 
 Dies kann zum Beispiel wiederum durch ein Optimierungsproblem erreicht werden, und zwar $\lambda=\arg\min_{\lambda} g(\lambda)$ wobei $g(\lambda)=f(a^t-\lambda\nabla f(a^t))$.
-\end{enumerate}
 
 
 
@@ -87,12 +86,12 @@ für alle $\lambda \in [0, 1]$.
 \end{Def}
 
 Ein Illustration f\"ur eine konvexe Funktion ist in Abbildung \ref{fig:konvex} zu sehen. 
-\begin{dsafigure}
-\begin{center}
-\includegraphics[width=0.3\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.pdf}
-\caption{Beispiel einer konvexen Funktion}
-\label{fig:konvex}
-\end{center}
+ \begin{dsafigure}
+ \begin{center}
+ \includegraphics[width=0.3\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.pdf}
+ \caption{Beispiel einer konvexen Funktion}
+ \label{fig:konvex}
+ \end{center}
 \end{dsafigure}
 Der Gro\ss teil der Forschung in der Optimierung behandelt die Minimierung von konvexen Kostenfunktionen. Der Hauptgrund liegt darin, dass es f\"ur konvexe Funktionen nur globale Maxima gibt. 
 

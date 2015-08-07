@@ -132,39 +132,29 @@ Wie in Fig.~\ref{FigConvNN} gezeigt wird der existierende Filter $w$ über die E
 
 \subsection{SVMs als Neuronale Netze}
 
-Wir haben bereits SVMs kennengelernt, die durch das folgende Optimierungsproblem beschrieben werden:
-
+Wir haben bereits SVMs kennengelernt, die beschrieben werden durch das Optimierungsproblem
 \begin{align*}
 \underset{b,w,z}{\text{minimiere}} &\qquad\norm{w} + C  \sum_{i=1}^{n} z_i\\
 \text{sodass} &\qquad y_i (\langle w,x \rangle - b) \geq 1 - z_i \text { mit } z_i \geq 0
 \end{align*}
-
-Diese Nebenbedingung lässt sich umschreiben als:
-
-
+Die Nebenbedingung lässt sich umschreiben als
 \begin{align*}
-&y_i (\langle w,x \rangle - b) \geq 1 - z_i \text { mit } z_i \geq 0 \\
-\Rightarrow &z_i \geq 1- y_i (\langle w,x \rangle - b) \text{ mit } z_i \geq 0
+z_i \geq 1- y_i (\langle w,x \rangle - b), z_i \geq 0
 \end{align*}
-
-Da über $z_i$ minimiert wird und $C$ positiv ist, nehmen die Variablen $C$ immer die Grenzen an.
+Da über $z_i$ minimiert wird und $C$ positiv ist, nehmen die Variablen $z_i$ immer die Grenzen an, wir bekommen also
 
 \begin{align*}
 \min &\norm{w} + C \cdot \sum_{i=1}^{n} \max (0, 1-y_i (\langle w,x_i\rangle-b) \\
  = &\norm{w} + C \sum_{i=1}^{n} \ell ( 1-y_i (\langle w,x_i\rangle)-b) \\
-=&\norm{w} + C \sum_{i=1}^{n} \ell (a_i)
+=&\norm{w} + C \sum_{i=1}^{n} \ell (1 - y_i a_i)
 \end{align*}
-
-Charakteristisch für dieses Neuronale Netz ist, dass es nur einen Layer besitzt. Im folgenden wird verdeutlicht, wie man diese auch als Neuronales Netz ausdrücken kann. 
+Charakteristisch für dieses Neuronale Netz ist, dass es nur einen Layer besitzt.
 
 \subsection{Lineare Regression}
 
-Die lineare Regression kann auch in Form von Neuronalen Netzen ausgedrückt werden. 
-
-
+Analog kann auch die lineare Regression in Form von Neuronalen Netzen ausgedrückt werden:
 \begin{align*}
-\min\limits_{w,b} \ & \frac{1} {2} \sum_{i=1}^{n} ((\langle w,x_i\rangle- b) -y_i)^2 \\
-&a_i = \langle w,x_i\rangle -b-y_i
+\min\limits_{w,b} \ & \frac{1} {2} \sum_{i=1}^{n} (a_i -y_i)^2, \quad a_i = \langle w,x_i\rangle -b
 \end{align*}
 
 \subsection{MNIST}
@@ -177,7 +167,7 @@ Die lineare Regression kann auch in Form von Neuronalen Netzen ausgedrückt werd
 	\end{center}
 \end{dsafigure}
 
-Das MNIST bietet Daten zur freien Verfügung, damit man seine SVMs und Neuronalen Netze mit den Daten trainieren kann. Mit diesen MNIST Trainingsets haben wir uns im Kurs beschäftigt, um unsere maschinellen Lernalgorithmen zu trainieren, damit sie am Ende Vorhersagen treffen können.
+MNIST ist ein freier Datensatz, der es erlaubt, SVMs und Neuronalen Netze zur Zeichenerkennung zu trainieren. Wir haben den Datensatz im Kurs verwendet, um unsere Modelle zu trainieren.
 
 
 
