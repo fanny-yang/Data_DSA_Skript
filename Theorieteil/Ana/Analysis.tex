@@ -16,21 +16,13 @@ Eine Funktion $f:\mathbb{R}\rightarrow \mathbb{R}$ ist an einer Stelle $x$ \emph
 \end{Def}
 Wir betrachten eine einfache Folgerung aus diesen Definitionen.
 
-<<<<<<< HEAD
+
 \begin{lemma}
 Eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar an der Stelle $x \in \mathbb{R}$ ist, ist dort auch stetig.
 \end{lemma}
 
 \begin{proof}
-Wir überlegen zuerst, welche Bedingungen gegeben sind. Eine Funktion ist an der Stelle $x$ differenzierbar, wenn $f(x+h)=f(x)+l_x(h)+ r(h)$  
-=======
-%\begin{exercise}
-Zeige, dass eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar an der Stelle $x \in \mathbb{R}$ ist dort auch stetig ist.
-%\end{exercise}
-
-Lösung: Wir überlegen zuerst, welche Bedingungen gegeben sind. Eine Funktion ist an der Stelle $x$ differenzierbar, wenn $f(x+h)=f(x)+l_x(h)+ r(h)$  
->>>>>>> 70aebc3b96f943eec61bf519bf64e708ab927277
-mit $\lim_{h \rightarrow 0} r(h)/h= 0$. Um die Stetigkeit nachzuweisen müssen wir zeigen, dass $\lim_{w \rightarrow x} f(w)=f(x)$. Mit $w = x+h$ ist dies äquivalent zu $\lim_{h \rightarrow 0} f(x)+l_x(h)+r(h)=f(x)$. Es genügt also zu zeigen, dass  $l_x(h)$ und $r(h)$ gegen Null gehen.
+Wir überlegen zuerst, welche Bedingungen gegeben sind. Eine Funktion ist an der Stelle $x$ differenzierbar, wenn $f(x+h)=f(x)+l_x(h)+ r(h)$  mit $\lim_{h \rightarrow 0} r(h)/h= 0$. Um die Stetigkeit nachzuweisen müssen wir zeigen, dass $\lim_{w \rightarrow x} f(w)=f(x)$. Mit $w = x+h$ ist dies äquivalent zu $\lim_{h \rightarrow 0} f(x)+l_x(h)+r(h)=f(x)$. Es genügt also zu zeigen, dass  $l_x(h)$ und $r(h)$ gegen Null gehen.
 \begin{itemize}
   \item Würde $r(h)$ nicht gegen Null gehen, so würde $r(h)/h$ nicht gegen Null gehen. Widerspruch zur Differenzierbarkeit.
   \item Der lineare Term $l_x(h)$ kann auch als $f'(x) \cdot h$ dargestellt werden. Da $h$ gegen Null geht folgt $l_x(h)\rightarrow 0$.
@@ -50,7 +42,7 @@ Der \emph{Gradient} $\nabla f(x)$ einer Funktion $f:\mathbb{R}^n\rightarrow \mat
 \right).
 \end{split} \end{equation*} 
 \end{Def}
-<<<<<<< HEAD
+
 Der Gradient zeigt immer in Richtung des steilsten Anstiegs einer Funktion. Der negative Gradient in die Richtung des steilsten Abstiegs, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden. Wichtig für das Gradientenabstiegsverfahren ist das folgende Lemma
 
 \begin{Lem}
@@ -69,40 +61,28 @@ Die zu zeigende Ungleichung \eqref{lambda-ungleichung} laesst sich umschreiben i
 \begin{align*}
 &f(x - \lambda \nabla f(x))\\
  = \, &f(x) - \lambda \langle \nabla f(x), \nabla f(x)\rangle + r(\lambda \nabla f(x)) \\
-= \, &f(x) - \lambda( \|\nabla f(x)\|^2 - \frac{r(h)}{\lambda}) \overset{!}{\leq} f(x)
+= \, &f(x) - \lambda( \Vert\nabla f(x)\Vert^2 - \frac{r(h)}{\lambda}) \overset{!}{\leq} f(x)
 \end{align*}
 Es ist hinreichend zu zeigen, dass ein $\lambda>0$ existiert, sodass
 \begin{equation}
 \label{eq:positiveterm}
-\|\nabla f(x)\|^2 - \frac{r(\lambda \nabla f(x))}{\lambda} >0.
+\Vert\nabla f(x)\Vert^2 - \frac{r(\lambda \nabla f(x))}{\lambda} >0.
 \end{equation}
   Dies ist dadurch gegeben, dass 
 \begin{align*}
-\lim_{\lambda\to 0} \frac{r(\lambda \nabla f(x))}{\lambda} &= \lim_{\lambda \to 0}\|\nabla f(x)\| \frac{r(\lambda \nabla f(x))}{\lambda \|\nabla f(x)\|}= 0
+\lim_{\lambda\to 0} \frac{r(\lambda \nabla f(x))}{\lambda} &= \lim_{\lambda \to 0}\Vert\nabla f(x)\Vert \frac{r(\lambda \nabla f(x))}{\lambda \Vert\nabla f(x)\Vert}= 0
 \end{align*}
-Die letzte Gleichung folgt durch die Bedingung an das Restglied, dass $\lim_{h\to 0}\frac{r(h)}{h} = 0$. Durch die Definition eines Grenzwerts wissen wir also, dass ein $\lambda^*$ existiert, sodass $\left| \frac{r(\lambda^* \nabla f(x))}{\lambda^* \|\nabla f(x)\|} \right| \leq \|\nabla f(x)\|$. Zusammenfassend ist die Positivitaet des Terms \eqref{eq:positiveterm} damit gezeigt, d.h. es gilt fuer das gerade gewaehlte $\lambda^*$, dass
+Die letzte Gleichung folgt durch die Bedingung an das Restglied, dass $\lim_{h\to 0}\frac{r(h)}{h} = 0$. Durch die Definition eines Grenzwerts wissen wir also, dass ein $\lambda^*$ existiert, sodass $\left| \frac{r(\lambda^* \nabla f(x))}{\lambda^* \Vert\nabla f(x)\Vert} \right| \leq \Vert\nabla f(x)\Vert$. Zusammenfassend ist die Positivitaet des Terms \eqref{eq:positiveterm} damit gezeigt, d.h. es gilt fuer das gerade gewaehlte $\lambda^*$, dass
 \begin{align*}
-&\|\nabla f(x)\|^2 - \frac{r(\lambda^* \nabla f(x))}{\lambda^*} \\
-\geq \, &\|\nabla f(x)\| \left( \| \nabla f(x)\| - \frac{r (\lambda^* \nabla f(x))}{\lambda^* \| \nabla f(x)\|} \right) \\
-\geq \, &\| \nabla f(x)\| \left(\|\nabla f(x)\| - \left| \frac{r (\lambda^* \nabla f(x))}{\lambda^* \| \nabla f(x)\|}\right| \right) \geq 0. 
+&\Vert\nabla f(x)\Vert^2 - \frac{r(\lambda^* \nabla f(x))}{\lambda^*} \\
+\geq \, &\Vert\nabla f(x)\Vert \left( \Vert \nabla f(x)\Vert - \frac{r (\lambda^* \nabla f(x))}{\lambda^* \Vert \nabla f(x)\Vert} \right) \\
+\geq \, &\Vert \nabla f(x)\Vert \left(\Vert\nabla f(x)\Vert - \left| \frac{r (\lambda^* \nabla f(x))}{\lambda^* \Vert \nabla f(x)\Vert}\right| \right) \geq 0. 
 \end{align*}
 \end{proof}
 
 
 
-=======
-Der Gradient zeigt immer in Richtung des steilsten Anstiegs einer Funktion. Der negative Gradient in die Richtung des steilsten Abstiegs, weshalb wir das Gradientenabstiegsverfahren verwenden können, um das Minimum einer mehrdimensionalen Funktion zu finden. Wichtig für das Gradientenabstiegsverfahren ist die folgende Aufgabe.
-% \begin{exercise}
-Zeige, dass es immer möglich ist für eine differenzierbare Funktion $f$ einen Skalar $\lambda$ zu finden, sodass
-\begin{equation}\label{lambda-ungleichung}f(x + \lambda \nabla f(x)) \leq f(x)\end{equation} 
-% \end{exercise}
-Lösung:
-Schreibe die Ungleichung \eqref{lambda-ungleichung} um in
-\begin{equation*}
-f(x) + \text{D} f(x)h + r(h) \leq f(x)
-\end{equation*}
-Hierbei ist $h = \lambda \nabla f(x)$ und $r(h)$ das Restglied.
->>>>>>> 70aebc3b96f943eec61bf519bf64e708ab927277
+
 %% Das Ganze kann man noch weiter umschreiben, indem man das Skalarprodukt bildet: \\ \\
 %% $f(x) + \lambda \langle \nabla f(x), \nabla f(x) \rangle + r(h) \leq f(x)$ \\ \\
 %% Anschließend kann man von der Regel Gebrauch machen, dass sich ein Skalarprodukt, das in der Form $\langle u,u \rangle$ vorliegt, in die Ausprägung der Euklidischen Norm von $||u||^2$ umgewandelt werden kann. \\
