@@ -31,13 +31,13 @@ $||v||$ ist eine Norm im Vektorraum $V$ falls
 \item $|| \lambda v|| = |\lambda| ||v||$ für alle $\lambda \in \mathbb{R}$ und $v \in V$
 \end{enumerate}
 \end{Def}
-Eine Norm kann nie negativ sein, ist die Norm 0 bedeuted das, dass der Vektor der Nullvektor ist. Wenn man zwei Vektoren
+In Worte gefasst ergeben sich die folgenden Eigenschaften: Eine Norm kann nie negativ sein, ist die Norm 0 bedeutet das, dass der Vektor der Nullvektor ist. Wenn man zwei Vektoren
 addiert, ist die Norm des resultierenden Vektors kleiner oder gleich der Summe der Normen der beiden Ausgangsvektoren. Außerdem ist die
-Norm eines Vektors, der mit einem reelen Faktor multipliziert wurde gleich dem Produkt aus der Norm des Vektors und dem 
+Norm eines Vektors, der mit einem reellen Faktor multipliziert wurde gleich dem Produkt aus der Norm des Vektors und dem 
 Betrag des Faktors.
 
 \begin{Def}
-$f:V\times V \rightarrow\mathbb{R}$ ist ein Skalarprodukt wenn\\
+$f:V\times V \rightarrow\mathbb{R}$ ist ein Skalarprodukt, wenn\\
 \begin{enumerate}
 \item $\left\langle  \alpha u + \beta v, w\right\rangle = \alpha \left\langle  u,w\right\rangle + \beta \left\langle  v,w\right\rangle $ (Bilinearität)
 \item $\left\langle  u,v\right\rangle = \left\langle  v,u\right\rangle $ für alle $u,v \in V$
@@ -46,15 +46,16 @@ $f:V\times V \rightarrow\mathbb{R}$ ist ein Skalarprodukt wenn\\
 \end{Def}
  
 
-Wir können ein Skalarprodukt mit
+Wir können ein Skalarprodukt im euklidischen Raum $\mathbb{R}$ mit
 
-\begin{equation*}
+\begin{equation}
 \left\langle u,v\right\rangle  = u_1 v_1 + \dots + u_n v_n
-\end{equation*}
+\label{skal}
+\end{equation}
 
-definieren.\\An der ausgeschriebenen Form lässt sich überprüfen, ob es sich dabei wirklich um ein Skalarprodukt handelt. In der ausgeschriebenen Form wird aus $\left\langle \alpha u + \beta v, w\right\rangle $ dabei $(\alpha u_1 + \beta v_1) w_1 + \dots + (\alpha u_n + \beta v_n) w_n$. Durch Ausmultiplizieren der Produkte erhalten wir die Form $\alpha u_1 w_1 + \beta v_1 w_1 + \dots + \alpha u_n w_n +\beta v_n w_v$. Wenn wir daraus nach zwei Summen sortieren und die Summanden mit $\alpha$ von denen mit $\beta$ trennen können, wir die beiden Faktoren ausklammern und gelangen zu der aus der Definition geforderten Form $\alpha \left\langle u,w\right\rangle  + \beta \left\langle v,w\right\rangle $.\\
+definieren.\\An der ausgeschriebenen Form lässt sich überprüfen, ob es sich dabei wirklich um ein Skalarprodukt handelt. Hierbei kann  $\left\langle \alpha u + \beta v, w\right\rangle $ zu $\sum\limits_{i=1}^n (\alpha u_i + \beta v_i)w_i$ umgeformt werden. Durch das Ausmultiplizieren der Produkte erhalten wir die Form $\sum\limits_{i=1}^n \alpha u_i w_i + \beta v_i w_i$. Wenn wir daraus nach zwei Summen sortieren und die Summanden mit $\alpha$ von denen mit $\beta$ trennen, können wir die beiden Faktoren ausklammern und gelangen zu der aus der Definition geforderten Form $\alpha \left\langle u,w\right\rangle  + \beta \left\langle v,w\right\rangle $.\\
 Die zweite Bedingung können wir mit dem Kommutativgesetz beweisen, wenn wir dieses auf die ausgeschriebene Form anwenden.
-Für die dritte Bedingung ergibt sich $v_1 v_1 + \dots + v_n v_n = v_1^2 + \dots + v_n^2$. Da durch das Quadrieren keiner der Summanden kleiner als 0 werden kann und auch nur für $v_i = 0$ genau 0 werden kann, ist auch diese Bedingung erfüllt.\\
+Für die dritte Bedingung ergibt sich $\sum\limits_{i=1}^n v_i v_i = \sum\limits_{i=1}^n v_i^2$. Da durch das Quadrieren keiner der Summanden kleiner als 0 werden kann und auch nur für $v_i = 0$ genau 0 werden kann, ist auch diese Bedingung erfüllt.\\
 
 \begin{dsafigure}
 \centering
@@ -72,22 +73,36 @@ Für die dritte Bedingung ergibt sich $v_1 v_1 + \dots + v_n v_n = v_1^2 + \dots
 \label{Kosinussatz}
 \end{dsafigure}
 
-Da grundsätzlich $\left\langle v,v\right\rangle  = ||v||^2$ gilt, kann über die Abbildung \ref{Kosinussatz} auch die Aussage getroffen werden, dass $||v-u||^2 = \left\langle v-u,v-u\right\rangle $. Mit der Bilinearität des Skalarproduktes und der eben getroffenen Aussage können wir die Gleichung zu 
+Da grundsätzlich 
+
+\begin{equation}
+\left\langle v,v\right\rangle  = ||v||^2
+\label{SkalNorm}
+\end{equation}
+
+gilt, kann über die Abbildung \ref{Kosinussatz} auch die Aussage getroffen werden, dass $||v-u||^2 = \left\langle v-u,v-u\right\rangle $. Mit der Bilinearität des Skalarproduktes und der eben getroffenen Aussage können wir die Gleichung zu 
 \begin{equation*}
 ||v-u||^2 = ||v||^2 - 2\left\langle v,u\right\rangle  + ||u||^2 
 \end{equation*}
 umformen.
 Zusätzlich folgt aus dem Kosinussatz, dass $||v-u||^2 = ||u||^2 + ||v||^2 - 2 ||u|| ||v|| \cos\theta$. Setzt man beide Terme gleich, gelangt man über einige wenige Umformungen zu der Form $\left\langle u,v\right\rangle  = ||u|| ||v|| \cos\theta$, was ebenfalls eine Möglichkeit ist, das Skalarprodukt darzustellen.\\
-Aus dieser Gleichung ergibt sich direkt die Cauchy-Schwarz Ungleichung. Da der Betrag des Kosinus sich nur zwischen 0 und 1 bewegt, gilt $\left\langle u,v\right\rangle  \leq ||u|| ||v||$.\\
-Eine häufig genutzte Norm ist die Euklidische Norm, welche mit $||v||_2 = \sqrt{v_1^2 + \dots + v_n^2}$ definiert ist. Mit den zuvor getroffenen Aussagen können wir beweisen, dass es sich bei der Euklidischen Norm wirklich um eine Norm handelt.\\
-Die erste und die dritte Bedingung aus der Definition für eine Norm zeigen sich aus der ausgeschriebenen Form der Euklidischen Norm. Da alle Komponenten dabei quadriert werden und die Wurzel gezogen wird muss die erste Bedingung stimmen. Ein Faktor $\lambda$, der ebenfalls quadriert in der Wurzel steht kann aus der Summe ausgeklammert werden und als Faktor vor die Wurzel gelangen. Der Betrag ergibt sich dabei daraus, dass $\lambda$ nach dem Vorgang nur positiv sein kann, auch wenn es zuvor negativ war.\\
-Um zu beweisen, dass $||u+v|| \leq ||u|| + ||v||$ benötigen wir die Dreiecksungleichung für reele Zahlen und die Cauchy-Schwarz Ungleichung. Wir gehen dabei von der quadrierten Form des linken Terms aus.
+Aus dieser Gleichung ergibt sich direkt die Cauchy-Schwarz Ungleichung, da der Betrag des Kosinus sich nur zwischen 0 und 1 bewegt, gilt:
+
+\begin{equation}
+\left\langle u,v\right\rangle  \leq ||u|| ||v||
+\label{cauchy}
+\end{equation}
+
+
+Eine häufig genutzte Norm ist die Euklidische Norm, welche mit $||v||_2 = \sqrt{v_1^2 + \dots + v_n^2}$ definiert ist und die obrige Definition des Skalarproduktes (Gleichung \ref{skal}) induziert wird. Mit den zuvor getroffenen Aussagen (Gleichung \ref{SkalNorm} und \ref{cauchy}) können wir beweisen, dass es sich bei der Euklidischen Norm wirklich um eine Norm handelt.\\
+Die erste und die dritte Bedingung aus der Definition für eine Norm zeigen sich aus der ausgeschriebenen Form der Euklidischen Norm. Da alle Komponenten dabei quadriert werden und die Wurzel gezogen wird, muss die erste Bedingung stimmen. Ein Faktor $\lambda$, der ebenfalls quadriert in der Wurzel steht kann aus der Summe ausgeklammert werden und als Faktor vor die Wurzel gelangen. Der Betrag ergibt sich dabei daraus, dass $\lambda$ nach dem Vorgang nur positiv sein kann, auch wenn es zuvor negativ war.\\
+Um zu beweisen, dass die Dreiecksungleichung $||u+v|| \leq ||u|| + ||v||$  gilt,benötigen wir die Dreiecksungleichung für reelle Zahlen und die Cauchy-Schwarz Ungleichung. Wir gehen dabei von der quadrierten Form des linken Terms aus und erhalten
 
 \begin{align*}
 ||u+v||^2 &= |\left\langle u+v,u+v\right\rangle|\\
 &\leq |\left\langle u,u\right\rangle| + 2|\left\langle u,v\right\rangle| + |\left\langle v,v\right\rangle|\\
 &\leq ||v||^2 + 2||u|| ||v|| + ||v||^2\\
-&= (||u|| + ||v||)^2\\
+&= (||u|| + ||v||)^2.\\
 \end{align*}
 
 Man sieht sofort, dass der Ausgangsterm kleiner oder gleich dem Ergebnis ist, womit bewiesen ist, dass die Euklidische Norm eine Norm ist.

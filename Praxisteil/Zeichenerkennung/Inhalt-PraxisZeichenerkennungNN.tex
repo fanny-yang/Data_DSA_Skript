@@ -1,0 +1,20 @@
+\section{Zeichenerkennung mit neuronalen Netzen}
+\authors{Luca Bohn, Lukas Lück, Lukas Kamm}
+Ein funktionsfähiges neuronales Netz zu implementieren, bedeutet einen großen Zeitaufwand und viel Feinoptimierung. Da uns diese Zeit nicht zur Verfügung stand und wir ein größeres Interesse an der Anwendung hatten, nutzten wir Caffe. Bei Caffe handelt es sich um eine Software des Berkeley Vision and Learning Centers. Caffe bietet eine Art Bausatz für neuronale Netze. Man kann verschiedene Filter auswählen und sich so sein eigenes neuronales Netz erstellen. Caffe ist in der Lage, Bilder sehr schnell auszuwerten, nach Herstellerangaben benötigt es je Bild 4 ms in der Trainingsphase und 1 ms in der Testphase. \\
+Die für die Zeichenerkennung notwendigen Daten beziehen wir aus der MNIST-Datenbank, die 60.000 handgeschriebene Beispiele für Zahlen und 10.000 Beispiele für Test-Daten enthält. Diese vorgefertigte Zeichendatenbank eignet sich vor allem für Testumgebungen im Bereich des maschinellen Lernens und das Testen von Algorithmen neuronaler Netze. Aufgrund dessen ist sie optimal für unser Projekt geeignet.
+\begin{dsafigure}
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{\media Kameramann.png}
+	\caption{Schwarz-Weiß Bild eines Kameramannes.}
+	\label{Kameramann}
+\end{center}
+\end{dsafigure}
+
+\subsection{Training}
+Voraussetzung für das maschinellen Lernen mit neuronalen Netzen ist das Anlernen mit Hilfe von Testdaten. Hierzu versuchen wir ein möglichst weit gefächertes Spektrum der handgeschriebenen Ziffern, die uns als kleine Bilder mit 28 x 28 Pixeln vorliegen, zu erzeugen, indem wir nicht nur die Ziffern, die wir zum Anlernen verwenden, zufällig auswählen, sondern auch ihre Position variieren, indem wir den Bildbereich in Höhe sowie Breite um eine beliebige Varianz erweitern und so das Netz auf weitere Variation trainieren. Dies ist anschaulich und beispielhaft in Abbildung  \ref{Zahlen_input} dargestellt, die mit Hilfe von PyPlot generiert wurde.\\
+
+Nunmehr ist es uns möglich, den Caffe-Server mit solchen generierten Trainingsdaten auszustatten und den Anlernvorgang zu starten.
+
+\subsection{Testen}
+Nach erfolgreichem Anlernen gilt es nun, geeignete Testdaten zu generieren. Hierzu generieren wir wiederum aus den oben angeführten Trainingsdaten Testdaten. Dabei iterieren wir zunächst innerhalb eines Zahlenbildes über alle möglichen Varianten, anschließend wiederholen wir diesen Vorgang für alle Zahlenbilder. \\
+Diese Testdateien können wir nun dem neuronalen Netzwerk übermitteln, um zu überprüfen, welche Resultate dieses uns liefert.
