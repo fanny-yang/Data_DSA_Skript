@@ -1,19 +1,32 @@
 \section{Wahrscheinlichkeitstheorie}
+<<<<<<< HEAD
+
+
+\vspace{15pt}
+
+
+1933 ver\"offentlichte der russische Mathematiker Andrey Kolmogorov sein Buch \textit{Foundations of the Theory of Probability}, in dem er die drei Axiome der Wahrscheinlichkeitstheorie aufstellte. Es existiert ein Wahrscheinlichkeitsraum, der sich aus den drei Elementen $\Omega$, $\mathcal{F}$, $\mathbb{P}$ zusammensetzt. Wir betrachten im Folgenden die speziellen Wahrscheinlichkeitsr\"aume mit folgenden Eigenschaften:
+=======
 \authors{Katharina Krause, Annika Scheug, Moritz Hollenberg}
 1933 ver\"offentlichte der russische Mathematiker Andrey Kolmogorov sein Buch \textit{Foundations of the Theory of Probability}, in dem er die drei Axiome der Wahrscheinlichkeitstheorie aufstellte. Es existiert ein Wahrscheinlichkeitsraum, der sich aus den drei Elementen $\Omega$, $\mathcal{F}$, $\mathbb{P}$ zusammensetzt.
+>>>>>>> 70aebc3b96f943eec61bf519bf64e708ab927277
 
 \vspace{5pt}
 
 \begin{enumerate}
 	\item $\Omega$ ist eine Menge mit einer endlichen Anzahl an Elementen.
 	\item $\mathcal{F}$ ist die Menge aller Ereignisse E, also Teilmengen von $\Omega$. Das hei"st f\"ur alle $E \in \mathcal{F}$ gilt $E \subseteq \Omega$.
-	\item $\mathbb{P}: \mathcal{F} \rightarrow \mathbb{R}$ bezeichnet die Wahrscheinlichkeitsverteilung. Diese weist jedem Ereignis in $\mathcal{F}$ eine reelle Zahl zu.  
+	\item $\mathbb{P}: \mathcal{F} \rightarrow \mathbb{R}$ bezeichnet die Wahrscheinlichkeitsverteilung. Diese weist jedem Element in $\mathcal{F}$ (also Ereignis) eine reelle Zahl zu.  
 	
 	
 \end{enumerate}
 
 \vspace{10pt}
 
+
+Die Wahrscheinlichkeit eines Ereignisses $E$ fuer unsere speziellen Wahrscheinlichkeitsr\"aume wird errechnet durch $ \mathbb{P}(E) = \frac{|E|}{|\Omega|}$.
+Alternativ definieren wir $p_{i} = \mathbb{P} (\{i\})$ mit $p_{i} \geq 0$  
+f\"ur $i \in \Omega$, f\"ur die gilt $\sum_{i\in \Omega} p_{i} =1$. Dann ist $\mathbb{P}(E) = \sum_{i\in E} \mathbb{P}(\{i\})$. 
 
 
 \begin{Def}[Kolmogorovs Axiome]
@@ -26,26 +39,19 @@
 	\item Die Wahrscheinlichkeit der Vereinigung von disjunkten Ereignisssen ist gleich der Summe der Wahrscheinlichkeiten der disjunkten Ereignisse. 
 	\vspace{3pt}
 	\begin{equation*}
-	\mathbb{P} (\cup_{i=1}^m E_{i}) = \sum_{i=1}^n \mathbb{P} (E_{i}) \quad \text{f\"ur alle} \: E_{1},...,E_{m} \in \mathcal{F}
+	\mathbb{P} (\cup_{i=1}^m E_{i}) = \sum_{i=1}^n \mathbb{P} (E_{i}) \, \text{f\"ur alle } \, E_{1},...,E_{m} \in \mathcal{F}
 	\end{equation*}
 \end{enumerate}
 \vspace{5pt}
 
 $E_{1},...,E_{m}$ sind disjunkt, falls $E_{i} \cap E_{j} = \emptyset$ f\"ur alle $i,j= 1,2,...,m$. 
-Hierbei bezeichnet $\emptyset$ ein unm\"ogliches Ereignis $\emptyset \in \mathcal{F}$.
+Hierbei bezeichnet $\emptyset$ ein unm\"ogliches Ereignis $\emptyset \in \mathcal{F}$ fuer welches gilt $P(\emptyset) = 0$.
 \end{Def}
-
-\vspace{5pt}
-
-Die Wahrscheinlichkeit wird errechnet durch $ \mathbb{P}(E) = \frac{|E|}{|\Omega|}$.
-Alternativ definieren wir $p_{i} = \mathbb{P} (\{i\})$ mit $p_{i} \geq 0$  
-f\"ur $i \in \Omega$, f\"ur die gilt $\sum_{i\in \Omega} p_{i} =1$. 
-
 
 
 \vspace{10pt}
 
-Aus diesen Axiomen lassen sich direkt folgende \textit{Konsequenzen} ableiten:
+Aus Kolmogorovs Axiomen lassen sich direkt folgende \textit{Konsequenzen} ableiten:
 
 
 \vspace{5pt}
@@ -60,170 +66,156 @@ Aus diesen Axiomen lassen sich direkt folgende \textit{Konsequenzen} ableiten:
 
 \vspace{10pt}
 
-\paragraph {Zufallsvariablen}
-
-\vspace{5pt}
-
+\begin{Def}[Zufallsvektoren und -variablen]
 In einem Wahrscheinlichkeitsraum $(\Omega, \mathcal{F}, \mathbb{P})$ k\"onnen wir eine Funktion $X:\Omega \rightarrow \mathbb{R}^k$  definieren, die dann einen k-dimensionalen Zufallsvektoren beschreibt. Im Fall von $k=1$ sprechen wir von einer Zufallsvariablen.
-Bei einem W\"urfelwurf w\"are dies zum Beispiel eine der Augenzahlen des W\"urfels. Wir schreiben $\Omega \{1,2,3,4,5,6\}$. 
-Ein weiteres Beispiel ist die Einteilung in \glqq gerade\grqq{} und \glqq ungerade\grqq{} Zahlen. Hier w\"are die Variable $1$, wenn die Augenzahl gerade ist und $0$, wenn die Zahl ungerade ist.
+\end{Def}
+
+Bei einem W\"urfelwurf w\"are eine moegliche Zufallsvariable die Augenzahl des W\"urfels. Wir schreiben $\Omega =  \{1,2,3,4,5,6\}$. 
+Ein weiteres Beispiel ist die Einteilung in \glqq gerade\grqq{} und \glqq ungerade\grqq{} Zahlen. Hier nimmt die Variable $1$ an, wenn die Augenzahl gerade ist und $0$, wenn die Zahl ungerade ist.
 
 \vspace{10pt}
 
-\paragraph {Erwartungswert}
+\paragraph {Summe von Zufallsvariablen}
+Gegeben seien zwei unabhängige Zufallsvariablen
+\begin{equation*}
+X_{1}:\Omega \rightarrow \mathbb{R} \text{ und }  X_{2}:\Omega \rightarrow \mathbb{R}.
+\end{equation*}
+Wir berechnen nun die Verteilung der Summe $Y=X_{1}+X_{2}$. Daf\"ur beobachten wir,  dass
+\begin{equation*}
+\{Y=l\}=\bigcup_{i=-\infty}^{\infty} \{X_{1}=1\} \cap \{X_{2}=l-i\}
+\end{equation*}
+sodass die Verteilung direkt berechnet werden kann durch
+\begin{align}
+\label{eq:zvsumme}
+&\mathbb{P} (\{Y=l\}) \\
+=\, &\sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1}=i\} \cap \{X_{2}=l-i\})\nonumber\\
+=\, &\sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1} = i\})  \mathbb{P} (\{X_{2}=l-i\}) \nonumber. 
+\end{align}
 
-\vspace{5pt}
 
- Der Erwartungswert einer Zufallsvariablen beschreibt die Zahl, die die Zufallsvariable im Mittel annimmt.
-Sie wird definiert durch
+\subsection{Statistiken}
 
+\begin{Def}[Erwartungswert]
+ Der Erwartungswert einer Zufallsvariablen beschreibt die Zahl, die die Zufallsvariable im Mittel annimmt. Sie wird definiert durch
 \begin{equation*}
 \mathbb{E} [X] = \sum_{i \in \Omega} X (i) \mathbb{P} (\{i\}) = \sum_{x\in\mathcal{X}} x \, \mathbb{P} (\{X=x\}) \text{,}
 \end{equation*}
 wobei $\mathcal{X}$ ein Wertebereich von $X$ ist.
+\end{Def}
 
-Wirft man also beispielsweise mit zwei W\"urfeln und addiert deren Augenzahl, sagt der Erwartungswert, welche Zahl nach vielen Versuchen am ehesten erwartet werden kann. Durch oben genannte Formel ist dies bei zwei W\"urfeln $7$.
+Wirft man also beispielsweise mit zwei W\"urfeln und addiert deren Augenzahl, sagt der Erwartungswert, welche Zahl nach vielen Versuchen am ehesten erwartet werden kann. Durch Formel~\eqref{eq:zvsumme} ist dies bei zwei W\"urfeln $7$.
 
-\vspace{10pt}
 
-\paragraph {Varianz}
+Folgender spezieller Erwartungswert kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. 
 
-\vspace{5pt}
 
-Die Varianz kennzeichnet die Ausdehnung einer Wahrscheinlichkeit. Die Varianz einer Zufallsvariable $X$ ist definiert durch
+\begin{Def}[Varianz]
+Die Varianz einer Zufallsvariable $X$ ist definiert durch
+\begin{equation}
+\label{eq:Varianz}
+X= \mathbb{E} [X^2] - \mathbb{E} [X]^2 = \mathbb{E} [ (X - \mathbb{E} [X] )^2 ].
+\end{equation}
 
+\end{Def}
+
+Berechnet man den Erwartungswert eines einfachen W\"urfelwurfes, so erh\"alt man $3.5$. Die Varianz eines Wurfes liegt durch Formel~\eqref{eq:Varianz} bei $2.92$. Die hohe Streuung suggeriert, dass die Wahrscheinlichkeit f\"ur jede Seite des W\"urfels relativ hoch ist.
+
+\begin{Def}[Marginale und bedingte Wahrscheinlichkeiten]
+\label{def:Wkeits}
+Es seien $X_{1}, X_{2}$ Zufallsvariablen auf dem Wahrscheinlichkeitsraum $\Omega_{1}\times \Omega_{2}$, dann ist die \emph{marginale} Wahrscheinlichkeit von $X_{1}$ definiert durch 
 
 \begin{equation*}
-X= \mathbb{E} [X^2] - \mathbb{E} [X]^2 = \mathbb{E} [ (X - \mathbb{E} [X] )^2 ].
+\mathbb{P} (\{X_{1} \in A \} ) = \sum_{b \in \Omega_{2} } \mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} = b\})
 \end{equation*}
 
-Berechnet man den Erwartungswert eines einfachen W\"urfelwurfes, so erh\"alt man $3.5$. Die Varianz eines Wurfes liegt durch die oben genannte Formel bei $2.92$. Dies hohe Streuung suggeriert, dass die Wahrscheinlichkeit f\"ur jede Seite des W\"urfels gleich hoch ist.
+Eine Wahrscheinlichkeit ist \emph{bedingt}, wenn die Wahrscheinlichkeit des Eintretens von einem Ereignis $A$ davon abhängt, ob auch Ereignis $B$ eintritt. 
+Diese ist bestimmt durch:
 
-\vspace{10pt}
+\begin{equation*}
+\mathbb{P} (\{X_{1} \in A \} | \{ X_{2} \in B \} ) = \frac {\mathbb{P} ( \{X_{1} \in A \} \cap \{X_{2} \in B \})} {\mathbb{P} (\{X_{2} \in B\})}
+\end{equation*}
+\end{Def}
 
 \begin{Def}[Unabh\"angigkeit von Ereignissen]
-
-\vspace{5pt}
 
 \begin{enumerate}
 	\item Wenn f\"ur Ereignisse $E, F \in \mathcal{F} $ gilt
 	\begin{equation} 
 	\mathbb{P} (E\cap F)= \mathbb{P} (E)  \mathbb{P} (F),
 	\end{equation}
-
-dann sind E und F unabhängig. 
-
-\item Zwei Zufallsvariablen 
-\begin{equation*}
-%X_{1}: \Omega_{1} \rightarrow \mathbb{R} \: \text{ und } \: X_{2}: \Omega_{2} \rightarrow \mathbb{R}
-X_{1}: \Omega_{1} \rightarrow \mathbb{R} : \text{ und } : X_{2}: \Omega_{2} \rightarrow \mathbb{R}
-\end{equation*}
+        dann sind E und F unabhängig. 
+\item Zwei Zufallsvariablen $X_1 : \Omega_1 \to \mathbb{R}, X_2:\Omega_2 \to \mathbb{R}$
+%% \begin{equation*}
+%% %X_{1}: \Omega_{1} \rightarrow \mathbb{R} \: \text{ und } \: X_{2}: \Omega_{2} \rightarrow \mathbb{R}
+%% X_{1}: \Omega_{1} \rightarrow \mathbb{R} : \text{ und } : X_{2}: \Omega_{2} \rightarrow \mathbb{R}
+%% \end{equation*}
 sind unabhängig, falls gilt, dass für alle $A, B \subseteq \mathbb{R}$
 \begin{equation*}
-\mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} \in B\} ) = \mathbb{P} (\{X_{1} \in A\}  \mathbb{P} \{X_{2} \in B\} )
+\mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} \in B\} ) = \mathbb{P} (\{X_{1} \in A\})  \mathbb{P} \{X_{2} \in B\} )
 \end{equation*}
 \end{enumerate}
+
+Aus obiger Definition von Unabhaengigkeit und bedingter Wahrscheinlichkeit in Definition \ref{def:Wkeits} folgt sofort, dass zwei Zufallsvariablen  genau dann unabh\"angig sind wenn
+\begin{equation*}
+P(\{X_1 \in A\} | \{X_2 \in B\}) = P(\{X_1\in A\})
+\end{equation*}
+f\"ur alle $A,B \subset \R$. 
+
 \end{Def}
-\vspace{10pt}
 
-\paragraph {Marginale Wahrscheinlichkeiten}
 
-Es seien $X_{1}, X_{2}$ Zufallsvariablen auf dem Wahrscheinlichkeitsraum $\Omega_{1}\times \Omega_{2}$, dann ist die marginale Wahrscheinlichkeit von $X_{1}$ definiert durch 
-
+\begin{Thm}[Linearit\"at des Erwartungswerts]
+\label{thm:explinearity}
+Für die Summe beliebiger Zufallsvariablen $X_{1}, \dots, X_{n}}$ gilt
 \begin{equation*}
-\mathbb{P} (\{X_{1} \in A \} ) = \sum_{b \in \Omega_{2} } \mathbb{P} (\{X_{1} \in A\} \cap \{X_{2} = b\})
+\mathbb{E} \left[\sum_{i=1}^{n} a_{i} X_{i}\right] = \sum_{i=1}^{n} a_{i} (\mathbb{E} [X_{i}] )
+\end{equation*}
+\end{Thm}
+
+Man sagt auch dass der Erwartungswert linear ist, aehnlich wie bei einer linearen Abbildung die Funktion der Summe ist gleich die Summe der Funktionen. F\"ur den Beweis von Theorem~\ref{thm:explinearity} benutzt man vor allem die Verteilung der Summen von Zufallsvariablen~\eqref{eq:zvsumme}.
+
+\paragraph{Wahrscheinlichkeitsdichten}
+
+Gegeben eine Funktion $f: \mathbb{R} \rightarrow \mathbb{R}$ f\"ur die gilt 
+\begin{equation*}
+\int_{\mathbb{R}} f(x) dx = 1,
+\end{equation*}
+k\"onnen wir eine Wahrscheinlichkeitsverteilung folgenderma"sen definieren:
+\begin{equation*}
+\mathbb{P} (\{X\in A\}) = \int_{X \in A} f(x) dx. 
 \end{equation*}
 
-\vspace{10pt}
 
-\paragraph {Bedingte Wahrscheinlichkeit}
-Eine Wahrscheinlichkeit ist bedingt, wenn die Wahrscheinlichkeit des Eintretens von einem Ereignis $A$ davon abhängt, ob auch Ereignis $B$ eintritt. 
-Diese ist bestimmt durch:
+\subsection{Maximum-Likelihood-Methode}
+
+Die Maximum-Likelihood-Methode wird in der Statistik angewandt, um mithilfe einiger i.i.d. (unabhaengig und identisch verteilt) Datenpunkte auf die ihnen zu Grunde liegende Gesamtverteilung schlie"sen zu k\"onnen. Die Methode kann auf parametrisierte Verteilungen angewandt werden, wie z.B. die Gaussverteilung die ihr Maximum (und Erwartungswert) an der Stelle $\theta$ hat. Wenn man $2$ Datenpunkte hat, l\"asst sich die Gaussverteilungs-Kurve, bei der $\sigma$ sicher ist, beliebig verschieben, sodass beide Datenpunkte dem Maximum $\theta$ m\"oglichst nah sind.
+Die Wahrscheinlichkeit, dass wir unter der Verteilung mit Parameter $\theta$ den Datenpunkt $x$ ziehen, ist $p(x,\theta)$. 
 
 \begin{equation*}
-\mathbb{P} (\{X_{1} \in A \} | \{ X_{2} \in B \} ) = \frac {\mathbb{P} ( \{X_{1} \in A \} \cap \{X_{2} \in B \})} {\mathbb{P} (\{X_{2} \in B\})}
+\hat{\theta}_{ML} = \underset{\theta}{\operatorname{argmax}} \,\, p (x_{1},...,x_{r};\theta)
 \end{equation*}
 
-
-
-\paragraph {Summe von Zufallsvariablen}
-
-Gegeben seien zwei unabhängige Zufallsvariablen
+\noindent hei"st Maximum-Likelihood-Sch\"atzer (von $\theta$) für $x_{1},...,x_{n}$ gezogen aus $p(x_{1},...,x_{r};\theta$). Da die Datenpunkte $x_1, \dots, x_n$ i.i.d. verteilt sind, kann man die gemeinsame Verteilung faktorisieren und erh\"alt
 \begin{equation*}
-X_{1}:\Omega \rightarrow \mathbb{R} : \text{ und } : X_{2}:\Omega \rightarrow \mathbb{R}
+p (x_{1},...,x_{r};\theta) = \prod_{i=1}^r p(x_i;\theta).
 \end{equation*}
-Wir betrachten nun die Summe
-\begin{equation*}
-Y=X_{1}+X_{2}
-.\end{equation*}
 
-F\"ur die Berechnung der Verteilung der Summe 
-\begin{equation*}
-\{Y=l\}=\cup_{i=-\infty}^{\infty} \{X_{1}=1\} \cap \{X_{2}=l-i\}
+Verwendet man auf diese Formel den Logarithmus, wird das Produkt in eine Summe umgewandelt. Dadurch l\"asst sich die Form sehr gut optimieren bzw. maximieren. 
+
+
+\paragraph{Lineare Regression} 
+Man betrachte das Modell
+\begin{equation*} 
+y_{i} = ax_{i}+\epsilon_{i} \text{ mit } y_{i}, x_{i} \in \mathbb{R}
 \end{equation*}
-beobachten wir zun\"achst, dass 
+fuer gegebene $x_i$, wobei man annimmt dass das Rauschen $\epsilon_i \overset{i.i.d.}{\sim} \mathcal{N}(0,\sigma^2)$ normal verteilt ist. Hier ist der zu bestimmende Parameter $\theta = a$. Fuer diesen konkrete Fall erh\"alt man bei der Maximum-Likelihood Methode fuer die Sch\"atzung von $a$ dasselbe Optimierungsprogramm wie dasjenige in der \textit{Linearen Regression}, und zwar 
+Maximiert man nun die Likelihood Funktion \"uber $a$, d.h.
+%% \begin{equation*} 
+%% \underset{a}{\operatorname{max}} \,\, p (y_{1},...,y_{n};a)
+%% \end{equation*}
+%% so kommt man zu folgendem Ergebnis:
 \begin{align*}
-\mathbb{P} (\{Y=l\}) &= \sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1}=i\} \cap \{X_{2}=l-i\})\\
-&= \sum_{i=-\infty}^{\infty} \mathbb{P} (\{X_{1} = i\})  \mathbb{P} (\{X_{2}=l-i\})
+\hat{a}_{ML} &= \underset{a}{\operatorname{argmax}} -\frac{1}{2} \sum_{i=1}^{n} (y_{i} -ax_{i})^{2}\\
+&= \underset{a}{\operatorname{argmin}} \sum_{i=1}^n (y_i - ax_i)^2
 \end{align*}
-
-\vspace{10pt}
-
-\paragraph {Theorem: Linearit\"at des Erwartungswerts}
-
-\vspace{5pt}
-
-Für Zufallsvariablen ${X_{1},..., X_{2}}$ gilt
-
-\begin{equation*}
-\mathbb{E} [\sum_{i=1}^{n} a_{i} X_{i}] = \sum_{i=1}^{n} a_{i} (\mathbb{E} [X_{i}] )
-\end{equation*}
-
-\paragraph {Wahrscheinlichkeitsdichten}
-
-
-Angenommen, wir h\"atten eine Funktion
-\vspace{3pt}
-
-$f: \mathbb{R} \rightarrow \mathbb{R}$ , f\"ur die gilt: 
-\begin{equation*}
-\int_{\mathbb{R}} f(x) dx = 1
-\end{equation*}
-
-\vspace{3pt}
-
-dann k\"onnten wir eine Wahrscheinlichkeitsverteilung folgenderma"sen definieren:
-\begin{equation*}
-\mathbb{P} (\{X\in A\}) = \int_{X \in A} f(x) dx
-\end{equation*}
-
-\paragraph {Maximum-Likelihood-Methode}
-
-Die Maximum-Likelihood-Methode wird in der Wahrscheinlichkeitsstatistik angewandt, um mithilfe einiger Datenpunkte auf die ihnen zu Grunde liegende Gesamtverteilung schlie"sen zu k\"onnen.
-Die Methode kann auf parametrisierte Verteilungen angewandt werden. Eine dieser parametrisierten Verteilungen ist die sogenannte Gaussverteilung,idie ihr Maximum an der Stelle $\theta$ hat. Wenn man $2$ Datenpunkte hat, l\"asst sich die Gaussverteilungs-Kurve, bei der $\sigma$ sicher ist, beiliebig verschieben, sodass beide Datenpunkte dem Maximum $\theta$ m\"oglichst nah sind.
-Die Wahrscheinlichkeit, dass wir unter der Verteilung $\theta$ den Datenpunkt x ziehen, ist $p(x,\theta)$
-
-\begin{equation*}
-\theta_{ML} = \operatorname{argmax}_{\theta} : \text{p} (x_{1},...,x_{r};\theta)
-\end{equation*}
-
-hei"st ML-Sch\"atzer (von $\theta$) für $x_{1},...,x_{n}$ gezogen aus $p(x_{1},...,x_{r};\theta$)
-
-In Folge dessen kann man auf diese Formel den Logarithmus (log) anwenden, der eine Summenschreibweise der Formel erm\"oglicht. Dadurch l\"asst sich die Form sehr gut optimieren bzw. maximieren. 
-
-
-\vspace{5pt}
-
-Wenn man das Modell
-\begin{equation*} 
-y_{i} = ax_{i}+\epsilon_{i} : \text{ mit} : y_{i}, x_{i} \in \mathbb{R}
-\end{equation*}
-hat und das Rauschen $\mathcal{N}$ normal verteilt ist, dann ist die \textit{Lineare Regression} gleich dem Maximum-Likelihood. Optimiert man $y_{1},...,y_{n}$ mit $a$ gegeben
-\begin{equation*} 
-\operatorname{max}_{a} \text{p} (y_{1},...,y_{n};a)
-\end{equation*}
-so kommt man zu folgendem Ergebnis:
-\begin{equation*}
-\operatorname{max}_{a} -\frac{1}{2} \sum_{i=1}^{n} (y_{i} -ax_{i})^{2}
-\end{equation*}
-Darauf l\"asst sich die schon genannte \textit{Methode der kleinsten Quadrate} anwenden.
+Dies ist \"aquivalent zur \textit{Methode der kleinsten Quadrate} die im Optimierungsabschnitt~\ref{sec:regression} eingef\"uhrt wurde.
