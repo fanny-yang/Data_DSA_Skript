@@ -1,0 +1,91 @@
+%% \documentclass{newlayout}
+%% %Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
+%% \Akademie{Braunschweig}{2015}{1}
+
+%% \usepackage[english]{babel}
+%% \usepackage{misc}
+%% \usepackage{multicol}
+
+%% \usepackage[utf8]{inputenc}
+
+%% %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+%% \usepackage{amsfonts}
+
+%% \usepackage{blindtext}
+
+%% \usepackage{url}
+%% \def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+%% \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+%% \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
+%% \urlstyle{same}
+
+%% % hinzugef�gt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
+%% \usepackage{lmodern}
+%% \setkomafont{descriptionlabel}{\normalfont\bfseries}
+%% \addtokomafont{paragraph}{\normalfont}
+%% \usepackage{footnote}
+%% \usepackage[flushmargin,hang,ragged]{footmisc}
+%% \deffootnote{1em}{1em}{%
+%% \textsuperscript{\thefootnotemark\ }
+%% }
+%% %\setlength{\abovedisplayskip}{5pt}
+%% %\setlength{\belowdisplayskip}{5pt}
+
+
+%% %%%%%Mathe-Definitionen
+%% \newtheorem{Def}{Definition}
+%% \newtheorem{Sat}{Satz}
+%% \newtheorem{Bew}{Beweis}
+%% \newtheorem{Thm}{Theorem}
+
+%% \setlength\abovedisplayshortskip{0pt}
+%% \setlength\belowdisplayshortskip{0pt}
+%% \setlength\abovedisplayskip{3pt}
+%% \setlength\belowdisplayskip{3pt}
+%% %%%%Ende Mathe-Definitionen
+
+%% \begin{document}
+
+%%  %   \input{titel}
+%%  \setcounter{page}{3}
+
+%% \setcounter{tocdepth}{1}
+%%  \tableofcontents
+
+%%    \setcounter{secnumdepth}{1}
+
+
+%% \setcounter{page}{1}
+%% \setcounter{chapter}{0}
+\section{Dating mit Julia}
+\subsection{Vorwort}
+Bei der Auswahl des Projekts war uns schnell bewusst, dass wir etwas programmieren wollen, um die im Kurs erlernten mathematischen Theorien anzuwenden. Schon w\"ahrend der Vorlesung zum Thema SVM wurde ersichtlich, welche M\"oglichkeiten ein Programm, das auf diesem Konzept beruht, bietet und so entschieden wir uns, ein solches Programm als Projekt zu schreiben. Als Anwendungungsgebiet w\"ahlten wir die Partnersuche. Das im Folgenden vorgestellte Programm ist in der Lage, auszugeben, ob eine Person eine andere Person \"au\ss erlich anspricht, sofern diese Person zuvor Portr\"atbilder bewertet hat.
+
+\subsection{Beschreibung}
+Das Program ist so aufgebaut, dass eine Testperson zuerst \"uber zweihundert Personen mit \enquote{hot} oder \enquote{not} bewertet. Dabei erfahren wir etwas \"uber die Anspr\"uche beziehungsweise Vorlieben der Person. Anschlie\ss end wird eine neue Person dem Program hinzugef\"ugt. Die Merkmale dieser neuen Person werden mit denen der Trainingsdaten verglichen.
+Im Anschluss gibt der Computer aus, ob diese neue Person den Vorlieben der Testperson entspricht.
+
+\subsection{Datensatz}
+Als Erstes ben\"otigten wir einen gro\ss en Datensatz, also eine gro\ss e Menge an Bildern, die sp\"ater zum Trainieren des Programs auf die Vorlieben einer Person genutzt werden sollten. Hierbei gilt, dass ein größerer Datensatz zu besseren Ergebnissen führt. Da das Program f\"ur ein Klientel von Frauen im Alter von etwa 15-25 Jahren geschrieben werden sollte, suchten wir 212 Bilder von Männern im Alter von 15-50 Jahren aus, wobei die große Mehrheit sich im Bereich zwischen 20 und 30 Jahren befindet. Bei der Auswahl wurde auf einen m\"oglichst realistischen Datensatz geachtet. So sind Personen aus allen Kontinenten vertreten, mehr Braunhaarige als Blonde, mehr Blonde als Rothaarige, und so weiter. Diese Bilder wurden nach $13$ Features klassifiziert. Diese sind das Alter, die Ethnie, die Gesichtsform, die Hautfarbe, die Haarfarbe, die Frisur, die Gesichtsbehaarung, die Augenbrauen, die Augenfarbe, die Lippen, die Nase und die eventuell vorhandene Brille und der K\"orperschmuck. 
+
+
+\subsection{Featurization}
+
+Für die Featurization, also das Eintragen von Features, haben wir Einheitsvektoren verwendet, damit kein Feature bevorzugt wird. Das heißt, dass jeder Vektor die L\"ange eins besitzt und auch die Abst\"ande zwischen einem Paar von Vektoren beträgt eins. Die gleichen Abst\"ande bedingen, dass jeder Vektor gleich behandelt wird. Die Vektoren unterscheiden sich nur dadurch, an welcher Komponente der Wert ungleich null ist. Bei einem trifft die Eigenschaft zu, die übrigen Komponenten des Vektors werden durch Nullen aufgefüllt. Man kann auch zwei Auspr\"agungen einer Eigenschaft aufzeigen, indem man beispielsweise 0.5 und 0.5 nimmt. Wichtig ist hierbei, dass die Einträge des Vektors immer zu eins summieren.
+
+
+
+\subsection{Program}
+Die Werte der Trainingsdaten speichern wir in einer Matrix ab und lassen sie dann von unserer SVM klassifizieren. Es sucht folglich nach Verbindungen zwischen den Eigenschaften der Bilder. Es wird untersucht, ob Zusammenh\"ange zwischen allen positiv bewerteten Person existieren. Anhand dieser Auswertung erstellt der Computer eine Funktion, die die verschiedenen Eigenschaften, wie beispielsweise Haarfarbe, den Ausgabewerten \enquote{hot} und \enquote{not} zuweist.
+
+
+
+
+
+% \end{document}
+
+
+
+
+
+

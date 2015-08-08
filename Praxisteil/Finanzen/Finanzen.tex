@@ -1,10 +1,12 @@
 \section{\enquote{Earning from Data} -- Finanzanalyse}
 \author{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
+\label{sec:FinanzenIntro}
 
 Die Finanzanalyse versucht, künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
 
 \subsection{Formen der Finanzanalyse}
 \author{Dennis Kempf}
+\label{ssec:FinanzanalyseFormenIntro}
 
 Die drei grundlegenden Formen der Finanzanalyse bilden die \emph{Fundamentalanalyse}, \emph{Technische Analyse} und die \emph{Sentimentanalyse}. 
 
@@ -12,6 +14,7 @@ Die Fundamental- und die Technische Analyse gehen davon aus, dass nicht alle ver
 
 \subsubsection{Fundamentalanalyse}
 \author{Dennis Kempf}
+\label{sssec:Fundamentalanalyse}
 
 Bei der Fundamentalanalyse werden sogenannte \emph{Fundamentaldaten} analysiert, um den wirklichen Wert eines Finanzproduktes zu bestimmen. Zu diesen Daten zählen unter anderem
 \begin{itemize}
@@ -46,11 +49,13 @@ Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Cha
 
 \subsubsection{Sentimentanalyse}
 \author{Dennis Kempf}
+\label{sssec:Sentimentanalyse}
 
 Die Sentimentanalyse befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische Phase} (steigender Trend) oder eine \emph{bärische Phase} (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
 
 \subsection{Einsatz von Machine Learning}
 \author{Dennis Kempf}
+\label{ssec:MachineLearningIntro}
 
 Unser Projekt befasst sich ausschließlich mit der Technischen Analyse (siehe \ref{sssec:TechnischeAnalyse}). Der klassische Ansatz würde die Aufgabe der Analyse einem Menschen oder einem selbstgeschriebenen Algorithmus überlassen. 
 
@@ -66,7 +71,7 @@ Wir haben uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph
 
 Der Stochastic Oscillator ist ein von Dr. George Lane in den 1950er Jahren entwickelter Indikator. Dieser versucht, bevorstehende Trendwenden anhand von Unterstützungs- und Widerstandslinien zu erkennen. Er setzt sich aus zwei Elementen zusammen: Der \%K- und der \%D-Kurve, wobei \%D ein gleitender Durchschnitt von \%K ist. 
 
-Wir betrachten jedoch nur die \%K Kurve für unsere Features. Diese lässt sich wie folgt berechnen:
+Für unsere Features betrachten wir jedoch nur die \%K-Kurve. Diese lässt sich wie folgt berechnen:
 \begin{align*}
 	\text{\%K}&=100\cdot \frac{P-T_5}{H_5-T_5}\quad \text{mit}\\
 	P&=\text{Aktueller Schlusskurs}\\
@@ -78,7 +83,7 @@ Wir betrachten jedoch nur die \%K Kurve für unsere Features. Diese lässt sich 
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]
 		{\media Finances_Stochastic}
-		\caption{Beispielchart des EUR/USD mit dem Stochastic Oscillator (Standardparameter) im unteren Fenster (Blau: \%K-Kurve, Rot: \%D-Kurve)}
+		\caption{Beispielchart des EUR/USD mit dem Stochastic Oscillator (Standardparameter) im unteren Fenster (blau: \%K-Kurve, rot: \%D-Kurve)}
 		\label{fig:BeispielChartStochastic}
 	\end{center}
 \end{dsafigure}
@@ -98,7 +103,7 @@ Wir betrachten jedoch nur die \%K Kurve für unsere Features. Diese lässt sich 
 \author{Dennis Kempf}
 \label{sssec:Datensaetze}
 
-Für unsere Datensätze haben wir jeweils 65535 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus jeweils vier Werten des Stochastic Oscillators und des Relative Strength Indexes zusammen. Somit sind diese insgesamt 8 Elemente lang. Bei unseren Labels unterscheiden wir lediglich, ob der Kurs in der auf die Features folgenden Stunde gestiegen oder gefallen ist.
+Für unsere Datensätze haben wir jeweils 65536 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus jeweils vier von $-1$ bis $+1$ normalisierten Werten des Stochastic Oscillators und des Relative Strength Indexes zusammen. Somit sind diese insgesamt 8 Elemente lang. Bei unseren Labels unterscheiden wir lediglich, ob der Kurs in der auf die Features folgenden Stunde gestiegen oder gefallen ist.
 
 \begin{dsafigure}
 	\begin{center}
@@ -109,5 +114,74 @@ Für unsere Datensätze haben wir jeweils 65535 gelabelte Featurevektoren für v
 	\end{center}
 \end{dsafigure}
 
-Insgesamt haben wir jeweils mehr als zehn Jahre an Features und Labels für den Währungspaare CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD und GBP/JPY zusammengestellt.
+Insgesamt haben wir jeweils mehr als zehn Jahre an Features und Labels für die Währungspaare CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD und GBP/JPY zusammengestellt. 
 
+Diese Daten haben wir mittels eines selbstgeschriebenen Skripts für MetaTrader in einem CSV-ähnlichen Format exportiert.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_DatensatzNotepad}
+		\caption{Ausschnitt aus unserem Datensatz für den EUR/USD}
+		\label{fig:DatensatzNotepad}
+	\end{center}
+\end{dsafigure}
+
+\subsubsection{Verwendete Parameter}
+\author{Dennis Kempf}
+\label{sssec:Parameter}
+
+Die Bestimmung der Parameter für das neuronale Netzwerk stellt für unser Projekt die interessanteste, aber auch schwierigste Aufgabe dar. Denn das Verändern eines einzelnen Parameters hat meist ein vollkommen anderes Ergebnis zur Folge. Zu den zu optimierenden Parametern gehören unter anderem:\\
+
+\begin{itemize}
+	\item Schichtenanzahl des neuronalen Netzwerks
+	\item Neuronenanzahl in den Schichten
+	\item Anfangsgewichte des Netzwerks
+	\item Lerndurchläufe des Netzwerks\\
+\end{itemize}
+
+Um diese Aufgabe zu lösen haben wir uns dazu entschieden ein Optimierungsprogramm (finances-optimize.exe) zu schreiben. Dieses iteriert durch alle möglichen Netzwerkkonfigurationen, überprüft sie anhand von Testdatensätzen und speichert das beste Ergebnis in einer Datei.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_OptimizeParams}
+		\caption{Alle möglichen Parameter für das Optimierungsprogramm}
+		\label{fig:OptimizeParams}
+	\end{center}
+\end{dsafigure}
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_OptimizeProgress}
+		\caption{Optimierungsprozess auf Basis linearer Regression (neuronales Netzwerk ohne \enquote{hidden layer})}
+		\label{fig:OptimizeProgress}
+	\end{center}
+\end{dsafigure}
+
+\subsubsection{Ergebnis}
+\author{Dennis Kempf}
+\label{ssec:Ergebnis}
+
+Überraschenderweise lassen sich mithilfe der linearen Regression äußerst schnell sehr gute Ergebnisse erreichen. Die aus der Optimierung hervorgehenden Netzwerke bieten oftmals eine Vorhersagegenauigkeit von $\approx$ 60\%, ob ein Kurs in der nächsten Stunde steigt oder fällt, für alle getesteten Datensätze (CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD, GBP/JPY).
+
+Ein ähnliches Ergebnis lässt sich auch mit tiefen neuronalen Netzen erreichen. Hierbei besteht allerdings das Problem, dass es sehr schnell zu \enquote{overfitting} kommt, und dass die Optimierung wesentlich länger dauert.
+
+\subsubsection{Verbesserungsmöglichkeiten}
+\author{Dennis Kempf}
+\label{ssec:Verbesserungsmöglichkeiten}
+
+\paragraph{Features}
+Für unsere Features greifen wir lediglich auf zwei Indikatoren zurück. Eine breitere Vielfalt könnte zu noch besseren Ergebnissen führen. Zu untersuchen wäre dabei auch, welche Auswirkungen eine Veränderung der Anzahl an Werten jedes Indikators im Featurevektor hat.
+
+\paragraph{Datensätze}
+Die meisten unserer Datensätze stehen in Verbindung zum Euro und stammen aus dem gleichen Zeitraum. Auch hier wäre zu untersuchen, wie sich eine größere Diversität auf das Ergebnis auswirkt.
+
+\paragraph{Optimierungsprogramm}
+Das Optimierungsprogramm ist aktuell noch single-threaded, d.h. es arbeitet nur auf einem einzigen Rechenkern. Jedoch ist die Aufgabe, alle möglichen Netzwerkkonfigurationen zu evaluieren, sehr gut auf mehrere Rechenkerne verteilbar. 
+
+Zukünftige Revisionen sollten deshalb auch von diesen Gebrauch machen, um die Rechenzeit drastisch zu verkürzen. Hierdurch wird auch das Optimieren von tiefen neuronalen Netzen deutlich vereinfacht und praktikabler.
+
+%\newpage
+%Lorem ipsum...
