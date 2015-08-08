@@ -1,10 +1,21 @@
 \subsection{Gradientenmethode}
 
-Folgend beschrieben wird Gradientenmethode, die einen wichtigen Teil des Gebietes der Optimierung darstellt.
-Das Ziel der Gradientenmethode ist es, das Optimum einer Funktion zu finden. Ein 
-anfänglicher Schätzwert wird dafür in Richtung des negativen Gradienten 
-optimiert, man nähert sich dem Minimum der Funktion möglichst genau durch jenes 
-Abstiegsverfahren an.
+Zur Berechnung von Minima gibt es nun verschiedene Möglichkeiten:
+Entweder man verwendet die gewöhnliche Tiefpunktberechnung indem man den Wert $\hat{a}$ 
+ermittelt, f\"ur welchen $h'(a)=0$ und $h''(a)>0$. 
+Eine weitere Methode w\"are die sogenannte \emph{Gradientenabstiegsmethode}. Das Ziel der Gradientenmethode ist es, das Optimum einer Funktion zu finden. Ein anfänglicher Schätzwert wird dafür iterativ in Richtung des negativen Gradienten 
+ver\"andert, womit man sich dem Minimum der Funktion möglichst schnell n\"ahert.
+
+Die Iteration, die dabei ausgef\"uhrt wird, lautet folgenderma\ss en. 
+\begin{equation*}
+a^{t+1}  =a^{t} - \lambda \cdot \nabla  f(a^{t}).
+\end{equation*}
+Nach Lemma~\ref{lem:gradientabstieg} ist es moeglich, dass man ein $\lambda > 0$ findet, sodass $f(a^{t+1}) < f(a^{t})$ falls $ \nabla f(a^{(t)}) \neq 0$. 
+Dies kann zum Beispiel wiederum durch ein Optimierungsproblem erreicht werden, und zwar $\lambda=\arg\min_{\lambda} g(\lambda)$ wobei $g(\lambda)=f(a^t-\lambda\nabla f(a^t))$.
+
+
+%Folgend beschrieben wird Gradientenmethode, die einen wichtigen Teil des Gebietes der Optimierung darstellt.
+
 
 \begin{dsafigure}
 \begin{center}
