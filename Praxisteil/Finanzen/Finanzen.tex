@@ -1,8 +1,8 @@
-\section{\enquote{Earning from Data} --- Finanzanalyse}
+\section{\enquote{Earning from Data} -- Finanzanalyse}
 \author{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
 \label{sec:FinanzenIntro}
 
-Die Finanzanalyse versucht künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
+Die Finanzanalyse versucht, künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
 
 \subsection{Formen der Finanzanalyse}
 \author{Dennis Kempf}
@@ -16,28 +16,26 @@ Die Fundamental- und die Technische Analyse gehen davon aus, dass nicht alle ver
 \author{Dennis Kempf}
 \label{sssec:Fundamentalanalyse}
 
-Bei der Fundamentalanalyse werden sogenannte \emph{Fundamentaldaten} analysiert, um den wirklichen Wert eines Finanzproduktes zu bestimmen. Zu diesen Daten zählen unter anderem:\\ 
-
+Bei der Fundamentalanalyse werden sogenannte \emph{Fundamentaldaten} analysiert, um den wirklichen Wert eines Finanzproduktes zu bestimmen. Zu diesen Daten zählen unter anderem
 \begin{itemize}
-	\item Kurs-Gewinn-Verhältnis
-	\item Gesamtkapitalrendite
-	\item Eigenkapitalquote
-	\item Bruttoinlandsprodukt
-	\item Einzelhandelsverkäufe
+	\item Kurs-Gewinn-Verhältnis,
+	\item Gesamtkapitalrendite,
+	\item Eigenkapitalquote,
+	\item Bruttoinlandsprodukt und
+	\item Einzelhandelsverkäufe.
 \end{itemize}
 
 \subsubsection{Technische Analyse}
 \author{Dennis Kempf}
 \label{sssec:TechnischeAnalyse}
 
-Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Charts}, d.h. Abbildungen von Kursverläufen analysiert. Dazu werden sowohl reine Preisverläufe, als auch von diesen abgeleitete \emph{Indikatoren} berücksichtigt. Zu diesen Indikatoren gehören unter anderem:\\
-
+Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Charts}, das heißt Abbildungen von Kursverläufen analysiert. Dazu werden sowohl reine Preisverläufe, als auch von diesen abgeleitete \emph{Indikatoren} berücksichtigt. Zu diesen Indikatoren gehören unter anderem:
 \begin{itemize}
-	\item Moving Average
-	\item Bollinger Bands
-	\item Stochastic Oscillator
-	\item Relative Strength Index
-	\item Fractals
+	\item Moving Average,
+	\item Bollinger Bands,
+	\item Stochastic Oscillator,
+	\item Relative Strength Index und
+	\item Fractals.
 \end{itemize}
 
 \begin{dsafigure}
@@ -61,7 +59,7 @@ Die Sentimentanalyse befasst sich mit der Stimmung von Investoren, um daraus zu 
 
 Unser Projekt befasst sich ausschließlich mit der Technischen Analyse (siehe \ref{sssec:TechnischeAnalyse}). Der klassische Ansatz würde die Aufgabe der Analyse einem Menschen oder einem selbstgeschriebenen Algorithmus überlassen. 
 
-Wir hingegen versuchen diese Aufgabe auf ein \emph{neuronales Netzwerk} zu übertragen. Hierbei spielt die Auswahl der Features und der verwendeten Parameter wie z.B. Schichtenanzahl des Netzwerks eine sehr wichtige Rolle.
+Wir hingegen versuchen diese Aufgabe auf ein \emph{neuronales Netzwerk} zu übertragen. Hierbei spielt die Auswahl der Features und der verwendeten Parameter wie z.\,B. Schichtenanzahl des Netzwerks eine sehr wichtige Rolle.
 
 \subsubsection{Verwendete Features}
 \author{Dennis Kempf}
@@ -69,18 +67,14 @@ Wir hingegen versuchen diese Aufgabe auf ein \emph{neuronales Netzwerk} zu über
 
 Wir haben uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Es handelt sich dabei um zwei der bekanntesten Indikatoren für die technische Analyse.
 
-\paragraph{Stochastic Oscillator}
+\paragraph{Stochastic Oscillator.}
 
-Der Stochastic Oscillator ist ein von Dr. George Lane in den 1950er Jahren entwickelter Indikator. Dieser versucht, bevorstehende Trendwenden anhand von Unterstützungs- und Widerstandslinien zu erkennen. 
-
-Er setzt sich aus zwei Elementen zusammen: Der \%K- und der \%D-Kurve, wobei \%D ein gleitender Durchschnitt von \%K ist. 
+Der Stochastic Oscillator ist ein von Dr. George Lane in den 1950er Jahren entwickelter Indikator. Dieser versucht, bevorstehende Trendwenden anhand von Unterstützungs- und Widerstandslinien zu erkennen. Er setzt sich aus zwei Elementen zusammen: Der \%K- und der \%D-Kurve, wobei \%D ein gleitender Durchschnitt von \%K ist. 
 
 Für unsere Features betrachten wir jedoch nur die \%K-Kurve. Diese lässt sich wie folgt berechnen:
-
 \begin{align*}
-	\%K&=100*\frac{Preis-T_5}{H_5-T_5}\\
-	\text{mit:}\\
-	Preis&=\text{Aktueller Schlusskurs}\\
+	\text{\%K}&=100\cdot \frac{P-T_5}{H_5-T_5}\quad \text{mit}\\
+	P&=\text{Aktueller Schlusskurs}\\
 	T_5&=\text{Tief der letzten fünf Perioden}\\
 	H_5&=\text{Hoch der letzten fünf Perioden}
 \end{align*}
@@ -94,9 +88,7 @@ Für unsere Features betrachten wir jedoch nur die \%K-Kurve. Diese lässt sich 
 	\end{center}
 \end{dsafigure}
 
-\paragraph{Relative Strength Index}
-
-Der Relative Strength Index (dt.: \enquote{Relative Stärke Index}) ist ein von J. Welles Wilder Ende der 1970er Jahre entwickelter Indikator. Wie auch der Stochastic Oscillator versucht dieser, bevorstehende Trendwenden zu erkennen. Hierzu analysiert dieser Indikator Kursbewegungen entsprechend ihrer Richtung und Größe.
+\paragraph{Relative Strength Index.} Der Relative Strength Index (\enquote{Relative Stärke Index}) ist ein von J. Welles Wilder Ende der 1970er Jahre entwickelter Indikator. Wie auch der Stochastic Oscillator versucht dieser, bevorstehende Trendwenden zu erkennen. Hierzu analysiert dieser Indikator Kursbewegungen entsprechend ihrer Richtung und Größe.
 
 \begin{dsafigure}
 	\begin{center}
@@ -122,7 +114,7 @@ Für unsere Datensätze haben wir jeweils 65536 gelabelte Featurevektoren für v
 	\end{center}
 \end{dsafigure}
 
-Insgesamt haben wir jeweils mehr als zehn Jahre an Features und Labels für die Währungspaare \emph{CHF/JPY}, \emph{EUR/AUD}, \emph{EUR/CAD}, \emph{EUR/CHF}, \emph{EUR/USD} und \emph{GBP/JPY} zusammengestellt. 
+Insgesamt haben wir jeweils mehr als zehn Jahre an Features und Labels für die Währungspaare CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD und GBP/JPY zusammengestellt. 
 
 Diese Daten haben wir mittels eines selbstgeschriebenen Skripts für MetaTrader in einem CSV-ähnlichen Format exportiert.
 

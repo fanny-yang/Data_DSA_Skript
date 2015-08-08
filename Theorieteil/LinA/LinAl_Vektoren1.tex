@@ -20,7 +20,7 @@
 
 \section{Lineare Algebra}
 \authors{Vivien Thi, Luca Bohn, Max Braun}
-\subsection{Vektoren}
+\subsection{Vektoräume}
 In der linearen Algebra nehmen Vektoren eine zentrale Rolle ein. Ein Vektor wird in der Schule als eine Menge an Pfeilen gelehrt, die parallel, gleichgerichtet und gleich lang sind. Betrachten wir jedoch nicht nur den dreidimensionalen Raum $\mathbb{R}^3$, sondern $\mathbb{R}^n$ f\"ur beliebige $n$, so ist die Vorstellung eines Pfeils nicht immer m\"oglich. Dies bedingt die Notwendigkeit einer anderen Definition.
 
 Ein \textit{Vektor} ist eine geordnete Aufz\"ahlung von Objekten und wird auch \textit{Tupel} $(a_1, a_2,\dots,a_n)$ genannt. Entscheidend bei Tupeln ist die Reihenfolge der Objekte, die auch mehrfach vorkommen k\"onnen. Dies steht im Kontrast zum Begriff einer Menge. Die Addition von Vektoren $u, v\in\mathbb{R}^n$ ist dann definiert durch
@@ -31,10 +31,6 @@ und die skalare Multiplikation eines Vektors $u\in\mathbb{R}^n$ mit $\lambda\in\
 \begin{equation*}
 \lambda u = \lambda \begin{pmatrix} u_1 \\ u_2 \\ \dots \\ u_n \end{pmatrix} = \begin{pmatrix} \lambda u_1 \\ \lambda u_2 \\ \dots \\ \lambda u_n \end{pmatrix}.
 \end{equation*}
-
-
-
-\subsection{Vektor- und Unterraum}
 Vektoren bilden die Elemente eines \textit{Vektorraumes V}. Addieren wir zwei Vektoren eines Vektorraumes oder multiplizieren wir sie mit einem Skalar, so muss die Summe bzw. das Produkt ebenfalls ein Element des Vektorraumes sein. Das hei\ss t
 \begin{enumerate}
 \item $u, v \in V \text{ }\Rightarrow u+v \in V$
@@ -42,28 +38,20 @@ Vektoren bilden die Elemente eines \textit{Vektorraumes V}. Addieren wir zwei Ve
 \end{enumerate}
 \vspace{10pt}
 Ein \textit{Unterraum} $U$ ist eine Teilmenge eines Vektorraumes $V$. Es gelten die oben genannten Eigenschaften eines Vektorraumes.
-\begin{enumerate}
-\item $\text{ }u, v \in U,\text{ } u+v \in U$
-\item $\text{ }u \in U, \lambda \in \mathbb{R} ,\text{ }\lambda u \in U$
-\end{enumerate}
 
-
-
-\subsection{Aufspan}
-Der span$(v_1, v_2,\dots,v_k)$ ist die Menge aller Vektoren, die mit den Linearkombinationen der Vektoren $v_1, v_2, \dots, v_k$ darstellbar sind, das hei\ss t
+Der Aufspan span$(v_1, v_2,\dots,v_k)$ ist ein Beispiel für einen Unterraum, er ist definiert als die Menge aller Vektoren, die mit den Linearkombinationen der Vektoren $v_1, v_2, \dots, v_k$ darstellbar sind, also
 \begin{align*}
-\text{span}(v_1,\dots,v_k) = \{u \in V : u = \lambda_1v_1+\dots+\lambda_kv_k\} \\
-\text{ mit } \lambda_1,\dots,\lambda_k \in \mathbb{R}
+&\text{span}(v_1,\dots,v_k) =\\ &\qquad \{\lambda_1v_1+\dots+\lambda_kv_k : \lambda_1, \dots, \lambda_k \in \mathbb{R}\}
 \end{align*}
 
 
 
 \begin{theorem}
-Ein Span ist immer auch ein Vektorraum.
+Ein Aufspan ist immer auch ein Vektorraum.
 \end{theorem}
 \begin{proof} 
 Angenommen, $v \in \text{span}(v_1,\dots,v_k)$,
-dann wissen wir durch die Definition des Spans, dass man $u$ und $v$ auch darstellen kann als
+dann wissen wir durch die Definition des Aufspanns, dass man $u$ und $v$ auch darstellen kann als
 \begin{align*}
 u = \sum\limits_{i=1}^{k} \lambda_iv_i, \quad v = \sum\limits_{i=1}^{k} \alpha_iv_i
 \end{align*}
@@ -75,17 +63,10 @@ Wegen der Multiplikation bei Vektorr\"aumen gilt dann
 \begin{align*}
 	\lambda\cdot v = (\lambda \cdot \lambda_1) v_1+\dots+(\lambda \cdot \lambda_k)v_k
 \end{align*}
-Dadurch hat man gezeigt, dass ein Span die Eigenschaften eines Vektorraumes erf\"ullt.
+Dadurch hat man gezeigt, dass ein Aufspan die Eigenschaften eines Vektorraumes erf\"ullt.
 \end{proof}
-
-
-
-\subsection{Basis und Dimension}
 Jeder Vektorraum kann durch eine Menge linear unabh\"angiger Basisvektoren dargestellt werden. Diese Menge wird \textit{Basis} eines Vektorraumes genannt. Es gibt beliebig viele unterschiedliche Basen. Die Anzahl der Basisvektoren bestimmt die \textit{Dimension p} eines Vektorraums.
 
-
-
-\subsection{Lineare Unabh\"angigkeit}
 Die Vektoren $v_1,\dots,v_k$ mit $v_i \in V$ sind \textit{linear unabh\"angig}, falls $\lambda_iv_i+\dots+\lambda_kv_k = 0$ nur f\"ur $\lambda_i=\dots=\lambda_k= 0$ gilt. 
 
 %\end{multicols*}
