@@ -1,10 +1,50 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: DSA_1.2_LearningFromData.aux
-I couldn't open database file lit.bib
----line 59 of file DSA_1.2_LearningFromData.aux
- : \bibdata{lit
- :             }
-I'm skipping whatever remains of this command
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: DSA_1.2_LearningFromData.aux
 The style file: plain.bst
-I found no \citation commands---while reading file DSA_1.2_LearningFromData.aux
-I found no database files---while reading file DSA_1.2_LearningFromData.aux
-(There were 3 error messages)
+Database file #1: lit.bib
+Warning--to sort, need author or key in TheGuardian_1
+Warning--empty year in LectureA
+Warning--empty year in heavyball
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            618 strings with 7235 characters,
+and the built_in function-call counts, 5450 in all, are:
+= -- 504
+> -- 232
+< -- 2
++ -- 96
+- -- 72
+* -- 275
+:= -- 927
+add.period$ -- 61
+call.type$ -- 22
+change.case$ -- 94
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 229
+empty$ -- 486
+format.name$ -- 72
+if$ -- 1155
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 18
+newline$ -- 106
+num.names$ -- 44
+pop$ -- 163
+preamble$ -- 1
+purify$ -- 78
+quote$ -- 0
+skip$ -- 176
+stack$ -- 0
+substring$ -- 184
+swap$ -- 41
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 3
+while$ -- 49
+width$ -- 24
+write$ -- 211
+(There were 3 warnings)
