@@ -68,6 +68,33 @@ Im Anschluss gibt der Computer aus, ob diese neue Person den Vorlieben der Testp
 \subsection{Datensatz}
 Als Erstes ben\"otigten wir einen gro\ss en Datensatz, also eine gro\ss e Menge an Bildern, die sp\"ater zum Trainieren des Programs auf die Vorlieben einer Person genutzt werden sollten. Hierbei gilt, dass ein größerer Datensatz zu besseren Ergebnissen führt. Da das Program f\"ur ein Klientel von Frauen im Alter von etwa 15-25 Jahren geschrieben werden sollte, suchten wir 212 Bilder von Männern im Alter von 15-50 Jahren aus, wobei die große Mehrheit sich im Bereich zwischen 20 und 30 Jahren befindet. Bei der Auswahl wurde auf einen m\"oglichst realistischen Datensatz geachtet. So sind Personen aus allen Kontinenten vertreten, mehr Braunhaarige als Blonde, mehr Blonde als Rothaarige, und so weiter. Diese Bilder wurden nach $13$ Features klassifiziert. Diese sind das Alter, die Ethnie, die Gesichtsform, die Hautfarbe, die Haarfarbe, die Frisur, die Gesichtsbehaarung, die Augenbrauen, die Augenfarbe, die Lippen, die Nase und die eventuell vorhandene Brille und der K\"orperschmuck. 
 
+\begin{landscape}
+\begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | l | l | l | }
+\hline
+	Bild & Alter & Ethnie & Gesichtsform & Hautfarbe & Haarfarbe & Frisur & Gesichtsbehaarung & Augenbrauen & Augenfarbe & Lippen & Brille & Nase & Piercing \\ \hline
+	LeFloid & 25-30 & europäisch & oval & hell & braun & kurz & keine & gerade & braun & schmal & ja & spitz & nein \\ \hline
+	00100 & 1 0 0 0 & 0 1 0 0 & 1 0 0 0 & 0 1 0 0 & 0 1 0 0 & 1 0 0 0 & 0 1 0 0 0 0 & 0 0 0 1 & 1 0 & 1 0 & 0 0 0 1 & 1 0 0 0 0 0 & \  \\ \hline
+	Andy Biersack & 20-25 & europäisch & oval & hell & braun & kurz & keine & geschwungen & blau & voll & nein & flach & Lippe \\ \hline
+	01000 & 1 0 0 0 & 0 1 0 0 & 1 0 0 0 & 0 1 0 0 & 0 1 0 0 & 1 0 0 0 & 0 0 1 0 0 0 & 1 0 0 0 & 0 1 & 0 1 & 0 0 1 0 & 0 0 0 0 0 1 & \  \\ \hline
+	Usain Bolt & 25-30 & afrikanisch & schmal & dunkel & schwarz & kurz & Ziegenbart & gerade, ausgedünnt & braun & schmal, voll & nein & groß, flach & nein \\ \hline
+	00100 & 0 0 0 1 & 1 0 0 0 & 0 0 0 1 & 0 0 1 0 & 0 1 0 0 & 0 0 0 1 & 0 0.5 0 0.5 0 0 & 0 0 0 1 & 0.5 0.5 & 0 1 & 0 0.5 0.5 0 & 1 0 0 0 0 0 & \  \\ \hline
+	Brooklyn Beckham & 15-20 & europäisch & schmal, markant & hell & braun & kurz & keine & gerade & braun & schmal & nein & spitz & nein \\ \hline
+	10000 & 1 0 0 0 & 0.5 0 0 0.5 & 1 0 0 0 & 0 1 0 0 & 0 1 0 0 & 1 0 0 0 & 0 1 0 0 0 0 & 0 0 0 1 & 1 0 & 0 1 & 0 0 0 1 & 1 0 0 0 0 0 & \  \\ \hline
+	Elyas M' Barek & 30 - 40 & europäisch, asiatisch & schmal & gebräunt & schwarz & kurz & Dreitagebart & geschwungen & braun & voll & nein & spitz & nein \\ \hline
+	00010 & 0.5 0.5 0 0 & 1 0 0 0 & 0 1 0 0 & 0 0 1 0 & 0 1 0 0 & 0 1 0 0  & 0 0 1 0 0 0 & 0 0 0 1 & 0 1  & 0 1 & 0 0 0 1 & 1 0 0 0 0 0 & \  \\ \hline
+	Lee min ho & 25-30 & asiatisch & oval & hell & braun & mittellang & keine & geschwungen & braun & schmal & nein & spitz, groß & nein \\ \hline
+	00100 & 0 1 0 0 & 0 1 0 0 & 1 0 0 0 & 0 1 0 0 & 0 0 1 0 & 1 0 0 0 & 0 0 1 0 0 0 & 0 0 0 1 & 1 0 & 0 1 & 0 0.5 0 0.5 & 1 0 0 0 0 0 & \  \\ \hline
+	Pewdiepie & 25-30 & europäisch & rund, markant & hell & blond & mittellang & Dreitagebart & gerade & blau & schmal & nein & flach & nein \\ \hline
+	00100 & 1 0 0 0 & 0 0 0.5 0.5 & 1 0 0 0 & 1 0 0 0 & 0 0 1 0 & 0 1 0 0 & 0 1 0 0 0 0 & 1 0 0 0 & 1 0 & 0 1 & 0 0 1 0 & 1 0 0 0 0 0 & \  \\ \hline
+	Robert Pattinson & 25-30 & europäisch & oval, markant & hell & braun & mittellang & Dreitagebart & buschig, geschwungen & blau & schmal & nein & spitz & nein \\ \hline
+	00100 & 1 0 0 0 & 0 0.5 0 0.5 & 1 0 0 0 & 0 1 0 0 & 0 0 1 0 & 0 1 0 0 & 0 0 0.5 0 0.5 0 & 1 0 0 0 & 1 0 & 0 1 & 0 0 0 1 & 1 0 0 0 0 0 & \  \\ \hline
+	Ed Sheeran & 20-25 & europäisch & rund & hell & rot & mitellang & Dreitagebart & ausgedünnt, gerade & blau & schmal & nein & spitz & nein \\ \hline
+	01000 & 1 0 0 0 & 0 0 1 0 & 1 0 0 0 & 0 0 0 1 & 0 0 1 0 & 0 1 0 0 & 0 0.5 0 0.5 0 0 & 1 0 0 0 & 1 0 & 0 1 & 0 0 0 1 & 1 0 0 0 0 0 & \  \\ \hline
+	Tyler Blackburn & 25-30 & europäisch & schmal, markant & hell & schwarz & mittellang & Dreitagebart & geschwungen, buschig & braun & schmal, voll & nein & klein, spitz & nein \\ \hline
+	00100 & 1 0 0 0 & 0.5 0 0 0.5 & 1 0 0 0 & 0 0 1 0 & 0 0 1 0 & 0 1 0 0 & 0 0 0.5 0 0.5 0 & 0 0 0 1 & 0.5 0.5 & 0 1 & 0.5 0 0 0.5 & 1 0 0 0 0 0 & \  \\ \hline
+\end{tabular}
+\end{landscape}
+
 
 \subsection{Featurization}
 
@@ -77,6 +104,8 @@ Für die Featurization, also das Eintragen von Features, haben wir Einheitsvekto
 
 \subsection{Program}
 Die Werte der Trainingsdaten speichern wir in einer Matrix ab und lassen sie dann von unserer SVM klassifizieren. Es sucht folglich nach Verbindungen zwischen den Eigenschaften der Bilder. Es wird untersucht, ob Zusammenh\"ange zwischen allen positiv bewerteten Person existieren. Anhand dieser Auswertung erstellt der Computer eine Funktion, die die verschiedenen Eigenschaften, wie beispielsweise Haarfarbe, den Ausgabewerten \enquote{hot} und \enquote{not} zuweist.
+
+
 
 
 
