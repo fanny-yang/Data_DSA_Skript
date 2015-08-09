@@ -61,20 +61,20 @@
 \authors{Jan Fritz,  Vivien Thi, Franziska Wilfinger}
 Bei der Auswahl des Projekts war uns schnell bewusst, dass wir etwas programmieren wollen, um die im Kurs erlernten mathematischen Theorien anzuwenden. Schon w\"ahrend der Vorlesung zum Thema SVM wurde ersichtlich, welche M\"oglichkeiten ein Programm, das auf diesem Konzept beruht, bietet und so entschieden wir uns, ein solches Programm als Projekt zu schreiben. Als Anwendungungsgebiet w\"ahlten wir die Partnersuche. Das im Folgenden vorgestellte Programm ist in der Lage, auszugeben, ob eine Person eine andere Person \"au\ss erlich anspricht, sofern diese Person zuvor Portr\"atbilder bewertet hat.
 
-\subsection{Beschreibung}
+\paragraph{Beschreibung.}
 Das Program ist so aufgebaut, dass eine Testperson zuerst \"uber zweihundert Personen mit \enquote{hot} oder \enquote{not} bewertet. Dabei erfahren wir etwas \"uber die Anspr\"uche beziehungsweise Vorlieben der Person. Anschlie\ss end wird eine neue Person dem Program hinzugef\"ugt. Die Merkmale dieser neuen Person werden mit denen der Trainingsdaten verglichen.
 Im Anschluss gibt der Computer aus, ob diese neue Person den Vorlieben der Testperson entspricht.
 
-\subsection{Datensatz}
+\paragraph{Datensatz.}
 Als Erstes ben\"otigten wir einen gro\ss en Datensatz, also eine gro\ss e Menge an Bildern, die sp\"ater zum Trainieren des Programs auf die Vorlieben einer Person genutzt werden sollten. Hierbei gilt, dass ein größerer Datensatz zu besseren Ergebnissen führt. Da das Program f\"ur ein Klientel von Frauen im Alter von etwa 15-25 Jahren geschrieben werden sollte, suchten wir 212 Bilder von Männern im Alter von 15-50 Jahren aus, wobei die große Mehrheit sich im Bereich zwischen 20 und 30 Jahren befindet. Bei der Auswahl wurde auf einen m\"oglichst realistischen Datensatz geachtet. So sind Personen aus allen Kontinenten vertreten, mehr Braunhaarige als Blonde, mehr Blonde als Rothaarige, und so weiter. Diese Bilder wurden nach $13$ Features klassifiziert. Diese sind das Alter, die Ethnie, die Gesichtsform, die Hautfarbe, die Haarfarbe, die Frisur, die Gesichtsbehaarung, die Augenbrauen, die Augenfarbe, die Lippen, die Nase und die eventuell vorhandene Brille und der K\"orperschmuck. 
 
-\subsection{Featurization}
+\paragraph{Featurization.}
 
 Für die Featurization, also das Eintragen von Features, haben wir Einheitsvektoren verwendet, damit kein Feature bevorzugt wird. Das heißt, dass jeder Vektor die L\"ange eins besitzt und auch die Abst\"ande zwischen einem Paar von Vektoren beträgt eins. Die gleichen Abst\"ande bedingen, dass jeder Vektor gleich behandelt wird. Die Vektoren unterscheiden sich nur dadurch, an welcher Komponente der Wert ungleich null ist. Bei einem trifft die Eigenschaft zu, die übrigen Komponenten des Vektors werden durch Nullen aufgefüllt. Man kann auch zwei Auspr\"agungen einer Eigenschaft aufzeigen, indem man beispielsweise 0.5 und 0.5 nimmt. Wichtig ist hierbei, dass die Einträge des Vektors immer zu eins summieren (siehe Anhang).
 
 
 
-\subsection{Programm}
+\paragraph{Programm.}
 Die Werte der Trainingsdaten speichern wir in einer Matrix ab und lassen sie dann von unserer SVM klassifizieren. Es sucht folglich nach Verbindungen zwischen den Eigenschaften der Bilder. Es wird untersucht, ob Zusammenh\"ange zwischen allen positiv bewerteten Person existieren. Anhand dieser Auswertung erstellt der Computer eine Funktion, die die verschiedenen Eigenschaften, wie beispielsweise Haarfarbe, den Ausgabewerten \enquote{hot} und \enquote{not} zuweist.
 
 

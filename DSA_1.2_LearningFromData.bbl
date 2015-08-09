@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{TheGuardian_1}
-Eugene the turing test-beating 'human computer' – in 'his' own words, 6 2014.
-
 \bibitem{Bengio-et-al-2015-Book}
 Yoshua Bengio, Ian~J. Goodfellow, and Aaron Courville.
 \newblock Deep learning.
@@ -29,15 +26,15 @@ Michael Grant, Stephen Boyd, and Yinyu Ye.
 
 \bibitem{NewAtlantis}
 Mark Halpern.
-\newblock The trouble with the turing test, 2006.
+\newblock {The trouble with the Turing Test}, 2006.
 
 \bibitem{Spektrum_1}
 Dr.~Rolf Henkel.
-\newblock Ki. das zeitalter der künstlichen intelligenz, 6 1994.
+\newblock {KI. Das Zeitalter der Künstlichen Intelligenz}, 6 1994.
 
 \bibitem{Spiegel_2}
 Christian~Stöcker Judith~Horchert, Matthias~Kremp.
-\newblock Fünf technologien, die unseren alltag verändern werden.
+\newblock {Fünf Technologien, die unseren Alltag verändern werden }.
 \newblock {\em Spiegel}, 2 2015.
 
 \bibitem{NIPS2012_4824}
@@ -49,18 +46,18 @@ Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E. Hinton.
 
 \bibitem{Spiegel_1}
 Matthias Lauerer.
-\newblock Technik im operationssaal: Teurer eingriff mit dr. robo,.
+\newblock {Technik im Operationssaal: Teurer Eingriff mit Dr. Robo}.
 \newblock {\em Spiegel}, 4 2013.
 
 \bibitem{BildDerWissenschaft_1}
 Doris Marszk.
-\newblock Können computer kreativ sein?
+\newblock {Können Computer kreativ sein?}
 \newblock {\em Bild der Wissenschaft}, 11 2001.
 
 \bibitem{UniversitaetHamburg_1}
 Prof.~Bernd Neumann.
-\newblock Universit\"at hamburg, vortrag \"uber künstliche intelligenz - ein
-  blick hinter die kulissen.
+\newblock {Universit\"at Hamburg, Vortrag \"uber Künstliche Intelligenz - ein
+  Blick hinter die Kulissen}.
 
 \bibitem{LectureA}
 Andrew Ng.
@@ -75,8 +72,8 @@ Michael Nielsen.
 
 \bibitem{Innovationsblog}
 Andreas Pihan.
-\newblock 10 bereiche, in denen wir heute schon innovative künstliche
-  intelligenz finden.
+\newblock {10 Bereiche, in denen wir heute schon innovative künstliche
+  Intelligenz finden}.
 \newblock \url{http://www.der-innovationsblog.de}, 4 2015.
 
 \bibitem{heavyball}
@@ -87,12 +84,12 @@ Ben Recht.
 
 \bibitem{UniversitaetJena}
 Prof.~E.G. Schukat-Talamazzini.
-\newblock Maschinelles lernen \& datamining (vorlesungsskript), 7 2015.
+\newblock {Maschinelles Lernen \& Datamining (Vorlesungsskript)}, 7 2015.
 
 \bibitem{3sat}
 T.~A. Skalski.
-\newblock 3sat tv-sendung: Ki im alltag - elektronische unterstützung -
-  überall und jederzeit, 5 2013.
+\newblock {3sat TV-Sendung: KI im Alltag -- Elektronische Unterstützung --
+  überall und jederzeit}, 5 2013.
 
 \bibitem{strang09}
 Gilbert Strang.
@@ -107,7 +104,7 @@ Philipp~Moritz und Fanny~Yang.
 
 \bibitem{UniversitaetOldenburg}
 Manuela Varchmin.
-\newblock Künstliche intelligenz informatik und gesellschaft.
+\newblock {Künstliche Intelligenz Informatik und Gesellschaft}.
 \newblock \url{http://www.informatik.uni-oldenburg.de/~iug08/ki}, 2008.
 
 \bibitem{wahlster1981ki}
