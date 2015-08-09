@@ -70,11 +70,11 @@ Als Erstes ben\"otigten wir einen gro\ss en Datensatz, also eine gro\ss e Menge 
 
 \subsection{Featurization}
 
-Für die Featurization, also das Eintragen von Features, haben wir Einheitsvektoren verwendet, damit kein Feature bevorzugt wird. Das heißt, dass jeder Vektor die L\"ange eins besitzt und auch die Abst\"ande zwischen einem Paar von Vektoren beträgt eins. Die gleichen Abst\"ande bedingen, dass jeder Vektor gleich behandelt wird. Die Vektoren unterscheiden sich nur dadurch, an welcher Komponente der Wert ungleich null ist. Bei einem trifft die Eigenschaft zu, die übrigen Komponenten des Vektors werden durch Nullen aufgefüllt. Man kann auch zwei Auspr\"agungen einer Eigenschaft aufzeigen, indem man beispielsweise 0.5 und 0.5 nimmt. Wichtig ist hierbei, dass die Einträge des Vektors immer zu eins summieren.
+Für die Featurization, also das Eintragen von Features, haben wir Einheitsvektoren verwendet, damit kein Feature bevorzugt wird. Das heißt, dass jeder Vektor die L\"ange eins besitzt und auch die Abst\"ande zwischen einem Paar von Vektoren beträgt eins. Die gleichen Abst\"ande bedingen, dass jeder Vektor gleich behandelt wird. Die Vektoren unterscheiden sich nur dadurch, an welcher Komponente der Wert ungleich null ist. Bei einem trifft die Eigenschaft zu, die übrigen Komponenten des Vektors werden durch Nullen aufgefüllt. Man kann auch zwei Auspr\"agungen einer Eigenschaft aufzeigen, indem man beispielsweise 0.5 und 0.5 nimmt. Wichtig ist hierbei, dass die Einträge des Vektors immer zu eins summieren (siehe Anhang).
 
 
 
-\subsection{Program}
+\subsection{Programm}
 Die Werte der Trainingsdaten speichern wir in einer Matrix ab und lassen sie dann von unserer SVM klassifizieren. Es sucht folglich nach Verbindungen zwischen den Eigenschaften der Bilder. Es wird untersucht, ob Zusammenh\"ange zwischen allen positiv bewerteten Person existieren. Anhand dieser Auswertung erstellt der Computer eine Funktion, die die verschiedenen Eigenschaften, wie beispielsweise Haarfarbe, den Ausgabewerten \enquote{hot} und \enquote{not} zuweist.
 
 
