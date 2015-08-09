@@ -2,14 +2,14 @@
 \authors{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
 \label{sec:FinanzenIntro}
 
-Die Finanzanalyse versucht, künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
+Die Finanzanalyse versucht, künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir, dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
 
 \subsection{Formen der Finanzanalyse}
 \label{ssec:FinanzanalyseFormenIntro}
 
 Die drei grundlegenden Formen der Finanzanalyse bilden die \emph{Fundamentalanalyse}, \emph{Technische Analyse} und die \emph{Sentimentanalyse}. 
 
-Diese Analysen gehen davon aus, dass nicht alle verfügbaren Informationen in den aktuellen Kurswerten enthalten sind. Mithilfe von Features, die sich aus dem Verlauf des Kurses berechnen, und zus\"atzlichen Informationen aus der Wirtschfat ist es allerdings möglich, Algorithmen zu entwickeln die schneller als andere Marktteilnehmer zu agieren und daraus Profite zu erzielen. Im folgenden werden die drei Analysen vorgestellt, die sich mit unterschiedlichen Kriterien auseinander setzen.  
+Diese Analysen gehen davon aus, dass nicht alle verfügbaren Informationen in den aktuellen Kurswerten enthalten sind. Mithilfe von Features, die sich aus dem Verlauf des Kurses berechnen und zus\"atzlichen Informationen aus der Wirtschaft ist es allerdings möglich, Algorithmen zu entwickeln, die schneller als andere Marktteilnehmer zu agieren und daraus Profite zu erzielen. Im folgenden werden die drei Analysen vorgestellt, die sich mit unterschiedlichen Kriterien auseinander setzen.  
 
 %\subsubsection{Fundamentalanalyse}
 %\label{sssec:Fundamentalanalyse}
@@ -22,16 +22,16 @@ Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Cha
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]
 		{\media Finances_Chart.png}
-		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren (siehe  \ref{sssec:TechnischeAnalyse})}
+		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren f\"ur eine Technische Analyse}
 		\label{fig:BeispielChart}
 	\end{center}
 \end{dsafigure}
 
-Die Sentimentanalyse befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische Phase} (steigender Trend) oder eine \emph{bärische Phase} (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
+Die Sentimentanalyse auf der anderen Seite befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische Phase} (steigender Trend) oder eine \emph{bärische Phase} (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
 
 \subsection{Algorithmus und Features}
 
-Unser Projekt befasst sich ausschließlich mit der Technischen Analyse. Der klassische Ansatz würde die Aufgabe der Analyse einem Menschen oder einem selbstgeschriebenen Algorithmus überlassen. Wir versuchen hingegen, diese Aufgabe auf ein \emph{neuronales Netzwerk} zu übertragen. Hierbei spielt die Auswahl der Features und der verwendeten Parameter wie z.\,B. Schichtenanzahl des Netzwerks eine sehr wichtige Rolle.
+Unser Projekt befasst sich ausschließlich mit der Technischen Analyse. Der klassische Ansatz würde die Aufgabe der Analyse einem Menschen oder einem selbstgeschriebenen Algorithmus überlassen. Wir versuchen hingegen, diese Aufgabe auf ein \emph{neuronales Netzwerk} zu übertragen. Hierbei spielt die Auswahl der Features und der verwendeten Hyperparameter, wie z.\,B. die Schichtenanzahl des Netzwerks, eine sehr wichtige Rolle.
 
 \paragraph{Features} Hierbei haben wir uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Es handelt sich dabei um zwei der bekanntesten Indikatoren für die technische Analyse.
 
@@ -65,10 +65,10 @@ Für unser Feature betrachten wir jedoch nur die \%K-Kurve. Diese lässt sich wi
 	\end{center}
 \end{dsafigure}
 
-\paragraph{Hyperparameter f\"ur das neuronale Netz}
+\paragraph{Wahl der Hyperparameter f\"ur das neuronale Netz}
 Die Bestimmung der Parameter für das neuronale Netzwerk stellt für unser Projekt die interessanteste, aber auch schwierigste Aufgabe dar. Denn das Verändern eines einzelnen Parameters hat meist ein vollkommen anderes Ergebnis zur Folge. Zu den zu optimierenden Parametern gehören unter anderem die Schichtenanzahl des neuronalen Netzwerks, die Neuronenanzahl in den Schichten, die Anfangsgewichte des Netzwerks und die Lerndurchläufe des Netzwerks.
 
-Um diese Aufgabe zu lösen haben wir uns dazu entschieden ein Optimierungsprogramm (finances-optimize.exe) zu schreiben. Dieses iteriert durch alle möglichen Netzwerkkonfigurationen, überprüft sie anhand von Testdatensätzen und speichert das beste Ergebnis in einer Datei.
+Um diese Aufgabe zu lösen haben wir uns dazu entschieden, ein Optimierungsprogramm (finances-optimize.exe) zu schreiben. Dieses iteriert durch alle möglichen Netzwerkkonfigurationen, überprüft sie anhand von Testdatensätzen und speichert das beste Ergebnis in einer Datei.
 
 \begin{dsafigure}
 	\begin{center}
@@ -90,7 +90,7 @@ Um diese Aufgabe zu lösen haben wir uns dazu entschieden ein Optimierungsprogra
 
 \subsubsection{Trainingsdaten}
 
-Für unsere Datensätze haben wir jeweils 65536 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus jeweils vier von $-1$ bis $+1$ normalisierten Werten des Stochastic Oscillators und des Relative Strength Indexes zusammen. Somit sind diese insgesamt 8 Elemente lang. Bei unserer Beschriftung (Labels) unterscheiden wir lediglich, ob der Kurs in der auf die Features folgenden Stunde gestiegen oder gefallen ist.
+Für unsere Datensätze haben wir jeweils 65536 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus dem aktuellen und den Werten der jeweils letzten drei Stunden des Stochastic Oscillators und Relative Strength Index zusammen, wobei diese auf $-1$ bis $+1$. Somit sind diese Vektoren insgesamt 8 Elemente lang. Bei unserer Beschriftung (Labels) unterscheiden wir lediglich, ob der Kurs in der folgenden Stunde gestiegen oder gefallen ist.
 
 \begin{dsafigure}
 	\begin{center}
@@ -112,10 +112,10 @@ Insgesamt haben wir Daten f\"ur jeweils mehr als zehn Jahre an Features und Labe
 	\end{center}
 \end{dsafigure}
 
-\subsubsection{Ergebnisse und Diskussion}
+\subsection{Ergebnisse und Diskussion}
 \label{ssec:Ergebnis}
 
-Überraschenderweise lassen sich mithilfe der linearen Regression äußerst schnell sehr gute Ergebnisse erreichen. Die aus der Optimierung hervorgehenden Netzwerke bieten oftmals eine Vorhersagegenauigkeit von $\approx$ 60\%, ob ein Kurs in der nächsten Stunde steigt oder fällt, für alle getesteten Datensätze (CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD, GBP/JPY).
+Überraschenderweise lassen sich mithilfe der linearen Regression äußerst schnell sehr gute Ergebnisse erreichen. Die aus der Optimierung hervorgehenden Netzwerke k\"onnen oftmals mit einer Genauigkeit von $\approx$ 60\% vorhersagen, ob ein Kurs in der nächsten Stunde steigt oder fällt/ Dies gilt f\"ur alle getesteten Datensätze (CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD, GBP/JPY).
 
 Ein ähnliches Ergebnis lässt sich auch mit tiefen neuronalen Netzen erreichen. Hierbei besteht allerdings das Problem, dass es sehr schnell zu \enquote{overfitting} kommt, und dass die Optimierung wesentlich länger dauert.
 

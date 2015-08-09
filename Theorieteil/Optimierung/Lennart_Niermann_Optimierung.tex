@@ -8,8 +8,8 @@
 In der Optimierung studiert man, wie Funktionen $f: \mathbb{R}^n \rightarrow \mathbb{R}$ maximiert oder minimiert werden können. Beispielhafte Anwendungen sind die Minimierung oder Maximierung der Kosten bzw. Einnahmen eines Unternehmens. Diese entspricht dem realen Funktionswert der Funktion und ergibt sich aus den Eigenschaften des Unternehmens wie Gehalt, Anzahl der Mitarbeiter, Marketing-Ausgaben usw., welche man zusammenfassend als Vektor eines $n$-dimensionalen Vektorraumes darstellt.
 
 \begin{Bsp}[Lineare Regression]
-\label{sec:regression}
-Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten Quadrate. Gegeben ist hierbei eine lineare Funktion $f(x) = ax$ und Punkte $P_i=(x_i,y_i)$ mit $i=1,\dots,n$, welche näherungsweise auf der Geraden liegen (siehe Abbildung \ref{fig:LinReg}), also $y_i = f(x_i) + \epsilon_{i}$. Dabei modelliert man mit $\epsilon_i$ meist die unerw\"unschte (und meist zuf\"allige) St\"orung der Messung gegen\"uber dem idealen Wert $y_i$. Das Ziel bei der Regression ist es, f\"ur einen neuen $x$-Wert, m\"oglichst den richtigen dazugeh\"origen Funktionswert $f(x)$ voraussagen zu k\"onnen. Diese Problemstellung ist interessant f\"ur Anwendungen, bei denen man davon ausgeht, dass man die Natur durch $y = f(x)$ modellieren kann. Zum Beispiel k\"onnte man sich daf\"ur interessieren, wie der Wohnungspreis oder das Monatsgehalt von bestimmten Parametern abh\"angt. Diese Funktion w\"are in diesen F\"allen z.B. für Immobilienmakler oder Unternehmensf\"uhrer von gro\ss er Relevanz.
+\label{bsp:regression}
+Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten Quadrate, auch Lineare Regression genannt. Gegeben sind hierbei eine lineare Funktion $f(x) = ax$ und Punkte $P_i=(x_i,y_i)$ mit $i=1,\dots,n$, welche näherungsweise auf der Geraden liegen (siehe Abbildung \ref{fig:LinReg}), also $y_i = f(x_i) + \epsilon_{i}$. Dabei modelliert man mit $\epsilon_i$ meist die unerw\"unschte (und meist zuf\"allige) St\"orung der Messung gegen\"uber dem idealen Wert $y_i$. Das Ziel bei der Regression ist es, f\"ur einen neuen $x$-Wert, m\"oglichst den richtigen dazugeh\"origen Funktionswert $f(x)$ voraussagen zu k\"onnen. Diese Problemstellung ist interessant f\"ur Anwendungen, bei denen man davon ausgeht, dass man die Natur durch $y = f(x)$ modellieren kann. Zum Beispiel k\"onnte man sich daf\"ur interessieren, wie der Wohnungspreis oder das Monatsgehalt von bestimmten Parametern abh\"angt. Diese Funktion w\"are in diesen F\"allen z.B. für Immobilienmakler oder Unternehmensf\"uhrer von gro\ss er Relevanz.
 \end{Bsp}
 
 
@@ -46,18 +46,19 @@ Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten 
 \end{scriptsize}
 \end{tikzpicture}
 \end{center}
-\caption{Beispiel einer Linearen Reggression}
+\caption{Beispiel einer Linearen Regression}
 \label{fig:LinReg}
 \end{dsafigure}
 
-
-\subsection{Grundlagen der Optimierung}
 Man nehme an, dass es eine Funktion $f$ gibt, welche dem wahren Modell entspricht.
 Um eine Funktion zu finden, die den gest\"orten Datenpunkten $(x_i,y_i)$ so nah wie m\"oglich kommt, minimieren wir die Summe der quadratischen Abweichungen $\epsilon_i^2$, also
 \begin{equation*}
 \min_{x} h(x)= \sum_{i=1}^n\epsilon_i^2 = \sum_{i=1}^n(y_i-ax_i)^2
 \end{equation*}
 
+\subsection{Grundlagen der Optimierung}
+
+Bevor wir \"uber die m\"oglichen L\"osungsmethoden dieses oder allgemeiner Optimierungsproblemen sprechen, wollen wir zun\"achst ein paar grundlegende Konzepte der Optimierung einf\"uhren. 
 
 
 \begin{Def}[Lokales und globales Minimum]
@@ -75,7 +76,7 @@ Eine Funktion $f: \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funkt
 für alle $\lambda \in [0, 1]$.
 \end{Def}
 
-Ein Illustration f\"ur eine konvexe Funktion ist in Abbildung \ref{fig:konvex} zu sehen. 
+Ein Illustration eines Beispiels f\"ur eine konvexe Funktion ist in Abbildung \ref{fig:konvex} zu sehen. 
  \begin{dsafigure}
  \begin{center}
  \includegraphics[width=0.3\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.pdf}
@@ -93,5 +94,5 @@ f(\lambda u+(1-\lambda)v) &=\lVert\lambda u+(1-\lambda)v\rVert_2\\
 &\leq\lVert\lambda u\rVert_2+\lVert(1-\lambda)v\rVert_2\\
 &\leq\lambda\lVert u\rVert_2+(1-\lambda)\lVert v\rVert_2
 \end{align*}
-wie aus der Dreiecksungleichung und der Linearität der Norm folgt.
+wie aus der Dreiecksungleichung und der Homogenit\"a der Norm folgt.
 \end{Bsp}

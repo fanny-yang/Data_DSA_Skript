@@ -3,17 +3,17 @@
 Machine Learning ist ein Konzept, bei dem der Computer durch Algorithmen aus Daten lernt, gewisse Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmä\ss igkeiten, durch die er dann in der Lage ist, mit neuen, ihm unbekannte Datensätze umzugehen. Dabei werden verschiedene Modelle genutzt, doch zunächst einmal sollten wir uns mit den grundsätzlichen Begriffen Klassifikation und Regression vertraut machen.
 
 \subsection{Klassifikation und Regression}
-Bei Klassifikation und Regression handelt es sich um zwei verscheidene Möglichkeiten zur Problemlösung im Bereich Machine Learning.
+Bei der Klassifikation und Regression handelt es sich um zwei verschiedene Möglichkeiten zur Problemlösung im Bereich Machine Learning.
 
 \paragraph{Klassifikation}
-Bei der Klassifikation sorgt der Algorithmus am Ende dafür, dass der Datensatz vom Computer in verschiedene Klassen eingeteilt wird. Die Klassen müssen vorher vom Mensch festgelegt werden. Der Computer klassifiziert die Datensätze dann anhand der Attribute (sogenannten \emph{features}) des entsprechenden Datensatzes. Die klassifizierten Datensätze enthalten dann meistens eine weitere Dimension, in der die Klasse anhand einer Zahl gespeichert ist.
+Bei der Klassifikation sorgt der Algorithmus am Ende dafür, dass der Datensatz vom Computer in verschiedene Klassen eingeteilt wird. F\"ur das Training eines solchen Algorithmusses müssen die Klassen vorher vom Mensch festgelegt werden. Der Computer klassifiziert die Datensätze dann anhand der Attribute (sogenannten \emph{features}) des entsprechenden Datensatzes. Die klassifizierten Datensätze enthalten dann meistens eine weitere Dimension, in der die Klasse anhand einer Zahl gespeichert ist.
 
 \paragraph{Regression}
 Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern eine konkrete reelle Zahl beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (zum Beispiel Größe, Lage, ob sie von einem) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in \enquote{teuer} , \enquote{mittelteuer}, \enquote{billig}. 
 
 \subsection{Support Vector Machines}
 \label{sec:SVM}
-Support Vector Machines oder kurz SVMs sind ein Modell im Machine Learning.
+Support Vector Machines (oder kurz SVMs) sind ein Modell im Machine Learning.
 Dabei werden für alle Datensätze zuerst gewisse Features festgelegt. Diese Features entsprechen den Attributen des Datensatzes. Je nach Problem kann es unterschiedlich viele Features geben, doch allgemein kann man sagen, dass mit der Anzahl der Features auch die Genauigkeit des Programms wächst.
 
 Diese Features werden normalerweise in einem Vektor $x_i\in \mathbb{R}^m$ für den entsprechenden Datensatz $i = 1, \dots, n$ gespeichert.
@@ -21,7 +21,7 @@ Zusätzlich hat jeder Datensatz noch einen weiteren Wert $y_{i} \in \mathbb{R}$,
 
 % Die Features und das Label zusammen beschreiben einen Punkt im $(m+1)$-dimensionalen Koordinatensystem, da zu den $m$ Dimensionen von $x$ noch die eine Dimension von $y$ dazukommt.
 
-Durch die Features ist es dann möglich den Datensätzen einen bestimmten Vektor im $m$-dimensionalen Koordinatensystem zuzuordnen. Diese können dann auf Grund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, das ein Datensatz falsch klassifiziert würde (siehe Abb. \ref{SVM1}). 
+Durch die Features ist es dann möglich den Datensätzen einen bestimmten Vektor im $m$-dimensionalen Koordinatensystem zuzuordnen. Diese Datenvektoren k\"onnen dann aufgrund ihrer räumlichen Anordnung klassifiziert werden. Dabei soll der Abstand von beiden Gruppen von Punkten zu dem Trennobjekt maximal sein. Dadurch kann die Klassifizierung optimal durchgeführt werden. Andernfalls würden schon geringe Abweichungen von den Test-Datensätzen reichen, dass ein Datensatz falsch klassifiziert würde (siehe Abb. \ref{SVM1}). 
 
 
 \begin{dsafigure}
@@ -33,10 +33,10 @@ Durch die Features ist es dann möglich den Datensätzen einen bestimmten Vektor
 \end{dsafigure}
 
 
-Für die mathematische Formulierung des zugehörigen Optimierungsproblems stellen wir zunächst fest dass $2/\norm{w}$ der Abstand der Ebenen $\langle w, x_i\rangle - b = 1$ und $\langle w, x_i\rangle - b = -1$ ist (siehe Abb. \ref{SVM2}). Man nennt diesen Abstand auch den \emph{margin} der Klassifikationsebene $\langle w, x\rangle - b = 0$, $1/\norm{w}$ ist der maximal Abstand der Testdatenpunkte von der Ebene. Das folgende Programm berechnet somit eine Klassifikationsebene mit bester Trennung:
+Für die mathematische Formulierung des zugehörigen Optimierungsproblems stellen wir zunächst fest, dass $2/\norm{w}$ der Abstand der Ebenen $\langle w, x_i\rangle - b = 1$ und $\langle w, x_i\rangle - b = -1$ ist (siehe Abb. \ref{SVM2}). Man nennt diesen Abstand auch den \emph{margin} der Klassifikationsebene $\langle w, x\rangle - b = 0$ und $1/\norm{w}$ ist der maximal Abstand der Testdatenpunkte von der Ebene. Das folgende Programm berechnet somit eine Klassifikationsebene mit maximaler Trennung:
 \begin{align*}
 	\underset{w,b}{\operatorname{maximiere}} \quad & \frac{2}{\norm{w}} \\
-	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,\dots ,n
+	\operatorname{sodass} \quad &y_{i}(\langle w,x_{i} \rangle -b) \geq 1 \quad \forall  i = 1,\dots ,n.
 	 %\label{SVMProblemMax}
 \end{align*}
 Dieses Problem is äquivalent zu
@@ -49,12 +49,12 @@ Die Klassifikation neuer Datenpunkte erfolgt dann nach der Regel
 	y_{i} =& 
         \begin{cases}
 1 &\text{falls} \quad \langle w,x_{i} \rangle - b \geq 0 \\
--1 &\text{falls} \quad \langle w,x_{i} \rangle - b \leq 0
+-1 &\text{falls} \quad \langle w,x_{i} \rangle - b \leq 0.
 \end{cases}
 	%\label{KlassifikationSVM}
 \end{align*}
 Nachdem das Problem optimiert wurde, ist der Computer in der Lage, weitere Daten einzuordnen.
-Dennoch kann es bei dieser Art von SVMs zu einem Problemen kommen: Wenn die Datensätze nicht linear separierbar sind, das heißt es ist nicht möglich, die beiden Datensätze mit einem linearen Element zu trennen. Dann ist obiges Optimierungsproblem nicht lösbar.
+Dennoch kann es bei dieser Art von SVMs zu einem Problem kommen: Wenn die Datensätze nicht linear separierbar sind, das heißt es ist nicht möglich, die beiden Datensätze mit einem linearen Element zu trennen. Dann ist obiges Optimierungsproblem nicht lösbar.
 
 \begin{dsafigure}
 	\begin{center}
@@ -78,8 +78,13 @@ Um die optimale Größe von $C$ für das entsprechende Problem zu finden wird ei
 
 \subsection{Neuronale Netze}
 
-Inspiriert von unserem Verständnis über das menschliche Gehirn benutzen neuronale Netze Lernalgorithmen, welche besonders für praktische Anwendungen geeignet sind.
-Dazu zählen Spracherkennung, Objekterkennung in Bildern und die Fähigkeit individuell passende Produkte vorzuschlagen, die dem Kunden gefallen könnten. 
+Inspiriert von unserem Verständnis über das menschliche Gehirn benutzen Lernalgorithmen heutzutage oft neuronale Netze, welche besonders für praktische Anwendungen geeignet sind. Dazu zählen Spracherkennung, Objekterkennung in Bildern und die Fähigkeit, individuell passende Produkte vorzuschlagen, die dem Kunden gefallen könnten.  
+
+
+
+
+
+
 Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist dabei, die Datenschicht, auf die ein oder mehrere sogenannte \emph{hidden layer} folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher eine Wahrscheinlichkeitsverteilung darstellt, die angibt wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
 
 \begin{dsafigure}
@@ -95,16 +100,21 @@ Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist da
 
 Mit Deep Learning beschreibt man neuronale Netze, die über mehr als eine \enquote{versteckte Schicht} verfügen. Damit ist gemeint, dass sich zwischen Ein- und Ausgabeschicht weitere Schichten befinden. 
 
-Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft (die Verkettung von linearen Funktion wäre wieder linear und besäße deshalb nur begrenzte Representationskraft). Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk \enquote{overfitted}, das heißt zu sehr an den Trainingsdatensatz angepasst wird. Dann kann das Netzwerk neue Daten nicht mehr korrekt klassifizieren.
+Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft (die Verkettung von linearen Funktion wäre wieder linear und besäße deshalb nur begrenzte Representationskraft). Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk \enquote{overfittet}, das heißt zu sehr an den Trainingsdatensatz angepasst wird. Dann kann das Netzwerk selbst geringe Abweichungen von den Trainingsdaten nicht mehr korrekt klassifizieren.
 
-Wie wir in der Abbildung \ref{FigNN} sehen können ist ein typisches \emph{fully connected} neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $(x_1 \dots x_i)$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert. Hierbei handelt es sich um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird eine nicht-lineare Funktion angewendet. Für die $k$-te hidden layer bekommen wir
+Wie wir in der Abbildung \ref{FigNN} sehen können, ist ein typisches \emph{fully connected} neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $(x_1 \dots x_d)$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert und anschlie\ss end summiert. Hierbei handelt es sich also um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird wiederum eine nicht-lineare Funktion $f$ angewendet. Für die $k$-te hidden layer bekommen wir schlie\ss lich
 \begin{align*}
-a_j^{(k)} &= f^{(k)} (\langle w_{j}^{(k)}, a^{(k-1)}\rangle)\\ &= f^{(k)} \left(\sum_{i=1}^{m^{(k-1)}} w_{ji}^{(k)},a_i^{(k-1)}\right)
+a_j^{(k)} &= f^{(k)} (\langle w_{j}^{(k)}, a^{(k-1)}\rangle)\\ &= f^{(k)} \left(\sum_{i=1}^{m^{(k-1)}} w_{ji}^{(k)},a_i^{(k-1)}\right).
 \end{align*}
-Das Ergebnis wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $(p_1 \dots p_k)$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert werden kann.
+Beispiele f\"ur die Nichtlinearit\"at sind zum Beispiel die quadratische Funktion oder $f(x) = \max\{0, x\}$, auch das \emph{Hinge-Loss} genannt. Das Ergebnis wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wiederholt sich so lange bis uns schließlich ein Vektor mit seinen Komponenten $(p_1 \dots p_k)$ zurückgegeben wird, welcher als Wahrscheinlichkeitsverteilung interpretiert werden kann. Das Endergebnis der Klassifikation ist schlie\ss lich der Index mit der h\"ochsten Wahrscheinlichkeit, also
+\begin{equation*}
+k^* = \operatorname{argmax}_{i} p_i
+\end{equation*}
 
 Anhand eines konkreten Beispiels würde es folgendes bedeuten:
 Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Tisch oder Stuhl das daurauf abgebildete Objekt gehört. Unsere inputs wären demnach die Pixel des Bildes. Diese durchlaufen nun das Neuronale Netz und wir erhalten eine Wahrscheinlichkeitsverteilung als Rückgabewert, welche uns mitteilt, dass es am wahrscheinlichsten ist, dass das abgebildete Objekt ein Objekt der Klasse Stuhl ist. Demnach ist die Klassifizierung vollzogen.
+
+Beim Training eines neuronalen Netzwerks sind die Hyperparameter wie zum Beispiel die Anzahl an hidden layers oder Anzahl der Komponent innerhalb einer Schicht vorher festgelegt, w\"ahrend die Gewichte $w$ durch die Minimierung des Klassifikationsfehlers bestimmt werden.
 
 \subsubsection{Convolutional Neural Networks}
 \label{ml:cnn}
@@ -124,9 +134,10 @@ Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Ti
 		\label{FigConvNN}
 \end{dsafigure}
 
-Wie in Fig.~\ref{FigConvNN} gezeigt wird der existierende Filter $w$ über die Eingabematrix geschoben. Dabei wird das Skalarprodukt berechnet und in der Endmatrix als Ergebnis festgehalten. Daraufhin wird der Filter immer um eine Stelle weiter nach rechts in der Eingabematrix verschoben und das neue Skalarprodukt berechnet bis das Ende der Eingabematrix erreicht wurde.
+Wie in Fig.~\ref{FigConvNN} gezeigt ist, wird der existierende Filter $w$ über die Eingabematrix geschoben. Dabei wird das Skalarprodukt berechnet und in der Endmatrix als Ergebnis festgehalten. Daraufhin wird der Filter immer um eine Stelle weiter nach rechts in der Eingabematrix verschoben und das neue Skalarprodukt berechnet bis das Ende der Eingabematrix erreicht wurde. Konkret hei\ss t est f\"ur Abbildung \ref{FigNN}, dass jeder Knoten in den versteckten Schichten, jeweils nur mit wenigen Knoten in der vorherigen tieferen Schicht verbunden ist. 
 
 \subsubsection{Machine Learning mit neuronalen Netzen}
+\label{sec:MLNN}
 
 \paragraph{SVM} Wir haben bereits SVMs kennengelernt, die beschrieben werden durch das Optimierungsproblem
 \begin{align*}
@@ -140,11 +151,11 @@ z_i \geq 1- y_i (\langle w,x \rangle - b), z_i \geq 0
 Da über $z_i$ minimiert wird und $C$ positiv ist, nehmen die Variablen $z_i$ immer die Grenzen an, wir bekommen also
 
 \begin{align*}
-\min &\norm{w} + C \cdot \sum_{i=1}^{n} \max (0, 1-y_i (\langle w,x_i\rangle-b) \\
+\min_w &\norm{w} + C \cdot \sum_{i=1}^{n} \max (0, 1-y_i (\langle w,x_i\rangle-b) \\
  = &\norm{w} + C \sum_{i=1}^{n} \ell ( 1-y_i (\langle w,x_i\rangle)-b) \\
 =&\norm{w} + C \sum_{i=1}^{n} \ell (1 - y_i a_i)
 \end{align*}
-Charakteristisch für dieses Neuronale Netz ist, dass es nur einen Layer besitzt.\\
+Dies ist ein einschichtiges neuronales Netz mit der Hinge-Loss-Funktion und einer zus\"atzlichen Regularisierung, um overfitting zu vermeiden. \\
 %
 \paragraph{Lineare Regression} Analog zur Klassifikation kann auch die lineare Regression, also
 \begin{align*}
@@ -153,17 +164,5 @@ Charakteristisch für dieses Neuronale Netz ist, dass es nur einen Layer besitzt
 in Form von neuronalen Netzen ausgedrückt werden. Nat\"urlicherweise wird hierbei die lineare Funktion in der linearen Schicht in den Layers dargestellt und die Loss-Funktion entspricht dem Fehler im Quadrat.
 
 
-\begin{Bsp}[Der MNIST Datensatz]
-
-\begin{dsafigure}
-	\begin{center}
-		\includegraphics[width=0.4 \textwidth]{\media mnistExamples.png}
-		\caption{MNIST Beispiele}
-		\label{FigConvNN}
-	\end{center}
-\end{dsafigure}
-
-MNIST ist ein freier Datensatz, der es erlaubt, SVMs und Neuronalen Netze zur Zeichenerkennung zu trainieren. Wir haben den Datensatz im Kurs verwendet, um unsere Modelle zu trainieren (siehe Fig.~\ref{FigConvNN}).
-\end{Bsp}
 
 

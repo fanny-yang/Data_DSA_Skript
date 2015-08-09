@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: DSA_1.2_LearningFromData.aux
 The style file: plain.bst
@@ -7,7 +7,7 @@ Warning--empty year in LectureA
 Warning--empty year in heavyball
 You've used 21 entries,
             2118 wiz_defined-function locations,
-            614 strings with 7149 characters,
+            614 strings with 7151 characters,
 and the built_in function-call counts, 5294 in all, are:
 = -- 491
 > -- 231

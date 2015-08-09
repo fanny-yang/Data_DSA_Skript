@@ -25,7 +25,7 @@ A= \left(
 Da wir nun wissen was eine Matrix ist, führen wir in dem folgenden Abschnitt zwei neue Operationen ein: die \textit{Matrix-Vektor-Multiplikation} und \textit{Matrix-Matrix-Multiplikation}.
 
 \subsubsection{Matrix-Vektor-Multiplikation}
-Bei einer Matrix-Vektor-Multiplikation wird eine Matrix $A \in  \mathbb{R}^{n \times m}$ mit einem Vektor $v \in \mathbb{R}^m$ multipliziert. Dabei bildet jede Multiplikation zwischen einer Matrixzeile und einem Vektor ein Skalarprodukt. Eine Multiplikation zwischen Matrizen und Vektoren, bei denen die Anzahl nicht übereinstimmt, ist nicht definiert. Deshalb ist es wichtig, dass die Matrix so viele Spalten wie der Vektor Dimensionen hat.
+Bei einer Matrix-Vektor-Multiplikation wird eine Matrix $A \in  \mathbb{R}^{n \times m}$ mit einem Vektor $v \in \mathbb{R}^m$ multipliziert. Dabei bildet man f\"ur den Ergebnisvektor das Skalarprodukt zwischen jeder Matrixzeile und dem zu multiplizierenden Vektor. Eine Multiplikation zwischen Matrizen und Vektoren, bei denen die Anzahl nicht übereinstimmt, ist nicht definiert. Deshalb ist es wichtig, dass die Matrix so viele Spalten wie der Vektor Dimensionen hat.
 \begin{align*}
 	Av &= 
 	\left(
@@ -60,9 +60,7 @@ Allgemein lässt sich die Matrix-Vektor-Multiplikation folgendermaßen berechnen
 \begin{equation*}
 (Av)_i = \sum_{j=1}^{n}a_{ij}v_j ,
 \end{equation*}
-
-wobei $(AV)_i$ der $i$-te Eintrag des Vektors $n$ ist, der das Ergebnis der Multiplikation ist.\\
-Eine Eigenschaft der linearen Abbildung ist, dass sich jede Abbildung als ein solches Matrix-Vektor-Produkt schreiben lässt. 
+wobei $(Av)_i$ der $i$-te Eintrag des Vektors $n$ ist, der das Ergebnis der Multiplikation ist. Eine Eigenschaft der linearen Abbildung ist, dass sich jede Abbildung als ein solches Matrix-Vektor-Produkt schreiben lässt. 
 
 \subsubsection{Matrix-Matrix-Multiplikation}
 Eine Matrix-Matrix-Multiplikation ist nichts anderes als mehrere Matrix-Vektor-Multiplikationen hintereinander. Haben wir zwei Matrizen $A \in \mathbb{R}^{n \times m}$ und $B \in \mathbb{R}^{m \times p}$ und berechnen $AB$, nehmen wir jede Spalte von $B$ als Vektor und multiplizieren ihn mit $A$ wie oben beschrieben. Die Vektoren, die man als Ergebnisse erhält, fasst man wieder in einer Matrix mit der Dimension $\mathbb{R}^{n \times p}$ zusammen. Allgemein können wir die Matrix-Matrix-Multiplikation folgendermaßen berechnen
@@ -72,7 +70,7 @@ Eine Matrix-Matrix-Multiplikation ist nichts anderes als mehrere Matrix-Vektor-M
 
 \subsubsection{Komposition}
 \begin{Thm}
-Eine Komposition $h(x) = (f \circ g)(x)$ aus den linearen Abbildungen $f$ und $g$, ist auch eine lineare Abbildung.
+Eine Komposition $h(x) = (f \circ g)(x)$ aus den linearen Abbildungen $f$ und $g$ ist auch eine lineare Abbildung.
 \end{Thm}
 
 \begin{proof}
@@ -84,7 +82,7 @@ Da $f$ und $g$ linear sind gelten die Bedingungen aus Definition \ref{Def:Def_1}
 	&= f(g(u)) + f(g(v))\\
 	&= (f\circ g)(u) + (f\circ g)(v) = h(u) + h(v)
 \end{align*}
-Des Weiteren gilt:
+Desweiteren gilt:
 \begin{align*}
 	h(\lambda v) &= (f \circ g)(\lambda v)\\
 	&=f(g(\lambda v))\\

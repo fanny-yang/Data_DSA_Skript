@@ -25,7 +25,7 @@ Dies kann zum Beispiel wiederum durch ein Optimierungsproblem erreicht werden, u
 \end{center}
 \end{dsafigure}
 
-Eine mögliche Softwareimplementierung in Pseudocode wird hier gezeigt:
+Eine mögliche Softwareimplementierung des Gradientenabstiegs f\"ur eine eindimensionale Funktion wird hier in Pseudocode gezeigt:
 
 \begin{algorithmic}[1]
 
@@ -49,7 +49,7 @@ Eine mögliche Softwareimplementierung in Pseudocode wird hier gezeigt:
 \Statex
 \end{algorithmic}
 
-$F(x)$ beschreibt die Funktion, deren globales Minimum wir finden wollen. $F'(x)$ ist dementsprechend die Ableitung der Funktion $F(x)$. Mit $x=10$ setzen wir den Schätzwert ab dem optimiert wird. $\lambda$ bekommt einen niedrigen Wert zugewiesen, damit man sich in kleinen Schritten dem Minimum annähern kann. Dies wiederum geschieht in zwei For-Schleifen, deren Inhalt in diesem Fall je 8 mal durchlaufen wird. In der äußeren Schleife sorgen wir dafür, dass unser $\lambda$ größere Werte annimmt. In der inneren For-Schleife wird die Schätz-Variable $x$ mit Hilfe der Ableitung und $\lambda$ angepasst. Daraus folgt, dass 
+$F(x)$ beschreibt die Funktion, deren globales Minimum wir finden wollen. $F'(x)$ ist dementsprechend die Ableitung der Funktion $F(x)$. Mit $x=10$ setzen wir den Schätzwert ab dem optimiert wird. $\lambda$ bekommt einen niedrigen Wert zugewiesen, damit man sich in kleinen Schritten dem Minimum annähern kann. Dies wiederum geschieht in zwei For-Schleifen, deren Inhalt in diesem Fall je 8 mal durchlaufen wird. In der äußeren Schleife sorgen wir dafür, dass unser $\lambda$ immer größere Werte annimmt. In der inneren For-Schleife wird die Schätz-Variable $x$ mit Hilfe der Ableitung und $\lambda$ angepasst. Daraus folgt, dass 
 %\begin{equation*}
  $f(x-\lambda \nabla f(x)) \leq f(x)$.
 % \end{equation*}
