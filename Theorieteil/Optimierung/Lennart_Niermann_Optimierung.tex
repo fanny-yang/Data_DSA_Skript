@@ -5,13 +5,11 @@
 \section{Optimierung}
 \authors{Lukas Lück, Patrice Becker, Lennart Niermann}
 
-In der Optimierung studiert man wie Funktionen $f: \mathbb{R}^n \rightarrow \mathbb{R}$, welche Elemente eines $n$-dimensionalen Vektorraumes auf reelle Zahlen abbilden, maximiert oder minimiert werden können.
-
-Beispielhafte Anwendungszwecke wären die Minimierung oder Maximierung der Kosten bzw. der Einnahmen eines Unternehmens. Diese würden dem reellen Funktionswert der Funktion entsprechen und ergäben sich aus den Eigenschaften des Unternehmens wie Gehalt, Anzahl der Mitarbeiter, Marketing-Ausgaben usw., welche man zusammenfassend als Vektor eines $n$-dimensionalen Vektorraumes darstellen könnte.
+In der Optimierung studiert man, wie Funktionen $f: \mathbb{R}^n \rightarrow \mathbb{R}$ maximiert oder minimiert werden können. Beispielhafte Anwendungen sind die Minimierung oder Maximierung der Kosten bzw. Einnahmen eines Unternehmens. Diese entspricht dem realen Funktionswert der Funktion und ergibt sich aus den Eigenschaften des Unternehmens wie Gehalt, Anzahl der Mitarbeiter, Marketing-Ausgaben usw., welche man zusammenfassend als Vektor eines $n$-dimensionalen Vektorraumes darstellt.
 
 \subsection{Lineare Regression}
 \label{sec:regression}
-Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten Quadrate. Gegeben ist hierbei eine lineare Funktion $f(x) = ax$ und Punkte $P_i=(x_i,y_i)$ mit $i=1,\dots,n$, welche näherungsweise auf der Geraden liegen (siehe Abbildung \ref{fig:LinReg}), also $y_i = f(x_i) + \epsilon_{i}$. Dabei modelliert man mit $\epsilon_i$ meist die unerw\"unschte (und meist zuf\"allige) St\"orung der Messung gegen\"uber dem idealen Wert $y_i$. Das Ziel bei der Regression ist es, f\"ur einen neuen $x$-Wert, m\"oglichst den richtigen dazugeh\"origen Funktionswert $f(x)$ voraussagen zu k\"onnen. Diese Problemstellung ist interessant f\"ur Anwendungen, bei denen man davon ausgeht, dass man die Natur durch $y = f(x)$ modellieren kann. Zum Beispiel k\"onnte man sich daf\"ur interessieren, wie der Wohnungspreis oder das Monatsgehalt von bestimmten Parametern abh\"angt. Diese Funktion w\"are in diesen F\"allen z.B. fuer Immobilienmakler oder Unternehmensf\"uhrer von gro\ss er Relevanz. 
+Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten Quadrate. Gegeben ist hierbei eine lineare Funktion $f(x) = ax$ und Punkte $P_i=(x_i,y_i)$ mit $i=1,\dots,n$, welche näherungsweise auf der Geraden liegen (siehe Abbildung \ref{fig:LinReg}), also $y_i = f(x_i) + \epsilon_{i}$. Dabei modelliert man mit $\epsilon_i$ meist die unerw\"unschte (und meist zuf\"allige) St\"orung der Messung gegen\"uber dem idealen Wert $y_i$. Das Ziel bei der Regression ist es, f\"ur einen neuen $x$-Wert, m\"oglichst den richtigen dazugeh\"origen Funktionswert $f(x)$ voraussagen zu k\"onnen. Diese Problemstellung ist interessant f\"ur Anwendungen, bei denen man davon ausgeht, dass man die Natur durch $y = f(x)$ modellieren kann. Zum Beispiel k\"onnte man sich daf\"ur interessieren, wie der Wohnungspreis oder das Monatsgehalt von bestimmten Parametern abh\"angt. Diese Funktion w\"are in diesen F\"allen z.B. für Immobilienmakler oder Unternehmensf\"uhrer von gro\ss er Relevanz. 
 
 
 \definecolor{ffqqqq}{rgb}{1.,0.,0.}
@@ -53,10 +51,10 @@ Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten 
 
 
 \subsection{Grundlagen der Optimierung}
-Man nehme an dass es eine ``Ground-truth'' $f$ gibt.
-Ein m\"oglicher Ansatz, gegeben den gest\"orten Datenpunkten $(x_i,y_i)$ so nah wie m\"oglich an die wahre Funktion $f$ zu kommen, w\"are, die Summe der Abst\"ande $\epsilon_i$ zu minimieren, also
+Man nehme an dass es eine Funktion $f$ gibt, welche dem wahren Modell entspricht.
+Um eine Funktion zu finden, die den gest\"orten Datenpunkten $(x_i,y_i)$ so nah wie m\"oglich kommt, minimieren wir die Summe der quadratischen Abweichungen $\epsilon_i^2$, also
 \begin{equation*}
-\min_{x} h(x)= \sum_{i=1}^n\epsilon_i(x_i) = \sum_{i=1}^n(y_i-ax_i)^2
+\min_{x} h(x)= \sum_{i=1}^n\epsilon_i^2 = \sum_{i=1}^n(y_i-ax_i)^2
 \end{equation*}
 
 
@@ -80,11 +78,11 @@ Ein Illustration f\"ur eine konvexe Funktion ist in Abbildung \ref{fig:konvex} z
  \begin{dsafigure}
  \begin{center}
  \includegraphics[width=0.3\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.pdf}
- \caption{Beispiel einer konvexen Funktion}
+ \caption{Konvexe Funktion}
  \label{fig:konvex}
  \end{center}
 \end{dsafigure}
-Der Gro\ss teil der Forschung in der Optimierung behandelt die Minimierung von konvexen Kostenfunktionen. Der Hauptgrund liegt darin, dass es f\"ur konvexe Funktionen nur globale Maxima gibt. 
+Der Gro\ss teil der Forschung in der Optimierung behandelt die Minimierung von konvexen Kostenfunktionen. Der Hauptgrund liegt darin, dass es f\"ur konvexe Funktionen nur globale Minima gibt. 
 
 
 \begin{Bsp}[Beispiel zu konvexen Funktionen]
