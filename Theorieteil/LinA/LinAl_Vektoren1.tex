@@ -25,11 +25,11 @@ In der linearen Algebra nehmen Vektoren eine zentrale Rolle ein. Ein Vektor wird
 
 Ein \textit{Vektor} ist eine geordnete Aufz\"ahlung von Objekten und wird auch \textit{Tupel} $(a_1, a_2,\dots,a_n)$ genannt. Entscheidend bei Tupeln ist die Reihenfolge der Objekte, die auch mehrfach vorkommen k\"onnen. Dies steht im Kontrast zum Begriff einer Menge. Die Addition von Vektoren $u, v\in\mathbb{R}^n$ ist dann definiert durch
 \begin{equation*}
-u + v = \begin{pmatrix} u_1 \\ u_2 \\ \dots \\ u_n \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \\ \dots \\ v_n \end{pmatrix} = \begin{pmatrix} u_1 + v_1 \\ u_1+v_2 \\ \dots \\ u_1+v_n \end{pmatrix}
+u + v = \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{pmatrix} = \begin{pmatrix} u_1 + v_1 \\ u_1+v_2 \\ \vdots \\ u_1+v_n \end{pmatrix}
 \end{equation*} 
 und die skalare Multiplikation eines Vektors $u\in\mathbb{R}^n$ mit $\lambda\in\mathbb{R}$ ist definiert durch
 \begin{equation*}
-\lambda u = \lambda \begin{pmatrix} u_1 \\ u_2 \\ \dots \\ u_n \end{pmatrix} = \begin{pmatrix} \lambda u_1 \\ \lambda u_2 \\ \dots \\ \lambda u_n \end{pmatrix}.
+\lambda u = \lambda \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} = \begin{pmatrix} \lambda u_1 \\ \lambda u_2 \\ \vdots \\ \lambda u_n \end{pmatrix}.
 \end{equation*}
 Vektoren bilden die Elemente eines \textit{Vektorraumes V}. Addieren wir zwei Vektoren eines Vektorraumes oder multiplizieren wir sie mit einem Skalar, so muss die Summe bzw. das Produkt ebenfalls ein Element des Vektorraumes sein. Das hei\ss t
 \begin{enumerate}
@@ -37,9 +37,9 @@ Vektoren bilden die Elemente eines \textit{Vektorraumes V}. Addieren wir zwei Ve
 \item $u\in V, \lambda \in \mathbb{R} \text{ }\Rightarrow \lambda u \in V$
 \end{enumerate}
 \vspace{10pt}
-Ein \textit{Unterraum} $U$ ist eine Teilmenge eines Vektorraumes $V$. Es gelten die oben genannten Eigenschaften eines Vektorraumes.
+Ein \emph{Unterraum} $U$ ist eine Teilmenge eines Vektorraumes $V$. Es gelten die oben genannten Eigenschaften eines Vektorraumes.
 
-Der Aufspann span$(v_1, v_2,\dots,v_k)$ ist ein Beispiel für einen Unterraum, er ist definiert als die Menge aller Vektoren, die mit den Linearkombinationen der Vektoren $v_1, v_2, \dots, v_k$ darstellbar sind, also
+Der \emph{Aufspann} span$(v_1, v_2,\dots,v_k)$ ist ein Beispiel für einen Unterraum, er ist definiert als die Menge aller Vektoren, die mit den Linearkombinationen der Vektoren $v_1, v_2, \dots, v_k$ darstellbar sind, also
 \begin{align*}
 &\text{span}(v_1,\dots,v_k) =\\ &\qquad \{\lambda_1v_1+\dots+\lambda_kv_k : \lambda_1, \dots, \lambda_k \in \mathbb{R}\}
 \end{align*}

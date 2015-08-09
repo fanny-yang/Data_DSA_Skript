@@ -21,7 +21,7 @@
 % \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 \subsection{Norm und Skalarprodukt}
-\author{Vivien Thi, Max Braun, Luca Bohn}
+
 \begin{Def}
 $\norm{v}$ ist eine Norm im Vektorraum $V$ falls
 \begin{enumerate}
@@ -34,9 +34,11 @@ $\norm{v}$ ist eine Norm im Vektorraum $V$ falls
 \item $\norm{\lambda v} = |\lambda| \norm{v}$ für alle $\lambda \in \mathbb{R}$ und $v \in V$
 \end{enumerate}
 \end{Def}
+
+Die zweite Ungleichung nennt man auch Dreiecksungleichung.
 In Worte gefasst ergeben sich die folgenden Eigenschaften: Eine Norm kann nie negativ sein, ist die Norm 0 bedeutet das, dass der Vektor der Nullvektor ist. Wenn man zwei Vektoren
 addiert, ist die Norm des resultierenden Vektors kleiner oder gleich der Summe der Normen der beiden Ausgangsvektoren. Außerdem ist die
-Norm eines Vektors, der mit einem reellen Faktor multipliziert wurde gleich dem Produkt aus der Norm des Vektors und dem 
+Norm eines Vektors, der mit einem reellen Faktor multipliziert wurde, gleich dem Produkt aus der Norm des Vektors und dem 
 Betrag des Faktors.
 
 \begin{Def}
@@ -76,13 +78,13 @@ Da grundsätzlich $\langle v,v\rangle  = \norm{v}^2$ gilt, kann über die Abbild
 $\lVert v-u\rVert ^2 = \lVert v\rVert ^2 - 2\left\langle v,u\right\rangle  + \lVert u\rVert ^2$
 umformen.
 Zusätzlich folgt aus dem Kosinussatz, dass $\norm{v-u}^2 = \norm{u}^2 + \norm{v}^2 - 2 \norm{u} \norm{v} \cos\theta$. Setzt man beide Terme gleich, gelangt man über einige wenige Umformungen zu der Form $\left\langle u,v\right\rangle  = \norm{u} \norm{v} \cos\theta$, was ebenfalls eine Möglichkeit ist, das Skalarprodukt darzustellen.
-Aus dieser Gleichung ergibt sich direkt die Cauchy-Schwarz Ungleichung. Da der Betrag des Kosinus sich nur zwischen 0 und 1 bewegt gilt
+Aus dieser Gleichung ergibt sich direkt die Cauchy-Schwarz Ungleichung. Da sich der Betrag des Kosinus nur zwischen 0 und 1 bewegt, gilt
 \begin{equation}
 \left\langle u,v\right\rangle  \leq \norm{u} \norm{v}.
 \label{cauchy}
 \end{equation}
 
-Eine häufig genutzte Norm ist die Euklidische Norm, welche durch $\norm{v}_2 = \sqrt{v_1^2 + \dots + v_n^2}$ definiert ist und die obrige Definition des Skalarproduktes \eqref{skal} induziert wird.
+Eine häufig genutzte Norm ist die Euklidische Norm, welche durch $\norm{v}_2 = \sqrt{v_1^2 + \dots + v_n^2}$ definiert ist und auch durch die obrige Definition des Skalarproduktes \eqref{skal} induziert wird.
 
 Die erste und die dritte Bedingung aus der Definition für eine Norm zeigen sich aus der ausgeschriebenen Form der Euklidischen Norm. Da alle Komponenten dabei quadriert werden und die Wurzel gezogen wird, muss die erste Bedingung stimmen. Ein Faktor $\lambda$, der ebenfalls quadriert in der Wurzel steht kann aus der Summe ausgeklammert werden und als Faktor vor die Wurzel gelangen. Der Betrag ergibt sich dabei daraus, dass $\lambda$ nach dem Vorgang nur positiv sein kann, auch wenn es zuvor negativ war.
 

@@ -52,7 +52,7 @@ Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten 
 
 
 \subsection{Grundlagen der Optimierung}
-Man nehme an dass es eine Funktion $f$ gibt, welche dem wahren Modell entspricht.
+Man nehme an, dass es eine Funktion $f$ gibt, welche dem wahren Modell entspricht.
 Um eine Funktion zu finden, die den gest\"orten Datenpunkten $(x_i,y_i)$ so nah wie m\"oglich kommt, minimieren wir die Summe der quadratischen Abweichungen $\epsilon_i^2$, also
 \begin{equation*}
 \min_{x} h(x)= \sum_{i=1}^n\epsilon_i^2 = \sum_{i=1}^n(y_i-ax_i)^2
@@ -87,7 +87,7 @@ Der Gro\ss teil der Forschung in der Optimierung behandelt die Minimierung von k
 
 
 \begin{Bsp}[Beispiel zu konvexen Funktionen]
-Ein Beispiel für eine konvexe Funktion ist die euklidische Norm $f(u) = \lVert u\rVert_2$ für $u\in\mathbb{R}$. Diese ist konvex, weil
+Ein Beispiel für eine konvexe Funktion ist die euklidische Norm $f(u) = \lVert u\rVert_2$ für $u\in\mathbb{R}^k$. Diese ist konvex, weil
 \begin{align*}
 f(\lambda u+(1-\lambda)v) &=\lVert\lambda u+(1-\lambda)v\rVert_2\\
 &\leq\lVert\lambda u\rVert_2+\lVert(1-\lambda)v\rVert_2\\
