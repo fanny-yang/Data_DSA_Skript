@@ -62,14 +62,14 @@ Bevor wir \"uber die m\"oglichen L\"osungsmethoden dieses oder allgemeiner Optim
 
 
 \begin{Def}[Lokales und globales Minimum]
-Für $f: D\rightarrow \mathbb{R}$ ist $x\in D$ ein \emph{lokales} Minimum, wenn mindestens eine Umgebung $N$ existiert, sodass $f(y)\geq f(x)$ für alle $y\in N$.
+Für $f: D \subset \mathbb{R}^n \rightarrow \mathbb{R}$ ist $x\in D$ ein \emph{lokales} Minimum, wenn mindestens eine Umgebung $N$ existiert, sodass $f(y)\geq f(x)$ für alle $y\in N$.
 Ein \emph{globales} Minimum liegt vor, falls hierbei $N=D$.
 \end{Def}
 
 Im Folgenden geht es nun um die Frage, in welchen F\"allen das lokale auch ein globales Minimum ist. F\"ur diese Zwecke f\"uhren wir die konvexen Funktionen ein.
 
 \begin{Def}[Konvexe Funktion]
-Eine Funktion $f: \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls für alle $x, y\in D$ gilt
+Eine Funktion $f: D\subset \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls für alle $x, y\in D$ gilt
 \begin{equation*}
   f(\lambda x+ (1 - \lambda)y) \leq \lambda f(x)+(1-\lambda)f(y)
 \end{equation*}
