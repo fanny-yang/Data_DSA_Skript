@@ -1,9 +1,8 @@
 \section{Machine Learning}
-\author{Farhadiba Mohammed, Dennis Kempf, David Steinmann}
+\authors{David Steinmann, Dennis Kempf, Farhadiba Mohammed}
 Machine Learning ist ein Konzept, bei dem der Computer durch Algorithmen aus Daten lernt, gewisse Probleme selbstständig zu lösen. Dabei erkennt der Computer nach einer gewissen Lernphase Gesetzmä\ss igkeiten, durch die er dann in der Lage ist, mit neuen, ihm unbekannte Datensätze umzugehen. Dabei werden verschiedene Modelle genutzt, doch zunächst einmal sollten wir uns mit den grundsätzlichen Begriffen Klassifikation und Regression vertraut machen.
 
 \subsection{Klassifikation und Regression}
-\author{David Steinmann}
 Bei Klassifikation und Regression handelt es sich um zwei verscheidene Möglichkeiten zur Problemlösung im Bereich Machine Learning.
 
 \paragraph{Klassifikation}
@@ -14,7 +13,6 @@ Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen 
 
 \subsection{Support Vector Machines}
 \label{sec:SVM}
-\author{David Steinmann}
 Support Vector Machines oder kurz SVMs sind ein Modell im Machine Learning.
 Dabei werden für alle Datensätze zuerst gewisse Features festgelegt. Diese Features entsprechen den Attributen des Datensatzes. Je nach Problem kann es unterschiedlich viele Features geben, doch allgemein kann man sagen, dass mit der Anzahl der Features auch die Genauigkeit des Programms wächst.
 
@@ -78,10 +76,7 @@ Dabei steht $z_{i}$ für die Grö\ss e des Fehlers des Punktes $x_{i}$ und $C$ i
 Um die optimale Größe von $C$ für das entsprechende Problem zu finden wird ein Verfahren namens \emph{crossvalidation} genutzt. Dabei wird der Algorithmus mehrmals auf den gleichen Testdatensatz angewendet, $C$ dabei aber variiert. Damit kann man herausfinden, bei welchem Wert von $C$ der Algorithmus optimal funktioniert.
 
 
-\section{Neuronale Netze}
-\author {Farhadiba Mohammed}
-
-\subsection{Einführung}
+\subsection{Neuronale Netze}
 
 Inspiriert von unserem Verständnis über das menschliche Gehirn benutzen neuronale Netze Lernalgorithmen, welche besonders für praktische Anwendungen geeignet sind.
 Dazu zählen Spracherkennung, Objekterkennung in Bildern und die Fähigkeit individuell passende Produkte vorzuschlagen, die dem Kunden gefallen könnten. 
@@ -96,7 +91,7 @@ Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist da
 	\end{center}
 \end{dsafigure}
 
-\subsection{Deep Learning}
+\subsubsection{Deep Learning}
 
 Mit Deep Learning beschreibt man neuronale Netze, die über mehr als eine \enquote{versteckte Schicht} verfügen. Damit ist gemeint, dass sich zwischen Ein- und Ausgabeschicht weitere Schichten befinden. 
 
@@ -111,7 +106,7 @@ Das Ergebnis wird erneut mit einem Faktor $w$ multipliziert. Dieser Vorgang wied
 Anhand eines konkreten Beispiels würde es folgendes bedeuten:
 Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Tisch oder Stuhl das daurauf abgebildete Objekt gehört. Unsere inputs wären demnach die Pixel des Bildes. Diese durchlaufen nun das Neuronale Netz und wir erhalten eine Wahrscheinlichkeitsverteilung als Rückgabewert, welche uns mitteilt, dass es am wahrscheinlichsten ist, dass das abgebildete Objekt ein Objekt der Klasse Stuhl ist. Demnach ist die Klassifizierung vollzogen.
 
-\subsection{Convolutional Neural Networks}
+\subsubsection{Convolutional Neural Networks}
 \label{ml:cnn}
 \begin{dsafigure}
   \centering
@@ -131,9 +126,9 @@ Nehmen wir an wir haben ein Bild und wollen ermitteln zu welcher Klasse Haus, Ti
 
 Wie in Fig.~\ref{FigConvNN} gezeigt wird der existierende Filter $w$ über die Eingabematrix geschoben. Dabei wird das Skalarprodukt berechnet und in der Endmatrix als Ergebnis festgehalten. Daraufhin wird der Filter immer um eine Stelle weiter nach rechts in der Eingabematrix verschoben und das neue Skalarprodukt berechnet bis das Ende der Eingabematrix erreicht wurde.
 
-\subsection{Machine Learning mit neuronalen Netzen}
+\subsubsection{Machine Learning mit neuronalen Netzen}
 
-Wir haben bereits SVMs kennengelernt, die beschrieben werden durch das Optimierungsproblem
+\paragraph{SVM} Wir haben bereits SVMs kennengelernt, die beschrieben werden durch das Optimierungsproblem
 \begin{align*}
 \underset{b,w,z}{\text{minimiere}} &\qquad\norm{w} + C  \sum_{i=1}^{n} z_i\\
 \text{sodass} &\qquad y_i (\langle w,x \rangle - b) \geq 1 - z_i \text { mit } z_i \geq 0
@@ -151,14 +146,14 @@ Da über $z_i$ minimiert wird und $C$ positiv ist, nehmen die Variablen $z_i$ im
 \end{align*}
 Charakteristisch für dieses Neuronale Netz ist, dass es nur einen Layer besitzt.\\
 %
-Analog zur Klassifikation kann auch die lineare Regression, also
+\paragraph{Lineare Regression} Analog zur Klassifikation kann auch die lineare Regression, also
 \begin{align*}
 \min\limits_{w,b} \ & \frac{1} {2} \sum_{i=1}^{n} (a_i -y_i)^2, \quad a_i = \langle w,x_i\rangle -b
 \end{align*}
 in Form von neuronalen Netzen ausgedrückt werden. Nat\"urlicherweise wird hierbei die lineare Funktion in der linearen Schicht in den Layers dargestellt und die Loss-Funktion entspricht dem Fehler im Quadrat.
 
 
-\subsection{MNIST}
+\begin{Bsp}[Der MNIST Datensatz]
 
 \begin{dsafigure}
 	\begin{center}
@@ -169,6 +164,6 @@ in Form von neuronalen Netzen ausgedrückt werden. Nat\"urlicherweise wird hierb
 \end{dsafigure}
 
 MNIST ist ein freier Datensatz, der es erlaubt, SVMs und Neuronalen Netze zur Zeichenerkennung zu trainieren. Wir haben den Datensatz im Kurs verwendet, um unsere Modelle zu trainieren (siehe Fig.~\ref{FigConvNN}).
-
+\end{Bsp}
 
 
