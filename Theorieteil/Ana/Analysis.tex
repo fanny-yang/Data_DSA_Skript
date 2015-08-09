@@ -6,7 +6,7 @@ Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für Opt
 \subsection{Stetigkeit und Differenzierbarkeit}
 
 Wir beginnen mit einigen theoretischen Grundlagen der Analysis.
-\begin{Def} Die Zahl $L$ heißt \emph{Grenzwert} der Funktion $f(x)$ für $x$ gegen $a$, wenn es für alle $\epsilon > 0$ ein $\delta > 0$ existiert, sodass für alle $|x-a| < \delta$ gilt $|f(x)-L|<\epsilon$
+\begin{Def} Die Zahl $L$ heißt \emph{Grenzwert} der Funktion $f(x)$ für $x$ gegen $a$, wenn für alle $\epsilon > 0$ ein $\delta > 0$ existiert, sodass für alle $|x-a| < \delta$ gilt $|f(x)-L|<\epsilon$
 \end{Def}
 \begin{Def}
 Eine Funktion $f: D \subseteq \mathbb{R}\rightarrow \mathbb{R}$ ist \emph{stetig}, wenn $\lim_{w\rightarrow x}f(w)=f(x)$ auf ihrem gesamten Definitionsbereich gilt, das heißt sie ist stetig in $x$ für alle $x\in D$.
@@ -17,9 +17,9 @@ Eine Funktion $f:\mathbb{R}\rightarrow \mathbb{R}$ ist an einer Stelle $x$ \emph
 Wir betrachten eine einfache Folgerung aus diesen Definitionen.
 
 
-\begin{lemma}
+\begin{Lem}
 Eine Funktion $f:\mathbb{R} \rightarrow \mathbb{R}$, welche differenzierbar an der Stelle $x \in \mathbb{R}$ ist, ist dort auch stetig.
-\end{lemma}
+\end{Lem}
 
 \begin{proof}
 Wir überlegen zuerst, welche Bedingungen gegeben sind. Eine Funktion ist an der Stelle $x$ differenzierbar, wenn $f(x+h)=f(x)+l_x(h)+ r(h)$  mit $\lim_{h \rightarrow 0} r(h)/h= 0$. Um die Stetigkeit nachzuweisen müssen wir zeigen, dass $\lim_{w \rightarrow x} f(w)=f(x)$. Mit $w = x+h$ ist dies äquivalent zu $\lim_{h \rightarrow 0} f(x)+l_x(h)+r(h)=f(x)$. Es genügt also zu zeigen, dass  $l_x(h)$ und $r(h)$ gegen Null gehen.
@@ -47,7 +47,7 @@ Der Gradient zeigt immer in Richtung des steilsten Anstiegs einer Funktion. Der 
 
 \begin{Lem}
 \label{lem:gradientabstieg}
-F\"ur eine differenzierbare Funktion $f$ ist es immer moeglich einen Skalar $\lambda>0$ zu finden, sodass
+F\"ur eine differenzierbare Funktion $f$ ist es immer m\"oglich, ein Skalar $\lambda>0$ zu finden, sodass
 \begin{equation}
 \label{lambda-ungleichung}
 f(x - \lambda \nabla f(x)) \leq f(x)
@@ -57,7 +57,7 @@ f(x - \lambda \nabla f(x)) \leq f(x)
 
 \begin{proof}
 Wir betrachten den nicht-trivialen Fall in dem $\nabla f(x) \neq 0$. 
-Die zu zeigende Ungleichung \eqref{lambda-ungleichung} laesst sich umschreiben in die folgende Form
+Die zu zeigende Ungleichung \eqref{lambda-ungleichung} l\"asst sich umschreiben in die folgende Form
 \begin{align*}
 &f(x - \lambda \nabla f(x))\\
  = \, &f(x) - \lambda \langle \nabla f(x), \nabla f(x)\rangle + r(\lambda \nabla f(x)) \\
@@ -72,7 +72,7 @@ Es ist hinreichend zu zeigen, dass ein $\lambda>0$ existiert, sodass
 \begin{align*}
 \lim_{\lambda\to 0} \frac{r(\lambda \nabla f(x))}{\lambda} &= \lim_{\lambda \to 0}\Vert\nabla f(x)\Vert \frac{r(\lambda \nabla f(x))}{\lambda \Vert\nabla f(x)\Vert}= 0
 \end{align*}
-Die letzte Gleichung folgt durch die Bedingung an das Restglied, dass $\lim_{h\to 0}\frac{r(h)}{h} = 0$. Durch die Definition eines Grenzwerts wissen wir also, dass ein $\lambda^*$ existiert, sodass $\left| \frac{r(\lambda^* \nabla f(x))}{\lambda^* \Vert\nabla f(x)\Vert} \right| \leq \Vert\nabla f(x)\Vert$. Zusammenfassend ist die Positivitaet des Terms \eqref{eq:positiveterm} damit gezeigt, d.h. es gilt fuer das gerade gewaehlte $\lambda^*$, dass
+Die letzte Gleichung folgt durch die Bedingung an das Restglied, dass $\lim_{h\to 0}\frac{r(h)}{h} = 0$. Durch die Definition eines Grenzwerts wissen wir also, dass ein $\lambda^*$ existiert, sodass $\left| \frac{r(\lambda^* \nabla f(x))}{\lambda^* \Vert\nabla f(x)\Vert} \right| \leq \Vert\nabla f(x)\Vert$. Zusammenfassend ist die Positivit\"at des Terms \eqref{eq:positiveterm} damit gezeigt, d.h. es gilt f\"ur das gerade gew\"ahlte $\lambda^*$, dass
 \begin{align*}
 &\Vert\nabla f(x)\Vert^2 - \frac{r(\lambda^* \nabla f(x))}{\lambda^*} \\
 \geq \, &\Vert\nabla f(x)\Vert \left( \Vert \nabla f(x)\Vert - \frac{r (\lambda^* \nabla f(x))}{\lambda^* \Vert \nabla f(x)\Vert} \right) \\
@@ -121,9 +121,9 @@ Die letzte Gleichung folgt durch die Bedingung an das Restglied, dass $\lim_{h\t
 
 \subsection{Summen-, Produkt- und Kettenregel}
 
-Falls mehrere Funktonen miteinander verknüpft sind gelten folgende drei Regeln.
+Falls mehrere Funktionen miteinander verknüpft sind gelten folgende drei Regeln.
 \begin{itemize}
-\item Die \emph{Summenregel} besagt, dass der Gradient der Funktion $h(x)=f(x)+g(x)$ die Summe der Gradienten ist, das heißt
+\item Die \emph{Summenregel} besagt, dass der Gradient (also Ableitung) der Funktion $h(x)=f(x)+g(x)$ die Summe der Gradienten ist, das heißt
 \begin{equation*} D(f + g)(x)=\text{D} f(x)+\text{D} g(x)\end{equation*}
 
 \item Gegeben seien die differenzierbaren Funktionen $f:\mathbb{R}^k\rightarrow\mathbb{R}^n$, $g:\mathbb{R}^n\rightarrow\mathbb{R}^k$ und $h(x)=f(g(x))$. Die \emph{Kettenregel} besagt, dass
@@ -131,7 +131,7 @@ Falls mehrere Funktonen miteinander verknüpft sind gelten folgende drei Regeln.
 \text{D}h(x) = \text{D}f(g(x)) \cdot \text{D} g(x).
 \end{equation*}
 
-\item Gegeben zwei differenzierbaren Funktionen $f:\mathbb{R}^m\rightarrow\mathbb{R}$ und $g:\mathbb{R}^m\rightarrow\mathbb{R}$, so gilt für das Produkt der Funktionen $h(x)=f(x) \cdot g(x)$ die \emph{Produktregel} \begin{equation*}\text{D}h(x)=f(x) \cdot \text{D}g(x)+\text{D}f(x) \cdot g(x).\end{equation*}
+\item Gegeben seien zwei differenzierbaren Funktionen $f:\mathbb{R}^m\rightarrow\mathbb{R}$ und $g:\mathbb{R}^m\rightarrow\mathbb{R}$, so gilt für das Produkt der Funktionen $h(x)=f(x) \cdot g(x)$ die \emph{Produktregel} \begin{equation*}\text{D}h(x)=f(x) \cdot \text{D}g(x)+\text{D}f(x) \cdot g(x).\end{equation*}
  \end{itemize}
 Wir beweisen nun die Produktregel.
 Da die Funktionen $f$ und $g$ differenzierbar sind gilt
@@ -143,7 +143,7 @@ wobei $\lim_{h\rightarrow 0} r_f(h)/h = 0$ und $\lim_{h\rightarrow 0} r_g(h)/h =
 Wir schreiben zuerst die Ableitung von $h(x+v)$ als Kombination aus den Ableitungen von $f(x)$ und $g(x)$ auf, also $h(x+v) =  f(x+v)\cdot g(x+v)$.
 Das Produkt wird ausmultipliziert und wir erhalten
 \begin{equation*}
-\begin{split} h(x+v) & = f(x) \cdot g(x)  + f(x)  \cdot D_{g}(x) \cdot v \\ & + f(x) \cdot r_{g}(v) + Df(x) \cdot v \cdot g(x) \\ & +  Df(x) \cdot v \cdot D_{g}(x) \cdot v  + Df(x) \cdot v \cdot r_{g}(v) \\ & +  r_{g}(v) \cdot g(x) + r_{g}(x) \cdot Dg(x) \cdot v \\ & + r_{g}(v) \cdot r_{g}(v) \end{split} \end{equation*}   %Die Formel passt nicht in eine Zeile. Umbruch?
+\begin{split} h(x+v) & = f(x) \cdot g(x)  + f(x)  \cdot D_{g}(x) \cdot v \\ & + f(x) \cdot r_{g}(v) + Df(x) \cdot v \cdot g(x) \\ & +  Df(x) \cdot v \cdot D_{g}(x) \cdot v  + Df(x) \cdot v \cdot r_{g}(v) \\ & +  r_{f}(v) \cdot g(x) + r_{f}(x) \cdot Dg(x) \cdot v \\ & + r_{f}(v) \cdot r_{g}(v) \end{split} \end{equation*}   %Die Formel passt nicht in eine Zeile. Umbruch?
 
 Von den ganzen Summanden müsssen letztendlich alle eliminiert werden, bis auf 
 \begin{equation*} f(x) \cdot g(x) + f(x) \cdot Dg(x) \cdot v + Df(x) \cdot v \cdot g(x) \end{equation*} 
