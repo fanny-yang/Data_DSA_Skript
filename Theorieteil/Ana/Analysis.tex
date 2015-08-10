@@ -6,7 +6,7 @@ Analysis ist ein wichtiges Teilgebiet der Mathematik. Sie ist Grundlage für die
 \subsection{Stetigkeit und Differenzierbarkeit}
 
 Wir beginnen mit einigen theoretischen Grundlagen der Analysis.
-\begin{Def} Die Zahl $L$ heißt \emph{Grenzwert} der Funktion $f:\mathbb{R}^n \to \mathbb{R}^m$ für $x$ gegen $a$, wenn für alle $\epsilon > 0$ ein $\delta > 0$ existiert, sodass für alle $\|x-a\| < \delta$ gilt $\|f(x)-L\|<\epsilon$
+\begin{Def} Die Zahl $L$ heißt \emph{Grenzwert} der Funktion $f:\mathbb{R}^n \to \mathbb{R}^m$ für $x$ gegen $a$, wenn für alle $\epsilon > 0$ ein $\delta > 0$ existiert, sodass für alle $\Vert x-a\Vert < \delta$ gilt $\Vert f(x)-L\Vert <\epsilon$
 \end{Def}
 
 Der Grenzwert ist notwendig f\"ur die Definition von Stetigkeit und Differenzierbarkeit, die Grundbausteine der Analysis und Optimierung. 
@@ -15,7 +15,7 @@ Eine Funktion $f: D \subseteq \mathbb{R}^n\rightarrow \mathbb{R}^m$ hei\ss t \em
 \end{Def}
 \begin{Def}
 \label{def:diffbar}
-Eine Funktion $f:\mathbb{R}^n\rightarrow \mathbb{R}^m$ ist an einer Stelle $x$ \emph{differenzierbar}, wenn eine lineare Abbildung $ l_ x (h)$ und ein Restglied $r(h)$ existieren, sodass $f(x+h)=f(x)+l_{x}(h)+r(h)$, wobei $\lim_{h\rightarrow 0} \|r(h)\|/\|h\|= 0$ gilt.
+Eine Funktion $f:\mathbb{R}^n\rightarrow \mathbb{R}^m$ ist an einer Stelle $x$ \emph{differenzierbar}, wenn eine lineare Abbildung $ l_ x (h)$ und ein Restglied $r(h)$ existieren, sodass $f(x+h)=f(x)+l_{x}(h)+r(h)$, wobei $\lim_{h\rightarrow 0} \Vert r(h)\Vert /\Vert h\Vert= 0$ gilt.
 \end{Def}
 
 Da die lineare Abbildung $l_x(h)$ als Matrix-Vektor Produkt geschrieben werden kann (siehe Abschnitt~\ref{sec:linabb}), d.h.
