@@ -9,7 +9,7 @@ Bei der Klassifikation und Regression handelt es sich um zwei verschiedene Mögl
 Bei der Klassifikation sorgt der Algorithmus am Ende dafür, dass der Datensatz vom Computer in verschiedene Klassen eingeteilt wird. F\"ur das Training eines solchen Algorithmusses müssen die Klassen vorher vom Mensch festgelegt werden. Der Computer klassifiziert die Datensätze dann anhand der Attribute (sogenannten \emph{features}) des entsprechenden Datensatzes. Die klassifizierten Datensätze enthalten dann meistens eine weitere Dimension, in der die Klasse anhand einer Zahl gespeichert ist.
 
 \paragraph{Regression}
-Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern eine konkrete reelle Zahl beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verscheidenen Attributen in die Datenbank eingespeichert (zum Beispiel Größe, Lage, ob sie von einem) der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in \enquote{teuer} , \enquote{mittelteuer}, \enquote{billig}. 
+Bei der Regression geht es darum, den entsprechenden Datensätzen am Ende einen festen Wert zuzuordnen. Der Unterschied zur Klassifikation besteht darin, dass der zugeordnete Wert nicht für eine Klasse steht, sondern eine konkrete reelle Zahl beinhaltet. Ein Beispiel wäre der Preis von einer Wohnung. Diese wurde mit vielen verschiedenen Attributen in die Datenbank eingespeichert (zum Beispiel Größe, Lage, ob sie von einem). Der Endwert wäre dann zum Beispiel der konkrete Preis und nicht eine Klassifizierung in \enquote{teuer} , \enquote{mittelteuer}, \enquote{g\"unstig}. 
 
 \subsection{Support Vector Machines}
 \label{sec:SVM}
@@ -85,7 +85,7 @@ Inspiriert von unserem Verständnis über das menschliche Gehirn benutzen Lernal
 
 
 
-Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist dabei, die Datenschicht, auf die ein oder mehrere sogenannte \emph{hidden layer} folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher eine Wahrscheinlichkeitsverteilung darstellt, die angibt wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
+Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist dabei die Datenschicht, auf die ein oder mehrere sogenannte \emph{hidden layer} folgen. Als Ausgabewert erhält man schließlich einen Vektor, welcher eine Wahrscheinlichkeitsverteilung darstellt, die angibt wie wahrscheinlich es ist, dass das Ausgangsobjekt zu einer bestimmten Klasse gehört.
 
 \begin{dsafigure}
 	\begin{center}
@@ -100,9 +100,9 @@ Ein neuronales Netz ist aus mehreren Schichten aufgebaut. Ausgangsschicht ist da
 
 Mit Deep Learning beschreibt man neuronale Netze, die über mehr als eine \enquote{versteckte Schicht} verfügen. Damit ist gemeint, dass sich zwischen Ein- und Ausgabeschicht weitere Schichten befinden. 
 
-Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft (die Verkettung von linearen Funktion wäre wieder linear und besäße deshalb nur begrenzte Representationskraft). Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk \enquote{overfittet}, das heißt zu sehr an den Trainingsdatensatz angepasst wird. Dann kann das Netzwerk selbst geringe Abweichungen von den Trainingsdaten nicht mehr korrekt klassifizieren.
+Um die Anzahl an Parametern zu vergrößern, werden diese auch über nicht-lineare Funktionen miteinander verknüpft (die Verkettung von linearen Funktion wäre wieder linear und besäße deshalb nur begrenzte Repr\"asentationskraft). Jedoch kann eine zu hohe Anzahl an Parametern auch dazu führen, dass das Netzwerk \enquote{overfittet}, das heißt zu sehr an den Trainingsdatensatz angepasst wird. Dann kann das Netzwerk selbst geringe Abweichungen von den Trainingsdaten nicht mehr korrekt klassifizieren.
 
-Wie wir in der Abbildung \ref{FigNN} sehen können, ist ein typisches \emph{fully connected} neuronales Netz abgebildet. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $(x_1 \dots x_d)$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert und anschlie\ss end summiert. Hierbei handelt es sich also um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird wiederum eine nicht-lineare Funktion $f$ angewendet. Für die $k$-te hidden layer bekommen wir schlie\ss lich
+In Abbildung \ref{FigNN} ist ein typisches \emph{fully connected} neuronales Netz skizziert. Als Basis findet man unten die Datenschicht mit ihren Eingabewerten in Form eines Vektors $(x_1 \dots x_d)$. Diese Werte werden nun mit einem jeweiligen Faktor $w$ multipliziert und anschlie\ss end summiert. Hierbei handelt es sich also um ein Skalarprodukt. Das Ergebnis wird nun im ersten hidden layer abgespeichert. Darauf wird wiederum eine nicht-lineare Funktion $f$ angewendet. Für die $k$-te hidden layer bekommen wir schlie\ss lich
 \begin{align*}
 a_j^{(k)} &= f^{(k)} (\langle w_{j}^{(k)}, a^{(k-1)}\rangle)\\ &= f^{(k)} \left(\sum_{i=1}^{m^{(k-1)}} w_{ji}^{(k)},a_i^{(k-1)}\right).
 \end{align*}
