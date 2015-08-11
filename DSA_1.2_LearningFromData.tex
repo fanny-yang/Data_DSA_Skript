@@ -3,8 +3,12 @@
 \Akademie{Braunschweig}{2015}{1}
 
 \usepackage[english, ngerman]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{misc}
 \usepackage{multicol}
+\usepackage{csquotes}
+\usepackage{subfig}
+\usepackage{lscape}
 
 %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
 \usepackage{amssymb}
@@ -15,10 +19,12 @@
 \usepackage{tipa}
 \usepackage{algpseudocode}
 \usepackage{url}
-\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
-\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
-\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
-\urlstyle{same}
+%\def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+% \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+% \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
+% \urlstyle{same}
+
+\usetikzlibrary{arrows}
 
 % hinzugefügt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
 \usepackage{lmodern}
@@ -39,6 +45,8 @@
 \newtheorem{Def}{Definition}
 \newtheorem{Sat}{Satz}
 \newtheorem{Bew}{Beweis}
+\newtheorem{Lem}{Lemma}
+\newtheorem{Bsp}{Beispiel}
 \newtheorem{Thm}{Theorem}
 
 \setlength\abovedisplayshortskip{0pt}
@@ -68,9 +76,9 @@
   \bigskip
   \Large \centerline{Mathematische Theorien und Methoden für das digitale Zeitalter}
   \bigskip
- \includegraphics[width=\columnwidth]{\media LearningFromData_Logo}
- \label{fig:titelbild}
+ \includegraphics[width=1.5\columnwidth]{\media LearningFromData_Logo}\\
   \bigskip
+  \includegraphics[width=1.5\columnwidth]{\media coursepic_edit.jpeg}
 \end{coursetitle}
 %\begin{dsafigure}
 %\begin{center}
@@ -88,20 +96,90 @@
 \input{Theorieteil/LinA/LinAl_Vektoren2}
 \input{Theorieteil/LinA/LinAl_Matrizen}
 \input{Theorieteil/Ana/Analysis}
-\input{Theorieteil/Wkeit/Wahrscheinlichkeitstheorie}
 
-\section{Optimierung}
-
-\input{Theorieteil/Optimierung/Inhalt-OptimierungLennart}
+%\input{Theorieteil/Optimierung/Inhalt-OptimierungLennart}
+\input{Theorieteil/Optimierung/Lennart_Niermann_Optimierung.tex}
+\input{Theorieteil/Optimierung/Inhalt-OptimierungPatrice.tex}
 \input{Theorieteil/Optimierung/Inhalt-OptimierungLukasL}
-\input{Theorieteil/Optimierung/Inhalt-OptimierungPatrice}
+
+\input{Theorieteil/Wkeit/Wahrscheinlichkeitstheorie}
 
 \input{Theorieteil/ML/ML}
 
 \input{Praxisteil/Finanzen/Finanzen}
+\input{Praxisteil/Zeichenerkennung/Kapitel_SchrifterkennungSVM}
+\input{Praxisteil/Zeichenerkennung/Inhalt-PraxisZeichenerkennungNN}
+\input{Praxisteil/Zeichenerkennung/Kapitel_Vergleich}
+\input{Praxisteil/Dating/Dating.tex}
 \input{Praxisteil/KI/KI}
 
-%\nocite{*} % alle referenzen anzeigen, sogar wenn sie nicht im text zitiert sind
-%\bibliography{lit}{}
-%\bibliographystyle{plain}
+\section*{Literaturverzeichnis}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{lit}
+
+\onecolumn
+\section*{Anhang: Beispiele für Features für die Dating App}
+\small
+\begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | l | l | l | }
+\hline
+	Bild & Alter & Ethnie & Gesichtsform & Hautfarbe \\ \hline
+	LeFloid & 25-30 & europäisch & oval & hell  \\ \hline
+	Andy Biersack & 20-25 & europäisch & oval & hell  \\ \hline
+	Usain Bolt & 25-30 & afrikanisch & schmal & dunkel   \\ \hline
+	Brooklyn Beckham & 15-20 & europäisch & schmal, markant & hell  \\ \hline
+	Elyas M' Barek & 30-40 & europäisch, asiatisch & schmal & gebräunt   \\ \hline
+	Lee min ho & 25-30 & asiatisch & oval & hell \\ \hline
+	Pewdiepie & 25-30 & europäisch & rund, markant & hell   \\ \hline
+	Robert Pattinson & 25-30 & europäisch & oval, markant & hell  \\ \hline
+\end{tabular}
+\medskip
+\vspace{1em}
+\medskip
+\begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | l | l | l | }
+\hline
+	Bild & Haarfarbe & Frisur & Gesichtsbehaarung & Augenbrauen \\ \hline
+	LeFloid & braun & kurz & keine & gerade \\ \hline
+	Andy Biersack & braun & kurz & keine & geschwungen  \\ \hline
+	Usain Bolt & schwarz & kurz & Ziegenbart & gerade, ausgedünnt  \\ \hline
+	Brooklyn Beckham & hell & braun & kurz & keine \\ \hline
+	Elyas M' Barek & schwarz & kurz & Dreitagebart & geschwungen  \\ \hline
+	Lee min ho & braun & mittellang & keine & geschwungen  \\ \hline
+	Pewdiepie & blond & mittellang & Dreitagebart & gerade  \\ \hline
+	Robert Pattinson & braun & mittellang & Dreitagebart & buschig, geschwungen  \\ \hline
+\end{tabular}
+\medskip
+\vspace{1em}
+\medskip
+\begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | l | l | l | l | }
+\hline
+	Bild & Augenfarbe & Lippen & Brille & Nase & Piercing \\ \hline
+	LeFloid & braun & schmal & ja & spitz & nein \\ \hline
+	Andy Biersack & blau & voll & nein & flach & Lippe \\ \hline
+	Usain Bolt & braun & schmal, voll & nein & groß, flach & nein \\ \hline
+	Brooklyn Beckham & braun & schmal & nein & spitz & nein \\ \hline
+	Elyas M' Barek & braun & voll & nein & spitz & nein \\ \hline
+	Lee min ho & braun & schmal & nein & spitz, groß & nein \\ \hline
+	Pewdiepie & blau & schmal & nein & flach & nein \\ \hline
+	Robert Pattinson & blau & schmal & nein & spitz & nein \\ \hline
+\end{tabular}\\
+\vskip2em
+\noindent Reihenfolge der Bilder: LeFloid, Andy Biersack, Usain Bolt, Brooklyn Beckham, Elyas M' Barek, Lee min ho, Pewdiepie, Robert Pattinson
+\vskip2em
+\begin{minipage}{\textwidth}
+\includegraphics[width=0.2\textwidth]{media/le-floid.jpg}
+\includegraphics[width=0.2\textwidth]{media/andy-biersack.jpg}
+\includegraphics[width=0.2\textwidth]{media/usain-bolt.jpg}
+\includegraphics[width=0.2\textwidth]{media/brooklyn-beckham.jpg}
+\end{minipage}
+\vskip2em
+\begin{minipage}{\textwidth}
+\includegraphics[width=0.2\textwidth]{media/elyas-m-barek.jpg}
+\includegraphics[width=0.2\textwidth]{media/lee-min-ho.jpg}
+\includegraphics[width=0.2\textwidth]{media/pewdiepie.jpg}
+\includegraphics[width=0.2\textwidth]{media/robert-pattinson.jpg}
+\end{minipage}
+
+%\input{Referenzen.tex}
 \end{document}

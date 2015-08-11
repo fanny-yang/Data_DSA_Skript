@@ -1,0 +1,56 @@
+\section{Handschrifterkennung}
+
+Wie in der Einleitung bereits erwähnt, werden in Deutschland rund 64 Millionen Briefe am Tag verschickt. Es ist nur verständlich, dass die Post anstelle vieler Angestellter, die die Briefe sortieren und dabei womöglich noch einige Fehler machen, lieber einem Programm das Sortieren überlässt. Da wir uns zunächst nicht wirklich vorstellen konnten, wie ein solches Programm funktionieren könnte, haben zwei Projektgruppen beschlossen, sich bei ihrer Arbeit mit der Schrifterkennung zu beschäftigen und sich dem Problem auf zwei unterschiedliche Weisen anzunähern: Eine Gruppe nutzt hierzu Support Vector Machines \textit{(SVM)}, die andere ein Convolutional Neural Network \textit{(CNN)}.
+
+%Täglich werden in Deutschland rund 64 Millionen Briefe verschickt. Doch habt ihr euch schon einmal gefragt, wie die ganzen Briefe so schnell verarbeitet werden können? Die Vorstellung von mehreren tausend Mitarbeitern, die sich nur mit der Sortierung der Post beschäftigen, erscheint schon aufgrund des Aufwandes unwahrscheinlich. Eine bessere Variante stellt die Benutzung von Schrifterkennungsalgorithmen dar, deren sich die Post seit längerer Zeit bedient. Dabei scannt ein Computer die auf den Umschlägen geschriebenen Adressen ein, wertet diese aus und sortiert sie entsprechend. \\
+%Zu diesem Thema gab es zwei Projektgruppen, die sich dem Problem auf verschiedene Weise näherten. Eine Gruppe nutzte SVMs, die andere ein neuronales Netzwerk.
+
+\subsection{Klassifikation mit Support Vector Machines}
+\authors{Max Braun, Farhadiba Mohammed, Annika Scheug}
+
+Dieser Abschnitt widmet sich den Details der Implementierung einer SVM (siehe Abschnitt \ref{sec:SVM}) f\"ur die Zeichenerkennung. 
+
+Da es beim maschinellen Lernen essentiell ist, über ein entsprechend großes Datenset zu verfügen, haben wir unseren Algorithmus zunächst einmal mit 60.000 Bildern ausgestattet. 
+
+
+Im ersten Schritt generieren wir die Features sämtlicher Bilder. Features sind z.B. Muster in einem Bild, wie Kanten und Farben oder allgemein gesagt, die Eigenschaften eines Objektes. Dabei werden Bilder in einzelnen \enquote{Zellen} getrennt betrachtet. Hierbei sind mit Zellen Teile eines Bildes gemeint, wobei die Pixelanzahl variabel ist (\textit{pixels\_per\_cell}). Bei den Hog Features kann man z.B. die Genauigkeit f\"ur die Erkennung der Orientierung von Konturen einstellen, z.B. berechnet man die \"Ubereinstimmung der Zellen mit Konturen die in verschiedenen Winkeln angeordnet sind (\textit{orientations}). Die Orientierung mit der gr\"ossten \"Ubereinstimmung wird dann als Feature-Wert zur\"uckgegeben.\\
+%
+Wie wir an dem Beispielbild mit dem Kameramann in Abb. \ref{Kameramann} sehen können, wurden durch die Featuregenerierung in Abb. \ref{Kameramann_hogfeat} die Kanten hervorgehoben. Diese Featurebilder k\"onnen als Vektoren dargestellt werden, die dann von der SVM benutzt werden, um die Unterschiede der Trainingsdaten zu ermitteln. Danach kann die SVM neue Objekte, hier sind es Bilder, zuverl\"assig klassifizieren.\\ 
+%
+Die Feature-Erstellung erfolgt durch Aufruf einer bereits implementierten Methode der Scikit-Image Bibliothek
+\begin{verbatim}
+feature, hog_image = feats.hog(sub_pic,
+ orientations = 8,pixels_per_cell = (4,4),
+ cells_per_block = (1,1),visualise = true)
+\end{verbatim}
+Anschließend wird die SVM mit den Bildern trainiert und ist somit einsatzbereit.
+Bei der Einstellung der pixels per cell und orientations gilt: Je kleiner die Zellen sind und je höher die Genauigkeit ist, desto länger braucht die Methode zum Berechnen der Features, desto pr\"aziser ist aber auch die Endrepr\"asentation. Allerdings muss man auch darauf achten, dass die Zellengröße nicht zu klein wird, da in sehr kleinen Zellen die Muster eventuell nicht für das Programm erkennbar sind. 
+
+\begin{dsafigure}
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{\media Kameramann.png}
+	\caption{Schwarz-Weiß Bild eines Kameramannes.}
+	\label{Kameramann}
+\end{center}
+\end{dsafigure}
+
+\begin{dsafigure}
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{\media Kameramann_hogfeat.png}
+	\caption{Feature-Bild von Abb.\ref{Kameramann}.}
+	\label{Kameramann_hogfeat}
+\end{center}
+\end{dsafigure}
+
+Ein Beispiel Julia-Code des gesamten SVM Algorithmuses, der die scikit-learn Bibliothek von Python verwendet, s\"ahe z.B. folgenderma\ss en aus: 
+\begin{verbatim}
+@pyimport sklearn.svm as svm
+clf = svm.SVC()
+clf[:fit](features_trainset', 
+ label_train_data[:])
+ ...
+prob = clf[:predict_proba]
+ (features_testset')
+\end{verbatim}
+
+

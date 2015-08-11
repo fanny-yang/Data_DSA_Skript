@@ -1,54 +1,134 @@
-\section{Finanzanalyse}
-\author{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
+\section{\enquote{Earning from Data} -- Finanzanalyse}
+\authors{Dennis Kempf, Moritz Hollenberg, Patrice Becker}
+\label{sec:FinanzenIntro}
 
-Die Finanzanalyse versucht künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen.
+Die Finanzanalyse versucht, künftige Kursverläufe vorherzusagen, um Gewinne im Finanzhandel zu erzielen. In unserem Projekt versuchen wir, dies durch den Einsatz von \emph{Machine Learning} zu erreichen.
 
 \subsection{Formen der Finanzanalyse}
-\author{Dennis Kempf}
+\label{ssec:FinanzanalyseFormenIntro}
 
 Die drei grundlegenden Formen der Finanzanalyse bilden die \emph{Fundamentalanalyse}, \emph{Technische Analyse} und die \emph{Sentimentanalyse}. 
 
-Die Fundamental- und die Technische Analyse gehen davon aus, dass nicht alle verfügbaren Informationen in den Kursen verarbeitet sind. Es sei somit möglich, schneller als andere Marktteilnehmer zu agieren und daraus Profite zu erzielen.
+Diese Analysen gehen davon aus, dass nicht alle verfügbaren Informationen in den aktuellen Kurswerten enthalten sind. Mithilfe von Features, die sich aus dem Verlauf des Kurses berechnen und zus\"atzlichen Informationen aus der Wirtschaft ist es allerdings möglich, Algorithmen zu entwickeln, die schneller als andere Marktteilnehmer zu agieren und daraus Profite zu erzielen. Im folgenden werden die drei Analysen vorgestellt, die sich mit unterschiedlichen Kriterien auseinander setzen.  
 
-\subsubsection{Fundamentalanalyse}
-\author{Dennis Kempf}
+%\subsubsection{Fundamentalanalyse}
+%\label{sssec:Fundamentalanalyse}
 
-Bei der Fundamentalanalyse werden sogenannte \emph{Fundamentaldaten} analysiert, um den wirklichen Wert eines Finanzproduktes zu bestimmen. Zu diesen Daten zählen unter anderem:\\ 
+Bei der Fundamentalanalyse werden sogenannte \emph{Fundamentaldaten} analysiert, um den wirklichen Wert eines Finanzproduktes zu bestimmen. Zu diesen Daten zählen unter anderem das Kurs-Gewinn-Verhältnis, die Gesamtkapitalrendite, die Eigenkapitalquote, das Bruttoinlandsprodukt und Einzelhandelsverkäufe.
 
-\begin{itemize}
-	\item Kurs-Gewinn-Verhältnis
-	\item Gesamtkapitalrendite
-	\item Eigenkapitalquote
-	\item Bruttoinlandsprodukt
-	\item Einzelhandelsverkäufe
-\end{itemize}
-
-\subsubsection{Technische Analyse}
-\author{Dennis Kempf}
-\label{sssec:TechnischeAnalyse}
-
-Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Charts}, d.h. Abbildungen von Kursverläufen analysiert. Dazu werden sowohl reine Preisverläufe, als auch von diesen abgeleitete \emph{Indikatoren} berücksichtigt. Zu diesen Indikatoren gehören unter anderem:\\
-
-\begin{itemize}
-	\item Moving Average
-	\item Bollinger Bands
-	\item Stochastic Oscillator
-	\item Relative Strength Index
-	\item Fractals
-\end{itemize}
+Im Gegensatz zur Fundamentalanalyse werden bei der Technischen Analyse \emph{Charts}, das heißt Abbildungen von Kursverläufen, analysiert. Dazu werden sowohl reine Preisverläufe als auch von diesen abgeleitete \emph{Indikatoren} berücksichtigt. Zu diesen Indikatoren gehören unter anderem der gleitende Durchschnitt (moving average), Bollinger Bands, Stochastic Oscillator, Relative Strength Index und Fractals.
 
 \begin{dsafigure}
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]
-		{\media EURUSDH1.png}
-		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren aus \ref{sssec:TechnischeAnalyse}}
-		\label{fig:Beispielchart}
+		{\media Finances_Chart.png}
+		\caption{Ein \emph{Chart} (eine Kerze $\hat =$ eine Stunde) des EUR/USD Währungspaares mit den genannten Beispielindikatoren f\"ur eine Technische Analyse}
+		\label{fig:BeispielChart}
 	\end{center}
 \end{dsafigure}
 
-\subsubsection{Sentimentanalyse}
-\author{Dennis Kempf}
+Die Sentimentanalyse auf der anderen Seite befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische Phase} (steigender Trend) oder eine \emph{bärische Phase} (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
 
-Die Sentimentanalyse befasst sich mit der Stimmung von Investoren, um daraus zu schließen, ob eine \emph{bullische} Phase (steigender Trend) oder eine \emph{bärische} Phase (fallender Trend) bevorsteht. Dazu können Mittel wie etwa \emph{Meinungsumfragen} oder die Analyse von \emph{Börsenbriefen} eingesetzt werden.
+\subsection{Algorithmus und Features}
 
-\subsection{Einsatz von Machine Learning}
+Unser Projekt befasst sich ausschließlich mit der Technischen Analyse. Der klassische Ansatz würde die Aufgabe der Analyse einem Menschen oder einem selbstgeschriebenen Algorithmus überlassen. Wir versuchen hingegen, diese Aufgabe auf ein \emph{neuronales Netzwerk} zu übertragen. Hierbei spielt die Auswahl der Features und der verwendeten Hyperparameter, wie z.\,B. die Schichtenanzahl des Netzwerks, eine sehr wichtige Rolle.
+
+\paragraph{Features} Hierbei haben wir uns für die Verwendung des \emph{Stochastic Oscillator} und des \emph{Relative Strength Index} (jeweils mit Standardparametern) als Features entschieden. Es handelt sich dabei um zwei der bekanntesten Indikatoren für die technische Analyse.
+
+Der \emph{Stochastic Oscillator} ist ein von Dr. George Lane in den 1950er Jahren entwickelter Indikator. Dieser versucht, bevorstehende Trendwenden anhand von Unterstützungs- und Widerstandslinien zu erkennen. Er setzt sich aus zwei Elementen zusammen: Der \%K- und der \%D-Kurve, wobei \%D ein gleitender Durchschnitt von \%K ist. 
+
+Für unser Feature betrachten wir jedoch nur die \%K-Kurve. Diese lässt sich wie folgt berechnen:
+\begin{align*}
+	\text{\%K}&=100\cdot \frac{P-T_5}{H_5-T_5}\quad \text{mit}\\
+	P&=\text{Aktueller Schlusskurs}\\
+	T_5&=\text{Tief der letzten fünf Perioden}\\
+	H_5&=\text{Hoch der letzten fünf Perioden}
+\end{align*}
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_Stochastic}
+		\caption{Beispielchart des EUR/USD mit dem Stochastic Oscillator (Standardparameter) im unteren Fenster (blau: \%K-Kurve, rot: \%D-Kurve)}
+		\label{fig:BeispielChartStochastic}
+	\end{center}
+\end{dsafigure}
+
+\paragraph{Relative Strength Index} Der \emph{Relative Strength Index} (\enquote{Relative Stärke Index}) ist ein Indikator, der Ende der 1970er Jahre von J. Welles Wilder entwickelt wurde. Wie auch der Stochastic Oscillator versucht dieser, bevorstehende Trendwenden zu erkennen. Hierzu analysiert dieser Indikator Kursbewegungen entsprechend ihrer Richtung und Größe.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_RSI}
+		\caption{Beispielchart des EUR/USD mit dem Relative Strength Index (Standardparameter) im unteren Fenster}
+		\label{fig:BeispielChartRSI}
+	\end{center}
+\end{dsafigure}
+
+\paragraph{Wahl der Hyperparameter f\"ur das neuronale Netz}
+Die Bestimmung der Parameter für das neuronale Netzwerk stellt für unser Projekt die interessanteste, aber auch schwierigste Aufgabe dar. Denn das Verändern eines einzelnen Parameters hat meist ein vollkommen anderes Ergebnis zur Folge. Zu den zu optimierenden Parametern gehören unter anderem die Schichtenanzahl des neuronalen Netzwerks, die Neuronenanzahl in den Schichten, die Anfangsgewichte des Netzwerks und die Lerndurchläufe des Netzwerks.
+
+Um diese Aufgabe zu lösen haben wir uns dazu entschieden, ein Optimierungsprogramm (finances-optimize.exe) zu schreiben. Dieses iteriert durch alle möglichen Netzwerkkonfigurationen, überprüft sie anhand von Testdatensätzen und speichert das beste Ergebnis in einer Datei.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_OptimizeParams}
+		\caption{Alle möglichen Parameter für das Optimierungsprogramm}
+		\label{fig:OptimizeParams}
+	\end{center}
+\end{dsafigure}
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_OptimizeProgress}
+		\caption{Optimierungsprozess auf Basis linearer Regression (neuronales Netzwerk ohne \enquote{hidden layer})}
+		\label{fig:OptimizeProgress}
+	\end{center}
+\end{dsafigure}
+
+\subsubsection{Trainingsdaten}
+
+Für unsere Datensätze haben wir jeweils 65536 gelabelte Featurevektoren für verschiedene Währungspaare gesammelt. Jeder Featurevektor setzt sich aus dem aktuellen und den Werten der jeweils letzten drei Stunden des Stochastic Oscillators und Relative Strength Index zusammen, wobei diese auf $-1$ bis $+1$. Somit sind diese Vektoren insgesamt 8 Elemente lang. Bei unserer Beschriftung (Labels) unterscheiden wir lediglich, ob der Kurs in der folgenden Stunde gestiegen oder gefallen ist.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_Datensatz}
+		\caption{Schematischer Aufbau unserer Featurevektoren}
+		\label{fig:DatensatzSchema}
+	\end{center}
+\end{dsafigure}
+
+Insgesamt haben wir Daten f\"ur jeweils mehr als zehn Jahre an Features und Labels für die Währungspaare CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD und GBP/JPY zusammengestellt. Diese Daten haben wir mittels eines selbstgeschriebenen Skripts für MetaTrader in ein CSV-ähnliches Format exportiert.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]
+		{\media Finances_DatensatzNotepad}
+		\caption{Ausschnitt aus unserem Datensatz für den EUR/USD}
+		\label{fig:DatensatzNotepad}
+	\end{center}
+\end{dsafigure}
+
+\subsection{Ergebnisse und Diskussion}
+\label{ssec:Ergebnis}
+
+Überraschenderweise lassen sich mithilfe der linearen Regression äußerst schnell sehr gute Ergebnisse erreichen. Die aus der Optimierung hervorgehenden Netzwerke k\"onnen oftmals mit einer Genauigkeit von $\approx$ 60\% vorhersagen, ob ein Kurs in der nächsten Stunde steigt oder fällt/ Dies gilt f\"ur alle getesteten Datensätze (CHF/JPY, EUR/AUD, EUR/CAD, EUR/CHF, EUR/USD, GBP/JPY).
+
+Ein ähnliches Ergebnis lässt sich auch mit tiefen neuronalen Netzen erreichen. Hierbei besteht allerdings das Problem, dass es sehr schnell zu \enquote{overfitting} kommt, und dass die Optimierung wesentlich länger dauert.
+
+\paragraph{Features}
+Für unsere Features greifen wir lediglich auf zwei Indikatoren zurück. Eine breitere Vielfalt könnte zu noch besseren Ergebnissen führen. Zu untersuchen wäre dabei auch, welche Auswirkungen eine Veränderung der Anzahl an Werten jedes Indikators im Featurevektor hat.
+
+\paragraph{Datensätze}
+Die meisten unserer Datensätze stehen in Verbindung zum Euro und stammen aus dem gleichen Zeitraum. Auch hier wäre zu untersuchen, wie sich eine größere Diversität auf das Ergebnis auswirkt.
+
+\paragraph{Optimierungsprogramm}
+Das Optimierungsprogramm ist aktuell noch single-threaded, d.h. es arbeitet nur auf einem einzigen Rechenkern. Jedoch ist die Aufgabe, alle möglichen Netzwerkkonfigurationen zu evaluieren, sehr gut auf mehrere Rechenkerne verteilbar. 
+
+Zukünftige Revisionen sollten deshalb auch von diesen Gebrauch machen, um die Rechenzeit drastisch zu verkürzen. Hierdurch wird auch das Optimieren von tiefen neuronalen Netzen deutlich vereinfacht und praktikabler.
+
+%\newpage
+%Lorem ipsum...

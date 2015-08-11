@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: DSA_1.2_LearningFromData.aux
+The style file: plain.bst
+Database file #1: lit.bib
+Warning--empty year in LectureA
+Warning--empty year in heavyball
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            614 strings with 7151 characters,
+and the built_in function-call counts, 5294 in all, are:
+= -- 491
+> -- 231
+< -- 2
++ -- 94
+- -- 72
+* -- 267
+:= -- 912
+add.period$ -- 60
+call.type$ -- 21
+change.case$ -- 91
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 222
+empty$ -- 463
+format.name$ -- 72
+if$ -- 1117
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 18
+newline$ -- 103
+num.names$ -- 44
+pop$ -- 154
+preamble$ -- 1
+purify$ -- 76
+quote$ -- 0
+skip$ -- 168
+stack$ -- 0
+substring$ -- 178
+swap$ -- 40
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 2
+while$ -- 49
+width$ -- 23
+write$ -- 205
+(There were 2 warnings)

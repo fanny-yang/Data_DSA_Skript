@@ -1,0 +1,97 @@
+%% \documentclass{newlayout}
+%% %Bitte hier den enstprechenden Ort einsetzen z.B. Braunschweig und die Akademienummer
+%% \Akademie{Braunschweig}{2015}{1}
+
+%% \usepackage[english]{babel}
+%% \usepackage{misc}
+%% \usepackage{multicol}
+
+%% \usepackage[utf8]{inputenc}
+
+%% %\usepackage{amsmath}%wird automatisch durch newlayout.cls geladen
+%% \usepackage{amsfonts}
+
+%% \usepackage{blindtext}
+
+%% \usepackage{url}
+%% \def\UrlBreaks{\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l%
+%% \do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\0%
+%% \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\-\do\_\do\/\do\%}
+%% \urlstyle{same}
+
+%% % hinzugef�gt, um Fehler 'pdfTeX error (font expansion): auto expansion is only possible with scalable' zu vermeiden
+%% \usepackage{lmodern}
+%% \setkomafont{descriptionlabel}{\normalfont\bfseries}
+%% \addtokomafont{paragraph}{\normalfont}
+%% \usepackage{footnote}
+%% \usepackage[flushmargin,hang,ragged]{footmisc}
+%% \deffootnote{1em}{1em}{%
+%% \textsuperscript{\thefootnotemark\ }
+%% }
+%% %\setlength{\abovedisplayskip}{5pt}
+%% %\setlength{\belowdisplayskip}{5pt}
+
+
+%% %%%%%Mathe-Definitionen
+%% \newtheorem{Def}{Definition}
+%% \newtheorem{Sat}{Satz}
+%% \newtheorem{Bew}{Beweis}
+%% \newtheorem{Thm}{Theorem}
+
+%% \setlength\abovedisplayshortskip{0pt}
+%% \setlength\belowdisplayshortskip{0pt}
+%% \setlength\abovedisplayskip{3pt}
+%% \setlength\belowdisplayskip{3pt}
+%% %%%%Ende Mathe-Definitionen
+
+%% \begin{document}
+
+%%  %   \input{titel}
+%%  \setcounter{page}{3}
+
+%% \setcounter{tocdepth}{1}
+%%  \tableofcontents
+
+%%    \setcounter{secnumdepth}{1}
+
+
+%% \setcounter{page}{1}
+%% \setcounter{chapter}{0}
+\section{Dating mit Julia}
+\authors{Jan Fritz,  Vivien Thi, Franziska Wilfinger}
+Bei der Auswahl des Projekts war uns schnell bewusst, dass wir etwas programmieren wollen, um die im Kurs erlernten mathematischen Theorien anzuwenden. Schon w\"ahrend der Vorlesung zum Thema SVM wurde ersichtlich, welche M\"oglichkeiten ein Programm, das auf diesem Konzept beruht, bietet und so entschieden wir uns, ein solches Programm als Projekt zu schreiben. Als Anwendungungsgebiet w\"ahlten wir die Partnersuche. Das im Folgenden vorgestellte Programm ist in der Lage, auszugeben, ob eine Person (\enquote{Testkandidat}) eine andere Person (\enquote{Proband}) \"au\ss erlich anspricht, sofern diese Person zuvor Portr\"atbilder bewertet hat.
+
+\paragraph{Beschreibung.}
+Das Program ist so aufgebaut, dass der Proband zuerst mehr als zweihundert Personen mit \enquote{hot} oder \enquote{not} bewertet. Dabei erfahren wir etwas \"uber die Anspr\"uche beziehungsweise Vorlieben der Person. Anschlie\ss end wird eine neue Person in das Programm eingegeben. Die Merkmale dieser neuen Person werden mit denen der Trainingsdaten verglichen.
+Im Anschluss gibt der Computer aus, ob diese neue Person den Vorlieben des Probanden entspricht.
+
+\paragraph{Datensatz.}
+Als Erstes ben\"otigten wir einen gro\ss en Datensatz, also eine gro\ss e Menge an Bildern, die sp\"ater zum Trainieren des Programs auf die Vorlieben einer Person genutzt werden sollten. Hierbei gilt, dass ein größerer Datensatz zu besseren Ergebnissen führt. Da das Program f\"ur ein Klientel von Frauen im Alter von etwa 15--25 Jahren geschrieben wurde, suchten wir 212 Bilder von Männern im Alter von 15--50 Jahren aus, wobei die große Mehrheit sich im Altersbereich zwischen 20 und 30 Jahren befindet. Bei der Auswahl des Trainingsdatensatzes wurde darauf geachtet, dass die H\"aufigkeit der Merkmale im Datensatz die H\"aufigkeit der Merkmale in der Weltbev\"olkerung widerspiegelt. So sind Personen aus allen Kontinenten vertreten, mehr Braunhaarige als Blonde, mehr Blonde als Rothaarige, und so weiter. Diese Bilder wurden nach $13$ Features klassifiziert. Diese sind das Alter, die Ethnie, die Gesichtsform, die Hautfarbe, die Haarfarbe, die Frisur, die Gesichtsbehaarung, die Augenbrauen, die Augenfarbe, die Lippen, die Nase und die eventuell vorhandene Brille und der K\"orperschmuck. Im Anhang ist diese Klassifikation am Beispiel einiger Kandidaten gezeigt.
+
+\paragraph{Featurization.}
+Als Featurization bezeichnet man die Konvertierung von Merkmalen (zum Beispiel Augenfarbe) in eine Repr\"asentation, die vom Computer verarbeitet werden kann. Wir haben die Merkmale in Einheitsvektoren (\enquote{one hot} Vektoren) konvertiert, damit kein Feature bevorzugt wird. F\"ur die Augenfarbe haben wir zum Beispiel
+\begin{itemize}
+  \item braun entspricht $(1, 0, 0)$
+  \item blau entspricht $(0, 1, 0)$
+  \item gr\"un entspricht $(0, 0, 1)$
+\end{itemize}
+Die Komponente, die der jeweiligen Merkmalsauspr\"agung (hier braun, blau und gr\"un) entspricht, ist hier eins, alle anderen null. Man kann auch zwei Auspr\"agungen eines Merkmals aufzeigen, indem man beispielsweise 0.5 und 0.5 in die jeweiligen Komponenten schreibt. Wichtig ist hierbei, dass die Einträge des Vektors sich zu eins summieren. Am Schluss h\"angt man die Vektoren aller Merkmale hintereinander und bekommt so einen neuen Vektor, der die jeweilige Person repr\"asentiert.
+
+
+
+\paragraph{Programm.}
+Die Features der Trainingsdaten speichern wir in einer Matrix $X$ ab und die labels \enquote{hot} or \enquote{not} in einem Vektor $y$ mit Komponenten $+1$ und $-1$. Anhand dieser Daten trainieren wir dann eine SVM. Zur Testzeit wird eine Person aus dem Pool der Testpersonen ausgew\"ahlt. Wir planten, die Eigenschaften der Teilnehmer der DSA anhand von Bildern zu bestimmen und dann als Testdatensatz zu verwenden. Leider konnte aufgrund von Zeitmangel das Projekt nicht fertiggestellt werden.
+
+
+
+
+
+
+
+% \end{document}
+
+
+
+
+
+

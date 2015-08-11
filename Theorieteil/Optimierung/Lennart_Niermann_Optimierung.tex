@@ -3,19 +3,20 @@
 %\usepackage{pgf,tikz}
 %\usepackage{mathrsfs}
 \section{Optimierung}
-\subsection{Grundlagen der Optimierung}
-In der Optimierung studiert man wie Funktionen $f: \mathbb{R}^n \rightarrow \mathbb{R}$, welche Elemente eines $n$-dimensionalen Vektorraumes auf reelle Zahlen abbilden, maximiert oder minimiert werden können.
+\authors{Lukas Lück, Patrice Becker, Lennart Niermann}
 
-Beispielhafte Anwendungszwecke wären die Minimierung oder Maximierung der Kosten bzw. der Einnahmen eines Unternehmens. Diese würden dem reellen Funktionswert der Funktion entsprechen und ergäben sich aus den Eigenschaften des Unternehmens wie Gehalt, Anzahl der Mitarbeiter, Marketing-Ausgaben usw., welche man zusammenfassend als Vektor eines $n$-dimensionalen Vektorraumes darstellen könnte.
+In der Optimierung studiert man, wie Funktionen $f: \mathbb{R}^n \rightarrow \mathbb{R}$ maximiert oder minimiert werden können. Beispielhafte Anwendungen sind die Minimierung oder Maximierung der Kosten bzw. Einnahmen eines Unternehmens. Diese entspricht dem realen Funktionswert der Funktion und ergibt sich aus den Eigenschaften des Unternehmens wie Gehalt, Anzahl der Mitarbeiter, Marketing-Ausgaben usw., welche man zusammenfassend als Vektor eines $n$-dimensionalen Vektorraumes darstellt.
 
-\subsection{Regression}
+\begin{Bsp}[Lineare Regression]
+\label{bsp:regression}
+Ein Beispiel für ein solches Minimierungsproblem ist die Methode der kleinsten Quadrate, auch Lineare Regression genannt. Gegeben sind hierbei eine lineare Funktion $f(x) = ax$ und Punkte $P_i=(x_i,y_i)$ mit $i=1,\dots,n$, welche näherungsweise auf der Geraden liegen (siehe Abbildung \ref{fig:LinReg}), also $y_i = f(x_i) + \epsilon_{i}$. Dabei modelliert man mit $\epsilon_i$ meist die unerw\"unschte (und meist zuf\"allige) St\"orung der Messung gegen\"uber dem idealen Wert $y_i$. Das Ziel bei der Regression ist es, f\"ur einen neuen $x$-Wert, m\"oglichst den richtigen dazugeh\"origen Funktionswert $f(x)$ voraussagen zu k\"onnen. Diese Problemstellung ist interessant f\"ur Anwendungen, bei denen man davon ausgeht, dass man die Natur durch $y = f(x)$ modellieren kann. Zum Beispiel k\"onnte man sich daf\"ur interessieren, wie der Wohnungspreis oder das Monatsgehalt von bestimmten Parametern abh\"angt. Diese Funktion w\"are in diesen F\"allen z.B. für Immobilienmakler oder Unternehmensf\"uhrer von gro\ss er Relevanz.
+\end{Bsp}
 
-\begin{Thm}[Methode der kleinsten Quadrate]
-Beispiel für die Lösung eines solchen Minimierungsproblems ist die Methode der kleinsten Quadrate. Gegeben ist hierbei eine lineare Funktion $f(x) = ax$ und Punkte $P_i=(x_i,y_i)$, welche näherungsweise auf der Geraden liegen (siehe Abb. \ref{fig:LinReg}), also $y_i = f(x_i) + \epsilon_{i}$.
 
 \definecolor{ffqqqq}{rgb}{1.,0.,0.}
 \definecolor{qqqqff}{rgb}{0.,0.,1.}
 \begin{dsafigure}
+\begin{center}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \draw[->,color=black] (-0.252729391848446,0.) -- (5.909881514665974,0.);
 \foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5}
@@ -31,71 +32,67 @@ Beispiel für die Lösung eines solchen Minimierungsproblems ist die Methode der
 \draw [color=ffqqqq] (4.,4.)-- (4.,3.2);
 \begin{scriptsize}
 \draw [fill=qqqqff] (1.,1.5) circle (1.5pt);
-\draw[color=qqqqff] (0.9863140708369929,1.7517884297439121) node {$P_1$};
+\draw[color=qqqqff] (0.9863140708369929,1.7517884297439121) node {$(x_1, y_1)$};
 \draw [fill=qqqqff] (2.,1.7) circle (1.5pt);
-\draw[color=qqqqff] (1.9808094816766213,1.4790347346423591) node {$P_2$};
+\draw[color=qqqqff] (1.9808094816766213,1.4790347346423591) node {$(x_2, y_2)$};
 \draw [fill=qqqqff] (3.,3.6) circle (1.5pt);
-\draw[color=qqqqff] (2.9753048925162497,3.8656295667809477) node {$P_3$};
+\draw[color=qqqqff] (2.9753048925162497,3.8656295667809477) node {$(x_3, y_3)$};
 \draw [fill=qqqqff] (4.,3.2) circle (1.5pt);
-\draw[color=qqqqff] (3.95893150105162,2.9499564475114486) node {$P_4$};
+\draw[color=qqqqff] (3.95893150105162,2.9499564475114486) node {$(x_4, y_4)$};
 \draw[color=ffqqqq] (1.0297892800540258,1.2647282599197103) node {$\varepsilon_1$};
 \draw[color=ffqqqq] (2.230791934674561,1.9466124976735928) node {$\varepsilon_2$};
 \draw[color=ffqqqq] (3.029648904037541,3.29089856638839) node {$\varepsilon_3$};
 \draw[color=ffqqqq] (4.236085959810206,3.6902879056442353) node {$\varepsilon_4$};
 \end{scriptsize}
 \end{tikzpicture}
-\caption{Beispiel einer Linearen Reggression}
+\end{center}
+\caption{Beispiel einer Linearen Regression}
 \label{fig:LinReg}
 \end{dsafigure}
 
-Wenn nun der Abstand $\epsilon_i$ minimiert werden soll, dann gilt
+Man nehme an, dass es eine Funktion $f$ gibt, welche dem wahren Modell entspricht.
+Um eine Funktion zu finden, die den gest\"orten Datenpunkten $(x_i,y_i)$ so nah wie m\"oglich kommt, minimieren wir die Summe der quadratischen Abweichungen $\epsilon_i^2$, also
 \begin{equation*}
-\min h(x)={\sum_{i=1}^n\epsilon_i} = {\sum_{i=1}^n(y_i-ax_i)^2)}
+\min_{x} h(x)= \sum_{i=1}^n\epsilon_i^2 = \sum_{i=1}^n(y_i-ax_i)^2
 \end{equation*}
- Zur Berechnung dieses Minimums gibt es nun verschiedene Möglichkeiten:
-\begin{enumerate}
-\item Gewöhnliche Tiefpunktberechnung aus
-$h'(a)=0$ und $h''(a)>0$
-\item Gradientenabstiegsmethode mittels
-$a^{t+1}  =a^{t} - \lambda \cdot \partial f(a^{t})$,
-man findet also ein $\lambda > 0$, sodass
-$f(a^{t+1}) < f(a^{t})$ falls $ \partial f(a^{(t)}) \neq 0$. Dies kann erreicht werden durch $\lambda=\arg\min(g(\lambda))$ wobei
-$g(\lambda)=f(a^t-\lambda\nabla f(a^t))$.
-\end{enumerate}
 
-\end{Thm}
+\subsection{Grundlagen der Optimierung}
+
+Bevor wir \"uber die m\"oglichen L\"osungsmethoden dieses oder allgemeiner Optimierungsproblemen sprechen, wollen wir zun\"achst ein paar grundlegende Konzepte der Optimierung einf\"uhren. 
+
 
 \begin{Def}[Lokales und globales Minimum]
-Für $f: D\rightarrow \mathbb{R}$ ist $x\in D$ ein lokales Minimum, wenn mindestens eine Umgebung $N$ existiert, sodass $f(y)\geq f(x)$ für alle $y\in N$.
-Ein globales Minimum liegt vor, falls hierbei $N=D$.
+Für $f: D \subset \mathbb{R}^n \rightarrow \mathbb{R}$ ist $x\in D$ ein \emph{lokales} Minimum, wenn mindestens eine Umgebung $N$ existiert, sodass $f(y)\geq f(x)$ für alle $y\in N$.
+Ein \emph{globales} Minimum liegt vor, falls hierbei $N=D$.
 \end{Def}
 
-\subsection{Konvexität einer Funktion}
+Im Folgenden geht es nun um die Frage, in welchen F\"allen das lokale auch ein globales Minimum ist. F\"ur diese Zwecke f\"uhren wir die konvexen Funktionen ein.
 
 \begin{Def}[Konvexe Funktion]
-Eine Funktion $f: \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls für alle $x, y\in D$ gilt
+Eine Funktion $f: D\subset \mathbb{R}^n\rightarrow\mathbb{R}$ ist dann eine konvexe Funktion, falls für alle $x, y\in D$ gilt
 \begin{equation*}
   f(\lambda x+ (1 - \lambda)y) \leq \lambda f(x)+(1-\lambda)f(y)
 \end{equation*}
-für alle $\lambda \in [0, 1]$, siehe Abb. \ref{fig:konvex}.
-
-\begin{dsafigure}
-\begin{center}
-\includegraphics[width=0.3\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.pdf}
-\caption{Beispiel einer konvexen Funktion}
-\label{fig:konvex}
-\end{center}
-\end{dsafigure}
-
-
-
+für alle $\lambda \in [0, 1]$.
 \end{Def}
 
-\subsubsection{Beispiel zur Konvexität}
-Ein Beispiel für eine konvexe Funktion ist die euklidische Norm $f(u) = \lVert u\rVert_2$ für $u\in\mathbb{R}$. Diese ist konvex, weil
+Ein Illustration eines Beispiels f\"ur eine konvexe Funktion ist in Abbildung \ref{fig:konvex} zu sehen. 
+ \begin{dsafigure}
+ \begin{center}
+ \includegraphics[width=0.3\textwidth]{\media Grafik-Optimierung_KonvexeFunktion.pdf}
+ \caption{Konvexe Funktion}
+ \label{fig:konvex}
+ \end{center}
+\end{dsafigure}
+Der Gro\ss teil der Forschung in der Optimierung behandelt die Minimierung von konvexen Kostenfunktionen. Der Hauptgrund liegt darin, dass es f\"ur konvexe Funktionen nur globale Minima gibt. 
+
+
+\begin{Bsp}[Beispiel zu konvexen Funktionen]
+Ein Beispiel für eine konvexe Funktion ist die euklidische Norm $f(u) = \lVert u\rVert_2$ für $u\in\mathbb{R}^k$. Diese ist konvex, weil
 \begin{align*}
 f(\lambda u+(1-\lambda)v) &=\lVert\lambda u+(1-\lambda)v\rVert_2\\
 &\leq\lVert\lambda u\rVert_2+\lVert(1-\lambda)v\rVert_2\\
 &\leq\lambda\lVert u\rVert_2+(1-\lambda)\lVert v\rVert_2
 \end{align*}
-wie aus der Dreiecksungleichung und der Linearität der Norm folgt.
+wie aus der Dreiecksungleichung und der Homogenit\"a der Norm folgt.
+\end{Bsp}

@@ -15,18 +15,18 @@ Ist es möglich eine direkte Verbindungsstrecke zwischen zwei beliebigen Punkten
 Eine Menge $X$ heißt konvex, falls für alle $x, y \in X$ und $\lambda \in [0,1]$ gilt, dass $\lambda x + (1 - \lambda) \in X$.
 \end{Def}
 
-\subsection{Beispiele konvexer Mengen}
+Im Folgenden betrachten wir einige Beispiele konvexer Mengen.
 \begin{description}
 \item[Kugel:]
 Ein Beispiel für eine konvexe Menge ist die Menge $S = \{x \in \mathbb{R}^{n} \mid \lVert x \rVert \le 1\}$ der Vektoren, die eine Kugel mit dem Radius $r = 1$ und Mittelpunkt im Ursprung beschreibt.
 \item[Quadrant:] Auch die Quadranten des kartesischen Koordinatensystems lassen sich durch eine konvexe Menge erfassen; Beispiel ist der erste Quadrant $L = \{ x \in \mathbb{R}^{n} \mid x_i \ge 0, i=1,\dots,n\}$.
-\item[Eistüte:] Die Eistüte bzw. der quadratischen Kegel $Q = \{(x, t) \mid x\in \mathbb{R}^{n-1}, t\in \mathbb{R}, \lVert x\rVert ^{2} \le t\}$ ist ein weiteres Beispiel für eine konvexe Menge.
+\item[Eistüte:] Die Eistüte bzw. der quadratische Kegel $Q = \{(x, t) \mid x\in \mathbb{R}^{n-1}, t\in \mathbb{R}, \lVert x\rVert ^{2} \le t\}$ ist ein weiteres Beispiel für eine konvexe Menge.
 \item[Box:] Eine Box mit der Seitenlänge 2, deren Mittelpunkt im Ursprung liegt, ist eine konvexe Menge $B = \{x \in \mathbb{R}^{n} \mid |x_{i}| \le 1, i = 1, \dots, n\}$.
 \end{description}
 
 \subsection{Konvexe Programme}
 % \paragraph{Einführung}
-Ziel eines konvexen Programmes ist die Optimierung einer Funktion $f$, die vom Parameter $x$ abhängig ist. Hierbei sind sowohl die Zielfunktion als auch eventualle Nebenbedingungen konvex.
+Ziel eines konvexen Programmes ist im Allgemeinen die Optimierung einer Funktion $f$, die von einer Variablen $x$ abhängig ist. Hierbei sind sowohl die Zielfunktion als auch eventuelle Nebenbedingungen konvex.
 
 \begin{Def}[Lösung konvexer Programme]
 Sei $f: \mathbb{R}^{n} \rightarrow \mathbb{R}$ eine konvexe Funktion und $X \subseteq \mathbb{R}^{n}$ konvex, so ist die Lösung des Programms

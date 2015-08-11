@@ -1,0 +1,54 @@
+\subsection{Klassifikation mit neuronalen Netzen}
+\authors{Luca Bohn, Lukas Lück, Lukas Kamm}
+Nun betrachten wir neuronale Netze im Zusammenhang mit der Schrifterkennung. Convolutional Neural Networks eignen sich besonders für die Verarbeitung von Bildern. 
+ %Außerdem lassen sich im CNN \emph{Feature Maps} vielseitig anwenden (näheres in Abschnitt \ref{ml:cnn}).
+Im Abschnitt \ref{ml:cnn} wurde bereits die \emph{Convolution} (dt. Faltung) beschrieben. 
+Nach der Faltung wird auf das Ergebnis elementweise eine nichtlineare Funktion angewandt. Anschlie\ss end erfolgt die \emph{Pooling} Operation, d.h. eine Zusammenfassung der Pixel in einem kleinen Bereich z.B. durch das Finden des maximalen Wertes, der dann in das entsprechende Pixel im Bild der n\"achsten Schicht gespeichert werden. Dadurch können beispielsweise kleine Rotationen des Objekts auf einem Foto, das erkannt werden soll, kompensiert werden.
+
+Ein funktionsfähiges neuronales Netz zu implementieren bedeutet einen großen Zeitaufwand und viel Feinoptimierung. Da uns diese Zeit nicht zur Verfügung steht und wir ein größeres Interesse an der Anwendung haben, nutzen wir Caffe. Bei Caffe handelt es sich um eine Software des Berkeley Vision and Learning Centers \cite{Caffe06}. Caffe bietet eine Art Bausatz für neuronale Netze. Man kann verschiedene Filter auswählen und sich so sein eigenes neuronales Netz erstellen. Caffe ist in der Lage, Bilder sehr schnell auszuwerten, nach Herstellerangaben benötigt es je Bild 4 ms in der Trainingsphase und 1 ms in der Testphase.
+
+
+\begin{dsafigure}
+\begin{center}
+	\includegraphics[width=0.40\textwidth]{\media NNFilterMNIST.png}
+	\caption{Filter (sog. Feature Maps), spezialisiert für MNIST}
+	\label{NNFilterMNIST}
+\end{center}
+\end{dsafigure}
+
+
+
+\subsection{Training und Testen}
+Voraussetzung für das maschinelle Lernen mit neuronalen Netzen ist das Anlernen mit Hilfe von Trainingsdaten. Hierzu nutzen wir den MNIST-Datensatz. Dies ist ein freier Satz aus $28 \times 28$ px großen Bildern mit den arabischen Ziffern in Graustufe (siehe Abbildung~\ref{FigConvNN}). Der Trainingssatz enthält 60.000, der Testsatz 10.000 Grafiken. Diese vorgefertigte Zeichendatenbank eignet sich vor allem für Testumgebungen im Bereich des maschinellen Lernens und das Testen von Algorithmen neuronaler Netze. Aufgrund dessen ist sie optimal für beide Schrifterkennungs-Teams geeignet.
+
+\begin{dsafigure}
+	\begin{center}
+		\includegraphics[width=0.4 \textwidth]{\media mnistExamples.png}
+		\caption{MNIST Beispiele}
+		\label{FigConvNN}
+	\end{center}
+\end{dsafigure}
+
+Eine Visualisierung des Trainingsergebnisses f\"ur die erste Schicht ist in Abbildung~\ref{FigConvNN} zu sehen.
+
+Um nun die Genauigkeit der Algorithmen zu testen, benutzen wir allerdings nicht das gegebene MNIST Testset, sondern wollen ein wenig Robustheit gegen Verschiebungen in der Position der Ziffern im Bild bekommen. Die Features werden ebenfalls über den bestehenden Algorithmus berechnet. Das Testset wird dann an die SVM bzw. in das trainierte neuronale Netz eingespeist und die Klasse mit der h\"ochsten Wahrscheinlichkeit f\"ur die Klassifikation ausgew\"ahlt. Die Ergebnisse werden dann überprüft und die Genauigkeit wird errechnet.
+
+F\"ur das Testset erzeugen wir ein Bild mit $10 \times 10$ zufällig gewählten Ziffern, die jeweils in einer $38 \times 38$ Zelle um wenige Pixel von ihrer Zentrumsposition (zuf\"allig) abweichen, um den Handschriftcharakter zu simulieren. Ein Ausschnitt eines solchen gesamten Bildes ist in Ausschnitt in Abb. \ref{Zahlen_input} abgebildet. Anschließend iterieren wir pixelweise über das Bild und extrahieren wieder $28 \times 28$ px große Grafiken und übermitteln sie an das neuronale Netz.
+
+\begin{dsafigure}
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{\media Zahlen_input.png}
+	\caption{Ausschnitt des generierten Bildes, das die SVM analysieren soll.}
+	\label{Zahlen_input}
+\end{center}
+\end{dsafigure}
+
+\begin{dsafigure}
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{\media Zahlen_hogfeat.png}
+	\caption{Feature-Bild des generierten Bildes.}
+	\label{Zahlen_hogfeat}
+\end{center}
+\end{dsafigure}
+
+%% Daraufhin erzeugen wir ein Bild mit $10 \times 10$ Zahlen (Ausschnitt siehe Abb. \ref{Zahlen_input}), die jeweils in einer $38 \times 38$ Pixelzelle zufällig verteilt werden. Dieses Bild wird in eine Matrix umgewandelt und ein Algorithmus iteriert über die Matrix, sodass die SVM bestimmen kann, welche 100 Zahlen abgebildet sind.

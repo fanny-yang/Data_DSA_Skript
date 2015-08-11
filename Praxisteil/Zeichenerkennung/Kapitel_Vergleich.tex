@@ -1,0 +1,9 @@
+\subsection{Vergleich zwischen SVM und neuronalem Netzwerk}
+
+\paragraph{Trainingsdauer}
+
+SVMs sind im Allgemeinen schneller zu trainieren als neuronale Netze, da sie als besonders einfache (einschichte) neuronale Netze darstellbar sind (siehe Abschnitt \ref{sec:MLNN}). In unserem Projekt waren allerdings anfangs die neuronalen Netze wesentlich schneller, was aber an der schlechteren Implementierung der SVM lag und der Algorithmus dadurch nicht optimal genutzt wurde. Auch mussten wir bei der SVM zuerst die Features sämtlicher Bilder berechnen, bevor wir sie trainieren konnten. Dies war bei dem neuronalen Netz nicht notwendig, da die Features ja gerade im Training gelernt werden. Insgesamt waren die CNNs deshalb wesentlich schneller, da die Featureberechnung am längsten dauert.
+
+\paragraph{Genauigkeit}
+Im direkten Vergleich der SVM und des neuronalen Netzes lässt sich feststellen, dass die SVM eine Trefferquote von 98~\% aufweist. \\
+Leider hatten wir nicht genügend Zeit, einen Testalgorithmus basierend auf einem Convolutional Neural Network zu implementieren und somit direkte Vergleiche hinsichtlich der Genauigkeit beider Algorithmen durchzuführen.
